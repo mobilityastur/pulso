@@ -1,0 +1,13 @@
+name: Sondeo (temporal)
+on: { workflow_dispatch: {} }
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          UA="Mozilla/5.0 Pulso"
+          echo "=== IGN RSS"; curl -sSL -A "$UA" -m 30 https://www.ign.es/ign/RssTools/sismologia.xml | head -c 1500; echo
+          echo "=== EMSC"; curl -sSL -m 30 "https://www.seismicportal.eu/fdsnws/event/1/query?format=json&minlat=26&maxlat=45&minlon=-20&maxlon=6&limit=2" | head -c 1500; echo
+          echo "=== MITECO boletin links"; curl -sSL -A "$UA" -m 30 https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico.html | grep -oiE 'href="[^"]+\.(zip|xlsx?|csv|pdf|json)"|href="[^"]*(embalse|bolet|reserva)[^"]*"' | sort -u | head -40
+          echo "=== MITECO noticias"; curl -sSL -A "$UA" -m 30 "https://www.miteco.gob.es/es/prensa/ultimas-noticias.html" | grep -oiE 'href="[^"]*reserva-hidrica[^"]*"' | sort -u | head -5
+          echo "=== embalses.net"; curl -sSL -A "$UA" -m 30 -o /dev/null -w "%{http_code} %{size_download}\n" https://www.embalses.net/
