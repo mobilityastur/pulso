@@ -123,11 +123,13 @@ function pintarLuz(luz) {
 function pintarFuego(f) {
   if (!f) { $('c-fuego-pie').textContent = 'Esperando datos'; return; }
   $('c-fuego-val').textContent = f.total === 1 ? '1 foco' : `${nf.format(f.total)} focos`;
-  $('c-fuego-pie').textContent = f.total ? `Mayor: ${cercaDe(f.mayor.lat, f.mayor.lon)}` : 'Últimas 24 h, sin focos';
+  const ind = f.industriales ?? [];
+  $('c-fuego-pie').textContent = f.total ? `Mayor: ${cercaDe(f.mayor.lat, f.mayor.lon)}`
+    : ind.length ? `Sin incendios · ${ind.length} industrial${ind.length > 1 ? 'es' : ''}` : 'Últimas 24 h, sin focos';
   $('f-total').textContent = nf.format(f.total);
 
   const lista = $('focos');
-  if (!f.focos.length) { lista.innerHTML = '<li class="vacio">Ningún foco de calor en las últimas 24 horas.</li>'; }
+  if (!f.focos.length) { lista.innerHTML = '<li class="vacio">Ningún foco de calor fuera de instalaciones industriales en las últimas 24 horas.</li>'; }
   else {
     lista.innerHTML = '';
     f.focos.slice(0, 40).forEach(x => {
@@ -139,6 +141,10 @@ function pintarFuego(f) {
     });
     if (f.focos.length > 40) lista.append(el('li', { className: 'vacio' }, `Y ${f.focos.length - 40} focos más en el mapa.`));
   }
+  $('industriales').innerHTML = ind.length ? ind.map(x => `<li><div class="punto gris">${nf1.format(x.frp)}</div>
+    <div class="info"><div class="lugar">${x.nombre ?? cercaDe(x.lat, x.lon)}</div>
+    <div class="det">${x.nombre ? cercaDe(x.lat, x.lon) + ' · ' : ''}visto ${x.dias_mes} día${x.dias_mes === 1 ? '' : 's'} este mes</div></div></li>`).join('')
+    : '<li class="vacio">Ninguna en las últimas 24 horas.</li>';
   $('f-fuente').textContent = `Fuente: ${f.fuente}. El número del círculo es la potencia radiativa del fuego (MW).`;
 
   const dias = Object.entries(estado.hist?.dias ?? {}).slice(-30);
@@ -162,7 +168,8 @@ function pintarConexiones() {
   if (fuego) {
     const dias = Object.values(hist?.dias ?? {}).slice(-31, -1);
     const media = dias.length >= 5 ? dias.reduce((a, b) => a + b, 0) / dias.length : null;
-    if (!fuego.total) add('🔥', 'Ningún foco de calor detectado por satélite en las últimas 24 h.');
+    const ni = fuego.industriales?.length ?? 0;
+    if (!fuego.total) add('🔥', `Ningún foco de calor fuera de instalaciones industriales en las últimas 24 h.${ni ? ` El satélite sí ve ${ni} fuente${ni > 1 ? 's' : ''} industrial${ni > 1 ? 'es' : ''} fija${ni > 1 ? 's' : ''}.` : ''}`);
     else {
       add('🔥', `El foco más intenso está <b>${cercaDe(fuego.mayor.lat, fuego.mayor.lon).replace(/^En /, 'en ')}</b> (${nf.format(fuego.mayor.frp)} MW).`);
       if (media !== null) {
@@ -251,6 +258,11 @@ function iconoFoco(frp) {
 }
 function capaFuego(conPopups) {
   const g = L.layerGroup();
+  (estado.fuego?.industriales ?? []).forEach(f => {
+    const mk = L.circleMarker([f.lat, f.lon], { radius: 5, color: '#9496A0', weight: 1.5, fillColor: '#9496A0', fillOpacity: .35 });
+    if (conPopups) mk.bindPopup(`<b>${f.nombre ?? 'Fuente industrial fija'}</b><br>${cercaDe(f.lat, f.lon)}<br>Visto ${f.dias_mes} días este mes · ${nf1.format(f.frp)} MW<br><small>No se cuenta como incendio.</small>`);
+    mk.addTo(g);
+  });
   (estado.fuego?.focos ?? []).forEach(f => {
     const mk = L.marker([f.lat, f.lon], { icon: iconoFoco(f.frp), keyboard: false });
     if (conPopups) mk.bindPopup(`<b>${cercaDe(f.lat, f.lon)}</b><br>${hora(f.t)} (${hace(f.t)}) · ${f.dn}<br>Potencia: ${nf1.format(f.frp)} MW · confianza ${f.conf}<br>Satélite ${f.sat}${f.n > 1 ? ` · ${f.n} detecciones` : ''}`);
@@ -263,7 +275,7 @@ function pintarMapas() {
   if (!mapas.mini) mapas.mini = crearMapa('mapa-mini', false);
   mapas.capas.mini?.remove(); mapas.capas.mini = capaFuego(false).addTo(mapas.mini);
   if (mapas.grande) { mapas.capas.grande?.remove(); mapas.capas.grande = capaFuego(true).addTo(mapas.grande); }
-  $('leyenda-mapa').innerHTML = `<i style="background:var(--fuego)"></i>Focos de calor 24 h (${estado.fuego?.total ?? 0}) · tamaño = intensidad`;
+  $('leyenda-mapa').innerHTML = `<i style="background:var(--fuego)"></i>Focos de calor 24 h (${estado.fuego?.total ?? 0})<br><i style="background:#9496A0"></i>Fuentes industriales fijas (${estado.fuego?.industriales?.length ?? 0})`;
 }
 
 // ---------- navegación ----------

@@ -235,6 +235,16 @@ function parseCSV(txt) {
   return filas.map(l => Object.fromEntries(l.split(',').map((v, i) => [cols[i], v])));
 }
 
+// Fuentes industriales fijas (antorchas, hornos, refinerías): el satélite las ve casi a diario.
+// Semillas conocidas + aprendizaje: una celda de ~2 km con focos en 5 días distintos del último mes se marca como fija.
+const FIJAS_SEMILLA = [
+  { nombre: 'ArcelorMittal Gijón (Veriña)', lat: 43.5232, lon: -5.727 },
+  { nombre: 'ArcelorMittal Avilés', lat: 43.5394, lon: -5.8286 },
+];
+const RADIO_FIJA_KM = 2, DIAS_FIJA = 5;
+const distKm = (a, b) => Math.hypot((a.lat - b.lat) * 111.2, (a.lon - b.lon) * 111.2 * Math.cos(a.lat * Math.PI / 180));
+const celda = f => `${(Math.round(f.lat / 0.02) * 0.02).toFixed(2)},${(Math.round(f.lon / 0.02) * 0.02).toFixed(2)}`;
+
 async function fuego() {
   const key = process.env.FIRMS_MAP_KEY;
   if (!key) throw new Error('Falta FIRMS_MAP_KEY');
@@ -272,10 +282,31 @@ async function fuego() {
   }
   grupos.sort((a, b) => b.frp - a.frp);
 
-  // Histórico diario (para tendencias): una entrada por día, se queda con el máximo visto
+  // Separa fuentes industriales fijas
   const hoy = madridLocal(new Date()).slice(0, 10);
+  const memoria = readJSON('fuego-fijos.json', { celdas: {} });
+  const limite = madridLocal(new Date(Date.now() - 30 * 86400e3)).slice(0, 10);
+  for (const g of grupos) {
+    const c = (memoria.celdas[celda(g)] ??= { dias: [] });
+    if (!c.dias.includes(hoy)) c.dias.push(hoy);
+  }
+  for (const [k, c] of Object.entries(memoria.celdas)) {
+    c.dias = c.dias.filter(d => d >= limite).sort();
+    if (!c.dias.length) delete memoria.celdas[k];
+  }
+  writeJSON('fuego-fijos.json', memoria);
+
+  const focos_ = [], industriales = [];
+  for (const g of grupos) {
+    const semilla = FIJAS_SEMILLA.find(x => distKm(x, g) <= RADIO_FIJA_KM);
+    const dias = memoria.celdas[celda(g)]?.dias.length ?? 0;
+    if (semilla || dias >= DIAS_FIJA) industriales.push({ ...g, nombre: semilla?.nombre ?? null, dias_mes: dias });
+    else focos_.push(g);
+  }
+
+  // Histórico diario (para tendencias): solo focos no industriales, máximo visto en el día
   const hist = readJSON('fuego-historico.json', { dias: {} });
-  hist.dias[hoy] = Math.max(hist.dias[hoy] ?? 0, grupos.length);
+  hist.dias[hoy] = Math.max(hist.dias[hoy] ?? 0, focos_.length);
   const claves = Object.keys(hist.dias).sort().slice(-800);
   hist.dias = Object.fromEntries(claves.map(k => [k, hist.dias[k]]));
   writeJSON('fuego-historico.json', hist);
@@ -284,13 +315,14 @@ async function fuego() {
     actualizado: new Date().toISOString(),
     fuente: 'NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)',
     ventana_h: 24,
-    total: grupos.length,
+    total: focos_.length,
     detecciones: focos.length,
-    mayor: grupos[0] ?? null,
-    focos: grupos,
+    mayor: focos_[0] ?? null,
+    focos: focos_,
+    industriales,
   };
   writeJSON('fuego.json', out);
-  console.log(`[fuego] ok · ${focos.length} detecciones → ${grupos.length} focos`);
+  console.log(`[fuego] ok · ${focos.length} detecciones → ${focos_.length} focos + ${industriales.length} industriales`);
   return out;
 }
 

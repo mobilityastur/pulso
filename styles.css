@@ -97,6 +97,7 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px; }
 .focos li { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--bd); cursor: pointer; }
 .focos li:first-child { border-top: 0; }
 .focos .punto { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--fuego-bg); color: var(--fuego-tx); display: grid; place-items: center; font-size: 12px; font-weight: 650; }
+.focos .punto.gris { background: var(--s2); color: var(--tx2); }
 .focos .info { flex: 1; min-width: 0; }
 .focos .lugar { font-weight: 600; font-size: 14.5px; }
 .focos .det { color: var(--tx2); font-size: 12.5px; }
