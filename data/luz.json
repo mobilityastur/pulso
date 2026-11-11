@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T18:44:18.496Z",
+ "actualizado": "2026-11-11T18:45:40.380Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
@@ -1949,6 +1949,10 @@
    {
     "t": "2026-11-11T19:40:00.000+01:00",
     "v": 34122
+   },
+   {
+    "t": "2026-11-11T19:45:00.000+01:00",
+    "v": 34146
    }
   ]
  }
