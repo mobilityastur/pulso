@@ -416,7 +416,7 @@ async function aire() {
   const ciudades = JSON.parse(fs.readFileSync(path.join(DATA, 'ciudades.json'), 'utf8'));
   const vars = ['european_aqi', ...Object.keys(CONT)].join(',');
   const url = `${OM_AQ}?latitude=${ciudades.map(c => c.la).join(',')}&longitude=${ciudades.map(c => c.lo).join(',')}` +
-    `&current=${vars},pm2_5,pm10,nitrogen_dioxide,ozone&hourly=european_aqi&forecast_hours=36&past_hours=0&timezone=Europe%2FMadrid&domains=cams_europe`;
+    `&current=${vars},pm2_5,pm10,nitrogen_dioxide,ozone&hourly=european_aqi&forecast_hours=36&past_hours=0&timezone=Europe%2FMadrid`;
   let j = await getJSON(url);
   if (!Array.isArray(j)) j = [j];
   const puntos = ciudades.map((c, i) => {
@@ -440,7 +440,7 @@ async function aire() {
   const peor = [...puntos].sort((a, b) => b.eaqi - a.eaqi).slice(0, 5);
   const out = {
     actualizado: new Date().toISOString(), hora: j[0]?.current?.time ?? null,
-    fuente: 'Open-Meteo · modelo CAMS Europa (Copernicus)', categorias: CATS, reparto, peor, puntos,
+    fuente: 'Open-Meteo · modelo CAMS (Copernicus)', categorias: CATS, reparto, peor, puntos,
   };
   writeJSON('aire.json', out);
   console.log(`[aire] ok · ${puntos.length} ciudades · reparto ${reparto.join('/')} · peor ${peor[0].n} (${CATS[peor[0].cat]})`);
