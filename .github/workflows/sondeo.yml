@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -sSL --http1.1 --retry 3 -A "Mozilla/5.0 Pulso" -m 300 -o bd.zip "https://www.miteco.gob.es/content/dam/miteco/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/Historico-de-embalses/BD-Embalses.zip"
+          U="https://www.miteco.gob.es/content/dam/miteco/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/Historico-de-embalses/BD-Embalses.zip"; rm -f bd.zip; for i in $(seq 1 15); do curl -sSL --http1.1 -A "Mozilla/5.0 Pulso" -m 120 -C - -o bd.zip "$U" && break; echo "intento $i: $(stat -c %s bd.zip 2>/dev/null)"; sleep 2; done
           ls -la bd.zip; unzip -l bd.zip; unzip -q -o bd.zip -d bd
           sudo apt-get install -y -qq mdbtools >/dev/null 2>&1 || true
           for f in bd/*; do echo "== $f"; file "$f"; done
