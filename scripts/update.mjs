@@ -88,9 +88,12 @@ const TR = {
   cc: ['Ciclo combinado', 'gas', false], cogenResto: ['Cogeneración y residuos', 'gas', false], cogen: ['Cogeneración', 'gas', false],
   car: ['Carbón', 'carbon', false], gf: ['Fuel y gas', 'otras', false], termRenov: ['Térmica renovable', 'otras', true],
   aut: ['Autoproductores', 'otras', false], rsu: ['Residuos', 'otras', false],
+  bio: ['Biomasa', 'otras', true], turb: ['Turbinación bombeo', 'hidraulica', false],
+  bat: ['Baterías', 'otras', false], vap: ['Turbina de vapor', 'otras', false],
 };
-const CURVAS = ['DEMANDAAU', 'DEMANDA', 'PENINSULA'];
-const NO_GEN = new Set(['ts', 'dem', 'inter', 'icb', 'expo', 'impo', 'cb', 'tnr', 'trn']);
+const CURVAS = ['DEMANDAAU', 'DEMANDA'];
+const NO_GEN = new Set(['ts', 'dem', 'inter', 'icb', 'conb', 'consBat', 'dif', 'gnhd',
+  'expAnd', 'expMar', 'expPor', 'expFra', 'expTot', 'impFra', 'impPor', 'impMar', 'impAnd', 'impTot']);
 
 function offsetMadrid(d) {
   const tz = new Intl.DateTimeFormat('en-US', { timeZone: TZ, timeZoneName: 'longOffset' }).formatToParts(d).find(p => p.type === 'timeZoneName').value;
