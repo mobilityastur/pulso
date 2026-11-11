@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-11T17:45:42.126Z",
+ "actualizado": "2026-11-11T18:01:04.753Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-11T18:40:00+01:00",
-  "total": 37076,
-  "renovable": 44.3,
+  "t": "2026-11-11T18:55:00+01:00",
+  "total": 36560,
+  "renovable": 42.9,
   "mix": {
-   "solar": 61,
-   "eolica": 10286,
-   "hidraulica": 6927,
-   "nuclear": 6081,
-   "gas": 10471,
+   "solar": 56,
+   "eolica": 10201,
+   "hidraulica": 5912,
+   "nuclear": 6074,
+   "gas": 11041,
    "carbon": 0,
-   "otras": 3250
+   "otras": 3276
   }
  },
  "tecnologias": [
@@ -23,43 +23,43 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 10286
+   "valor": 10201
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 8778
+   "valor": 9356
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6081
+   "valor": 6074
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 5610
+   "valor": 4960
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2434
+   "valor": 2444
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1693
+   "valor": 1685
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 1317
+   "valor": 952
   },
   {
    "titulo": "Biomasa",
@@ -77,13 +77,13 @@
    "titulo": "Baterías",
    "renovable": false,
    "familia": "otras",
-   "valor": 62
+   "valor": 78
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 53
+   "valor": 48
   },
   {
    "titulo": "Solar térmica",
@@ -93,20 +93,6 @@
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-10T19:00:00+01:00",
-   "total": 37619,
-   "renovable": 48.6,
-   "mix": {
-    "solar": 108,
-    "eolica": 12628,
-    "hidraulica": 6381,
-    "nuclear": 6069,
-    "gas": 9214,
-    "carbon": 0,
-    "otras": 3219
-   }
-  },
   {
    "t": "2026-11-10T19:20:00+01:00",
    "total": 37971,
@@ -1366,16 +1352,26 @@
     "carbon": 0,
     "otras": 3250
    }
+  },
+  {
+   "t": "2026-11-11T18:55:00+01:00",
+   "total": 36560,
+   "renovable": 42.9,
+   "mix": {
+    "solar": 56,
+    "eolica": 10201,
+    "hidraulica": 5912,
+    "nuclear": 6074,
+    "gas": 11041,
+    "carbon": 0,
+    "otras": 3276
+   }
   }
  ],
  "demanda": {
-  "actual": 33181,
-  "t": "2026-11-11T18:35:00.000+01:00",
+  "actual": 33051,
+  "t": "2026-11-11T18:50:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-10T19:00:00.000+01:00",
-    "v": 33671
-   },
    {
     "t": "2026-11-10T19:20:00.000+01:00",
     "v": 34002
@@ -1657,15 +1653,15 @@
     "v": 32945
    },
    {
-    "t": "2026-11-11T18:35:00.000+01:00",
-    "v": 33181
+    "t": "2026-11-11T18:40:00.000+01:00",
+    "v": 33124
+   },
+   {
+    "t": "2026-11-11T18:50:00.000+01:00",
+    "v": 33051
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-10T19:00:00.000+01:00",
-    "v": 33766
-   },
    {
     "t": "2026-11-10T19:20:00.000+01:00",
     "v": 34051
@@ -1951,8 +1947,8 @@
     "v": 33786
    },
    {
-    "t": "2026-11-11T18:45:00.000+01:00",
-    "v": 33813
+    "t": "2026-11-11T19:00:00.000+01:00",
+    "v": 33860
    }
   ]
  }
