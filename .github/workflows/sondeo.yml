@@ -5,7 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          set +e
           UA="Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Pulso"
-          for u in https://ica.miteco.es/ https://www.ica.miteco.es/; do echo "=== $u"; curl -sSL -A "$UA" -m 30 -o p.html -w "%{http_code} %{url_effective}\n" "$u"; head -c 400 p.html; echo; grep -oE '(src|href)="[^"]+\.js[^"]*"' p.html | head; grep -oiE 'https?://[^"'"'"' ]*(api|json|ica|geoserver|arcgis|wfs)[^"'"'"' ]*' p.html | sort -u | head -20; done
-          for js in $(grep -oE 'src="[^"]+\.js[^"]*"' p.html | sed 's/src="//;s/"$//' | head -6); do case $js in http*) U=$js;; /*) U="https://ica.miteco.es$js";; *) U="https://ica.miteco.es/$js";; esac; echo "--- JS $U"; curl -sSL -A "$UA" -m 30 "$U" | grep -oE '"(https?:)?//[^"]{5,120}"|"/[a-zA-Z0-9_\-/]*(api|json|estacion|ica|datos)[a-zA-Z0-9_\-/.?=&]*"' | sort -u | head -30; done
-          echo "=== OPEN-METEO"; curl -sSL -m 30 "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=43.36,40.42&longitude=-5.85,-3.70&current=european_aqi,pm10,pm2_5,nitrogen_dioxide,ozone&timezone=Europe%2FMadrid" | head -c 900; echo
+          curl -sSL -A "$UA" -m 30 -o p.html https://ica.miteco.es/
+          M=$(grep -oE 'main\.[a-f0-9]+\.js' p.html | head -1); echo "MAIN=$M"
+          curl -sSL -A "$UA" -m 60 -o main.js "https://ica.miteco.es/$M"; ls -la main.js
+          echo "--- URLs"; grep -oE '"https?://[^"]{6,160}"' main.js | sort -u | head -40
+          echo "--- rutas"; grep -oE '"/?[a-zA-Z0-9_\-]*/?(api|rest|ws|servicio|datos|estaciones|ica|previs)[a-zA-Z0-9_\-/.]*"' main.js | sort -u | head -40
+          echo "--- environment"; grep -oE '(apiUrl|baseUrl|urlApi|API_URL|endpoint)[^,;]{0,160}' main.js | head -20
+          echo "=== OPEN-METEO"; curl -sSL -m 30 "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=43.36,40.42&longitude=-5.85,-3.70&current=european_aqi,pm10,pm2_5,nitrogen_dioxide,ozone&timezone=Europe%2FMadrid" | head -c 700; echo
