@@ -26,7 +26,7 @@ jobs:
       - name: Instalar mdbtools
         run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
 
-      - name: Descargar BD-Embalses (con reanudación: el servidor corta descargas largas)
+      - name: "Descargar BD-Embalses (con reanudación, el servidor corta descargas largas)"
         run: |
           U="https://www.miteco.gob.es/content/dam/miteco/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/Historico-de-embalses/BD-Embalses.zip"
           rm -f bd.zip
