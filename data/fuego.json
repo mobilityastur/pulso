@@ -1,20 +1,12 @@
 {
- "actualizado": "2026-11-11T18:01:03.356Z",
+ "actualizado": "2026-11-11T18:03:23.279Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 2,
+ "total": 0,
  "detecciones": 10,
- "mayor": {
-  "lat": 43.5232,
-  "lon": -5.727,
-  "t": "2026-11-11T03:08:00.000Z",
-  "frp": 4,
-  "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "noche",
-  "n": 6
- },
- "focos": [
+ "mayor": null,
+ "focos": [],
+ "industriales": [
   {
    "lat": 43.5232,
    "lon": -5.727,
@@ -23,7 +15,9 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 6
+   "n": 6,
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "dias_mes": 1
   },
   {
    "lat": 43.5394,
@@ -33,7 +27,9 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "noche",
-   "n": 4
+   "n": 4,
+   "nombre": "ArcelorMittal Avilés",
+   "dias_mes": 1
   }
  ]
 }
