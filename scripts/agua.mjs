@@ -54,6 +54,10 @@ for (const f of it) {
 }
 if (!registros.length) throw new Error('El CSV no tiene registros válidos');
 
+// "Barca, La" -> "La Barca"; "Miño - Sil" -> "Miño-Sil"
+const nombre = n => n.replace(/^(.+?),\s*(La|El|Los|Las|O|A|Os|As)$/i, '$2 $1').replace(/\s+-\s+/g, '-').replace(/\s+/g, ' ').trim();
+for (const r of registros) { r.emb = nombre(r.emb); r.amb = nombre(r.amb); }
+
 const fechas = [...new Set(registros.map(r => r.fe))].sort();
 const ultima = fechas.at(-1);
 const porFecha = new Map(fechas.map(f => [f, []]));
