@@ -89,6 +89,7 @@ const TR = {
   car: ['Carbón', 'carbon', false], gf: ['Fuel y gas', 'otras', false], termRenov: ['Térmica renovable', 'otras', true],
   aut: ['Autoproductores', 'otras', false], rsu: ['Residuos', 'otras', false],
 };
+const CURVAS = ['DEMANDAAU', 'DEMANDA', 'PENINSULA'];
 const NO_GEN = new Set(['ts', 'dem', 'inter', 'icb', 'expo', 'impo', 'cb', 'tnr', 'trn']);
 
 function offsetMadrid(d) {
@@ -101,9 +102,20 @@ async function luzTiempoReal() {
   const dias = [new Date(ahora.getTime() - 86400e3), ahora].map(d => madridLocal(d).slice(0, 10));
   const filas = [];
   for (const fecha of dias) {
-    const txt = await getText(`${REE_TR}?callback=cb&curva=DEMANDA&fecha=${fecha}`);
-    const json = JSON.parse(txt.slice(txt.indexOf('(') + 1, txt.lastIndexOf(')')));
-    filas.push(...(json.valoresHorariosGeneracion ?? []));
+    let ok = false;
+    for (const curva of CURVAS) {
+      const txt = await getText(`${REE_TR}?callback=cb&curva=${curva}&fecha=${fecha}`);
+      const a = txt.indexOf('{'), b = txt.lastIndexOf('}');
+      let json = null;
+      try { json = JSON.parse(txt.slice(a, b + 1)); } catch {}
+      if (json?.valoresHorariosGeneracion?.length) {
+        filas.push(...json.valoresHorariosGeneracion); ok = true;
+        if (curva !== CURVAS[0]) console.log(`[luz] curva válida: ${curva}`);
+        break;
+      }
+      console.warn(`[luz] curva ${curva} ${fecha}: ${txt.slice(0, 160).replace(/\s+/g, ' ')}`);
+    }
+    if (!ok && fecha === dias[1]) throw new Error('el servicio de tiempo real no devolvió datos');
   }
   if (!filas.length) throw new Error('sin valoresHorariosGeneracion');
   const desconocidas = Object.keys(filas[0]).filter(k => !TR[k] && !NO_GEN.has(k));
