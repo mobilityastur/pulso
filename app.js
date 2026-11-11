@@ -95,10 +95,11 @@ function pintarLuz(luz) {
   const a = luz.ahora;
   $('c-luz-val').textContent = `${nf.format(a.renovable)} %`;
   $('c-luz-mix').innerHTML = mixPct(a.mix).map(x => `<span style="width:${x.p}%;background:${FAM[x.k].c}"></span>`).join('');
-  $('c-luz-pie').textContent = luz.resolucion === 'hour' ? `renovable · ${hora(a.t)}` : `renovable · ${diaFmt.format(new Date(a.t))}`;
+  const diario = luz.resolucion === 'day';
+  $('c-luz-pie').textContent = diario ? `renovable · día ${diaFmt.format(new Date(a.t))}` : `renovable · ${hora(a.t)}`;
 
   $('l-renov').textContent = `${nf.format(a.renovable)} %`;
-  $('grafica-mix').innerHTML = graficaMix(luz.serie, luz.resolucion);
+  $('grafica-mix').innerHTML = graficaMix(luz.serie, luz.resolucion, luz.unidad);
   $('leyenda-mix').innerHTML = ORDEN.filter(k => luz.serie.some(p => p.mix[k] > 0))
     .map(k => `<span><i style="background:${FAM[k].c}"></i>${FAM[k].n}</span>`).join('');
 
@@ -116,7 +117,7 @@ function pintarLuz(luz) {
       { pts: luz.demanda.real, c: 'var(--luz)' },
     ], 'MW');
   }
-  $('l-fuente').textContent = `Fuente: ${luz.fuente}. Datos provisionales. ${luz.resolucion === 'hour' ? 'Energía por hora.' : 'Energía por día.'}`;
+  $('l-fuente').textContent = `Fuente: ${luz.fuente}. Datos provisionales.${diario ? ' Energía por día: el tiempo real no estaba disponible.' : ''}`;
 }
 
 function pintarFuego(f) {
@@ -151,8 +152,9 @@ function pintarConexiones() {
     const s = luz.serie, a = luz.ahora;
     const max = s.reduce((m, p) => p.renovable > m.renovable ? p : m);
     const lider = mixPct(a.mix).sort((x, y) => y.p - x.p)[0];
-    add('⚡', `<b>${FAM[lider.k].n}</b> es la primera fuente ahora, con el <b>${nf.format(lider.p)} %</b> de la generación.`);
-    if (luz.resolucion === 'hour' && max.t !== a.t)
+    const cuando = luz.resolucion === 'day' ? 'hoy' : 'ahora';
+    add('⚡', `<b>${FAM[lider.k].n}</b> es la primera fuente ${cuando}, con el <b>${nf.format(lider.p)} %</b> de la generación.`);
+    if (luz.resolucion !== 'day' && max.t !== a.t)
       add('📈', `El pico renovable de las últimas 24 h fue del <b>${nf.format(max.renovable)} %</b> a las ${hora(max.t)}.`);
     const hid = mixPct(a.mix).find(x => x.k === 'hidraulica');
     if (hid) add('💧', `La hidráulica aporta el <b>${nf.format(hid.p)} %</b>. Cuando llegue la capa de agua, se cruzará con la reserva de los embalses.`);
@@ -195,7 +197,7 @@ function etiquetasX(pts, porDia) {
   for (let i = 0; i < n; i += paso) out.push([i, porDia ? diaFmt.format(new Date(pts[i].t)) : hora(pts[i].t)]);
   return out;
 }
-function graficaMix(serie, res) {
+function graficaMix(serie, res, unidad = 'MW') {
   if (!serie?.length) return '';
   const n = serie.length, maxY = Math.max(...serie.map(p => p.total)) * 1.05;
   const x = i => PL + (W - PL - PR) * i / Math.max(n - 1, 1);
@@ -209,7 +211,7 @@ function graficaMix(serie, res) {
     capas += `<path d="${d}" fill="${FAM[k].c}" opacity=".9"/>`;
     top.forEach((v, i) => base[i] = v);
   }
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mix de generación">${ejes(n, maxY, etiquetasX(serie, res !== 'hour'), ' MWh')}${capas}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mix de generación">${ejes(n, maxY, etiquetasX(serie, res === 'day'), ' ' + unidad)}${capas}</svg>`;
 }
 function graficaLineas(series, unidad) {
   const todas = series.flatMap(s => s.pts);
@@ -234,13 +236,12 @@ function graficaBarras(dias) {
 
 // ---------- mapas ----------
 const oscuro = matchMedia('(prefers-color-scheme: dark)');
-const teselas = () => `https://{s}.basemaps.cartocdn.com/${oscuro.matches ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png`;
+const teselas = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${oscuro.matches ? 'World_Dark_Gray_Base' : 'World_Light_Gray_Base'}/MapServer/tile/{z}/{y}/{x}`;
 const mapas = { grande: null, mini: null, capas: {} };
 function crearMapa(id, interactivo) {
   const m = L.map(id, { zoomControl: interactivo, attributionControl: interactivo, dragging: interactivo, scrollWheelZoom: interactivo,
     doubleClickZoom: interactivo, touchZoom: interactivo, boxZoom: interactivo, keyboard: interactivo, zoomSnap: 0.25 });
-  L.tileLayer(teselas(), { maxZoom: 18, subdomains: 'abcd',
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(m);
+  L.tileLayer(teselas(), { maxZoom: 16, attribution: 'Mapa base © Esri, HERE, Garmin, © OpenStreetMap' }).addTo(m);
   m.fitBounds([[35.9, -9.4], [43.9, 4.4]], { padding: [6, 6] });
   return m;
 }

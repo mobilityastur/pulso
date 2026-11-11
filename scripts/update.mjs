@@ -79,73 +79,118 @@ const esRenovable = s => s.tipo
   ? /^renovable/i.test(s.tipo)
   : (RENOVABLES.test(s.titulo) && !NO_RENOVABLE_EXPL.test(s.titulo) && !/bombeo/i.test(s.titulo));
 
-async function luz() {
-  const fin = new Date();
-  const ini = new Date(fin.getTime() - 26 * 3600e3);
-  const q = `start_date=${madridLocal(ini)}&end_date=${madridLocal(fin)}`;
+// Servicio de tiempo real de REE (el que usa su web de demanda): generación por tecnología cada 5-10 min, península.
+const REE_TR = 'https://demanda.ree.es/WSvisionaMovilesPeninsulaRest/resources/demandaGeneracionPeninsula';
+// clave del servicio -> [nombre, familia, renovable]
+const TR = {
+  nuc: ['Nuclear', 'nuclear', false], eol: ['Eólica', 'eolica', true], hid: ['Hidráulica', 'hidraulica', true],
+  solFot: ['Solar fotovoltaica', 'solar', true], solTer: ['Solar térmica', 'solar', true], sol: ['Solar', 'solar', true],
+  cc: ['Ciclo combinado', 'gas', false], cogenResto: ['Cogeneración y residuos', 'gas', false], cogen: ['Cogeneración', 'gas', false],
+  car: ['Carbón', 'carbon', false], gf: ['Fuel y gas', 'otras', false], termRenov: ['Térmica renovable', 'otras', true],
+  aut: ['Autoproductores', 'otras', false], rsu: ['Residuos', 'otras', false],
+};
+const NO_GEN = new Set(['ts', 'dem', 'inter', 'icb', 'expo', 'impo', 'cb', 'tnr', 'trn']);
 
-  // 1) Estructura de generación horaria (si la API no admite "hour", cae a "day")
-  let gen = null, resolucion = 'hour';
-  for (const trunc of ['hour', 'day']) {
-    try {
-      const qq = trunc === 'day'
-        ? `start_date=${madridLocal(new Date(fin.getTime() - 7 * 86400e3)).slice(0, 10)}T00:00&end_date=${madridLocal(fin)}`
-        : q;
-      const j = await getJSON(`${REE}/generacion/estructura-generacion?${qq}&time_trunc=${trunc}`);
-      const series = parseIncluded(j).filter(s => !/generaci[oó]n total/i.test(s.titulo));
-      if (series.some(s => s.valores.length)) { gen = series; resolucion = trunc; break; }
-    } catch (e) { console.warn(`[luz] estructura-generacion (${trunc}) falló: ${e.message}`); }
+function offsetMadrid(d) {
+  const tz = new Intl.DateTimeFormat('en-US', { timeZone: TZ, timeZoneName: 'longOffset' }).formatToParts(d).find(p => p.type === 'timeZoneName').value;
+  return tz.replace('GMT', '') || '+00:00';
+}
+
+async function luzTiempoReal() {
+  const ahora = new Date();
+  const dias = [new Date(ahora.getTime() - 86400e3), ahora].map(d => madridLocal(d).slice(0, 10));
+  const filas = [];
+  for (const fecha of dias) {
+    const txt = await getText(`${REE_TR}?callback=cb&curva=DEMANDA&fecha=${fecha}`);
+    const json = JSON.parse(txt.slice(txt.indexOf('(') + 1, txt.lastIndexOf(')')));
+    filas.push(...(json.valoresHorariosGeneracion ?? []));
   }
-  if (!gen) throw new Error('REData no devolvió generación');
+  if (!filas.length) throw new Error('sin valoresHorariosGeneracion');
+  const desconocidas = Object.keys(filas[0]).filter(k => !TR[k] && !NO_GEN.has(k));
+  console.log(`[luz] tiempo real · claves: ${Object.keys(filas[0]).join(',')}${desconocidas.length ? ` · sin mapear: ${desconocidas.join(',')}` : ''}`);
 
-  // Instantes comunes y mix por instante
+  const off = offsetMadrid(ahora);
+  const puntos = filas
+    .map(f => ({ ...f, t: `${String(f.ts).replace(' ', 'T')}:00${off}` }))
+    .filter(f => Date.parse(f.t) <= ahora.getTime() && ahora.getTime() - Date.parse(f.t) <= 24 * 3600e3)
+    .map(f => {
+      const fam = Object.fromEntries(FAMILIAS.map(x => [x.id, 0]));
+      let total = 0, renov = 0;
+      const tec = {};
+      for (const [k, [nombre, familia, ren]] of Object.entries(TR)) {
+        if (k === 'sol' && ('solFot' in f)) continue; // evita contar la solar dos veces
+        const v = Number(f[k]);
+        if (!Number.isFinite(v) || v <= 0) continue;
+        fam[familia] += v; total += v; if (ren) renov += v; tec[k] = v;
+      }
+      return { t: f.t, total: Math.round(total), renovable: total ? Math.round(1000 * renov / total) / 10 : null,
+        mix: Object.fromEntries(Object.entries(fam).map(([k, v]) => [k, Math.round(v)])), _tec: tec, _dem: Number(f.dem) };
+    })
+    .filter(p => p.total > 0 && Object.keys(p._tec).length >= 3)
+    .sort((a, b) => a.t.localeCompare(b.t));
+  if (puntos.length < 3) throw new Error('muy pocos puntos en tiempo real');
+
+  // Reduce a un punto cada 20 minutos para que la gráfica sea ligera
+  const serie = puntos.filter((p, i) => i === puntos.length - 1 || new Date(p.t).getMinutes() % 20 === 0);
+  const ultimo = puntos.at(-1);
+  const tecnologias = Object.entries(ultimo._tec)
+    .map(([k, v]) => ({ titulo: TR[k][0], renovable: TR[k][2], familia: TR[k][1], valor: Math.round(v) }))
+    .sort((a, b) => b.valor - a.valor);
+  const clean = ({ _tec, _dem, ...p }) => p;
+  return { resolucion: 'realtime', unidad: 'MW', ambito: 'Península', ultimo: clean(ultimo), serie: serie.map(clean), tecnologias,
+    fuente: 'Red Eléctrica · tiempo real (península)' };
+}
+
+async function luzDiaria() {
+  const fin = new Date();
+  const qq = `start_date=${madridLocal(new Date(fin.getTime() - 7 * 86400e3)).slice(0, 10)}T00:00&end_date=${madridLocal(fin)}`;
+  const j = await getJSON(`${REE}/generacion/estructura-generacion?${qq}&time_trunc=day`);
+  const gen = parseIncluded(j).filter(s => !/generaci[oó]n total/i.test(s.titulo));
+  if (!gen.some(s => s.valores.length)) throw new Error('REData no devolvió generación');
   const instantes = [...new Set(gen.flatMap(s => s.valores.map(v => v.t)))].sort();
   const serie = instantes.map(t => {
     const fam = Object.fromEntries(FAMILIAS.map(f => [f.id, 0]));
     let total = 0, renov = 0;
     for (const s of gen) {
       const v = s.valores.find(x => x.t === t)?.v ?? 0;
-      if (v <= 0) continue; // consumo de bombeo, saldos negativos, etc.
+      if (v <= 0) continue;
       fam[familiaDe(s.titulo)] += v; total += v;
       if (esRenovable(s)) renov += v;
     }
     return { t, total: Math.round(total), renovable: total ? Math.round(1000 * renov / total) / 10 : null, mix: Object.fromEntries(Object.entries(fam).map(([k, v]) => [k, Math.round(v)])) };
   }).filter(p => p.total > 0);
-
   const ultimo = serie.at(-1);
   const tecnologias = gen
     .map(s => ({ titulo: s.titulo, renovable: esRenovable(s), familia: familiaDe(s.titulo), valor: Math.round(s.valores.find(v => v.t === ultimo.t)?.v ?? 0) }))
-    .filter(x => x.valor > 0)
-    .sort((a, b) => b.valor - a.valor);
+    .filter(x => x.valor > 0).sort((a, b) => b.valor - a.valor);
+  return { resolucion: 'day', unidad: 'MWh', ambito: 'España', ultimo, serie, tecnologias, fuente: 'Red Eléctrica · REData (diario)' };
+}
 
-  // 2) Demanda en tiempo real (opcional: si falla, la app sigue funcionando)
+async function luz() {
+  let g;
+  try { g = await luzTiempoReal(); }
+  catch (e) { console.warn(`[luz] tiempo real falló, uso el diario: ${e.message}`); g = await luzDiaria(); }
+
+  // Demanda en tiempo real (REData). Opcional.
   let demanda = null;
   try {
-    const j = await getJSON(`${REE}/demanda/demanda-tiempo-real?${q}&time_trunc=hour`);
+    const fin = new Date(), ini = new Date(fin.getTime() - 24 * 3600e3);
+    const j = await getJSON(`${REE}/demanda/demanda-tiempo-real?start_date=${madridLocal(ini)}&end_date=${madridLocal(fin)}&time_trunc=hour`);
     const s = parseIncluded(j);
-    const real = s.find(x => /real/i.test(x.titulo));
-    const prev = s.find(x => /prevista/i.test(x.titulo));
-    if (real?.valores.length) {
-      demanda = {
-        actual: Math.round(real.valores.at(-1).v),
-        t: real.valores.at(-1).t,
-        real: real.valores.map(v => ({ t: v.t, v: Math.round(v.v) })),
-        prevista: prev ? prev.valores.map(v => ({ t: v.t, v: Math.round(v.v) })) : [],
-      };
-    }
+    const reduce = arr => arr.filter((v, i) => i === arr.length - 1 || new Date(v.t).getMinutes() % 20 === 0).map(v => ({ t: v.t, v: Math.round(v.v) }));
+    const real = s.find(x => /real/i.test(x.titulo)), prev = s.find(x => /prevista/i.test(x.titulo));
+    if (real?.valores.length) demanda = { actual: Math.round(real.valores.at(-1).v), t: real.valores.at(-1).t, real: reduce(real.valores), prevista: prev ? reduce(prev.valores) : [] };
   } catch (e) { console.warn(`[luz] demanda falló: ${e.message}`); }
 
+  const u = g.ultimo;
   const out = {
     actualizado: new Date().toISOString(),
-    fuente: 'Red Eléctrica · REData',
-    resolucion, // "hour" (MWh por hora) o "day" (MWh por día)
-    ahora: { t: ultimo.t, total: ultimo.total, renovable: ultimo.renovable, mix: ultimo.mix },
-    tecnologias,
-    serie,
-    demanda,
+    fuente: g.fuente, resolucion: g.resolucion, unidad: g.unidad, ambito: g.ambito,
+    ahora: { t: u.t, total: u.total, renovable: u.renovable, mix: u.mix },
+    tecnologias: g.tecnologias, serie: g.serie, demanda,
   };
   writeJSON('luz.json', out);
-  console.log(`[luz] ok · ${serie.length} puntos (${resolucion}) · ${ultimo.renovable}% renovable`);
+  console.log(`[luz] ok · ${g.serie.length} puntos (${g.resolucion}) · ${u.renovable}% renovable`);
   return out;
 }
 
