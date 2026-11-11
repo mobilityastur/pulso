@@ -400,11 +400,58 @@ async function tierra() {
   return out;
 }
 
+
+// ---------- AIRE (Open-Meteo · modelo CAMS de Copernicus) ----------
+// Índice europeo (EAQI) 0-20-40-60-80-100+, cuyas 6 categorías coinciden con las del ICA español.
+const OM_AQ = 'https://air-quality-api.open-meteo.com/v1/air-quality';
+const CATS = ['Buena', 'Razonablemente buena', 'Regular', 'Desfavorable', 'Muy desfavorable', 'Extremadamente desfavorable'];
+const catDe = v => v == null ? null : Math.min(5, Math.floor(Math.max(0, v - 0.001) / 20));
+const CONT = { european_aqi_pm2_5: 'PM2,5', european_aqi_pm10: 'PM10', european_aqi_nitrogen_dioxide: 'NO₂', european_aqi_ozone: 'O₃', european_aqi_sulphur_dioxide: 'SO₂' };
+
+async function aire() {
+  const previo = readJSON('aire.json', null);
+  if (previo && Date.now() - Date.parse(previo.actualizado) < 50 * 60e3 && !process.env.FORZAR) {
+    console.log('[aire] reciente, no se vuelve a pedir'); return previo;
+  }
+  const ciudades = JSON.parse(fs.readFileSync(path.join(DATA, 'ciudades.json'), 'utf8'));
+  const vars = ['european_aqi', ...Object.keys(CONT)].join(',');
+  const url = `${OM_AQ}?latitude=${ciudades.map(c => c.la).join(',')}&longitude=${ciudades.map(c => c.lo).join(',')}` +
+    `&current=${vars},pm2_5,pm10,nitrogen_dioxide,ozone&hourly=european_aqi&forecast_hours=36&past_hours=0&timezone=Europe%2FMadrid&domains=cams_europe`;
+  let j = await getJSON(url);
+  if (!Array.isArray(j)) j = [j];
+  const puntos = ciudades.map((c, i) => {
+    const r = j[i]; const cur = r?.current ?? {};
+    const v = cur.european_aqi;
+    const dom = Object.keys(CONT).filter(k => cur[k] != null).sort((a, b) => cur[b] - cur[a])[0];
+    const h = r?.hourly ?? {};
+    const prev = (h.time ?? []).map((t, k) => ({ t, v: h.european_aqi?.[k] })).filter(x => x.v != null);
+    const maxPrev = prev.slice(0, 24).reduce((m, x) => (!m || x.v > m.v ? x : m), null);
+    return {
+      n: c.n, la: c.la, lo: c.lo, eaqi: v != null ? Math.round(v) : null, cat: catDe(v),
+      dom: dom ? CONT[dom] : null,
+      conc: { pm25: cur.pm2_5 != null ? Math.round(cur.pm2_5) : null, pm10: cur.pm10 != null ? Math.round(cur.pm10) : null,
+        no2: cur.nitrogen_dioxide != null ? Math.round(cur.nitrogen_dioxide) : null, o3: cur.ozone != null ? Math.round(cur.ozone) : null },
+      prev24: maxPrev ? { cat: catDe(maxPrev.v), eaqi: Math.round(maxPrev.v), t: maxPrev.t } : null,
+      serie: prev.slice(0, 24).filter((_, k) => k % 2 === 0).map(x => Math.round(x.v)),
+    };
+  }).filter(p => p.cat != null);
+  if (!puntos.length) throw new Error('Open-Meteo no devolvió datos');
+  const reparto = CATS.map((_, k) => puntos.filter(p => p.cat === k).length);
+  const peor = [...puntos].sort((a, b) => b.eaqi - a.eaqi).slice(0, 5);
+  const out = {
+    actualizado: new Date().toISOString(), hora: j[0]?.current?.time ?? null,
+    fuente: 'Open-Meteo · modelo CAMS Europa (Copernicus)', categorias: CATS, reparto, peor, puntos,
+  };
+  writeJSON('aire.json', out);
+  console.log(`[aire] ok · ${puntos.length} ciudades · reparto ${reparto.join('/')} · peor ${peor[0].n} (${CATS[peor[0].cat]})`);
+  return out;
+}
+
 // ---------- principal ----------
 fs.mkdirSync(DATA, { recursive: true });
-const res = await Promise.allSettled([luz(), fuego(), tierra()]);
+const res = await Promise.allSettled([luz(), fuego(), tierra(), aire()]);
 const estado = readJSON('estado.json', {});
-['luz', 'fuego', 'tierra'].forEach((k, i) => {
+['luz', 'fuego', 'tierra', 'aire'].forEach((k, i) => {
   estado[k] = res[i].status === 'fulfilled'
     ? { ok: true, t: new Date().toISOString() }
     : { ok: false, t: new Date().toISOString(), error: String(res[i].reason?.message ?? res[i].reason).slice(0, 300), ultimo_ok: estado[k]?.ok ? estado[k].t : estado[k]?.ultimo_ok ?? null };

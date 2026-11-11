@@ -29,6 +29,8 @@
   <!-- INICIO -->
   <section id="v-inicio" class="vista activa">
     <p class="sub">España, ahora mismo</p>
+    <div id="avisos"></div>
+    <div class="mizona" id="mizona"></div>
     <div class="tarjetas">
       <a class="tarjeta luz" href="#luz">
         <div class="t-cab"><span class="ico">⚡</span>Luz</div>
@@ -51,11 +53,12 @@
         <div class="t-val" id="c-tierra-val">—</div>
         <div class="t-pie" id="c-tierra-pie">&nbsp;</div>
       </a>
-      <div class="tarjeta pronto aire ancha">
+      <a class="tarjeta aire ancha" href="#aire">
         <div class="t-cab"><span class="ico">🌬️</span>Aire</div>
-        <div class="t-val">Pronto</div>
-        <div class="t-pie">Índice de calidad del aire</div>
-      </div>
+        <div class="t-val" id="c-aire-val">—</div>
+        <div class="reparto" id="c-aire-rep"></div>
+        <div class="t-pie" id="c-aire-pie">&nbsp;</div>
+      </a>
     </div>
 
     <h2 class="sec">Conexiones</h2>
@@ -132,6 +135,25 @@
     <p class="nota">La magnitud mide la energía liberada. Por debajo de 2,5 casi nunca se siente; a partir de 4 suele notarse con claridad cerca del epicentro.</p>
   </section>
 
+  <!-- AIRE -->
+  <section id="v-aire" class="vista">
+    <div class="grande">
+      <div class="g-num" id="ai-num">—</div>
+      <div class="g-txt" id="ai-txt">ciudades con calidad del aire buena o razonablemente buena</div>
+    </div>
+    <div class="panel">
+      <h3>Reparto por categoría</h3>
+      <div class="reparto grande-rep" id="ai-rep"></div>
+      <ul class="leyenda-ica" id="ai-ley"></ul>
+    </div>
+    <div class="panel">
+      <h3>Ciudades, de peor a mejor</h3>
+      <ul class="focos" id="ai-lista"></ul>
+    </div>
+    <p class="fuente" id="ai-fuente"></p>
+    <p class="nota">Valores del modelo de Copernicus (CAMS), no medidas de estaciones. Las categorías son las del Índice de Calidad del Aire (ICA): para cada punto cuenta el peor de los contaminantes (partículas PM2,5 y PM10, NO₂, ozono y SO₂).</p>
+  </section>
+
   <!-- FUEGO -->
   <section id="v-fuego" class="vista">
     <div class="grande">
@@ -156,11 +178,22 @@
   </section>
 </main>
 
+<div class="hoja" id="hoja" hidden>
+  <div class="hoja-c">
+    <h3>Elige tu zona</h3>
+    <button class="btn-prim" id="z-geo">📍 Usar mi ubicación</button>
+    <p class="nota" style="margin:10px 0 6px">o elige una ciudad:</p>
+    <select id="z-ciudad"></select>
+    <div class="hoja-b"><button id="z-quitar" class="btn-sec">Quitar mi zona</button><button id="z-cerrar" class="btn-sec">Cerrar</button></div>
+  </div>
+</div>
+
 <nav class="tabs">
   <a href="#inicio" data-v="inicio"><span>◉</span>Inicio</a>
   <a href="#mapa" data-v="mapa"><span>◎</span>Mapa</a>
   <a href="#luz" data-v="luz"><span>⚡</span>Luz</a>
   <a href="#agua" data-v="agua"><span>💧</span>Agua</a>
+  <a href="#aire" data-v="aire"><span>🌬️</span>Aire</a>
   <a href="#fuego" data-v="fuego"><span>🔥</span>Fuego</a>
   <a href="#tierra" data-v="tierra"><span>🌍</span>Tierra</a>
 </nav>
