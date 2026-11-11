@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T22:45:42.309Z",
+ "actualizado": "2026-11-11T23:01:18.943Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 0,
@@ -17,7 +17,7 @@
    "dn": "noche",
    "n": 6,
    "nombre": "ArcelorMittal Gijón (Veriña)",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 43.5394,
@@ -29,7 +29,7 @@
    "dn": "noche",
    "n": 4,
    "nombre": "ArcelorMittal Avilés",
-   "dias_mes": 1
+   "dias_mes": 2
   }
  ]
 }
