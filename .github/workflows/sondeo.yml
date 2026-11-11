@@ -8,9 +8,20 @@ jobs:
           set +e
           UA="Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Pulso"
           curl -sSL -A "$UA" -m 30 -o p.html https://ica.miteco.es/
-          M=$(grep -oE 'main\.[a-f0-9]+\.js' p.html | head -1); echo "MAIN=$M"
-          curl -sSL -A "$UA" -m 60 -o main.js "https://ica.miteco.es/$M"; ls -la main.js
-          echo "--- URLs"; grep -oE '"https?://[^"]{6,160}"' main.js | sort -u | head -40
-          echo "--- rutas"; grep -oE '"/?[a-zA-Z0-9_\-]*/?(api|rest|ws|servicio|datos|estaciones|ica|previs)[a-zA-Z0-9_\-/.]*"' main.js | sort -u | head -40
-          echo "--- environment"; grep -oE '(apiUrl|baseUrl|urlApi|API_URL|endpoint)[^,;]{0,160}' main.js | head -20
-          echo "=== OPEN-METEO"; curl -sSL -m 30 "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=43.36,40.42&longitude=-5.85,-3.70&current=european_aqi,pm10,pm2_5,nitrogen_dioxide,ozone&timezone=Europe%2FMadrid" | head -c 700; echo
+          M=$(grep -oE 'main\.[a-f0-9]+\.js' p.html | head -1)
+          curl -sSL -A "$UA" -m 60 -o main.js "https://ica.miteco.es/$M"
+          python3 - <<'PY'
+          import re
+          s=open('main.js',encoding='utf8',errors='replace').read()
+          for m in re.finditer(r'urlApi\}?\$?\{?', s):
+              pass
+          seen=set()
+          for m in re.finditer(r'(get|post)\(`\$\{[^}]+\}([^`]{0,120})`', s):
+              p=m.group(2)
+              if p not in seen: seen.add(p); print('RUTA', m.group(1), p)
+          for m in re.finditer(r'"(ica|estacion|estaciones|datos|prevision|contaminante|municipio|red|actual)[A-Za-z0-9_/\-]{0,60}"', s):
+              if m.group(0) not in seen: seen.add(m.group(0)); print('LIT', m.group(0))
+          i=s.find('urlApi')
+          for k in [x.start() for x in re.finditer('urlApi', s)][:12]:
+              print('CTX', s[max(0,k-80):k+160].replace('\n',' '))
+          PY
