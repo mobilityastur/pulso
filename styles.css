@@ -116,3 +116,29 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px; }
   .tarjetas { grid-template-columns: repeat(4, 1fr); }
   .tarjeta.ancha { grid-column: auto; min-height: 124px; }
 }
+
+#v-agua .g-num { color: var(--agua); }
+#v-tierra .g-num { color: var(--tierra); }
+.cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.cifras div { background: var(--s1); border: 1px solid var(--bd); border-radius: 14px; padding: 10px 12px; }
+.cifras b { display: block; font-size: 19px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.cifras span { font-size: 12px; color: var(--tx2); }
+.cuencas { list-style: none; margin: 0; padding: 0; }
+.cuencas li { padding: 8px 0; border-top: 1px solid var(--bd); font-size: 14px; }
+.cuencas li:first-child { border-top: 0; }
+.cuencas .fila { display: flex; justify-content: space-between; gap: 8px; }
+.cuencas .dif { font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.cuencas .dif.mas { color: var(--aire); } .cuencas .dif.menos { color: var(--fuego); }
+.cuencas .barra { position: relative; height: 6px; border-radius: 3px; background: var(--s2); margin-top: 6px; }
+.cuencas .barra span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: var(--agua); }
+.cuencas .barra i { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--tx); opacity: .55; border-radius: 1px; }
+select { width: 100%; font: inherit; font-size: 15px; color: var(--tx); background: var(--s2); border: 1px solid var(--bd); border-radius: 10px; padding: 8px 10px; margin-bottom: 6px; }
+.cab-panel { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.cab-panel h3 { margin: 0; }
+.seg { display: inline-flex; background: var(--s2); border-radius: 9px; padding: 2px; }
+.seg button { border: 0; background: transparent; color: var(--tx2); font: inherit; font-size: 12.5px; padding: 4px 10px; border-radius: 7px; cursor: pointer; }
+.seg button.on { background: var(--s1); color: var(--tx); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.focos .punto.mag { background: var(--tierra-bg); color: var(--tierra-tx); font-size: 13px; }
+.focos .punto.mag.m3 { background: #F1D9B8; color: #6B3F12; }
+.focos .punto.mag.m4 { background: var(--fuego); color: #fff; }
+.tabs a { font-size: 10.5px; }

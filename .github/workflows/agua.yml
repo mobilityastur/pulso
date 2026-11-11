@@ -1,0 +1,57 @@
+name: Actualizar agua (embalses)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '23 8,14,20 * * *'   # el MITECO publica los martes; se comprueba tres veces al día
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
+
+jobs:
+  agua:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Instalar mdbtools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq mdbtools
+
+      - name: Descargar BD-Embalses (con reanudación: el servidor corta descargas largas)
+        run: |
+          U="https://www.miteco.gob.es/content/dam/miteco/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/Historico-de-embalses/BD-Embalses.zip"
+          rm -f bd.zip
+          for i in $(seq 1 20); do
+            curl -sSL --http1.1 -A "Mozilla/5.0 (Pulso; github.com/mobilityastur/pulso)" -m 120 -C - -o bd.zip "$U" && unzip -tq bd.zip && break
+            echo "intento $i: $(stat -c %s bd.zip 2>/dev/null) bytes"; sleep 3
+          done
+          unzip -tq bd.zip
+          unzip -q -o bd.zip -d bd
+
+      - name: Exportar y procesar
+        run: |
+          F=$(ls bd/*.mdb bd/*.accdb | head -1)
+          T=$(mdb-tables -1 "$F" | grep -i embalse | head -1)
+          [ -z "$T" ] && T=$(mdb-tables -1 "$F" | head -1)
+          echo "Tabla: $T"
+          mdb-export -D '%Y-%m-%d' "$F" "$T" > /tmp/embalses.csv
+          node scripts/agua.mjs /tmp/embalses.csv
+
+      - name: Guardar cambios
+        run: |
+          git config user.name  "pulso-bot"
+          git config user.email "pulso-bot@users.noreply.github.com"
+          git add data/agua.json
+          if git diff --cached --quiet; then echo "Sin cambios"; else
+            git commit -m "agua: $(node -p "require('./data/agua.json').fecha")"
+            git pull --rebase --autostash && git push
+          fi

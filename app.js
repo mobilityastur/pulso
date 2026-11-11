@@ -57,7 +57,7 @@ const $ = id => document.getElementById(id);
 const el = (tag, attrs = {}, html = '') => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 
 // ---------- datos ----------
-const estado = { luz: null, fuego: null, hist: null, st: null };
+const estado = { luz: null, fuego: null, hist: null, st: null, agua: null, tierra: null };
 async function cargar(f) {
   const r = await fetch(`data/${f}?v=${Date.now()}`, { cache: 'no-store' });
   if (!r.ok) throw new Error(f);
@@ -65,7 +65,9 @@ async function cargar(f) {
 }
 async function actualizar() {
   const b = $('refrescar'); b.classList.add('girando');
-  const [luz, fuego, hist, st] = await Promise.allSettled(['luz.json', 'fuego.json', 'fuego-historico.json', 'estado.json'].map(cargar));
+  const [luz, fuego, hist, st, agua, tierra] = await Promise.allSettled(['luz.json', 'fuego.json', 'fuego-historico.json', 'estado.json', 'agua.json', 'tierra.json'].map(cargar));
+  estado.agua = agua.value ?? estado.agua;
+  estado.tierra = tierra.value ?? estado.tierra;
   estado.luz = luz.value ?? estado.luz;
   estado.fuego = fuego.value ?? estado.fuego;
   estado.hist = hist.value ?? estado.hist;
@@ -81,6 +83,8 @@ function pintar() {
   $('refrescar').textContent = ts ? `Actualizado ${hace(ts)}` : 'Sin datos aún';
   pintarLuz(luz);
   pintarFuego(fuego);
+  pintarAgua(estado.agua);
+  pintarTierra(estado.tierra);
   pintarConexiones();
   pintarMapas();
 }
@@ -163,7 +167,11 @@ function pintarConexiones() {
     if (luz.resolucion !== 'day' && max.t !== a.t)
       add('📈', `El pico renovable de las últimas 24 h fue del <b>${nf.format(max.renovable)} %</b> a las ${hora(max.t)}.`);
     const hid = mixPct(a.mix).find(x => x.k === 'hidraulica');
-    if (hid) add('💧', `La hidráulica aporta el <b>${nf.format(hid.p)} %</b>. Cuando llegue la capa de agua, se cruzará con la reserva de los embalses.`);
+    const ag = estado.agua;
+    if (hid && ag?.hidro?.pct != null) {
+      const dm = ag.hidro.pct_media_10 != null ? Math.round(ag.hidro.pct - ag.hidro.pct_media_10) : null;
+      add('💧', `La hidráulica aporta el <b>${nf.format(hid.p)} %</b> de la luz, con los embalses hidroeléctricos al <b>${nf.format(ag.hidro.pct)} %</b>${dm != null ? ` (${dm >= 0 ? `${dm} puntos por encima` : `${-dm} puntos por debajo`} de su media de 10 años)` : ''}.`);
+    } else if (hid) add('💧', `La hidráulica aporta el <b>${nf.format(hid.p)} %</b> de la generación.`);
   }
   if (fuego) {
     const dias = Object.values(hist?.dias ?? {}).slice(-31, -1);
@@ -180,9 +188,110 @@ function pintarConexiones() {
       }
     }
   }
+  const ag = estado.agua;
+  if (ag?.total) {
+    const T = ag.total, top = [...ag.ambitos].sort((x, y) => y.pct - x.pct), alto = top[0], bajo = top.at(-1);
+    add('🏞️', `Los embalses están al <b>${nf1.format(T.pct)} %</b>${T.var_semana_pts != null ? ` (${fmtPts(T.var_semana_pts)} en la semana)` : ''}. La cuenca más llena es ${alto.nombre} (${nf.format(alto.pct)} %) y la más baja, ${bajo.nombre} (${nf.format(bajo.pct)} %).`);
+  }
+  const ti = estado.tierra;
+  if (ti?.h24) {
+    const m = ti.h24.mayor;
+    if (m && m.mag >= 2.5) add('🌍', `El terremoto más fuerte de las últimas 24 h fue de magnitud <b>${nf1.format(m.mag)}</b> ${m.lugar ? `en ${m.lugar}` : `(${lugarSismo(m).replace(/^En /, 'en ')})`}, ${hace(m.t)}.`);
+    else add('🌍', `Ningún terremoto de magnitud 2,5 o más en 24 h${ti.h24.total ? `; ${ti.h24.total} microsismos registrados` : ''}.`);
+  }
   const st = estado.st ?? {};
-  ['luz', 'fuego'].forEach(k => { if (st[k] && !st[k].ok) add('⚠️', `La última descarga de ${k} falló; se muestran los datos anteriores.`); });
+  ['luz', 'fuego', 'tierra'].forEach(k => { if (st[k] && !st[k].ok) add('⚠️', `La última descarga de ${k} falló; se muestran los datos anteriores.`); });
   $('conexiones').innerHTML = li.join('') || '<li class="cargando">Aún no hay datos. Lanza la Action «Actualizar datos» en GitHub.</li>';
+}
+
+
+const fmtPct = v => v == null ? '—' : `${nf1.format(v)} %`;
+const fmtPts = v => v == null ? '' : `${v > 0 ? '+' : v < 0 ? '−' : '±'}${nf1.format(Math.abs(v))} pts`;
+const fechaLarga = f => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' }).format(new Date(f + 'T12:00:00'));
+let cuencaSel = null;
+
+function pintarAgua(a) {
+  if (!a) { $('c-agua-val').textContent = '—'; $('c-agua-pie').textContent = 'Esperando datos'; return; }
+  const T = a.total;
+  $('c-agua-val').textContent = fmtPct(T.pct);
+  $('c-agua-pie').textContent = T.pct_media_10 != null ? `${fmtPts(Math.round(10 * (T.pct - T.pct_media_10)) / 10)} vs. media 10 años` : `${fmtPts(T.var_semana_pts)} en la semana`;
+  $('a-pct').textContent = fmtPct(T.pct);
+  $('a-txt').textContent = `de capacidad en los embalses peninsulares · ${fechaLarga(a.fecha)}`;
+  $('a-cifras').innerHTML = [
+    [fmtPts(T.var_semana_pts) || '—', `en la semana (${T.var_semana_hm3 > 0 ? '+' : ''}${nf.format(T.var_semana_hm3 ?? 0)} hm³)`],
+    [fmtPct(T.pct_hace_1_año), 'hace un año'],
+    [fmtPct(T.pct_media_10), 'media 10 años'],
+  ].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+  $('grafica-agua').innerHTML = graficaAgua(a.serie);
+
+  $('cuencas').innerHTML = a.ambitos.map(x => {
+    const d = x.pct_media_10 != null ? Math.round(10 * (x.pct - x.pct_media_10)) / 10 : null;
+    return `<li data-c="${x.nombre}"><div class="fila"><span>${x.nombre}</span><span><b>${fmtPct(x.pct)}</b></span></div>
+      <div class="barra"><span style="width:${Math.min(100, x.pct)}%"></span>${x.pct_media_10 != null ? `<i style="left:${Math.min(100, x.pct_media_10)}%" title="Media 10 años"></i>` : ''}</div>
+      ${d != null ? `<div class="dif ${d >= 0 ? 'mas' : 'menos'}">${fmtPts(d)} sobre la media</div>` : ''}</li>`;
+  }).join('');
+  document.querySelectorAll('#cuencas li').forEach(li => li.onclick = () => { cuencaSel = li.dataset.c; pintarEmbalses(); $('sel-cuenca').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+
+  const sel = $('sel-cuenca');
+  const nombres = a.ambitos.map(x => x.nombre);
+  if (!cuencaSel || !nombres.includes(cuencaSel)) cuencaSel = nombres.find(n => /cant[aá]brico occidental/i.test(n)) ?? nombres[0];
+  sel.innerHTML = nombres.map(n => `<option${n === cuencaSel ? ' selected' : ''}>${n}</option>`).join('');
+  sel.onchange = () => { cuencaSel = sel.value; pintarEmbalses(); };
+  pintarEmbalses();
+  $('a-fuente').textContent = `Fuente: ${a.fuente}. ${a.ambito}. Datos semanales provisionales. La raya vertical de cada cuenca marca su media de 10 años.`;
+}
+function pintarEmbalses() {
+  const a = estado.agua; if (!a) return;
+  $('sel-cuenca').value = cuencaSel;
+  $('embalses').innerHTML = a.embalses.filter(e => e.ambito === cuencaSel).map(e => `<li>
+    <span>${e.nombre}${e.electrico ? ' <small title="Hidroeléctrico">⚡</small>' : ''}</span>
+    <span class="v">${fmtPct(e.pct)} · ${nf1.format(e.actual)}/${nf.format(e.capacidad)} hm³</span>
+    <div class="barra"><span style="width:${Math.min(100, e.pct)}%;background:var(--agua)"></span></div></li>`).join('');
+}
+
+const clasMag = m => m >= 4 ? 'm4' : m >= 3 ? 'm3' : '';
+let magMin = 2.5;
+const lugarSismo = e => e.lugar ?? cercaDe(e.lat, e.lon);
+function pintarTierra(t) {
+  if (!t) { $('c-tierra-val').textContent = '—'; $('c-tierra-pie').textContent = 'Esperando datos'; return; }
+  const h = t.h24, m = h.mayor;
+  $('c-tierra-val').textContent = h.total === 1 ? '1 sismo' : `${nf.format(h.total)} sismos`;
+  $('c-tierra-pie').textContent = m ? `Mayor: M${nf1.format(m.mag)} ${lugarSismo(m)}` : 'Sin terremotos en 24 h';
+  $('t-total').textContent = nf.format(h.total);
+  $('t-txt').textContent = `terremotos en las últimas 24 h${h.total ? ` · ${h.sentibles} de magnitud 2,5 o más` : ''}`;
+  const lista = t.eventos.filter(e => e.mag >= magMin);
+  $('sismos').innerHTML = lista.length ? lista.slice(0, 80).map(e => `<li data-lat="${e.lat}" data-lon="${e.lon}">
+      <div class="punto mag ${clasMag(e.mag)}">${nf1.format(e.mag)}</div>
+      <div class="info"><div class="lugar">${lugarSismo(e)}</div>
+      <div class="det">${diaFmt.format(new Date(e.t))} ${hora(e.t)} · ${hace(e.t)}${e.prof != null ? ` · ${e.prof} km de profundidad` : ''}</div></div></li>`).join('')
+    : `<li class="vacio">Ningún terremoto${magMin ? ' de magnitud 2,5 o más' : ''} en los últimos 10 días.</li>`;
+  document.querySelectorAll('#sismos li[data-lat]').forEach(li => li.onclick = () => {
+    location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([+li.dataset.lat, +li.dataset.lon], 9), 80);
+  });
+  $('t-fuente').textContent = `Fuente: ${t.fuente}. Hora local peninsular.`;
+}
+document.querySelectorAll('.seg button').forEach(b => b.onclick = () => {
+  magMin = Number(b.dataset.m);
+  document.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b));
+  pintarTierra(estado.tierra);
+});
+
+function graficaAgua(serie) {
+  if (!serie?.length) return '';
+  const n = serie.length, vals = serie.flatMap(p => [p.pct, p.anterior, p.media10]).filter(v => v != null);
+  const minY = Math.max(0, Math.floor((Math.min(...vals) - 5) / 10) * 10), maxY = Math.min(100, Math.ceil((Math.max(...vals) + 5) / 10) * 10);
+  const x = i => PL + (W - PL - PR) * i / Math.max(n - 1, 1);
+  const y = v => PT + (H - PT - PB) * (1 - (v - minY) / (maxY - minY));
+  const linea = (k, c, extra = '') => {
+    const pts = serie.map((p, i) => p[k] != null ? `${x(i)},${y(p[k])}` : null).filter(Boolean);
+    return pts.length ? `<path d="M${pts.join('L')}" fill="none" stroke="${c}" stroke-width="${k === 'pct' ? 2.6 : 1.6}" ${extra}/>` : '';
+  };
+  let g = '';
+  for (let v = minY; v <= maxY; v += (maxY - minY) / 2) g += `<line x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}" stroke="var(--bd)"/><text x="${PL - 6}" y="${y(v) + 5}" text-anchor="end">${nf.format(v)} %</text>`;
+  const meses = new Intl.DateTimeFormat('es-ES', { month: 'short' });
+  serie.forEach((p, i) => { if (i % 9 === 0) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${meses.format(new Date(p.f + 'T12:00:00'))}</text>`; });
+  const u = serie.at(-1);
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reserva de agua">${g}${linea('media10', 'var(--tx2)', 'stroke-dasharray="5 4"')}${linea('anterior', 'var(--tx3)')}${linea('pct', 'var(--agua)')}<circle cx="${x(n - 1)}" cy="${y(u.pct)}" r="4.5" fill="var(--agua)"/></svg>`;
 }
 
 // ---------- gráficas SVG ----------
@@ -270,22 +379,33 @@ function capaFuego(conPopups) {
   });
   return g;
 }
+const colMag = m => m >= 4 ? '#E2603D' : m >= 3 ? '#E9A23B' : '#B08A64';
+function capaTierra(conPopups) {
+  const g = L.layerGroup();
+  (estado.tierra?.eventos ?? []).filter(e => e.mag >= 2 && Date.now() - Date.parse(e.t) <= 7 * 86400e3).reverse().forEach(e => {
+    const edad = (Date.now() - Date.parse(e.t)) / 86400e3;
+    const mk = L.circleMarker([e.lat, e.lon], { radius: 3 + (e.mag - 1.5) * 2.6, color: colMag(e.mag), weight: 1.5, fillColor: colMag(e.mag), fillOpacity: Math.max(.12, .55 - edad * .06), opacity: Math.max(.35, 1 - edad * .1) });
+    if (conPopups) mk.bindPopup(`<b>Magnitud ${nf1.format(e.mag)}</b><br>${lugarSismo(e)}<br>${diaFmt.format(new Date(e.t))} ${hora(e.t)} (${hace(e.t)})${e.prof != null ? `<br>Profundidad: ${e.prof} km` : ''}${e.ign ? `<br><a href="${e.ign}" target="_blank" rel="noopener">Ficha del IGN</a>` : ''}`);
+    mk.addTo(g);
+  });
+  return g;
+}
 function pintarMapas() {
   if (typeof L === 'undefined') return;
   if (!mapas.mini) mapas.mini = crearMapa('mapa-mini', false);
-  mapas.capas.mini?.remove(); mapas.capas.mini = capaFuego(false).addTo(mapas.mini);
-  if (mapas.grande) { mapas.capas.grande?.remove(); mapas.capas.grande = capaFuego(true).addTo(mapas.grande); }
-  $('leyenda-mapa').innerHTML = `<i style="background:var(--fuego)"></i>Focos de calor 24 h (${estado.fuego?.total ?? 0})<br><i style="background:#9496A0"></i>Fuentes industriales fijas (${estado.fuego?.industriales?.length ?? 0})`;
+  mapas.capas.mini?.remove(); mapas.capas.mini = L.layerGroup([capaTierra(false), capaFuego(false)]).addTo(mapas.mini);
+  if (mapas.grande) { mapas.capas.grande?.remove(); mapas.capas.grande = L.layerGroup([capaTierra(true), capaFuego(true)]).addTo(mapas.grande); }
+  $('leyenda-mapa').innerHTML = `<i style="background:var(--fuego)"></i>Focos de calor 24 h (${estado.fuego?.total ?? 0})<br><i style="background:#9496A0"></i>Fuentes industriales fijas (${estado.fuego?.industriales?.length ?? 0})<br><i style="background:#B08A64"></i>Terremotos M ≥ 2 · 7 días`;
 }
 
 // ---------- navegación ----------
 function ir() {
   const v = (location.hash.slice(1) || 'inicio');
-  const vista = ['inicio', 'mapa', 'luz', 'fuego'].includes(v) ? v : 'inicio';
+  const vista = ['inicio', 'mapa', 'luz', 'agua', 'fuego', 'tierra'].includes(v) ? v : 'inicio';
   document.querySelectorAll('.vista').forEach(s => s.classList.toggle('activa', s.id === `v-${vista}`));
   document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('activa', a.dataset.v === vista));
   if (vista === 'mapa' && typeof L !== 'undefined') {
-    if (!mapas.grande) { mapas.grande = crearMapa('mapa', true); mapas.capas.grande = capaFuego(true).addTo(mapas.grande); }
+    if (!mapas.grande) { mapas.grande = crearMapa('mapa', true); mapas.capas.grande = L.layerGroup([capaTierra(true), capaFuego(true)]).addTo(mapas.grande); }
     setTimeout(() => mapas.grande.invalidateSize(), 50);
   }
   if (vista !== 'mapa') scrollTo({ top: 0 });

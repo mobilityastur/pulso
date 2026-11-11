@@ -326,11 +326,85 @@ async function fuego() {
   return out;
 }
 
+
+// ---------- TIERRA (EMSC + nombres del IGN) ----------
+const EMSC = 'https://www.seismicportal.eu/fdsnws/event/1/query';
+const IGN_RSS = 'https://www.ign.es/ign/RssTools/sismologia.xml';
+// Zona de interés: España, sus mares y Canarias
+const ZONAS = [[35.0, 44.5, -10.5, 5.0], [27.0, 30.0, -19.0, -13.0]]; // [latMin, latMax, lonMin, lonMax]
+const enZona = (la, lo) => ZONAS.some(([a, b, c, d]) => la >= a && la <= b && lo >= c && lo <= d);
+const PROV = { A: 'Alicante', AB: 'Albacete', AL: 'Almería', AV: 'Ávila', B: 'Barcelona', BA: 'Badajoz', BI: 'Bizkaia', BU: 'Burgos',
+  C: 'A Coruña', CA: 'Cádiz', CC: 'Cáceres', CE: 'Ceuta', CO: 'Córdoba', CR: 'Ciudad Real', CS: 'Castellón', CU: 'Cuenca', GC: 'Las Palmas',
+  GI: 'Girona', GR: 'Granada', GU: 'Guadalajara', H: 'Huelva', HU: 'Huesca', J: 'Jaén', L: 'Lleida', LE: 'León', LO: 'La Rioja', LU: 'Lugo',
+  M: 'Madrid', MA: 'Málaga', ML: 'Melilla', MU: 'Murcia', NA: 'Navarra', O: 'Asturias', OR: 'Ourense', P: 'Palencia', PM: 'Baleares',
+  PO: 'Pontevedra', S: 'Cantabria', SA: 'Salamanca', SE: 'Sevilla', SG: 'Segovia', SO: 'Soria', SS: 'Gipuzkoa', T: 'Tarragona', TE: 'Teruel',
+  TF: 'Santa Cruz de Tenerife', TO: 'Toledo', V: 'Valencia', VA: 'Valladolid', VI: 'Álava', Z: 'Zaragoza', ZA: 'Zamora',
+  FRA: 'Francia', POR: 'Portugal', MAR: 'Marruecos', ARG: 'Argelia', AND: 'Andorra' };
+const DIR = { N: 'N', S: 'S', E: 'E', W: 'O', NE: 'NE', NW: 'NO', SE: 'SE', SW: 'SO' };
+const titulo = t => t.toLowerCase().replace(/(^|[\s\-(/'])(\p{L})/gu, (m, a, b) => a + b.toUpperCase())
+  .replace(/\b(De|Del|La|Las|Los|El|Y|D')\b/g, x => x.toLowerCase()).replace(/^(\p{L})/u, x => x.toUpperCase());
+function lugarIGN(raw) {
+  // "E PLIEGO.MU" -> "E de Pliego (Murcia)"; "ALBORÁN NORTE" -> "Alborán Norte"; "GOLFO DE CÁDIZ" -> "Golfo de Cádiz"
+  const m = raw.trim().match(/^(?:(N|S|E|W|NE|NW|SE|SW)\s+)?(.+?)(?:\.([A-Z]{1,3}))?$/);
+  if (!m) return titulo(raw);
+  const [, dir, sitio, prov] = m;
+  const base = titulo(sitio);
+  return `${dir ? DIR[dir] + ' de ' : ''}${base}${prov ? ` (${PROV[prov] ?? prov})` : ''}`;
+}
+
+async function nombresIGN() {
+  try {
+    const xml = await getText(IGN_RSS);
+    return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map(([, it]) => {
+      const d = it.match(/magnitud\s+([\d.]+)\s+en\s+(.+?)\s+en la fecha/i);
+      const la = Number(it.match(/<geo:lat>([^<]+)/)?.[1]), lo = Number(it.match(/<geo:long>([^<]+)/)?.[1]);
+      const id = it.match(/evid=([\w]+)/)?.[1];
+      return d && Number.isFinite(la) ? { mag: Number(d[1]), lugar: lugarIGN(d[2]), lat: la, lon: lo, id } : null;
+    }).filter(Boolean);
+  } catch (e) { console.warn(`[tierra] RSS IGN falló: ${e.message}`); return []; }
+}
+
+async function tierra() {
+  const desde = new Date(Date.now() - 10 * 86400e3).toISOString().slice(0, 19);
+  const consultas = ZONAS.map(([a, b, c, d]) => `${EMSC}?format=json&minlat=${a}&maxlat=${b}&minlon=${c}&maxlon=${d}&start=${desde}&minmag=1.5&limit=2000&orderby=time`);
+  const [ign, ...emsc] = await Promise.all([nombresIGN(), ...consultas.map(u => getJSON(u))]);
+  const feats = emsc.flatMap(j => j?.features ?? []);
+  if (!feats.length && !ign.length) throw new Error('Sin datos de EMSC ni del IGN');
+
+  const vistos = new Set();
+  const eventos = feats.map(f => {
+    const p = f.properties;
+    const lat = +p.lat, lon = +p.lon;
+    const n = ign.find(x => Math.abs(x.lat - lat) < 0.06 && Math.abs(x.lon - lon) < 0.06 && Math.abs(x.mag - p.mag) <= 0.4);
+    return {
+      id: p.unid, t: new Date(p.time).toISOString(), lat: +lat.toFixed(4), lon: +lon.toFixed(4),
+      prof: Number.isFinite(+p.depth) ? Math.round(Math.abs(+p.depth)) : null,
+      mag: Math.round(+p.mag * 10) / 10, tipo_mag: p.magtype ?? null,
+      lugar: n?.lugar ?? null, region: titulo(p.flynn_region ?? ''), autor: p.auth ?? null,
+      ign: n?.id ? `https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=${n.id}` : null,
+    };
+  }).filter(e => enZona(e.lat, e.lon) && !vistos.has(e.id) && vistos.add(e.id))
+    .sort((a, b) => b.t.localeCompare(a.t));
+
+  const h24 = eventos.filter(e => Date.now() - Date.parse(e.t) <= 24 * 3600e3);
+  const mayor24 = h24.reduce((m, e) => (!m || e.mag > m.mag ? e : m), null);
+  const out = {
+    actualizado: new Date().toISOString(),
+    fuente: 'EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN',
+    ventana_dias: 10,
+    h24: { total: h24.length, sentibles: h24.filter(e => e.mag >= 2.5).length, mayor: mayor24 },
+    eventos,
+  };
+  writeJSON('tierra.json', out);
+  console.log(`[tierra] ok · ${eventos.length} sismos en 10 días · ${h24.length} en 24 h · mayor ${mayor24?.mag ?? '-'} ${mayor24?.lugar ?? mayor24?.region ?? ''}`);
+  return out;
+}
+
 // ---------- principal ----------
 fs.mkdirSync(DATA, { recursive: true });
-const res = await Promise.allSettled([luz(), fuego()]);
+const res = await Promise.allSettled([luz(), fuego(), tierra()]);
 const estado = readJSON('estado.json', {});
-['luz', 'fuego'].forEach((k, i) => {
+['luz', 'fuego', 'tierra'].forEach((k, i) => {
   estado[k] = res[i].status === 'fulfilled'
     ? { ok: true, t: new Date().toISOString() }
     : { ok: false, t: new Date().toISOString(), error: String(res[i].reason?.message ?? res[i].reason).slice(0, 300), ultimo_ok: estado[k]?.ok ? estado[k].t : estado[k]?.ultimo_ok ?? null };

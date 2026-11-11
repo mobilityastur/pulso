@@ -41,20 +41,20 @@
         <div class="t-val" id="c-fuego-val">—</div>
         <div class="t-pie" id="c-fuego-pie">&nbsp;</div>
       </a>
-      <div class="tarjeta pronto aire">
+      <a class="tarjeta agua" href="#agua">
+        <div class="t-cab"><span class="ico">💧</span>Agua</div>
+        <div class="t-val" id="c-agua-val">—</div>
+        <div class="t-pie" id="c-agua-pie">&nbsp;</div>
+      </a>
+      <a class="tarjeta tierra" href="#tierra">
+        <div class="t-cab"><span class="ico">🌍</span>Tierra</div>
+        <div class="t-val" id="c-tierra-val">—</div>
+        <div class="t-pie" id="c-tierra-pie">&nbsp;</div>
+      </a>
+      <div class="tarjeta pronto aire ancha">
         <div class="t-cab"><span class="ico">🌬️</span>Aire</div>
         <div class="t-val">Pronto</div>
         <div class="t-pie">Índice de calidad del aire</div>
-      </div>
-      <div class="tarjeta pronto agua">
-        <div class="t-cab"><span class="ico">💧</span>Agua</div>
-        <div class="t-val">Pronto</div>
-        <div class="t-pie">Reserva de embalses</div>
-      </div>
-      <div class="tarjeta pronto tierra ancha">
-        <div class="t-cab"><span class="ico">🌍</span>Tierra</div>
-        <div class="t-val">Pronto</div>
-        <div class="t-pie">Terremotos de las últimas 24 h</div>
       </div>
     </div>
 
@@ -93,6 +93,45 @@
     <p class="fuente" id="l-fuente"></p>
   </section>
 
+  <!-- AGUA -->
+  <section id="v-agua" class="vista">
+    <div class="grande">
+      <div class="g-num" id="a-pct">—</div>
+      <div class="g-txt" id="a-txt">de capacidad en los embalses peninsulares</div>
+    </div>
+    <div class="cifras" id="a-cifras"></div>
+    <div class="panel">
+      <h3>Últimos 12 meses</h3>
+      <div id="grafica-agua" class="grafica"></div>
+      <div class="leyenda-mix"><span><i style="background:var(--agua)"></i>Este año</span><span><i style="background:var(--tx3)"></i>Año anterior</span><span><i style="background:transparent;border:1.5px dashed var(--tx2)"></i>Media 10 años</span></div>
+    </div>
+    <div class="panel">
+      <h3>Por cuenca · frente a la media de 10 años</h3>
+      <ul class="cuencas" id="cuencas"></ul>
+    </div>
+    <div class="panel">
+      <h3>Embalses de la cuenca</h3>
+      <select id="sel-cuenca" aria-label="Cuenca"></select>
+      <ul class="tecnos" id="embalses"></ul>
+    </div>
+    <p class="fuente" id="a-fuente"></p>
+  </section>
+
+  <!-- TIERRA -->
+  <section id="v-tierra" class="vista">
+    <div class="grande">
+      <div class="g-num" id="t-total">—</div>
+      <div class="g-txt" id="t-txt">terremotos en las últimas 24 h</div>
+    </div>
+    <div class="panel">
+      <div class="cab-panel"><h3>Últimos 10 días</h3>
+        <div class="seg" role="group" aria-label="Filtro de magnitud"><button data-m="2.5" class="on">M ≥ 2,5</button><button data-m="0">Todos</button></div></div>
+      <ul class="focos" id="sismos"></ul>
+    </div>
+    <p class="fuente" id="t-fuente"></p>
+    <p class="nota">La magnitud mide la energía liberada. Por debajo de 2,5 casi nunca se siente; a partir de 4 suele notarse con claridad cerca del epicentro.</p>
+  </section>
+
   <!-- FUEGO -->
   <section id="v-fuego" class="vista">
     <div class="grande">
@@ -121,7 +160,9 @@
   <a href="#inicio" data-v="inicio"><span>◉</span>Inicio</a>
   <a href="#mapa" data-v="mapa"><span>◎</span>Mapa</a>
   <a href="#luz" data-v="luz"><span>⚡</span>Luz</a>
+  <a href="#agua" data-v="agua"><span>💧</span>Agua</a>
   <a href="#fuego" data-v="fuego"><span>🔥</span>Fuego</a>
+  <a href="#tierra" data-v="tierra"><span>🌍</span>Tierra</a>
 </nav>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
