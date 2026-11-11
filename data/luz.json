@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-11T23:15:38.944Z",
+ "actualizado": "2026-11-11T23:28:28.773Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-12T00:10:00+01:00",
-  "total": 29667,
+  "t": "2026-11-12T00:20:00+01:00",
+  "total": 29360,
   "renovable": 48.4,
   "mix": {
-   "solar": 33,
-   "eolica": 10509,
-   "hidraulica": 3587,
-   "nuclear": 6080,
-   "gas": 6361,
-   "carbon": 155,
-   "otras": 2942
+   "solar": 32,
+   "eolica": 10431,
+   "hidraulica": 3649,
+   "nuclear": 6077,
+   "gas": 6117,
+   "carbon": 164,
+   "otras": 2890
   }
  },
  "tecnologias": [
@@ -23,37 +23,37 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 10509
+   "valor": 10431
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6080
+   "valor": 6077
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 4597
+   "valor": 4361
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 3369
+   "valor": 3293
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2275
+   "valor": 2272
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1764
+   "valor": 1756
   },
   {
    "titulo": "Biomasa",
@@ -65,31 +65,25 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 218
+   "valor": 356
   },
   {
    "titulo": "Turbina de vapor",
    "renovable": false,
    "familia": "otras",
-   "valor": 200
+   "valor": 170
   },
   {
    "titulo": "Carbón",
    "renovable": false,
    "familia": "carbon",
-   "valor": 155
+   "valor": 164
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 32
-  },
-  {
-   "titulo": "Baterías",
-   "renovable": false,
-   "familia": "otras",
-   "valor": 19
+   "valor": 31
   },
   {
    "titulo": "Solar térmica",
@@ -99,20 +93,6 @@
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-11T00:20:00+01:00",
-   "total": 29177,
-   "renovable": 53.1,
-   "mix": {
-    "solar": 32,
-    "eolica": 13944,
-    "hidraulica": 1230,
-    "nuclear": 6083,
-    "gas": 4876,
-    "carbon": 0,
-    "otras": 3012
-   }
-  },
   {
    "t": "2026-11-11T00:40:00+01:00",
    "total": 28968,
@@ -1248,28 +1228,38 @@
    }
   },
   {
-   "t": "2026-11-12T00:10:00+01:00",
-   "total": 29667,
+   "t": "2026-11-12T00:20:00+01:00",
+   "total": 29360,
    "renovable": 48.4,
    "mix": {
-    "solar": 33,
-    "eolica": 10509,
-    "hidraulica": 3587,
-    "nuclear": 6080,
-    "gas": 6361,
-    "carbon": 155,
-    "otras": 2942
+    "solar": 32,
+    "eolica": 10431,
+    "hidraulica": 3649,
+    "nuclear": 6077,
+    "gas": 6117,
+    "carbon": 164,
+    "otras": 2890
+   }
+  },
+  {
+   "t": "2026-11-12T00:20:00+01:00",
+   "total": 29360,
+   "renovable": 48.4,
+   "mix": {
+    "solar": 32,
+    "eolica": 10431,
+    "hidraulica": 3649,
+    "nuclear": 6077,
+    "gas": 6117,
+    "carbon": 164,
+    "otras": 2890
    }
   }
  ],
  "demanda": {
-  "actual": 25743,
-  "t": "2026-11-12T00:05:00.000+01:00",
+  "actual": 25621,
+  "t": "2026-11-12T00:20:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-11T00:20:00.000+01:00",
-    "v": 25268
-   },
    {
     "t": "2026-11-11T00:40:00.000+01:00",
     "v": 24883
@@ -1555,15 +1545,11 @@
     "v": 26077
    },
    {
-    "t": "2026-11-12T00:05:00.000+01:00",
-    "v": 25743
+    "t": "2026-11-12T00:20:00.000+01:00",
+    "v": 25621
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-11T00:20:00.000+01:00",
-    "v": 25488
-   },
    {
     "t": "2026-11-11T00:40:00.000+01:00",
     "v": 24970
@@ -1849,8 +1835,12 @@
     "v": 26188
    },
    {
-    "t": "2026-11-12T00:15:00.000+01:00",
-    "v": 25755
+    "t": "2026-11-12T00:20:00.000+01:00",
+    "v": 25625
+   },
+   {
+    "t": "2026-11-12T00:25:00.000+01:00",
+    "v": 25493
    }
   ]
  }
