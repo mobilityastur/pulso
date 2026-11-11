@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pulso · España ahora</title>
+<meta name="description" content="Aire, agua, luz, fuego y tierra: cómo está España ahora mismo.">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pulso">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17h7l3-8 5 15 4-11 2 4h7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Pulso</span>
+  </div>
+  <button id="refrescar" class="hora" aria-label="Actualizar">—</button>
+</header>
+
+<main>
+  <!-- INICIO -->
+  <section id="v-inicio" class="vista activa">
+    <p class="sub">España, ahora mismo</p>
+    <div class="tarjetas">
+      <a class="tarjeta luz" href="#luz">
+        <div class="t-cab"><span class="ico">⚡</span>Luz</div>
+        <div class="t-val" id="c-luz-val">—</div>
+        <div class="mixbar" id="c-luz-mix"></div>
+        <div class="t-pie" id="c-luz-pie">&nbsp;</div>
+      </a>
+      <a class="tarjeta fuego" href="#fuego">
+        <div class="t-cab"><span class="ico">🔥</span>Fuego</div>
+        <div class="t-val" id="c-fuego-val">—</div>
+        <div class="t-pie" id="c-fuego-pie">&nbsp;</div>
+      </a>
+      <div class="tarjeta pronto aire">
+        <div class="t-cab"><span class="ico">🌬️</span>Aire</div>
+        <div class="t-val">Pronto</div>
+        <div class="t-pie">Índice de calidad del aire</div>
+      </div>
+      <div class="tarjeta pronto agua">
+        <div class="t-cab"><span class="ico">💧</span>Agua</div>
+        <div class="t-val">Pronto</div>
+        <div class="t-pie">Reserva de embalses</div>
+      </div>
+      <div class="tarjeta pronto tierra ancha">
+        <div class="t-cab"><span class="ico">🌍</span>Tierra</div>
+        <div class="t-val">Pronto</div>
+        <div class="t-pie">Terremotos de las últimas 24 h</div>
+      </div>
+    </div>
+
+    <h2 class="sec">Conexiones</h2>
+    <ul class="conexiones" id="conexiones"><li class="cargando">Cargando…</li></ul>
+
+    <h2 class="sec">Mapa</h2>
+    <a class="mini-mapa" href="#mapa"><div id="mapa-mini"></div></a>
+  </section>
+
+  <!-- MAPA -->
+  <section id="v-mapa" class="vista">
+    <div id="mapa"></div>
+    <div class="leyenda" id="leyenda-mapa"></div>
+  </section>
+
+  <!-- LUZ -->
+  <section id="v-luz" class="vista">
+    <div class="grande">
+      <div class="g-num" id="l-renov">—</div>
+      <div class="g-txt">de la electricidad es renovable ahora</div>
+    </div>
+    <div class="panel">
+      <h3>Mix de generación · últimas 24 h</h3>
+      <div id="grafica-mix" class="grafica"></div>
+      <div class="leyenda-mix" id="leyenda-mix"></div>
+    </div>
+    <div class="panel" id="panel-demanda" hidden>
+      <h3>Demanda · real frente a prevista</h3>
+      <div id="grafica-demanda" class="grafica"></div>
+    </div>
+    <div class="panel">
+      <h3>Ahora por tecnología</h3>
+      <ul class="tecnos" id="tecnos"></ul>
+    </div>
+    <p class="fuente" id="l-fuente"></p>
+  </section>
+
+  <!-- FUEGO -->
+  <section id="v-fuego" class="vista">
+    <div class="grande">
+      <div class="g-num" id="f-total">—</div>
+      <div class="g-txt">focos de calor detectados por satélite en 24 h</div>
+    </div>
+    <div class="panel">
+      <h3>Focos, de mayor a menor intensidad</h3>
+      <ul class="focos" id="focos"></ul>
+    </div>
+    <div class="panel">
+      <h3>Focos por día · últimos 30 días</h3>
+      <div id="grafica-fuego" class="grafica"></div>
+    </div>
+    <p class="fuente" id="f-fuente"></p>
+    <p class="nota">Un foco de calor es una detección térmica del satélite: puede ser un incendio forestal, una quema agrícola o una fuente industrial. No es un parte oficial de incendios.</p>
+  </section>
+</main>
+
+<nav class="tabs">
+  <a href="#inicio" data-v="inicio"><span>◉</span>Inicio</a>
+  <a href="#mapa" data-v="mapa"><span>◎</span>Mapa</a>
+  <a href="#luz" data-v="luz"><span>⚡</span>Luz</a>
+  <a href="#fuego" data-v="fuego"><span>🔥</span>Fuego</a>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
