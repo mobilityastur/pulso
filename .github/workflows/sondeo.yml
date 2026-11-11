@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          UA="Mozilla/5.0 Pulso"
-          echo "=== IGN RSS"; curl -sSL -A "$UA" -m 30 https://www.ign.es/ign/RssTools/sismologia.xml | head -c 1500; echo
-          echo "=== EMSC"; curl -sSL -m 30 "https://www.seismicportal.eu/fdsnws/event/1/query?format=json&minlat=26&maxlat=45&minlon=-20&maxlon=6&limit=2" | head -c 1500; echo
-          echo "=== MITECO boletin links"; curl -sSL -A "$UA" -m 30 https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico.html | grep -oiE 'href="[^"]+\.(zip|xlsx?|csv|pdf|json)"|href="[^"]*(embalse|bolet|reserva)[^"]*"' | sort -u | head -40
-          echo "=== MITECO noticias"; curl -sSL -A "$UA" -m 30 "https://www.miteco.gob.es/es/prensa/ultimas-noticias.html" | grep -oiE 'href="[^"]*reserva-hidrica[^"]*"' | sort -u | head -5
-          echo "=== embalses.net"; curl -sSL -A "$UA" -m 30 -o /dev/null -w "%{http_code} %{size_download}\n" https://www.embalses.net/
+          curl -sSL -A "Mozilla/5.0 Pulso" -m 120 -o bd.zip "https://www.miteco.gob.es/content/dam/miteco/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/Historico-de-embalses/BD-Embalses.zip"
+          ls -la bd.zip; unzip -l bd.zip; unzip -q -o bd.zip -d bd
+          sudo apt-get install -y -qq mdbtools >/dev/null 2>&1 || true
+          for f in bd/*; do echo "== $f"; file "$f"; done
+          F=$(ls bd/*.mdb bd/*.accdb 2>/dev/null | head -1); echo "MDB=$F"
+          if [ -n "$F" ]; then mdb-tables -1 "$F"; for t in $(mdb-tables -1 "$F"); do echo "--- $t"; mdb-export "$F" "$t" | head -4; mdb-export "$F" "$t" | wc -l; done; T=$(mdb-tables -1 "$F" | head -1); mdb-export "$F" "$T" | tail -3; fi
+          for f in bd/*.csv bd/*.xlsx; do [ -f "$f" ] && head -c 600 "$f"; done; true
