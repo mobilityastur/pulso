@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-12T01:15:36.860Z",
+ "actualizado": "2026-11-12T01:30:53.739Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 0,
- "detecciones": 10,
+ "detecciones": 8,
  "mayor": null,
  "focos": [],
  "industriales": [
@@ -27,7 +27,7 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "noche",
-   "n": 4,
+   "n": 2,
    "nombre": "ArcelorMittal Avilés",
    "dias_mes": 2
   }
