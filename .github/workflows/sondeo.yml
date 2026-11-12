@@ -1,0 +1,13 @@
+name: Sondeo (temporal)
+on: { workflow_dispatch: {} }
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set +e
+          UA="Mozilla/5.0 Pulso"
+          echo "=== GIJON CSV"; curl -sSL -A "$UA" -m 60 -o g.csv "https://opendata.gijon.es/descargar.php?id=1&tipo=CSV"; ls -la g.csv; head -c 700 g.csv; echo; echo "...TAIL"; tail -c 900 g.csv; echo
+          echo "=== GIJON estaciones"; curl -sSL -A "$UA" -m 60 "https://opendata.gijon.es/descargar.php?id=2&tipo=JSON" | head -c 600; echo
+          echo "=== GIJON app ma_estaciones"; curl -sSL -A "$UA" -m 30 -o a.html -w "%{http_code} %{url_effective}\n" "https://documentos.gijon.es/doc/ma_estaciones/"; head -c 300 a.html; echo; grep -oiE '(src|href|url)[=:(]["'"'"']?[^"'"'"' )]+' a.html | head -30
+          echo "=== Asturias medioambiente"; curl -sSL -A "$UA" -m 30 -o m.html -w "%{http_code} %{url_effective}\n" "https://medioambiente.asturias.es/calidad-del-aire"; grep -oiE 'href="[^"]*(aire|tiempo-real|datos|estacion)[^"]*"' m.html | sort -u | head -30
