@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-12T15:15:53.562Z",
+ "actualizado": "2026-11-12T15:31:06.065Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 16,
+  "total": 15,
   "sentibles": 0,
   "mayor": {
    "id": "20261112_0000189",
@@ -262,10 +262,10 @@
    "prof": 2,
    "mag": 3.1,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "E de Pliego (Murcia)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wciso"
   },
   {
    "id": "20261111_0000004",
@@ -275,10 +275,10 @@
    "prof": 3,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "SO de O Carballiño (OU)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wbwsu"
   },
   {
    "id": "20261111_0000002",
@@ -496,10 +496,10 @@
    "prof": 8,
    "mag": 2.9,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "NO de Olmeda del Rey (Cuenca)",
    "region": "Spain",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vzicc"
   },
   {
    "id": "20261109_0000154",
@@ -821,10 +821,10 @@
    "prof": 0,
    "mag": 2.6,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "Alborán Norte",
    "region": "Strait Of Gibraltar",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vthtd"
   },
   {
    "id": "20261106_0000101",
@@ -1055,10 +1055,10 @@
    "prof": 0,
    "mag": 2.5,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "NO de Olmeda del Rey (Cuenca)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vzicc"
   },
   {
    "id": "20261104_0000242",
@@ -1094,10 +1094,10 @@
    "prof": 3,
    "mag": 3,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "N de Tabernas (Almería)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vqijf"
   },
   {
    "id": "20261104_0000215",
@@ -1107,10 +1107,10 @@
    "prof": 31,
    "mag": 2.4,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "SO de Cabo de San Vicente",
    "region": "West Of Gibraltar",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vqfxj"
   },
   {
    "id": "20261104_0000213",
