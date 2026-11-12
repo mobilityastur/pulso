@@ -1,10 +1,10 @@
 {
- "actualizado": "2026-11-12T22:30:54.304Z",
+ "actualizado": "2026-11-12T22:45:38.773Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 12,
-  "sentibles": 1,
+  "total": 13,
+  "sentibles": 2,
   "mayor": {
    "id": "20261112_0000258",
    "t": "2026-11-12T20:08:07.150Z",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261112_0000287",
+   "t": "2026-11-12T22:13:46.590Z",
+   "lat": 28.7863,
+   "lon": -16.3115,
+   "prof": 33,
+   "mag": 2.8,
+   "tipo_mag": "ml",
+   "lugar": "Atlántico-Canarias",
+   "region": "Canary Islands, Spain Region",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfirt"
+  },
   {
    "id": "20261112_0000258",
    "t": "2026-11-12T20:08:07.150Z",
