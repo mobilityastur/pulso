@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-12T20:31:01.061Z",
+ "actualizado": "2026-11-12T20:45:40.289Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-12T21:25:00+01:00",
-  "total": 37060,
-  "renovable": 52.5,
+  "t": "2026-11-12T21:40:00+01:00",
+  "total": 36727,
+  "renovable": 52.9,
   "mix": {
-   "solar": 164,
-   "eolica": 13496,
-   "hidraulica": 6340,
-   "nuclear": 6082,
-   "gas": 8005,
+   "solar": 163,
+   "eolica": 13379,
+   "hidraulica": 6606,
+   "nuclear": 6086,
+   "gas": 7523,
    "carbon": 215,
-   "otras": 2758
+   "otras": 2755
   }
  },
  "tecnologias": [
@@ -23,43 +23,43 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 13496
-  },
-  {
-   "titulo": "Ciclo combinado",
-   "renovable": false,
-   "familia": "gas",
-   "valor": 6234
+   "valor": 13379
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6082
+   "valor": 6086
+  },
+  {
+   "titulo": "Ciclo combinado",
+   "renovable": false,
+   "familia": "gas",
+   "valor": 5722
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 5317
+   "valor": 5422
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2293
+   "valor": 2294
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1771
+   "valor": 1801
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 1023
+   "valor": 1184
   },
   {
    "titulo": "Biomasa",
@@ -83,44 +83,10 @@
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 82
-  },
-  {
-   "titulo": "Baterías",
-   "renovable": false,
-   "familia": "otras",
-   "valor": 4
+   "valor": 81
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-11T21:40:00+01:00",
-   "total": 36119,
-   "renovable": 42.3,
-   "mix": {
-    "solar": 42,
-    "eolica": 10886,
-    "hidraulica": 4741,
-    "nuclear": 6082,
-    "gas": 11273,
-    "carbon": 0,
-    "otras": 3095
-   }
-  },
-  {
-   "t": "2026-11-11T21:40:00+01:00",
-   "total": 36119,
-   "renovable": 42.3,
-   "mix": {
-    "solar": 42,
-    "eolica": 10886,
-    "hidraulica": 4741,
-    "nuclear": 6082,
-    "gas": 11273,
-    "carbon": 0,
-    "otras": 3095
-   }
-  },
   {
    "t": "2026-11-11T22:00:00+01:00",
    "total": 35063,
@@ -1340,28 +1306,24 @@
    }
   },
   {
-   "t": "2026-11-12T21:25:00+01:00",
-   "total": 37060,
-   "renovable": 52.5,
+   "t": "2026-11-12T21:40:00+01:00",
+   "total": 36727,
+   "renovable": 52.9,
    "mix": {
-    "solar": 164,
-    "eolica": 13496,
-    "hidraulica": 6340,
-    "nuclear": 6082,
-    "gas": 8005,
+    "solar": 163,
+    "eolica": 13379,
+    "hidraulica": 6606,
+    "nuclear": 6086,
+    "gas": 7523,
     "carbon": 215,
-    "otras": 2758
+    "otras": 2755
    }
   }
  ],
  "demanda": {
-  "actual": 35347,
-  "t": "2026-11-12T21:20:00.000+01:00",
+  "actual": 34372,
+  "t": "2026-11-12T21:35:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-11T21:40:00.000+01:00",
-    "v": 32238
-   },
    {
     "t": "2026-11-11T22:00:00.000+01:00",
     "v": 31129
@@ -1644,14 +1606,14 @@
    },
    {
     "t": "2026-11-12T21:20:00.000+01:00",
-    "v": 35347
+    "v": 35346
+   },
+   {
+    "t": "2026-11-12T21:35:00.000+01:00",
+    "v": 34372
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-11T21:40:00.000+01:00",
-    "v": 32745
-   },
    {
     "t": "2026-11-11T22:00:00.000+01:00",
     "v": 31554
@@ -1930,15 +1892,19 @@
    },
    {
     "t": "2026-11-12T21:00:00.000+01:00",
-    "v": 34682
+    "v": 34683
    },
    {
     "t": "2026-11-12T21:20:00.000+01:00",
-    "v": 34250
+    "v": 34249
    },
    {
-    "t": "2026-11-12T21:30:00.000+01:00",
-    "v": 33758
+    "t": "2026-11-12T21:40:00.000+01:00",
+    "v": 33268
+   },
+   {
+    "t": "2026-11-12T21:45:00.000+01:00",
+    "v": 32974
    }
   ]
  }
