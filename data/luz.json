@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-13T00:30:55.511Z",
+ "actualizado": "2026-11-13T00:45:41.345Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-13T01:25:00+01:00",
-  "total": 28132,
-  "renovable": 51.9,
+  "t": "2026-11-13T01:40:00+01:00",
+  "total": 27761,
+  "renovable": 52.7,
   "mix": {
    "solar": 48,
-   "eolica": 11587,
-   "hidraulica": 2713,
-   "nuclear": 6088,
-   "gas": 4816,
+   "eolica": 11625,
+   "hidraulica": 2662,
+   "nuclear": 6080,
+   "gas": 4488,
    "carbon": 215,
-   "otras": 2665
+   "otras": 2643
   }
  },
  "tecnologias": [
@@ -23,37 +23,37 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 11587
+   "valor": 11625
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6088
+   "valor": 6080
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 3166
+   "valor": 2857
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 2500
+   "valor": 2480
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2199
+   "valor": 2177
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1650
+   "valor": 1631
   },
   {
    "titulo": "Biomasa",
@@ -71,7 +71,7 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 213
+   "valor": 182
   },
   {
    "titulo": "Solar fotovoltaica",
@@ -81,20 +81,6 @@
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-12T01:40:00+01:00",
-   "total": 27189,
-   "renovable": 49,
-   "mix": {
-    "solar": 31,
-    "eolica": 9662,
-    "hidraulica": 3686,
-    "nuclear": 6077,
-    "gas": 4935,
-    "carbon": 201,
-    "otras": 2597
-   }
-  },
   {
    "t": "2026-11-12T02:00:00+01:00",
    "total": 26497,
@@ -1286,28 +1272,38 @@
    }
   },
   {
-   "t": "2026-11-13T01:25:00+01:00",
-   "total": 28132,
-   "renovable": 51.9,
+   "t": "2026-11-13T01:40:00+01:00",
+   "total": 27761,
+   "renovable": 52.7,
    "mix": {
     "solar": 48,
-    "eolica": 11587,
-    "hidraulica": 2713,
-    "nuclear": 6088,
-    "gas": 4816,
+    "eolica": 11625,
+    "hidraulica": 2662,
+    "nuclear": 6080,
+    "gas": 4488,
     "carbon": 215,
-    "otras": 2665
+    "otras": 2643
+   }
+  },
+  {
+   "t": "2026-11-13T01:40:00+01:00",
+   "total": 27761,
+   "renovable": 52.7,
+   "mix": {
+    "solar": 48,
+    "eolica": 11625,
+    "hidraulica": 2662,
+    "nuclear": 6080,
+    "gas": 4488,
+    "carbon": 215,
+    "otras": 2643
    }
   }
  ],
  "demanda": {
-  "actual": 25086,
-  "t": "2026-11-13T01:20:00.000+01:00",
+  "actual": 24889,
+  "t": "2026-11-13T01:35:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-12T01:40:00.000+01:00",
-    "v": 23751
-   },
    {
     "t": "2026-11-12T02:00:00.000+01:00",
     "v": 23476
@@ -1591,13 +1587,13 @@
    {
     "t": "2026-11-13T01:20:00.000+01:00",
     "v": 25086
+   },
+   {
+    "t": "2026-11-13T01:35:00.000+01:00",
+    "v": 24889
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-12T01:40:00.000+01:00",
-    "v": 23658
-   },
    {
     "t": "2026-11-12T02:00:00.000+01:00",
     "v": 23275
@@ -1860,31 +1856,35 @@
    },
    {
     "t": "2026-11-12T23:40:00.000+01:00",
-    "v": 27624
+    "v": 27625
    },
    {
     "t": "2026-11-13T00:00:00.000+01:00",
-    "v": 27069
+    "v": 27070
    },
    {
     "t": "2026-11-13T00:20:00.000+01:00",
-    "v": 26614
+    "v": 26615
    },
    {
     "t": "2026-11-13T00:40:00.000+01:00",
-    "v": 26070
+    "v": 26069
    },
    {
     "t": "2026-11-13T01:00:00.000+01:00",
-    "v": 25533
+    "v": 25530
    },
    {
     "t": "2026-11-13T01:20:00.000+01:00",
-    "v": 25083
+    "v": 25076
    },
    {
-    "t": "2026-11-13T01:30:00.000+01:00",
-    "v": 24877
+    "t": "2026-11-13T01:40:00.000+01:00",
+    "v": 24669
+   },
+   {
+    "t": "2026-11-13T01:45:00.000+01:00",
+    "v": 24568
    }
   ]
  }
