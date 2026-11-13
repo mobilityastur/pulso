@@ -1,25 +1,38 @@
 {
- "actualizado": "2026-11-13T08:01:11.807Z",
+ "actualizado": "2026-11-13T08:15:39.900Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 15,
-  "sentibles": 2,
+  "total": 16,
+  "sentibles": 3,
   "mayor": {
-   "id": "20261112_0000258",
-   "t": "2026-11-12T20:08:07.150Z",
-   "lat": 36.5201,
-   "lon": -5.7078,
-   "prof": 40,
-   "mag": 3.2,
-   "tipo_mag": "ml",
-   "lugar": "N de Alcalá de los Gazules (Cádiz)",
-   "region": "Strait Of Gibraltar",
-   "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfenz"
+   "id": "20261113_0000085",
+   "t": "2026-11-13T07:30:35.350Z",
+   "lat": 36.3379,
+   "lon": 2.752,
+   "prof": 11,
+   "mag": 4,
+   "tipo_mag": "mb",
+   "lugar": "N de Medea (Argelia)",
+   "region": "Northern Algeria",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wgbbk"
   }
  },
  "eventos": [
+  {
+   "id": "20261113_0000085",
+   "t": "2026-11-13T07:30:35.350Z",
+   "lat": 36.3379,
+   "lon": 2.752,
+   "prof": 11,
+   "mag": 4,
+   "tipo_mag": "mb",
+   "lugar": "N de Medea (Argelia)",
+   "region": "Northern Algeria",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wgbbk"
+  },
   {
    "id": "20261113_0000066",
    "t": "2026-11-13T06:00:10.150Z",
