@@ -1,10 +1,205 @@
 {
- "actualizado": "2026-11-13T11:03:55.718Z",
+ "actualizado": "2026-11-13T11:15:40.511Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 0,
- "detecciones": 0,
- "mayor": null,
- "focos": [],
- "industriales": []
+ "total": 16,
+ "detecciones": 24,
+ "mayor": {
+  "lat": 37.3914,
+  "lon": -6.3312,
+  "t": "2026-11-13T02:34:00.000Z",
+  "frp": 7.6,
+  "conf": "alta",
+  "sat": "NOAA20",
+  "dn": "noche",
+  "n": 2
+ },
+ "focos": [
+  {
+   "lat": 37.3914,
+   "lon": -6.3312,
+   "t": "2026-11-13T02:34:00.000Z",
+   "frp": 7.6,
+   "conf": "alta",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2
+  },
+  {
+   "lat": 43.0481,
+   "lon": -3.5006,
+   "t": "2026-11-12T12:33:00.000Z",
+   "frp": 5.7,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 40.4521,
+   "lon": -6.5976,
+   "t": "2026-11-12T13:16:00.000Z",
+   "frp": 3.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 41.9181,
+   "lon": 2.6596,
+   "t": "2026-11-12T12:33:00.000Z",
+   "frp": 3.4,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 40.5799,
+   "lon": 0.5374,
+   "t": "2026-11-13T00:52:00.000Z",
+   "frp": 2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 43.3458,
+   "lon": -8.4355,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 1.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 37.3579,
+   "lon": -5.8651,
+   "t": "2026-11-13T03:17:00.000Z",
+   "frp": 1.3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 40.2445,
+   "lon": -3.4748,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 41.4086,
+   "lon": 1.9992,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 38.3772,
+   "lon": -0.5423,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 1.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 3
+  },
+  {
+   "lat": 41.4749,
+   "lon": -1.4887,
+   "t": "2026-11-13T01:34:00.000Z",
+   "frp": 1.1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 41.3121,
+   "lon": 1.6651,
+   "t": "2026-11-13T01:34:00.000Z",
+   "frp": 1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 43.4417,
+   "lon": -3.844,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 0.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 43.5537,
+   "lon": -5.8596,
+   "t": "2026-11-13T01:34:00.000Z",
+   "frp": 0.8,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 37.3607,
+   "lon": -6.6726,
+   "t": "2026-11-13T01:36:00.000Z",
+   "frp": 0.7,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  },
+  {
+   "lat": 41.4538,
+   "lon": 1.9772,
+   "t": "2026-11-13T01:34:00.000Z",
+   "frp": 0.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1
+  }
+ ],
+ "industriales": [
+  {
+   "lat": 43.5395,
+   "lon": -5.8338,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 1.4,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 4,
+   "nombre": "ArcelorMittal Avilés",
+   "dias_mes": 1
+  },
+  {
+   "lat": 43.5262,
+   "lon": -5.7316,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 0.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "dias_mes": 1
+  }
+ ]
 }
