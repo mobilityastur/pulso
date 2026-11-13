@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-13T02:41:14.272Z",
+ "actualizado": "2026-11-13T02:45:39.628Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-13T03:35:00+01:00",
-  "total": 26451,
+  "t": "2026-11-13T03:40:00+01:00",
+  "total": 26490,
   "renovable": 51.7,
   "mix": {
    "solar": 48,
-   "eolica": 11264,
-   "hidraulica": 2082,
-   "nuclear": 6085,
-   "gas": 4170,
+   "eolica": 11257,
+   "hidraulica": 2120,
+   "nuclear": 6095,
+   "gas": 4168,
    "carbon": 196,
    "otras": 2606
   }
@@ -23,13 +23,13 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 11264
+   "valor": 11257
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6085
+   "valor": 6095
   },
   {
    "titulo": "Ciclo combinado",
@@ -47,13 +47,13 @@
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 1903
+   "valor": 1942
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1612
+   "valor": 1610
   },
   {
    "titulo": "Biomasa",
@@ -71,7 +71,7 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 179
+   "valor": 178
   },
   {
    "titulo": "Solar fotovoltaica",
@@ -1342,23 +1342,23 @@
    }
   },
   {
-   "t": "2026-11-13T03:35:00+01:00",
-   "total": 26451,
+   "t": "2026-11-13T03:40:00+01:00",
+   "total": 26490,
    "renovable": 51.7,
    "mix": {
     "solar": 48,
-    "eolica": 11264,
-    "hidraulica": 2082,
-    "nuclear": 6085,
-    "gas": 4170,
+    "eolica": 11257,
+    "hidraulica": 2120,
+    "nuclear": 6095,
+    "gas": 4168,
     "carbon": 196,
     "otras": 2606
    }
   }
  ],
  "demanda": {
-  "actual": 23534,
-  "t": "2026-11-13T03:30:00.000+01:00",
+  "actual": 23392,
+  "t": "2026-11-13T03:35:00.000+01:00",
   "real": [
    {
     "t": "2026-11-12T04:00:00.000+01:00",
@@ -1645,8 +1645,8 @@
     "v": 23624
    },
    {
-    "t": "2026-11-13T03:30:00.000+01:00",
-    "v": 23534
+    "t": "2026-11-13T03:35:00.000+01:00",
+    "v": 23392
    }
   ],
   "prevista": [
@@ -1937,6 +1937,10 @@
    {
     "t": "2026-11-13T03:40:00.000+01:00",
     "v": 23537
+   },
+   {
+    "t": "2026-11-13T03:45:00.000+01:00",
+    "v": 23536
    }
   ]
  }
