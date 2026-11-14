@@ -315,10 +315,13 @@ async function fuego() {
   if (!key) throw new Error('Falta FIRMS_MAP_KEY');
 
   const brutos = [];
+  let respuestas = 0;
   for (const sat of SATELITES) for (const area of AREAS) {
-    try { brutos.push(...parseCSV(await getText(`${FIRMS}/${key}/${sat}/${area}/2`)).map(r => ({ ...r, _sat: sat }))); }
-    catch (e) { console.warn(`[fuego] ${sat} ${area}: ${e.message}`); }
+    try { brutos.push(...parseCSV(await getText(`${FIRMS}/${key}/${sat}/${area}/2`)).map(r => ({ ...r, _sat: sat }))); respuestas++; }
+    catch (e) { console.warn(`[fuego] ${sat} ${area}: ${e.message}${e.cause?.code ? ' (' + e.cause.code + ')' : ''}`); }
   }
+  // Si no ha respondido ningún satélite, no es «cero focos»: es un fallo y se conservan los datos anteriores
+  if (!respuestas) throw new Error('NASA FIRMS no respondió a ninguna petición');
 
   const ahora = Date.now();
   const focos = brutos.map(r => {
