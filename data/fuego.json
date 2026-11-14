@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T22:45:49.537Z",
+ "actualizado": "2026-11-14T23:01:02.920Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 5,
@@ -91,7 +91,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ponferrada",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 41.1862,
@@ -108,7 +108,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 38.3776,
@@ -125,7 +125,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 37.3583,
@@ -142,7 +142,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 41.3135,
@@ -159,7 +159,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 2
+   "dias_mes": 3
   },
   {
    "lat": 37.3603,
@@ -176,7 +176,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "dias_mes": 2
+   "dias_mes": 3
   }
  ]
 }
