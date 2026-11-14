@@ -6,7 +6,29 @@ jobs:
     steps:
       - run: |
           set +e
-          UA="Mozilla/5.0 (X11; Linux x86_64) Pulso"
-          curl -sSL --http1.1 -A "$UA" -m 60 -D h.txt -o p.html "https://gis.miteco.gob.es/descargas/app/DescargaFichero?f=sitesfacilities-pf.zip"; cat h.txt | head -20; sed 's/<[^>]*>/ /g' p.html | tr -s ' \n' | head -c 1500; echo; grep -oiE '(href|action|src)="[^"]+"' p.html | head
-          echo "=== ATOM"; curl -sSL -A "$UA" -m 60 -o a.xml "http://gis.miteco.gob.es/descargas/atom/CategCalidadEvalAmbiental/downloadservice.xml"; ls -la a.xml; grep -oiE 'href="[^"]*(site|facilit|instala|prtr|emplaz)[^"]*"' a.xml | sort -u | head
-          for u in $(grep -oiE 'href="[^"]*(site|facilit|emplaz)[^"]*\.xml"' a.xml | sed 's/href="//;s/"$//' | sort -u | head -3); do echo "--- $u"; curl -sSL -A "$UA" -m 60 "$u" | grep -oiE 'href="[^"]+"' | sort -u | head -15; done
+          cat > q.py <<'PY'
+          import json, urllib.request, urllib.parse, math, time
+          puntos = [('Arcelor Gijon',43.5232,-5.727),('Arcelor Aviles',43.5394,-5.8286),('Sagunto?',39.66,-0.24),('Alcanar?',40.58,0.54),('Alcala Guadaira?',37.36,-5.86),('Agost?',38.38,-0.54),('Cantabria 43.04,-3.50',43.04,-3.50),('Girona 41.92,2.66',41.92,2.66)]
+          for n, la, lo in puntos:
+              q = f"""[out:json][timeout:25];
+              (nwr(around:2500,{la},{lo})[man_made~"^(works|flare|kiln|chimney)$"];
+               nwr(around:2500,{la},{lo})[industrial];
+               nwr(around:2500,{la},{lo})[power=plant];
+               nwr(around:2500,{la},{lo})[landuse=industrial][name];);
+              out tags center 40;"""
+              req = urllib.request.Request('https://overpass-api.de/api/interpreter', data=urllib.parse.urlencode({'data': q}).encode(), headers={'User-Agent': 'Pulso/1.0 (github.com/mobilityastur/pulso)'})
+              try:
+                  j = json.load(urllib.request.urlopen(req, timeout=60))
+              except Exception as e:
+                  print('###', n, 'ERROR', e); continue
+              res = []
+              for e in j['elements']:
+                  t = e.get('tags', {}); c = e.get('center') or {'lat': e.get('lat'), 'lon': e.get('lon')}
+                  if c['lat'] is None: continue
+                  d = math.hypot((c['lat']-la)*111.2, (c['lon']-lo)*111.2*math.cos(math.radians(la)))
+                  res.append((round(d,2), t.get('name') or t.get('operator') or '-', {k: t[k] for k in t if k in ('man_made','industrial','product','operator','power','plant:source','landuse')}))
+              res.sort(key=lambda x: x[0])
+              print('###', n, len(res)); [print('   ', r) for r in res[:6]]
+              time.sleep(2)
+          PY
+          python3 q.py
