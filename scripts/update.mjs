@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { tipoDe, TIPOS_NOMBRES, TIPO_CALOR } from './tipos-industria.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'data');
@@ -248,23 +249,6 @@ const SEMILLA_TIPO = 'Siderurgia';
 // Se consulta una sola vez por celda de ~2 km y se guarda en data/industrias-osm.json (caducidad 120 días).
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
 const MAX_CONSULTAS_OSM = 12, PRESUPUESTO_OSM_MS = 90e3, RADIO_OSM_M = 2500, RADIO_CALOR_KM = 1.6, CADUCIDAD_OSM_DIAS = 120;
-const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible?]
-  [t => /steel|iron|metal_?works|foundry|smelter|alumin/i.test(t.industrial ?? '') || /blast furnace|coke/i.test(t['plant:source'] ?? ''), 'Siderurgia / metalurgia', true],
-  [t => /refinery|oil|petro/i.test(t.industrial ?? '') || t.man_made === 'flare', 'Refinería / petroquímica', true],
-  [t => /cement|lime/i.test(`${t.industrial ?? ''} ${t.product ?? ''} ${t.name ?? ''}`) || /ciment|cemento/i.test(t.name ?? ''), 'Cementera', true],
-  [t => /chemical|fertili/i.test(t.industrial ?? ''), 'Química', true],
-  [t => /glass/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Vidrio', true],
-  [t => /brick|ceramic|tile/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Cerámica', true],
-  [t => /paper|pulp|cardboard/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Papelera', true],
-  [t => /incinerat|waste/i.test(`${t.industrial ?? ''} ${t['plant:source'] ?? ''}`), 'Residuos / incineración', true],
-  [t => t.power === 'plant' && !/solar|wind|hydro|photovoltaic/i.test(t['plant:source'] ?? ''), 'Central eléctrica', true],
-  [t => t.man_made === 'kiln', 'Horno industrial', true],
-  [t => /concrete|asphalt/i.test(t.industrial ?? ''), 'Planta de hormigón / asfalto', false],
-  [t => t.man_made === 'works' || !!t.industrial, 'Fábrica', true],
-  [t => t.landuse === 'industrial', 'Polígono industrial', false],
-];
-const tipoDe = t => { for (const [f, nombre, calor] of TIPOS) if (f(t)) return { tipo: nombre, calor }; return null; };
-
 async function overpass(lat, lon, limite) {
   const q = `[out:json][timeout:15];(nwr(around:${RADIO_OSM_M},${lat},${lon})[man_made~"^(works|flare|kiln|chimney)$"];` +
     `nwr(around:${RADIO_OSM_M},${lat},${lon})[industrial];nwr(around:${RADIO_OSM_M},${lat},${lon})[power=plant];` +
@@ -285,24 +269,43 @@ async function overpass(lat, lon, limite) {
   throw ultimo;
 }
 
+// Candidatos desde la respuesta de Overpass
+const candidatosOverpass = elementos => elementos.map(e => {
+  const t = e.tags ?? {}, p = e.center ?? { lat: e.lat, lon: e.lon };
+  if (p.lat == null) return null;
+  const ti = tipoDe(t); if (!ti) return null;
+  return { lat: p.lat, lon: p.lon, ...ti, nombre: t.name ?? t.operator ?? t.brand ?? null, osm: `${e.type}/${e.id}` };
+}).filter(Boolean);
+
+// Candidatos desde la lista local mensual (data/industrias-osm-es.json)
+let LISTA_OSM = null;
+function candidatosLocales(lat, lon) {
+  if (LISTA_OSM === null) {
+    try {
+      const j = JSON.parse(fs.readFileSync(path.join(DATA, 'industrias-osm-es.json'), 'utf8'));
+      LISTA_OSM = j.i.map(([la, lo, k, n]) => ({ lat: la, lon: lo, tipo: j.tipos[k], calor: TIPO_CALOR[j.tipos[k]] ?? false, nombre: n }));
+      console.log(`[fuego] lista local de OpenStreetMap: ${LISTA_OSM.length} instalaciones (${j.t.slice(0, 10)})`);
+    } catch { LISTA_OSM = false; }
+  }
+  if (!LISTA_OSM) return null;
+  const dLat = RADIO_OSM_M / 111200, dLon = dLat / Math.cos(lat * Math.PI / 180);
+  return LISTA_OSM.filter(x => Math.abs(x.lat - lat) <= dLat && Math.abs(x.lon - lon) <= dLon);
+}
+
 // Elige la instalación más probable alrededor de un punto
-function identificar(elementos, lat, lon) {
-  const c = elementos.map(e => {
-    const t = e.tags ?? {}, p = e.center ?? { lat: e.lat, lon: e.lon };
-    if (p.lat == null) return null;
-    const ti = tipoDe(t); if (!ti) return null;
-    return { t, ...ti, d: distKm({ lat, lon }, p), nombre: t.name ?? t.operator ?? t.brand ?? null, osm: `${e.type}/${e.id}` };
-  }).filter(Boolean);
+function identificar(cands, lat, lon) {
+  const c = cands.map(x => ({ ...x, d: distKm({ lat, lon }, x) }));
   const calor = c.filter(x => x.calor && x.d <= RADIO_CALOR_KM && x.tipo !== 'Fábrica').sort((a, b) => a.d - b.d);
-  const fabricas = c.filter(x => x.calor && x.d <= RADIO_CALOR_KM).sort((a, b) => a.d - b.d);
+  const fabricas = c.filter(x => x.tipo === 'Fábrica' && x.d <= 0.8).sort((a, b) => a.d - b.d);
   const mejor = calor[0] ?? fabricas[0];
   const nombrados = c.filter(x => x.nombre && x.tipo !== 'Polígono industrial').sort((a, b) => a.d - b.d);
   const poligono = c.filter(x => x.tipo === 'Polígono industrial' && x.nombre).sort((a, b) => a.d - b.d)[0];
   if (!mejor) return { industrial: false, contexto: poligono ? `${poligono.nombre} (a ${poligono.d.toFixed(1).replace(".", ",")} km)` : null };
   // Si el elemento con calor no tiene nombre, toma el de otro elemento cercano (operador, fábrica, polígono)
   const nombre = mejor.nombre ?? nombrados.find(x => x.d <= RADIO_CALOR_KM + 0.8)?.nombre ?? poligono?.nombre ?? null;
-  return { industrial: true, nombre, tipo: mejor.tipo, d_km: Math.round(mejor.d * 100) / 100, osm: mejor.osm };
+  return { industrial: true, nombre, tipo: mejor.tipo, d_km: Math.round(mejor.d * 100) / 100, osm: mejor.osm ?? null };
 }
+
 const distKm = (a, b) => Math.hypot((a.lat - b.lat) * 111.2, (a.lon - b.lon) * 111.2 * Math.cos(a.lat * Math.PI / 180));
 const celda = f => `${(Math.round(f.lat / 0.02) * 0.02).toFixed(2)},${(Math.round(f.lon / 0.02) * 0.02).toFixed(2)}`;
 
@@ -364,15 +367,20 @@ async function fuego() {
   let consultas = 0;
   const limiteOSM = Date.now() + PRESUPUESTO_OSM_MS;
   for (const g of grupos) {
-    if (Date.now() > limiteOSM) { console.warn('[fuego] Overpass: sin tiempo, se sigue en la próxima ejecución'); break; }
     const k = celda(g), prev = osm.celdas[k];
+    const [la, lo] = k.split(',').map(Number);
+    const locales = candidatosLocales(la, lo);
+    if (locales) { // lista mensual disponible: identificación local, sin consultas externas
+      osm.celdas[k] = { t: new Date().toISOString(), origen: 'lista', ...identificar(locales, la, lo) };
+      continue;
+    }
     if (prev?.error && Date.now() - Date.parse(prev.t) < 6 * 3600e3) continue; // falló hace poco: espera 6 h
     if (prev && !prev.error && (Date.now() - Date.parse(prev.t)) / 86400e3 < CADUCIDAD_OSM_DIAS) continue;
+    if (Date.now() > limiteOSM) { console.warn('[fuego] Overpass: sin tiempo, se sigue en la próxima ejecución'); break; }
     if (consultas >= MAX_CONSULTAS_OSM) break;
     consultas++;
     try {
-      const [la, lo] = k.split(',').map(Number);
-      osm.celdas[k] = { t: new Date().toISOString(), ...identificar(await overpass(la, lo, limiteOSM), la, lo) };
+      osm.celdas[k] = { t: new Date().toISOString(), ...identificar(candidatosOverpass(await overpass(la, lo, limiteOSM)), la, lo) };
     } catch (e) {
       console.warn(`[fuego] Overpass ${k}: ${e.message}`);
       if (e.message !== 'sin tiempo') osm.celdas[k] = { t: new Date().toISOString(), error: true };
