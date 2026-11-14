@@ -1,33 +1,24 @@
 {
- "actualizado": "2026-11-14T13:53:59.050Z",
+ "actualizado": "2026-11-14T13:58:26.208Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 15,
+ "total": 3,
+ "detecciones": 14,
  "mayor": {
-  "lat": 37.3588,
-  "lon": -6.7645,
-  "t": "2026-11-13T13:54:00.000Z",
-  "frp": 6.6,
+  "lat": 38.7587,
+  "lon": 0.1464,
+  "t": "2026-11-14T02:55:00.000Z",
+  "frp": 5.4,
   "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "día",
+  "sat": "NOAA21",
+  "dn": "noche",
   "n": 1,
   "ts": [
-   "2026-11-13T13:54:00.000Z"
-  ]
+   "2026-11-14T02:55:00.000Z"
+  ],
+  "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
  },
  "focos": [
-  {
-   "lat": 37.3588,
-   "lon": -6.7645,
-   "t": "2026-11-13T13:54:00.000Z",
-   "frp": 6.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
-  },
   {
    "lat": 38.7587,
    "lon": 0.1464,
@@ -49,28 +40,6 @@
    "dn": "noche",
    "n": 1,
    "contexto": "Parc Empresarial (a 1,1 km)"
-  },
-  {
-   "lat": 38.3776,
-   "lon": -0.5459,
-   "t": "2026-11-14T02:15:00.000Z",
-   "frp": 1.2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "contexto": "Polígon Industrial Inmediaciones (a 1,6 km)"
-  },
-  {
-   "lat": 41.408,
-   "lon": 1.9973,
-   "t": "2026-11-14T02:13:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   {
    "lat": 37.376,
@@ -118,6 +87,22 @@
    "dias_mes": 1
   },
   {
+   "lat": 38.3776,
+   "lon": -0.5459,
+   "t": "2026-11-14T02:15:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "CEMEX",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Alicante",
+   "dias_mes": 3
+  },
+  {
    "lat": 37.3583,
    "lon": -5.8655,
    "t": "2026-11-14T02:57:00.000Z",
@@ -147,6 +132,22 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
+   "dias_mes": 2
+  },
+  {
+   "lat": 41.408,
+   "lon": 1.9973,
+   "t": "2026-11-14T02:13:00.000Z",
+   "frp": 0.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Grupos Electrógenos, Electra Molins.",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Barcelona",
    "dias_mes": 2
   },
   {
