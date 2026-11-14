@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T11:45:48.770Z",
+ "actualizado": "2026-11-14T12:01:02.067Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -145,10 +145,10 @@
    "prof": 11,
    "mag": 4,
    "tipo_mag": "mb",
-   "lugar": null,
+   "lugar": "N de Medea (Argelia)",
    "region": "Northern Algeria",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wgbbk"
   },
   {
    "id": "20261113_0000066",
@@ -223,10 +223,10 @@
    "prof": 33,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "Atlántico-Canarias",
    "region": "Canary Islands, Spain Region",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfirt"
   },
   {
    "id": "20261112_0000258",
@@ -236,10 +236,10 @@
    "prof": 40,
    "mag": 3.2,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "N de Alcalá de los Gazules (Cádiz)",
    "region": "Strait Of Gibraltar",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfenz"
   },
   {
    "id": "20261112_0000184",
@@ -483,10 +483,10 @@
    "prof": 2,
    "mag": 3.1,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "E de Pliego (Murcia)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wciso"
   },
   {
    "id": "20261111_0000004",
@@ -496,10 +496,10 @@
    "prof": 3,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "SO de O Carballiño (OU)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wbwsu"
   },
   {
    "id": "20261111_0000002",
@@ -717,10 +717,10 @@
    "prof": 8,
    "mag": 2.9,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "NO de Olmeda del Rey (Cuenca)",
    "region": "Spain",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vzicc"
   },
   {
    "id": "20261109_0000154",
@@ -1042,10 +1042,10 @@
    "prof": 0,
    "mag": 2.6,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "Alborán Norte",
    "region": "Strait Of Gibraltar",
    "autor": "IGN",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vthtd"
   },
   {
    "id": "20261106_0000101",
@@ -1276,10 +1276,10 @@
    "prof": 0,
    "mag": 2.5,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "NO de Olmeda del Rey (Cuenca)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vzicc"
   },
   {
    "id": "20261104_0000242",
@@ -1315,10 +1315,10 @@
    "prof": 3,
    "mag": 3,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "N de Tabernas (Almería)",
    "region": "Spain",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vqijf"
   },
   {
    "id": "20261104_0000215",
@@ -1328,10 +1328,10 @@
    "prof": 31,
    "mag": 2.4,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "SO de Cabo de San Vicente",
    "region": "West Of Gibraltar",
    "autor": "EMSC",
-   "ign": null
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vqfxj"
   },
   {
    "id": "20261104_0000213",
@@ -1357,19 +1357,6 @@
    "lugar": null,
    "region": "Strait Of Gibraltar",
    "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261104_0000150",
-   "t": "2026-11-04T12:00:34.841Z",
-   "lat": 42.7835,
-   "lon": 1.7889,
-   "prof": 5,
-   "mag": 2,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Pyrenees",
-   "autor": "ReNaSS",
    "ign": null
   }
  ]
