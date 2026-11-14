@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-14T14:45:43.807Z",
+ "actualizado": "2026-11-14T15:01:03.333Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 8,
+  "total": 7,
   "sentibles": 0,
   "mayor": {
    "id": "20261114_0000071",
@@ -1328,10 +1328,10 @@
    "prof": 31,
    "mag": 2.4,
    "tipo_mag": "ml",
-   "lugar": "SO de Cabo de San Vicente",
+   "lugar": null,
    "region": "West Of Gibraltar",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vqfxj"
+   "ign": null
   },
   {
    "id": "20261104_0000213",
@@ -1340,19 +1340,6 @@
    "lon": -2.9721,
    "prof": 11,
    "mag": 1.7,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Strait Of Gibraltar",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261104_0000211",
-   "t": "2026-11-04T14:52:20.010Z",
-   "lat": 36.3254,
-   "lon": -7.9408,
-   "prof": 14,
-   "mag": 2.5,
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Strait Of Gibraltar",
