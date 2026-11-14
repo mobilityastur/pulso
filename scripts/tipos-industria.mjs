@@ -2,7 +2,7 @@
 export const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible?]
   [t => /steel|iron|metal_?works|foundry|smelter|alumin/i.test(t.industrial ?? '') || /blast furnace|coke/i.test(t['plant:source'] ?? ''), 'Siderurgia / metalurgia', true],
   [t => /refinery|oil|petro/i.test(t.industrial ?? '') || t.man_made === 'flare', 'Refinería / petroquímica', true],
-  [t => /cement|lime/i.test(`${t.industrial ?? ''} ${t.product ?? ''} ${t.name ?? ''}`) || /ciment|cemento/i.test(t.name ?? ''), 'Cementera', true],
+  [t => /cement|lime/i.test(`${t.industrial ?? ''} ${t.product ?? ''} ${t.name ?? ''}`) || /ciment|cemento|cemex|holcim|lafarge|portland|cosmos|molins|votorantim|cimpor|tudela veguín|tudela veguin|hisalba|financiera y minera/i.test(`${t.name ?? ''} ${t.operator ?? ''} ${t.brand ?? ''}`), 'Cementera', true],
   [t => /chemical|fertili/i.test(t.industrial ?? ''), 'Química', true],
   [t => /glass/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Vidrio', true],
   [t => /brick|ceramic|tile/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Cerámica', true],
