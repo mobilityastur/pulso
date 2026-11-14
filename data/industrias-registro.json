@@ -122,7 +122,27 @@
     "2026-11-14T01:15:00.000Z",
     "2026-11-14T02:15:00.000Z"
    ]
+  },
+  "grupos electrógenos, electra molins.|cementera|barcelona": {
+   "nombre": "Grupos Electrógenos, Electra Molins.",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Barcelona",
+   "lat": 41.408,
+   "lon": 1.9973,
+   "primera_vez": "2026-11-14T02:13:00.000Z",
+   "ultima_vez": "2026-11-14T02:13:00.000Z",
+   "ultimo_frp": 0.8,
+   "frp_max": 0.8,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T02:13:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-14T13:58:26.208Z"
+ "actualizado": "2026-11-14T14:04:14.474Z"
 }
