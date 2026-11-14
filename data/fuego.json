@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-14T14:31:03.101Z",
+ "actualizado": "2026-11-14T14:45:44.898Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 14,
+ "total": 5,
+ "detecciones": 15,
  "mayor": {
   "lat": 38.7587,
   "lon": 0.1464,
@@ -29,6 +29,17 @@
    "dn": "noche",
    "n": 1,
    "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
+  },
+  {
+   "lat": 39.4835,
+   "lon": 2.8599,
+   "t": "2026-11-14T12:38:00.000Z",
+   "frp": 2.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Son Noguera (a 0,9 km)"
   },
   {
    "lat": 41.2204,

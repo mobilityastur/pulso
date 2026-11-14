@@ -1,19 +1,19 @@
 {
  "celdas": {
   "38.76,0.14": {
-   "t": "2026-11-14T14:31:03.099Z",
+   "t": "2026-11-14T14:45:44.894Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
   },
   "41.22,1.56": {
-   "t": "2026-11-14T14:31:03.099Z",
+   "t": "2026-11-14T14:45:44.895Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Parc Empresarial (a 1,1 km)"
   },
   "42.56,-6.76": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.895Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -23,7 +23,7 @@
    "osm": null
   },
   "41.18,1.22": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.896Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Repsol Tarragona Refinery",
@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.896Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.896Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.896Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,13 +63,13 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-14T14:31:03.100Z",
+   "t": "2026-11-14T14:45:44.896Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   "37.36,-6.68": {
-   "t": "2026-11-14T14:31:03.101Z",
+   "t": "2026-11-14T14:45:44.897Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -79,10 +79,16 @@
    "osm": null
   },
   "37.38,-5.74": {
-   "t": "2026-11-14T14:31:03.101Z",
+   "t": "2026-11-14T14:45:44.897Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Pinto (a 0,3 km)"
+  },
+  "39.48,2.86": {
+   "t": "2026-11-14T14:45:44.895Z",
+   "origen": "lista",
+   "industrial": false,
+   "contexto": "Son Noguera (a 0,9 km)"
   }
  }
 }
