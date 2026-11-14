@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-14T06:45:37.516Z",
+ "actualizado": "2026-11-14T07:01:01.160Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 8,
+  "total": 9,
   "sentibles": 1,
   "mayor": {
    "id": "20261113_0000085",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261114_0000085",
+   "t": "2026-11-14T06:32:19.340Z",
+   "lat": 37.1156,
+   "lon": -3.596,
+   "prof": 10,
+   "mag": 1.5,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Spain",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261114_0000071",
    "t": "2026-11-14T04:54:54.950Z",
