@@ -298,12 +298,13 @@ function identificar(cands, lat, lon) {
   const calor = c.filter(x => x.calor && x.d <= RADIO_CALOR_KM && x.tipo !== 'Fábrica').sort((a, b) => a.d - b.d);
   const fabricas = c.filter(x => x.tipo === 'Fábrica' && x.d <= 0.8).sort((a, b) => a.d - b.d);
   const mejor = calor[0] ?? fabricas[0];
-  const nombrados = c.filter(x => x.nombre && x.tipo !== 'Polígono industrial').sort((a, b) => a.d - b.d);
+  const mismoTipo = c.filter(x => x.nombre && x.tipo === mejor?.tipo).sort((a, b) => a.d - b.d);
   const poligono = c.filter(x => x.tipo === 'Polígono industrial' && x.nombre).sort((a, b) => a.d - b.d)[0];
   if (!mejor) return { industrial: false, contexto: poligono ? `${poligono.nombre} (a ${poligono.d.toFixed(1).replace(".", ",")} km)` : null };
-  // Si el elemento con calor no tiene nombre, toma el de otro elemento cercano (operador, fábrica, polígono)
-  const nombre = mejor.nombre ?? nombrados.find(x => x.d <= RADIO_CALOR_KM + 0.8)?.nombre ?? poligono?.nombre ?? null;
-  return { industrial: true, nombre, tipo: mejor.tipo, d_km: Math.round(mejor.d * 100) / 100, osm: mejor.osm ?? null };
+  // Si no tiene nombre, solo se toma el de otro elemento del mismo tipo muy cerca; si no, se indica el polígono
+  const nombre = mejor.nombre ?? mismoTipo.find(x => x.d <= RADIO_CALOR_KM)?.nombre ?? null;
+  const zona = !nombre && poligono && poligono.d <= RADIO_CALOR_KM ? poligono.nombre : null;
+  return { industrial: true, nombre, tipo: mejor.tipo, zona, d_km: Math.round(mejor.d * 100) / 100, osm: mejor.osm ?? null };
 }
 
 const distKm = (a, b) => Math.hypot((a.lat - b.lat) * 111.2, (a.lon - b.lon) * 111.2 * Math.cos(a.lat * Math.PI / 180));
@@ -396,7 +397,7 @@ async function fuego() {
     const o = osm.celdas[celda(g)]?.error ? null : osm.celdas[celda(g)];
     let id = null;
     if (semilla) id = { nombre: semilla.nombre, tipo: SEMILLA_TIPO, origen: 'conocida' };
-    else if (o?.industrial) id = { nombre: o.nombre, tipo: o.tipo, origen: 'OpenStreetMap', osm: o.osm };
+    else if (o?.industrial) id = { nombre: o.nombre, tipo: o.tipo, zona: o.zona ?? null, origen: 'OpenStreetMap', osm: o.osm };
     else if (dias >= DIAS_FIJA) id = { nombre: null, tipo: 'Fuente fija sin identificar', origen: 'repetición' };
     if (id) industriales.push({ ...g, ...id, ciudad: ciudadCercana(g), dias_mes: dias });
     else focos_.push(o?.contexto ? { ...g, contexto: o.contexto } : g);
@@ -405,8 +406,8 @@ async function fuego() {
   // Registro histórico de instalaciones que han dado focos de calor
   const reg = readJSON('industrias-registro.json', { instalaciones: {} });
   for (const x of industriales) {
-    const clave = x.nombre ? `${x.nombre}|${x.tipo}|${x.ciudad}`.toLowerCase() : `celda:${celda(x)}`;
-    const r = (reg.instalaciones[clave] ??= { nombre: x.nombre, tipo: x.tipo, origen: x.origen, osm: x.osm ?? null, ciudad: x.ciudad,
+    const clave = x.nombre ? `${x.nombre}|${x.tipo}|${x.ciudad}`.toLowerCase() : `${x.tipo}|celda:${celda(x)}`.toLowerCase();
+    const r = (reg.instalaciones[clave] ??= { nombre: x.nombre, tipo: x.tipo, zona: x.zona ?? null, origen: x.origen, osm: x.osm ?? null, ciudad: x.ciudad,
       lat: x.lat, lon: x.lon, primera_vez: x.t, ultima_vez: x.t, ultimo_frp: x.frp, frp_max: x.frp, detecciones: 0, dias: [], pasos: [] });
     if (!r.nombre && x.nombre) { r.nombre = x.nombre; r.tipo = x.tipo; r.origen = x.origen; }
     for (const t of x.ts ?? [x.t]) {

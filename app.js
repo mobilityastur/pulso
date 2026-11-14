@@ -152,7 +152,7 @@ function pintarFuego(f) {
   }
   $('industriales').innerHTML = ind.length ? ind.map(x => `<li data-lat="${x.lat}" data-lon="${x.lon}"><div class="punto gris">${nf1.format(x.frp)}</div>
     <div class="info"><div class="lugar">${x.nombre ?? x.tipo}</div>
-    <div class="det">${x.nombre ? x.tipo + ' · ' : ''}${cercaDe(x.lat, x.lon)} · ${hora(x.t)}</div></div></li>`).join('')
+    <div class="det">${x.nombre ? x.tipo + ' · ' : ''}${x.zona ? 'en ' + x.zona + ' · ' : ''}${cercaDe(x.lat, x.lon)} · ${hora(x.t)}</div></div></li>`).join('')
     : '<li class="vacio">Ninguna en las últimas 24 horas.</li>';
   document.querySelectorAll('#industriales li[data-lat]').forEach(li => li.onclick = () => { location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([+li.dataset.lat, +li.dataset.lon], 13), 80); });
   const nreg = Object.keys(estado.reg?.instalaciones ?? {}).length;
@@ -424,7 +424,7 @@ function pintarRegistro() {
     const reciente = Date.now() - Date.parse(x.ultima_vez) <= 24 * 3600e3;
     return `<li data-lat="${x.lat}" data-lon="${x.lon}"><div class="punto gris">${x.dias.length}</div>
       <div class="info"><div class="lugar">${x.nombre ?? x.tipo}${reciente ? '<span class="etq hoy">hoy</span>' : ''}</div>
-      <div class="det">${x.nombre ? x.tipo + ' · ' : ''}cerca de ${x.ciudad}<br>Último: ${fechaHora(x.ultima_vez)} (${hace(x.ultima_vez)}) · ${nf1.format(x.ultimo_frp)} MW<br>
+      <div class="det">${x.nombre ? x.tipo + ' · ' : ''}${x.zona ? 'en ' + x.zona + ' · ' : ''}cerca de ${x.ciudad}<br>Último: ${fechaHora(x.ultima_vez)} (${hace(x.ultima_vez)}) · ${nf1.format(x.ultimo_frp)} MW<br>
       ${x.dias.length} día${x.dias.length === 1 ? '' : 's'} · ${x.detecciones} paso${x.detecciones === 1 ? '' : 's'} · desde ${diaFmt.format(new Date(x.primera_vez))} · máx. ${nf1.format(x.frp_max)} MW</div></div></li>`;
   }).join('') : '<li class="vacio">Aún no se ha registrado ninguna instalación.</li>';
   document.querySelectorAll('#registro li[data-lat]').forEach(li => li.onclick = () => { location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([+li.dataset.lat, +li.dataset.lon], 13), 80); });
