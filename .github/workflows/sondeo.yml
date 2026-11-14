@@ -6,23 +6,7 @@ jobs:
     steps:
       - run: |
           set +e
-          pip install -q pyshp >/dev/null 2>&1
-          for f in sitesfacilities-pf instalaciones-pf; do
-            echo "=== $f"; curl -sSL --http1.1 -A "Mozilla/5.0 Pulso" -m 180 -o $f.zip "https://gis.miteco.gob.es/descargas/app/DescargaFichero?f=$f.zip"; ls -la $f.zip; unzip -l $f.zip | head -15; mkdir -p $f; unzip -q -o $f.zip -d $f
-          done
-          python3 - <<'PY'
-          import shapefile, glob
-          for shp in glob.glob('*/**/*.shp', recursive=True):
-              r = shapefile.Reader(shp, encoding='latin-1')
-              print('###', shp, r.shapeType, len(r), r.bbox)
-              prj = glob.glob(shp[:-4]+'.prj'); print('PRJ', open(prj[0]).read()[:200] if prj else None)
-              print('CAMPOS', [f[0] for f in r.fields[1:]])
-              for i in range(3): print('REG', r.record(i).as_dict(), r.shape(i).points[:1])
-              d = [r.record(i).as_dict() for i in range(len(r))]
-              for k in d[0]:
-                  if any(x in k.lower() for x in ['activ','main','estado','status','nombre','name']):
-                      from collections import Counter
-                      c = Counter(str(x[k])[:70] for x in d); print('VALORES', k, len(c), c.most_common(12))
-              for x in d:
-                  if 'ARCELOR' in str(x).upper() and ('GIJ' in str(x).upper() or 'AVIL' in str(x).upper() or 'CARRE' in str(x).upper()): print('ARCELOR', x)
-          PY
+          UA="Mozilla/5.0 (X11; Linux x86_64) Pulso"
+          curl -sSL --http1.1 -A "$UA" -m 60 -D h.txt -o p.html "https://gis.miteco.gob.es/descargas/app/DescargaFichero?f=sitesfacilities-pf.zip"; cat h.txt | head -20; sed 's/<[^>]*>/ /g' p.html | tr -s ' \n' | head -c 1500; echo; grep -oiE '(href|action|src)="[^"]+"' p.html | head
+          echo "=== ATOM"; curl -sSL -A "$UA" -m 60 -o a.xml "http://gis.miteco.gob.es/descargas/atom/CategCalidadEvalAmbiental/downloadservice.xml"; ls -la a.xml; grep -oiE 'href="[^"]*(site|facilit|instala|prtr|emplaz)[^"]*"' a.xml | sort -u | head
+          for u in $(grep -oiE 'href="[^"]*(site|facilit|emplaz)[^"]*\.xml"' a.xml | sed 's/href="//;s/"$//' | sort -u | head -3); do echo "--- $u"; curl -sSL -A "$UA" -m 60 "$u" | grep -oiE 'href="[^"]+"' | sort -u | head -15; done
