@@ -1,5 +1,5 @@
 // Pulso · service worker: la app se abre sin conexión y los datos van siempre por red primero.
-const CACHE = 'pulso-v3';
+const CACHE = 'pulso-v4';
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', e => {

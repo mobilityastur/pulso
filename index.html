@@ -154,6 +154,22 @@
     <p class="nota">Valores del modelo de Copernicus (CAMS), no medidas de estaciones. Las categorías son las del Índice de Calidad del Aire (ICA): para cada punto cuenta el peor de los contaminantes (partículas PM2,5 y PM10, NO₂, ozono y SO₂).</p>
   </section>
 
+  <!-- REGISTRO DE INSTALACIONES -->
+  <section id="v-industrias" class="vista">
+    <a class="volver" href="#fuego">‹ Fuego</a>
+    <div class="grande">
+      <div class="g-num" id="r-total">—</div>
+      <div class="g-txt">instalaciones industriales detectadas por satélite</div>
+    </div>
+    <div class="panel">
+      <div class="cab-panel"><h3>Registro</h3>
+        <div class="seg" id="seg-reg" role="group" aria-label="Orden"><button data-o="ultima" class="on">Último registro</button><button data-o="dias">Más días</button></div></div>
+      <ul class="focos" id="registro"></ul>
+    </div>
+    <p class="fuente" id="r-fuente"></p>
+    <p class="nota">Cada instalación se registra la primera vez que el satélite detecta calor en ella. «Días» cuenta los días distintos con detección y «pasos», las pasadas del satélite en que se ha visto. Identificación con datos de OpenStreetMap; si no hay datos, se marca como fuente fija tras repetirse 5 días en un mes.</p>
+  </section>
+
   <!-- FUEGO -->
   <section id="v-fuego" class="vista">
     <div class="grande">
@@ -165,9 +181,9 @@
       <ul class="focos" id="focos"></ul>
     </div>
     <div class="panel">
-      <h3>Fuentes industriales fijas</h3>
+      <div class="cab-panel"><h3>Instalaciones industriales hoy</h3><a class="enlace" href="#industrias" id="ir-registro">Registro ›</a></div>
       <ul class="focos" id="industriales"></ul>
-      <p class="nota" style="margin:8px 0 0">Antorchas, hornos o refinerías que el satélite ve casi a diario. No se cuentan como incendios.</p>
+      <p class="nota" style="margin:8px 0 0">Siderurgias, refinerías, cementeras o centrales que el satélite ve por su calor. Se identifican con OpenStreetMap y no se cuentan como incendios.</p>
     </div>
     <div class="panel">
       <h3>Focos por día · últimos 30 días</h3>

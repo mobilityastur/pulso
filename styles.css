@@ -175,3 +175,9 @@ select { width: 100%; font: inherit; font-size: 15px; color: var(--tx); backgrou
 .tabs a { font-size: 10px; }
 .tabs a span { font-size: 18px; }
 .leaflet-control-layers { background: var(--s1) !important; color: var(--tx) !important; border: 1px solid var(--bd) !important; border-radius: 12px !important; }
+
+.enlace { color: var(--acento); font-size: 14px; font-weight: 500; }
+.volver { display: inline-block; color: var(--acento); font-size: 15px; margin: 2px 2px 6px; }
+#v-industrias .g-num { color: var(--tx2); }
+.etq { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 99px; background: var(--s2); color: var(--tx2); margin-left: 4px; vertical-align: 1px; }
+.etq.hoy { background: var(--fuego-bg); color: var(--fuego-tx); }

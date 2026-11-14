@@ -57,7 +57,7 @@ const $ = id => document.getElementById(id);
 const el = (tag, attrs = {}, html = '') => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 
 // ---------- datos ----------
-const estado = { luz: null, fuego: null, hist: null, st: null, agua: null, tierra: null, aire: null };
+const estado = { luz: null, fuego: null, hist: null, st: null, agua: null, tierra: null, aire: null, reg: null };
 async function cargar(f) {
   const r = await fetch(`data/${f}?v=${Date.now()}`, { cache: 'no-store' });
   if (!r.ok) throw new Error(f);
@@ -67,6 +67,7 @@ async function actualizar() {
   const b = $('refrescar'); b.classList.add('girando');
   const [luz, fuego, hist, st, agua, tierra, aire] = await Promise.allSettled(['luz.json', 'fuego.json', 'fuego-historico.json', 'estado.json', 'agua.json', 'tierra.json', 'aire.json'].map(cargar));
   estado.aire = aire.value ?? estado.aire;
+  try { estado.reg = await cargar('industrias-registro.json'); } catch {}
   estado.agua = agua.value ?? estado.agua;
   estado.tierra = tierra.value ?? estado.tierra;
   estado.luz = luz.value ?? estado.luz;
@@ -87,6 +88,7 @@ function pintar() {
   pintarAgua(estado.agua);
   pintarTierra(estado.tierra);
   pintarAire(estado.aire);
+  pintarRegistro();
   pintarZona();
   pintarConexiones();
   pintarMapas();
@@ -142,16 +144,19 @@ function pintarFuego(f) {
     f.focos.slice(0, 40).forEach(x => {
       const li = el('li', {}, `<div class="punto">${x.frp >= 100 ? nf.format(x.frp) : nf1.format(x.frp)}</div>
         <div class="info"><div class="lugar">${cercaDe(x.lat, x.lon)}</div>
-        <div class="det">${hora(x.t)} · ${x.dn} · confianza ${x.conf}${x.n > 1 ? ` · ${x.n} detecciones` : ''}</div></div>`);
+        <div class="det">${hora(x.t)} · ${x.dn} · confianza ${x.conf}${x.n > 1 ? ` · ${x.n} detecciones` : ''}${x.contexto ? `<br>Cerca de ${x.contexto}` : ''}</div></div>`);
       li.onclick = () => { location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([x.lat, x.lon], 11), 80); };
       lista.append(li);
     });
     if (f.focos.length > 40) lista.append(el('li', { className: 'vacio' }, `Y ${f.focos.length - 40} focos más en el mapa.`));
   }
-  $('industriales').innerHTML = ind.length ? ind.map(x => `<li><div class="punto gris">${nf1.format(x.frp)}</div>
-    <div class="info"><div class="lugar">${x.nombre ?? cercaDe(x.lat, x.lon)}</div>
-    <div class="det">${x.nombre ? cercaDe(x.lat, x.lon) + ' · ' : ''}visto ${x.dias_mes} día${x.dias_mes === 1 ? '' : 's'} este mes</div></div></li>`).join('')
+  $('industriales').innerHTML = ind.length ? ind.map(x => `<li data-lat="${x.lat}" data-lon="${x.lon}"><div class="punto gris">${nf1.format(x.frp)}</div>
+    <div class="info"><div class="lugar">${x.nombre ?? x.tipo}</div>
+    <div class="det">${x.nombre ? x.tipo + ' · ' : ''}${cercaDe(x.lat, x.lon)} · ${hora(x.t)}</div></div></li>`).join('')
     : '<li class="vacio">Ninguna en las últimas 24 horas.</li>';
+  document.querySelectorAll('#industriales li[data-lat]').forEach(li => li.onclick = () => { location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([+li.dataset.lat, +li.dataset.lon], 13), 80); });
+  const nreg = Object.keys(estado.reg?.instalaciones ?? {}).length;
+  $('ir-registro').textContent = nreg ? `Registro (${nreg}) ›` : 'Registro ›';
   $('f-fuente').textContent = `Fuente: ${f.fuente}. El número del círculo es la potencia radiativa del fuego (MW).`;
 
   const dias = Object.entries(estado.hist?.dias ?? {}).slice(-30);
@@ -280,9 +285,9 @@ function pintarTierra(t) {
   });
   $('t-fuente').textContent = `Fuente: ${t.fuente}. Hora local peninsular.`;
 }
-document.querySelectorAll('.seg button').forEach(b => b.onclick = () => {
+document.querySelectorAll('#v-tierra .seg button').forEach(b => b.onclick = () => {
   magMin = Number(b.dataset.m);
-  document.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('#v-tierra .seg button').forEach(x => x.classList.toggle('on', x === b));
   pintarTierra(estado.tierra);
 });
 
@@ -406,6 +411,31 @@ $('z-geo').onclick = () => {
   }, () => { b.textContent = 'No se pudo obtener la ubicación'; setTimeout(() => b.textContent = '📍 Usar mi ubicación', 2500); }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
 };
 
+
+// ---------- REGISTRO DE INSTALACIONES ----------
+let ordenReg = 'ultima';
+const fechaHora = t => `${diaFmt.format(new Date(t))} ${hora(t)}`;
+function pintarRegistro() {
+  const r = estado.reg; const inst = Object.values(r?.instalaciones ?? {});
+  $('r-total').textContent = nf.format(inst.length);
+  const hoy = new Set((estado.fuego?.industriales ?? []).map(x => `${x.lat},${x.lon}`));
+  const lista = [...inst].sort((a, b) => ordenReg === 'dias' ? b.dias.length - a.dias.length || b.ultima_vez.localeCompare(a.ultima_vez) : b.ultima_vez.localeCompare(a.ultima_vez));
+  $('registro').innerHTML = lista.length ? lista.map(x => {
+    const reciente = Date.now() - Date.parse(x.ultima_vez) <= 24 * 3600e3;
+    return `<li data-lat="${x.lat}" data-lon="${x.lon}"><div class="punto gris">${x.dias.length}</div>
+      <div class="info"><div class="lugar">${x.nombre ?? x.tipo}${reciente ? '<span class="etq hoy">hoy</span>' : ''}</div>
+      <div class="det">${x.nombre ? x.tipo + ' · ' : ''}cerca de ${x.ciudad}<br>Último: ${fechaHora(x.ultima_vez)} (${hace(x.ultima_vez)}) · ${nf1.format(x.ultimo_frp)} MW<br>
+      ${x.dias.length} día${x.dias.length === 1 ? '' : 's'} · ${x.detecciones} paso${x.detecciones === 1 ? '' : 's'} · desde ${diaFmt.format(new Date(x.primera_vez))} · máx. ${nf1.format(x.frp_max)} MW</div></div></li>`;
+  }).join('') : '<li class="vacio">Aún no se ha registrado ninguna instalación.</li>';
+  document.querySelectorAll('#registro li[data-lat]').forEach(li => li.onclick = () => { location.hash = '#mapa'; setTimeout(() => mapas.grande?.setView([+li.dataset.lat, +li.dataset.lon], 13), 80); });
+  $('r-fuente').textContent = r?.actualizado ? `Actualizado ${hace(r.actualizado)}. El número del círculo son los días con detección.` : '';
+}
+document.querySelectorAll('#seg-reg button').forEach(b => b.onclick = () => {
+  ordenReg = b.dataset.o;
+  document.querySelectorAll('#seg-reg button').forEach(x => x.classList.toggle('on', x === b));
+  pintarRegistro();
+});
+
 // ---------- gráficas SVG ----------
 const W = 640, H = 220, PL = 52, PR = 8, PT = 8, PB = 28;
 function ejes(n, maxY, etqX, unidad = '') {
@@ -481,7 +511,7 @@ function capaFuego(conPopups) {
   const g = L.layerGroup();
   (estado.fuego?.industriales ?? []).forEach(f => {
     const mk = L.circleMarker([f.lat, f.lon], { radius: 5, color: '#9496A0', weight: 1.5, fillColor: '#9496A0', fillOpacity: .35 });
-    if (conPopups) mk.bindPopup(`<b>${f.nombre ?? 'Fuente industrial fija'}</b><br>${cercaDe(f.lat, f.lon)}<br>Visto ${f.dias_mes} días este mes · ${nf1.format(f.frp)} MW<br><small>No se cuenta como incendio.</small>`);
+    if (conPopups) mk.bindPopup(`<b>${f.nombre ?? f.tipo ?? 'Fuente industrial fija'}</b><br>${f.nombre ? f.tipo + '<br>' : ''}${cercaDe(f.lat, f.lon)}<br>${hora(f.t)} (${hace(f.t)}) · ${nf1.format(f.frp)} MW<br><small>Identificada por ${f.origen ?? 'repetición'}. No se cuenta como incendio.</small>`);
     mk.addTo(g);
   });
   (estado.fuego?.focos ?? []).forEach(f => {
@@ -534,9 +564,9 @@ function pintarMapas() {
 // ---------- navegación ----------
 function ir() {
   const v = (location.hash.slice(1) || 'inicio');
-  const vista = ['inicio', 'mapa', 'luz', 'agua', 'aire', 'fuego', 'tierra'].includes(v) ? v : 'inicio';
+  const vista = ['inicio', 'mapa', 'luz', 'agua', 'aire', 'fuego', 'tierra', 'industrias'].includes(v) ? v : 'inicio';
   document.querySelectorAll('.vista').forEach(s => s.classList.toggle('activa', s.id === `v-${vista}`));
-  document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('activa', a.dataset.v === vista));
+  document.querySelectorAll('.tabs a').forEach(a => a.classList.toggle('activa', a.dataset.v === (vista === 'industrias' ? 'fuego' : vista)));
   if (vista === 'mapa' && typeof L !== 'undefined') {
     if (!mapas.grande) { mapas.grande = crearMapa('mapa', true); rellenar('grande', true); }
     setTimeout(() => mapas.grande.invalidateSize(), 50);

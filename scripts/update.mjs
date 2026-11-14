@@ -242,6 +242,63 @@ const FIJAS_SEMILLA = [
   { nombre: 'ArcelorMittal Avilés', lat: 43.5394, lon: -5.8286 },
 ];
 const RADIO_FIJA_KM = 2, DIAS_FIJA = 5;
+const SEMILLA_TIPO = 'Siderurgia';
+
+// ---- Identificación automática con OpenStreetMap (API Overpass) ----
+// Se consulta una sola vez por celda de ~2 km y se guarda en data/industrias-osm.json (caducidad 120 días).
+const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
+const MAX_CONSULTAS_OSM = 12, RADIO_OSM_M = 2500, RADIO_CALOR_KM = 1.6, CADUCIDAD_OSM_DIAS = 120;
+const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible?]
+  [t => /steel|iron|metal_?works|foundry|smelter|alumin/i.test(t.industrial ?? '') || /blast furnace|coke/i.test(t['plant:source'] ?? ''), 'Siderurgia / metalurgia', true],
+  [t => /refinery|oil|petro/i.test(t.industrial ?? '') || t.man_made === 'flare', 'Refinería / petroquímica', true],
+  [t => /cement|lime/i.test(`${t.industrial ?? ''} ${t.product ?? ''} ${t.name ?? ''}`) || /ciment|cemento/i.test(t.name ?? ''), 'Cementera', true],
+  [t => /chemical|fertili/i.test(t.industrial ?? ''), 'Química', true],
+  [t => /glass/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Vidrio', true],
+  [t => /brick|ceramic|tile/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Cerámica', true],
+  [t => /paper|pulp|cardboard/i.test(`${t.industrial ?? ''} ${t.product ?? ''}`), 'Papelera', true],
+  [t => /incinerat|waste/i.test(`${t.industrial ?? ''} ${t['plant:source'] ?? ''}`), 'Residuos / incineración', true],
+  [t => t.power === 'plant' && !/solar|wind|hydro|photovoltaic/i.test(t['plant:source'] ?? ''), 'Central eléctrica', true],
+  [t => t.man_made === 'kiln', 'Horno industrial', true],
+  [t => /concrete|asphalt/i.test(t.industrial ?? ''), 'Planta de hormigón / asfalto', false],
+  [t => t.man_made === 'works' || !!t.industrial, 'Fábrica', true],
+  [t => t.landuse === 'industrial', 'Polígono industrial', false],
+];
+const tipoDe = t => { for (const [f, nombre, calor] of TIPOS) if (f(t)) return { tipo: nombre, calor }; return null; };
+
+async function overpass(lat, lon) {
+  const q = `[out:json][timeout:25];(nwr(around:${RADIO_OSM_M},${lat},${lon})[man_made~"^(works|flare|kiln|chimney)$"];` +
+    `nwr(around:${RADIO_OSM_M},${lat},${lon})[industrial];nwr(around:${RADIO_OSM_M},${lat},${lon})[power=plant];` +
+    `nwr(around:${RADIO_OSM_M},${lat},${lon})[landuse=industrial][name];);out tags center 60;`;
+  let ultimo;
+  for (let i = 0; i < OVERPASS.length * 2; i++) {
+    try {
+      const r = await fetch(OVERPASS[i % OVERPASS.length], { method: 'POST', body: new URLSearchParams({ data: q }),
+        headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' } });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return (await r.json()).elements ?? [];
+    } catch (e) { ultimo = e; await new Promise(s => setTimeout(s, 3000)); }
+  }
+  throw ultimo;
+}
+
+// Elige la instalación más probable alrededor de un punto
+function identificar(elementos, lat, lon) {
+  const c = elementos.map(e => {
+    const t = e.tags ?? {}, p = e.center ?? { lat: e.lat, lon: e.lon };
+    if (p.lat == null) return null;
+    const ti = tipoDe(t); if (!ti) return null;
+    return { t, ...ti, d: distKm({ lat, lon }, p), nombre: t.name ?? t.operator ?? t.brand ?? null, osm: `${e.type}/${e.id}` };
+  }).filter(Boolean);
+  const calor = c.filter(x => x.calor && x.d <= RADIO_CALOR_KM && x.tipo !== 'Fábrica').sort((a, b) => a.d - b.d);
+  const fabricas = c.filter(x => x.calor && x.d <= RADIO_CALOR_KM).sort((a, b) => a.d - b.d);
+  const mejor = calor[0] ?? fabricas[0];
+  const nombrados = c.filter(x => x.nombre && x.tipo !== 'Polígono industrial').sort((a, b) => a.d - b.d);
+  const poligono = c.filter(x => x.tipo === 'Polígono industrial' && x.nombre).sort((a, b) => a.d - b.d)[0];
+  if (!mejor) return { industrial: false, contexto: poligono ? `${poligono.nombre} (a ${poligono.d.toFixed(1).replace(".", ",")} km)` : null };
+  // Si el elemento con calor no tiene nombre, toma el de otro elemento cercano (operador, fábrica, polígono)
+  const nombre = mejor.nombre ?? nombrados.find(x => x.d <= RADIO_CALOR_KM + 0.8)?.nombre ?? poligono?.nombre ?? null;
+  return { industrial: true, nombre, tipo: mejor.tipo, d_km: Math.round(mejor.d * 100) / 100, osm: mejor.osm };
+}
 const distKm = (a, b) => Math.hypot((a.lat - b.lat) * 111.2, (a.lon - b.lon) * 111.2 * Math.cos(a.lat * Math.PI / 180));
 const celda = f => `${(Math.round(f.lat / 0.02) * 0.02).toFixed(2)},${(Math.round(f.lon / 0.02) * 0.02).toFixed(2)}`;
 
@@ -277,8 +334,8 @@ async function fuego() {
   const grupos = [];
   for (const f of focos) {
     const g = grupos.find(g => Math.hypot((g.lat - f.lat) * 111, (g.lon - f.lon) * 85) < 1.5);
-    if (g) { g.n++; g.frp = Math.max(g.frp, f.frp); if (f.t > g.t) g.t = f.t; if (f.conf === 'alta') g.conf = 'alta'; }
-    else grupos.push({ ...f, n: 1 });
+    if (g) { g.n++; g.frp = Math.max(g.frp, f.frp); if (f.t > g.t) g.t = f.t; if (f.conf === 'alta') g.conf = 'alta'; if (!g.ts.includes(f.t)) g.ts.push(f.t); }
+    else grupos.push({ ...f, n: 1, ts: [f.t] });
   }
   grupos.sort((a, b) => b.frp - a.frp);
 
@@ -296,13 +353,58 @@ async function fuego() {
   }
   writeJSON('fuego-fijos.json', memoria);
 
+  // Identificación con OpenStreetMap (solo celdas nuevas o caducadas, con un límite por ejecución)
+  const ciudades = JSON.parse(fs.readFileSync(path.join(DATA, 'ciudades.json'), 'utf8'));
+  const ciudadCercana = g => ciudades.reduce((m, c) => { const d = distKm(g, { lat: c.la, lon: c.lo }); return !m || d < m.d ? { n: c.n, d } : m; }, null).n;
+  const osm = readJSON('industrias-osm.json', { celdas: {} });
+  let consultas = 0;
+  for (const g of grupos) {
+    const k = celda(g), prev = osm.celdas[k];
+    if (prev && (Date.now() - Date.parse(prev.t)) / 86400e3 < CADUCIDAD_OSM_DIAS) continue;
+    if (consultas >= MAX_CONSULTAS_OSM) break;
+    consultas++;
+    try {
+      const [la, lo] = k.split(',').map(Number);
+      osm.celdas[k] = { t: new Date().toISOString(), ...identificar(await overpass(la, lo), la, lo) };
+    } catch (e) { console.warn(`[fuego] Overpass ${k}: ${e.message}`); }
+    await new Promise(s => setTimeout(s, 1500));
+  }
+  writeJSON('industrias-osm.json', osm);
+
   const focos_ = [], industriales = [];
   for (const g of grupos) {
     const semilla = FIJAS_SEMILLA.find(x => distKm(x, g) <= RADIO_FIJA_KM);
     const dias = memoria.celdas[celda(g)]?.dias.length ?? 0;
-    if (semilla || dias >= DIAS_FIJA) industriales.push({ ...g, nombre: semilla?.nombre ?? null, dias_mes: dias });
-    else focos_.push(g);
+    const o = osm.celdas[celda(g)];
+    let id = null;
+    if (semilla) id = { nombre: semilla.nombre, tipo: SEMILLA_TIPO, origen: 'conocida' };
+    else if (o?.industrial) id = { nombre: o.nombre, tipo: o.tipo, origen: 'OpenStreetMap', osm: o.osm };
+    else if (dias >= DIAS_FIJA) id = { nombre: null, tipo: 'Fuente fija sin identificar', origen: 'repetición' };
+    if (id) industriales.push({ ...g, ...id, ciudad: ciudadCercana(g), dias_mes: dias });
+    else focos_.push(o?.contexto ? { ...g, contexto: o.contexto } : g);
   }
+
+  // Registro histórico de instalaciones que han dado focos de calor
+  const reg = readJSON('industrias-registro.json', { instalaciones: {} });
+  for (const x of industriales) {
+    const clave = x.nombre ? `${x.nombre}|${x.tipo}|${x.ciudad}`.toLowerCase() : `celda:${celda(x)}`;
+    const r = (reg.instalaciones[clave] ??= { nombre: x.nombre, tipo: x.tipo, origen: x.origen, osm: x.osm ?? null, ciudad: x.ciudad,
+      lat: x.lat, lon: x.lon, primera_vez: x.t, ultima_vez: x.t, ultimo_frp: x.frp, frp_max: x.frp, detecciones: 0, dias: [], pasos: [] });
+    if (!r.nombre && x.nombre) { r.nombre = x.nombre; r.tipo = x.tipo; r.origen = x.origen; }
+    for (const t of x.ts ?? [x.t]) {
+      if (r.pasos.includes(t)) continue;
+      r.pasos.push(t); r.detecciones++;
+      const dia = madridLocal(new Date(t)).slice(0, 10);
+      if (!r.dias.includes(dia)) r.dias.push(dia);
+      if (t >= r.ultima_vez) { r.ultima_vez = t; r.ultimo_frp = x.frp; r.lat = x.lat; r.lon = x.lon; }
+      if (t < r.primera_vez) r.primera_vez = t;
+    }
+    r.frp_max = Math.max(r.frp_max, x.frp);
+    r.pasos = r.pasos.sort().slice(-60);
+    r.dias = r.dias.sort().slice(-400);
+  }
+  reg.actualizado = new Date().toISOString();
+  writeJSON('industrias-registro.json', reg);
 
   // Histórico diario (para tendencias): solo focos no industriales, máximo visto en el día
   const hist = readJSON('fuego-historico.json', { dias: {} });
@@ -318,11 +420,11 @@ async function fuego() {
     total: focos_.length,
     detecciones: focos.length,
     mayor: focos_[0] ?? null,
-    focos: focos_,
-    industriales,
+    focos: focos_.map(({ ts, ...f }) => f),
+    industriales: industriales.map(({ ts, ...f }) => f),
   };
   writeJSON('fuego.json', out);
-  console.log(`[fuego] ok · ${focos.length} detecciones → ${focos_.length} focos + ${industriales.length} industriales`);
+  console.log(`[fuego] ok · ${focos.length} detecciones → ${focos_.length} focos + ${industriales.length} industriales · ${consultas} consultas OSM · registro ${Object.keys(reg.instalaciones).length}`);
   return out;
 }
 
