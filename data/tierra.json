@@ -1,22 +1,22 @@
 {
- "actualizado": "2026-11-14T07:15:38.534Z",
+ "actualizado": "2026-11-14T07:30:52.064Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 9,
-  "sentibles": 1,
+  "total": 8,
+  "sentibles": 0,
   "mayor": {
-   "id": "20261113_0000085",
-   "t": "2026-11-13T07:30:35.350Z",
-   "lat": 36.3379,
-   "lon": 2.752,
-   "prof": 11,
-   "mag": 4,
-   "tipo_mag": "mb",
-   "lugar": "N de Medea (Argelia)",
-   "region": "Northern Algeria",
+   "id": "20261113_0000094",
+   "t": "2026-11-13T08:20:45.340Z",
+   "lat": 38.6551,
+   "lon": -1.1741,
+   "prof": 8,
+   "mag": 2.4,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Spain",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wgbbk"
+   "ign": null
   }
  },
  "eventos": [
