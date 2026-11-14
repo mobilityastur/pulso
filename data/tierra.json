@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T17:30:55.219Z",
+ "actualizado": "2026-11-14T17:45:38.749Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1280,19 +1280,6 @@
    "region": "Spain",
    "autor": "EMSC",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026vzicc"
-  },
-  {
-   "id": "20261104_0000242",
-   "t": "2026-11-04T17:34:26.190Z",
-   "lat": 37.0118,
-   "lon": -2.3703,
-   "prof": 4,
-   "mag": 2.5,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
-   "autor": "IGN",
-   "ign": null
   }
  ]
 }
