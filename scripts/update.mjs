@@ -266,15 +266,17 @@ const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible
 const tipoDe = t => { for (const [f, nombre, calor] of TIPOS) if (f(t)) return { tipo: nombre, calor }; return null; };
 
 async function overpass(lat, lon, limite) {
-  const q = `[out:json][timeout:25];(nwr(around:${RADIO_OSM_M},${lat},${lon})[man_made~"^(works|flare|kiln|chimney)$"];` +
+  const q = `[out:json][timeout:15];(nwr(around:${RADIO_OSM_M},${lat},${lon})[man_made~"^(works|flare|kiln|chimney)$"];` +
     `nwr(around:${RADIO_OSM_M},${lat},${lon})[industrial];nwr(around:${RADIO_OSM_M},${lat},${lon})[power=plant];` +
     `nwr(around:${RADIO_OSM_M},${lat},${lon})[landuse=industrial][name];);out tags center 60;`;
   let ultimo;
-  for (let i = 0; i < OVERPASS.length; i++) {
+  const inicio = Math.floor(Math.random() * OVERPASS.length);
+  for (let j = 0; j < OVERPASS.length; j++) {
+    const i = (inicio + j) % OVERPASS.length;
     if (Date.now() > limite) throw new Error('sin tiempo');
     try {
       const r = await fetch(OVERPASS[i], { method: 'POST', body: new URLSearchParams({ data: q }),
-        signal: AbortSignal.timeout(Math.max(1000, Math.min(25e3, limite - Date.now()))),
+        signal: AbortSignal.timeout(Math.max(1000, Math.min(20e3, limite - Date.now()))),
         headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' } });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return (await r.json()).elements ?? [];
@@ -364,13 +366,17 @@ async function fuego() {
   for (const g of grupos) {
     if (Date.now() > limiteOSM) { console.warn('[fuego] Overpass: sin tiempo, se sigue en la próxima ejecución'); break; }
     const k = celda(g), prev = osm.celdas[k];
-    if (prev && (Date.now() - Date.parse(prev.t)) / 86400e3 < CADUCIDAD_OSM_DIAS) continue;
+    if (prev?.error && Date.now() - Date.parse(prev.t) < 6 * 3600e3) continue; // falló hace poco: espera 6 h
+    if (prev && !prev.error && (Date.now() - Date.parse(prev.t)) / 86400e3 < CADUCIDAD_OSM_DIAS) continue;
     if (consultas >= MAX_CONSULTAS_OSM) break;
     consultas++;
     try {
       const [la, lo] = k.split(',').map(Number);
       osm.celdas[k] = { t: new Date().toISOString(), ...identificar(await overpass(la, lo, limiteOSM), la, lo) };
-    } catch (e) { console.warn(`[fuego] Overpass ${k}: ${e.message}`); }
+    } catch (e) {
+      console.warn(`[fuego] Overpass ${k}: ${e.message}`);
+      if (e.message !== 'sin tiempo') osm.celdas[k] = { t: new Date().toISOString(), error: true };
+    }
     await new Promise(s => setTimeout(s, 1000));
   }
   writeJSON('industrias-osm.json', osm);
@@ -379,7 +385,7 @@ async function fuego() {
   for (const g of grupos) {
     const semilla = FIJAS_SEMILLA.find(x => distKm(x, g) <= RADIO_FIJA_KM);
     const dias = memoria.celdas[celda(g)]?.dias.length ?? 0;
-    const o = osm.celdas[celda(g)];
+    const o = osm.celdas[celda(g)]?.error ? null : osm.celdas[celda(g)];
     let id = null;
     if (semilla) id = { nombre: semilla.nombre, tipo: SEMILLA_TIPO, origen: 'conocida' };
     else if (o?.industrial) id = { nombre: o.nombre, tipo: o.tipo, origen: 'OpenStreetMap', osm: o.osm };
