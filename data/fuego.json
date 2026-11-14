@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-14T12:01:02.459Z",
+ "actualizado": "2026-11-14T12:15:42.243Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 17,
- "detecciones": 24,
+ "total": 16,
+ "detecciones": 20,
  "mayor": {
   "lat": 41.7613,
   "lon": 0.4778,
@@ -33,7 +33,7 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "día",
-   "n": 2
+   "n": 1
   },
   {
    "lat": 37.7013,
@@ -72,16 +72,6 @@
    "frp": 4.3,
    "conf": "nominal",
    "sat": "NOAA21",
-   "dn": "día",
-   "n": 3
-  },
-  {
-   "lat": 38.1026,
-   "lon": -0.9272,
-   "t": "2026-11-13T12:14:00.000Z",
-   "frp": 2.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
    "dn": "día",
    "n": 1
   },
