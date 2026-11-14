@@ -27,7 +27,7 @@ async function getJSON(url, tries = 3) {
   let last;
   for (let i = 0; i < tries; i++) {
     try {
-      const r = await fetch(url, { headers: { 'Accept': 'application/json', 'User-Agent': UA } });
+      const r = await fetch(url, { headers: { 'Accept': 'application/json', 'User-Agent': UA }, signal: AbortSignal.timeout(45e3) });
       if (!r.ok) throw new Error(`HTTP ${r.status} en ${url}\n${(await r.text()).slice(0, 300)}`);
       return await r.json();
     } catch (e) { last = e; await new Promise(s => setTimeout(s, 2000 * (i + 1))); }
@@ -39,7 +39,7 @@ async function getText(url, tries = 3) {
   let last;
   for (let i = 0; i < tries; i++) {
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': UA } });
+      const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(45e3) });
       if (!r.ok) throw new Error(`HTTP ${r.status} en ${url.replace(/\/api\/area\/csv\/[^/]+/, '/api/area/csv/***')}`);
       return await r.text();
     } catch (e) { last = e; await new Promise(s => setTimeout(s, 2000 * (i + 1))); }
@@ -247,7 +247,7 @@ const SEMILLA_TIPO = 'Siderurgia';
 // ---- Identificación automática con OpenStreetMap (API Overpass) ----
 // Se consulta una sola vez por celda de ~2 km y se guarda en data/industrias-osm.json (caducidad 120 días).
 const OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
-const MAX_CONSULTAS_OSM = 12, RADIO_OSM_M = 2500, RADIO_CALOR_KM = 1.6, CADUCIDAD_OSM_DIAS = 120;
+const MAX_CONSULTAS_OSM = 12, PRESUPUESTO_OSM_MS = 90e3, RADIO_OSM_M = 2500, RADIO_CALOR_KM = 1.6, CADUCIDAD_OSM_DIAS = 120;
 const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible?]
   [t => /steel|iron|metal_?works|foundry|smelter|alumin/i.test(t.industrial ?? '') || /blast furnace|coke/i.test(t['plant:source'] ?? ''), 'Siderurgia / metalurgia', true],
   [t => /refinery|oil|petro/i.test(t.industrial ?? '') || t.man_made === 'flare', 'Refinería / petroquímica', true],
@@ -265,18 +265,20 @@ const TIPOS = [ // [prueba sobre etiquetas, tipo legible, ¿genera calor visible
 ];
 const tipoDe = t => { for (const [f, nombre, calor] of TIPOS) if (f(t)) return { tipo: nombre, calor }; return null; };
 
-async function overpass(lat, lon) {
+async function overpass(lat, lon, limite) {
   const q = `[out:json][timeout:25];(nwr(around:${RADIO_OSM_M},${lat},${lon})[man_made~"^(works|flare|kiln|chimney)$"];` +
     `nwr(around:${RADIO_OSM_M},${lat},${lon})[industrial];nwr(around:${RADIO_OSM_M},${lat},${lon})[power=plant];` +
     `nwr(around:${RADIO_OSM_M},${lat},${lon})[landuse=industrial][name];);out tags center 60;`;
   let ultimo;
-  for (let i = 0; i < OVERPASS.length * 2; i++) {
+  for (let i = 0; i < OVERPASS.length; i++) {
+    if (Date.now() > limite) throw new Error('sin tiempo');
     try {
-      const r = await fetch(OVERPASS[i % OVERPASS.length], { method: 'POST', body: new URLSearchParams({ data: q }),
+      const r = await fetch(OVERPASS[i], { method: 'POST', body: new URLSearchParams({ data: q }),
+        signal: AbortSignal.timeout(Math.max(1000, Math.min(25e3, limite - Date.now()))),
         headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' } });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return (await r.json()).elements ?? [];
-    } catch (e) { ultimo = e; await new Promise(s => setTimeout(s, 3000)); }
+    } catch (e) { ultimo = e; await new Promise(s => setTimeout(s, 1000)); }
   }
   throw ultimo;
 }
@@ -358,16 +360,18 @@ async function fuego() {
   const ciudadCercana = g => ciudades.reduce((m, c) => { const d = distKm(g, { lat: c.la, lon: c.lo }); return !m || d < m.d ? { n: c.n, d } : m; }, null).n;
   const osm = readJSON('industrias-osm.json', { celdas: {} });
   let consultas = 0;
+  const limiteOSM = Date.now() + PRESUPUESTO_OSM_MS;
   for (const g of grupos) {
+    if (Date.now() > limiteOSM) { console.warn('[fuego] Overpass: sin tiempo, se sigue en la próxima ejecución'); break; }
     const k = celda(g), prev = osm.celdas[k];
     if (prev && (Date.now() - Date.parse(prev.t)) / 86400e3 < CADUCIDAD_OSM_DIAS) continue;
     if (consultas >= MAX_CONSULTAS_OSM) break;
     consultas++;
     try {
       const [la, lo] = k.split(',').map(Number);
-      osm.celdas[k] = { t: new Date().toISOString(), ...identificar(await overpass(la, lo), la, lo) };
+      osm.celdas[k] = { t: new Date().toISOString(), ...identificar(await overpass(la, lo, limiteOSM), la, lo) };
     } catch (e) { console.warn(`[fuego] Overpass ${k}: ${e.message}`); }
-    await new Promise(s => setTimeout(s, 1500));
+    await new Promise(s => setTimeout(s, 1000));
   }
   writeJSON('industrias-osm.json', osm);
 
