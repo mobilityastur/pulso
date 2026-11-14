@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-11-14T13:47:15.213Z",
+ "actualizado": "2026-11-14T13:53:59.050Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 11,
+ "total": 6,
  "detecciones": 15,
  "mayor": {
   "lat": 37.3588,
@@ -36,7 +36,8 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "noche",
-   "n": 1
+   "n": 1,
+   "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
   },
   {
    "lat": 41.2204,
@@ -46,27 +47,8 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 42.5527,
-   "lon": -6.7687,
-   "t": "2026-11-14T02:15:00.000Z",
-   "frp": 1.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2
-  },
-  {
-   "lat": 41.1862,
-   "lon": 1.2232,
-   "t": "2026-11-14T01:15:00.000Z",
-   "frp": 1.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
+   "n": 1,
+   "contexto": "Parc Empresarial (a 1,1 km)"
   },
   {
    "lat": 38.3776,
@@ -76,27 +58,8 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2
-  },
-  {
-   "lat": 37.3583,
-   "lon": -5.8655,
-   "t": "2026-11-14T02:57:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2
-  },
-  {
-   "lat": 41.3135,
-   "lon": 1.6601,
-   "t": "2026-11-14T02:15:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2
+   "n": 2,
+   "contexto": "Polígon Industrial Inmediaciones (a 1,6 km)"
   },
   {
    "lat": 41.408,
@@ -106,17 +69,8 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 37.3603,
-   "lon": -6.6723,
-   "t": "2026-11-14T02:15:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
+   "n": 1,
+   "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   {
    "lat": 37.376,
@@ -126,8 +80,90 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 1
+   "n": 1,
+   "contexto": "Polígono Industrial Pinto (a 0,3 km)"
   }
  ],
- "industriales": []
+ "industriales": [
+  {
+   "lat": 42.5527,
+   "lon": -6.7687,
+   "t": "2026-11-14T02:15:00.000Z",
+   "frp": 1.6,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "Cementos Cosmos",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ponferrada",
+   "dias_mes": 1
+  },
+  {
+   "lat": 41.1862,
+   "lon": 1.2232,
+   "t": "2026-11-14T01:15:00.000Z",
+   "frp": 1.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Repsol Tarragona Refinery",
+   "tipo": "Refinería / petroquímica",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 1
+  },
+  {
+   "lat": 37.3583,
+   "lon": -5.8655,
+   "t": "2026-11-14T02:57:00.000Z",
+   "frp": 0.9,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "Cementos Portland Valderrivas",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Sevilla",
+   "dias_mes": 3
+  },
+  {
+   "lat": 41.3135,
+   "lon": 1.6601,
+   "t": "2026-11-14T02:15:00.000Z",
+   "frp": 0.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "Rojano Trancoso, S.L.",
+   "tipo": "Fábrica",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 2
+  },
+  {
+   "lat": 37.3603,
+   "lon": -6.6723,
+   "t": "2026-11-14T02:15:00.000Z",
+   "frp": 0.7,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Cementos Cosmos",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Huelva",
+   "dias_mes": 2
+  }
+ ]
 }

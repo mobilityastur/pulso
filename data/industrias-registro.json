@@ -1,4 +1,107 @@
 {
- "instalaciones": {},
- "actualizado": "2026-11-14T13:47:15.213Z"
+ "instalaciones": {
+  "cementos cosmos|cementera|ponferrada": {
+   "nombre": "Cementos Cosmos",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ponferrada",
+   "lat": 42.5527,
+   "lon": -6.7687,
+   "primera_vez": "2026-11-14T02:15:00.000Z",
+   "ultima_vez": "2026-11-14T02:15:00.000Z",
+   "ultimo_frp": 1.6,
+   "frp_max": 1.6,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T02:15:00.000Z"
+   ]
+  },
+  "repsol tarragona refinery|refinería / petroquímica|tarragona": {
+   "nombre": "Repsol Tarragona Refinery",
+   "tipo": "Refinería / petroquímica",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "lat": 41.1862,
+   "lon": 1.2232,
+   "primera_vez": "2026-11-14T01:15:00.000Z",
+   "ultima_vez": "2026-11-14T01:15:00.000Z",
+   "ultimo_frp": 1.4,
+   "frp_max": 1.4,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T01:15:00.000Z"
+   ]
+  },
+  "cementos portland valderrivas|cementera|sevilla": {
+   "nombre": "Cementos Portland Valderrivas",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Sevilla",
+   "lat": 37.3583,
+   "lon": -5.8655,
+   "primera_vez": "2026-11-14T02:15:00.000Z",
+   "ultima_vez": "2026-11-14T02:57:00.000Z",
+   "ultimo_frp": 0.9,
+   "frp_max": 0.9,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T02:15:00.000Z",
+    "2026-11-14T02:57:00.000Z"
+   ]
+  },
+  "rojano trancoso, s.l.|fábrica|tarragona": {
+   "nombre": "Rojano Trancoso, S.L.",
+   "tipo": "Fábrica",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "lat": 41.3135,
+   "lon": 1.6601,
+   "primera_vez": "2026-11-14T01:15:00.000Z",
+   "ultima_vez": "2026-11-14T02:15:00.000Z",
+   "ultimo_frp": 0.8,
+   "frp_max": 0.8,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T01:15:00.000Z",
+    "2026-11-14T02:15:00.000Z"
+   ]
+  },
+  "cementos cosmos|cementera|huelva": {
+   "nombre": "Cementos Cosmos",
+   "tipo": "Cementera",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Huelva",
+   "lat": 37.3603,
+   "lon": -6.6723,
+   "primera_vez": "2026-11-14T02:15:00.000Z",
+   "ultima_vez": "2026-11-14T02:15:00.000Z",
+   "ultimo_frp": 0.7,
+   "frp_max": 0.7,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-14"
+   ],
+   "pasos": [
+    "2026-11-14T02:15:00.000Z"
+   ]
+  }
+ },
+ "actualizado": "2026-11-14T13:53:59.050Z"
 }
