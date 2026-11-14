@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-14T01:30:54.384Z",
+ "actualizado": "2026-11-14T01:45:37.480Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 19,
- "detecciones": 29,
+ "total": 14,
+ "detecciones": 20,
  "mayor": {
   "lat": 41.7613,
   "lon": 0.4778,
@@ -129,29 +129,9 @@
    "lat": 38.3772,
    "lon": -0.5423,
    "t": "2026-11-13T02:32:00.000Z",
-   "frp": 1.1,
+   "frp": 0.8,
    "conf": "nominal",
    "sat": "NOAA20",
-   "dn": "noche",
-   "n": 3
-  },
-  {
-   "lat": 41.4749,
-   "lon": -1.4887,
-   "t": "2026-11-13T01:34:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 41.3121,
-   "lon": 1.6651,
-   "t": "2026-11-13T01:34:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
    "dn": "noche",
    "n": 1
   },
@@ -166,26 +146,6 @@
    "n": 1
   },
   {
-   "lat": 43.5537,
-   "lon": -5.8596,
-   "t": "2026-11-13T01:34:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 37.3607,
-   "lon": -6.6726,
-   "t": "2026-11-13T01:36:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
-  },
-  {
    "lat": 37.3914,
    "lon": -6.3312,
    "t": "2026-11-13T02:34:00.000Z",
@@ -194,31 +154,9 @@
    "sat": "NOAA20",
    "dn": "noche",
    "n": 1
-  },
-  {
-   "lat": 41.4538,
-   "lon": 1.9772,
-   "t": "2026-11-13T01:34:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
   }
  ],
  "industriales": [
-  {
-   "lat": 43.5395,
-   "lon": -5.8338,
-   "t": "2026-11-13T02:32:00.000Z",
-   "frp": 1.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 4,
-   "nombre": "ArcelorMittal Avilés",
-   "dias_mes": 2
-  },
   {
    "lat": 43.5262,
    "lon": -5.7316,
@@ -229,6 +167,18 @@
    "dn": "noche",
    "n": 1,
    "nombre": "ArcelorMittal Gijón (Veriña)",
+   "dias_mes": 2
+  },
+  {
+   "lat": 43.5395,
+   "lon": -5.8338,
+   "t": "2026-11-13T02:32:00.000Z",
+   "frp": 0.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "ArcelorMittal Avilés",
    "dias_mes": 2
   }
  ]
