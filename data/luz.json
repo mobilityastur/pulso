@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-14T07:30:53.067Z",
+ "actualizado": "2026-11-14T07:37:39.849Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-14T08:25:00+01:00",
-  "total": 27349,
-  "renovable": 47.2,
+  "t": "2026-11-14T08:30:00+01:00",
+  "total": 27480,
+  "renovable": 47.9,
   "mix": {
-   "solar": 1158,
-   "eolica": 7916,
-   "hidraulica": 3684,
-   "nuclear": 6093,
-   "gas": 5509,
+   "solar": 1453,
+   "eolica": 7897,
+   "hidraulica": 3662,
+   "nuclear": 6091,
+   "gas": 5388,
    "carbon": 0,
    "otras": 2989
   }
@@ -23,25 +23,25 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 7916
+   "valor": 7897
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6093
+   "valor": 6091
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 3751
+   "valor": 3636
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 3368
+   "valor": 3346
   },
   {
    "titulo": "Autoproductores",
@@ -53,13 +53,13 @@
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1758
+   "valor": 1752
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 1158
+   "valor": 1453
   },
   {
    "titulo": "Biomasa",
@@ -1356,23 +1356,23 @@
    }
   },
   {
-   "t": "2026-11-14T08:25:00+01:00",
-   "total": 27349,
-   "renovable": 47.2,
+   "t": "2026-11-14T08:30:00+01:00",
+   "total": 27480,
+   "renovable": 47.9,
    "mix": {
-    "solar": 1158,
-    "eolica": 7916,
-    "hidraulica": 3684,
-    "nuclear": 6093,
-    "gas": 5509,
+    "solar": 1453,
+    "eolica": 7897,
+    "hidraulica": 3662,
+    "nuclear": 6091,
+    "gas": 5388,
     "carbon": 0,
     "otras": 2989
    }
   }
  ],
  "demanda": {
-  "actual": 24684,
-  "t": "2026-11-14T08:20:00.000+01:00",
+  "actual": 25738,
+  "t": "2026-11-14T08:25:00.000+01:00",
   "real": [
    {
     "t": "2026-11-13T08:40:00.000+01:00",
@@ -1660,7 +1660,11 @@
    },
    {
     "t": "2026-11-14T08:20:00.000+01:00",
-    "v": 24684
+    "v": 25582
+   },
+   {
+    "t": "2026-11-14T08:25:00.000+01:00",
+    "v": 25738
    }
   ],
   "prevista": [
@@ -1953,8 +1957,8 @@
     "v": 25519
    },
    {
-    "t": "2026-11-14T08:30:00.000+01:00",
-    "v": 25912
+    "t": "2026-11-14T08:35:00.000+01:00",
+    "v": 26101
    }
   ]
  }
