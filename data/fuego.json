@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T13:01:13.246Z",
+ "actualizado": "2026-11-14T13:39:58.707Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 11,
@@ -12,7 +12,10 @@
   "conf": "nominal",
   "sat": "NOAA20",
   "dn": "día",
-  "n": 1
+  "n": 1,
+  "ts": [
+   "2026-11-13T13:54:00.000Z"
+  ]
  },
  "focos": [
   {
