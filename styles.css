@@ -181,3 +181,7 @@ select { width: 100%; font: inherit; font-size: 15px; color: var(--tx); backgrou
 #v-industrias .g-num { color: var(--tx2); }
 .etq { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 99px; background: var(--s2); color: var(--tx2); margin-left: 4px; vertical-align: 1px; }
 .etq.hoy { background: var(--fuego-bg); color: var(--fuego-tx); }
+
+.mz-bot { display: inline-flex; gap: 6px; flex: none; }
+.pie-inicio { text-align: center; margin: 18px 0 8px; font-size: 14px; }
+.pie-inicio a { color: var(--acento); }

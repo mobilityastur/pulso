@@ -27,6 +27,24 @@ const CIUDADES = [
   ['Arrecife',28.963,-13.548],['Puerto del Rosario',28.500,-13.862],['Santa Cruz de La Palma',28.684,-17.765],['San Sebastián de La Gomera',28.093,-17.111],['Valverde',27.809,-17.915],
   ['Ceuta',35.889,-5.321],['Melilla',35.292,-2.938],
 ];
+// Cuenca hidrográfica (como la nombra el MITECO) de cada ciudad de referencia; sin dato en islas, Ceuta y Melilla
+const CUENCA = {
+  'A Coruña': 'Galicia Costa', 'Ferrol': 'Galicia Costa', 'Santiago': 'Galicia Costa', 'Pontevedra': 'Galicia Costa', 'Vigo': 'Galicia Costa',
+  'Lugo': 'Miño-Sil', 'Ourense': 'Miño-Sil', 'Ponferrada': 'Miño-Sil',
+  'Oviedo': 'Cantábrico Occidental', 'Gijón': 'Cantábrico Occidental', 'Avilés': 'Cantábrico Occidental', 'Santander': 'Cantábrico Occidental',
+  'Bilbao': 'Cuencas Internas del País Vasco', 'San Sebastián': 'Cuencas Internas del País Vasco',
+  'Vitoria': 'Ebro', 'Pamplona': 'Ebro', 'Logroño': 'Ebro', 'Zaragoza': 'Ebro', 'Huesca': 'Ebro', 'Lleida': 'Ebro', 'Tortosa': 'Ebro',
+  'Girona': 'Cuencas Internas de Cataluña', 'Barcelona': 'Cuencas Internas de Cataluña', 'Manresa': 'Cuencas Internas de Cataluña', 'Tarragona': 'Cuencas Internas de Cataluña',
+  'Teruel': 'Júcar', 'Castellón': 'Júcar', 'Valencia': 'Júcar', 'Alicante': 'Júcar', 'Benidorm': 'Júcar', 'Albacete': 'Júcar', 'Cuenca': 'Júcar',
+  'Murcia': 'Segura', 'Cartagena': 'Segura', 'Lorca': 'Segura',
+  'Almería': 'Cuenca Mediterránea Andaluza', 'Málaga': 'Cuenca Mediterránea Andaluza', 'Algeciras': 'Cuenca Mediterránea Andaluza', 'Ronda': 'Cuenca Mediterránea Andaluza',
+  'Granada': 'Guadalquivir', 'Jaén': 'Guadalquivir', 'Linares': 'Guadalquivir', 'Córdoba': 'Guadalquivir', 'Sevilla': 'Guadalquivir',
+  'Huelva': 'Tinto, Odiel y Piedras', 'Cádiz': 'Guadalete-Barbate', 'Jerez': 'Guadalete-Barbate',
+  'Badajoz': 'Guadiana', 'Mérida': 'Guadiana', 'Ciudad Real': 'Guadiana',
+  'Cáceres': 'Tajo', 'Plasencia': 'Tajo', 'Toledo': 'Tajo', 'Talavera': 'Tajo', 'Guadalajara': 'Tajo', 'Madrid': 'Tajo',
+  'Segovia': 'Duero', 'Ávila': 'Duero', 'Salamanca': 'Duero', 'Zamora': 'Duero', 'Valladolid': 'Duero', 'Palencia': 'Duero', 'Burgos': 'Duero', 'Soria': 'Duero', 'León': 'Duero',
+};
+const ciudadMasCercana = (lat, lon) => CIUDADES.reduce((m, [n, la, lo]) => { const d = Math.hypot((lat - la) * 111.2, (lon - lo) * 111.2 * Math.cos(la * Math.PI / 180)); return !m || d < m.d ? { n, d } : m; }, null);
 const RUMBOS = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
 function cercaDe(lat, lon) {
   let best = null;
@@ -223,7 +241,7 @@ const fmtPct = v => v == null ? '—' : `${nf1.format(v)} %`;
 const fmtPts = v => v == null ? '' : `${v > 0 ? '+' : v < 0 ? '−' : '±'}${nf1.format(Math.abs(v))} pts`;
 const fechaLarga = f => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' }).format(new Date(f + 'T12:00:00'));
 let cuencaSel = (() => { try { return JSON.parse(localStorage.getItem('pulso.cuenca')); } catch { return null; } })();
-const guardarCuenca = () => { try { localStorage.setItem('pulso.cuenca', JSON.stringify(cuencaSel)); } catch {} if (typeof pintarZona === 'function') pintarZona(); };
+const guardarCuenca = () => { try { localStorage.setItem('pulso.cuenca', JSON.stringify(cuencaSel)); } catch {} };
 
 function pintarAgua(a) {
   if (!a) { $('c-agua-val').textContent = '—'; $('c-agua-pie').textContent = 'Esperando datos'; return; }
@@ -249,7 +267,7 @@ function pintarAgua(a) {
 
   const sel = $('sel-cuenca');
   const nombres = a.ambitos.map(x => x.nombre);
-  if (!cuencaSel || !nombres.includes(cuencaSel)) cuencaSel = nombres.find(n => /cant[aá]brico occidental/i.test(n)) ?? nombres[0];
+  if (!cuencaSel || !nombres.includes(cuencaSel)) cuencaSel = (typeof cuencaDeZona === 'function' && cuencaDeZona()) || nombres[0];
   sel.innerHTML = nombres.map(n => `<option${n === cuencaSel ? ' selected' : ''}>${n}</option>`).join('');
   sel.onchange = () => { cuencaSel = sel.value; guardarCuenca(); pintarEmbalses(); };
   pintarEmbalses();
@@ -342,6 +360,14 @@ function pintarAire(a) {
 // ---------- MI ZONA Y AVISOS ----------
 const ls = { get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } }, set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
 let zona = ls.get('pulso.zona');
+let zonaOculta = ls.get('pulso.zonaOculta') === true;
+function cuencaDeZona() {
+  if (!zona) return null;
+  const n = zona.fuente === 'ciudad' ? zona.n : ciudadMasCercana(zona.la, zona.lo)?.n;
+  const c = CUENCA[n];
+  return c && estado.agua?.ambitos?.some(x => x.nombre === c) ? c : null;
+}
+function ocultarZona(v) { zonaOculta = v; ls.set('pulso.zonaOculta', v ? true : null); pintarZona(); }
 const distKm = (a, b) => Math.hypot((a.la - b.la) * 111.2, (a.lo - b.lo) * 111.2 * Math.cos(a.la * Math.PI / 180));
 function datosZona() {
   if (!zona) return null;
@@ -354,7 +380,10 @@ function datosZona() {
 }
 function pintarZona() {
   const box = $('mizona');
-  if (!zona) { box.innerHTML = `<div class="mz-vacio"><span>Elige tu zona para ver el aire, los focos y los sismos cerca de ti.</span><button id="mz-elegir">Elegir</button></div>`; $('mz-elegir').onclick = abrirHoja; pintarAvisos(null); return; }
+  $('mostrar-zona').hidden = !zonaOculta;
+  if (zonaOculta) { box.innerHTML = ''; pintarAvisos(null); return; }
+  if (!zona) { box.innerHTML = `<div class="mz-vacio"><span>Elige tu zona para ver el aire, los focos y los sismos cerca de ti.</span><span class="mz-bot"><button id="mz-elegir">Elegir</button><button id="mz-ocultar" aria-label="Ocultar">✕</button></span></div>`;
+    $('mz-elegir').onclick = abrirHoja; $('mz-ocultar').onclick = () => ocultarZona(true); pintarAvisos(null); return; }
   const d = datosZona(), filas = [];
   if (d.aire) {
     const p = d.aire, empeora = p.prev24 && p.prev24.cat > p.cat;
@@ -366,13 +395,16 @@ function pintarZona() {
   const s = d.sismos, ult = s[0];
   filas.push(['🌍', s.length ? `<b>${s.length} sismo${s.length > 1 ? 's' : ''}</b> a menos de 100 km esta semana` : 'Ningún sismo a menos de 100 km esta semana',
     ult ? `Último: M${nf1.format(ult.mag)} ${lugarSismo(ult)}, ${hace(ult.t)}` : 'Magnitud 1,5 o más, últimos 7 días']);
-  if (estado.agua && typeof cuencaSel === 'string') {
-    const c = estado.agua.ambitos.find(x => x.nombre === cuencaSel);
-    if (c) filas.push(['💧', `${c.nombre}: <b>${nf1.format(c.pct)} %</b>`, c.pct_media_10 != null ? `${fmtPts(Math.round(10 * (c.pct - c.pct_media_10)) / 10)} sobre su media de 10 años · cámbiala en Agua` : 'Cuenca elegida en Agua']);
+  const cz = cuencaDeZona();
+  if (cz) {
+    const c = estado.agua.ambitos.find(x => x.nombre === cz);
+    const dm = c.pct_media_10 != null ? Math.round(10 * (c.pct - c.pct_media_10)) / 10 : null;
+    filas.push(['💧', `Embalses del ${c.nombre}: <b>${nf1.format(c.pct)} %</b>`, dm != null ? `${fmtPts(Math.abs(dm)).replace(/^[+−±]/, '')} ${dm >= 0 ? 'por encima' : 'por debajo'} de su media de 10 años` : 'Datos semanales del MITECO']);
   }
-  box.innerHTML = `<div class="mz"><div class="mz-cab"><b>📍 ${zona.n}</b><button id="mz-cambiar">Cambiar</button></div>
+  box.innerHTML = `<div class="mz"><div class="mz-cab"><b>📍 ${zona.n}</b><span class="mz-bot"><button id="mz-cambiar">Cambiar</button><button id="mz-ocultar" aria-label="Ocultar Mi zona">✕</button></span></div>
     ${filas.map(([e, a, b]) => `<div class="mz-fila"><span class="e">${e}</span><div>${a}<small>${b}</small></div></div>`).join('')}</div>`;
   $('mz-cambiar').onclick = abrirHoja;
+  $('mz-ocultar').onclick = () => ocultarZona(true);
   pintarAvisos(d);
 }
 function pintarAvisos(d) {
@@ -397,7 +429,7 @@ function abrirHoja() {
   $('hoja').hidden = false;
 }
 const cerrarHoja = () => { $('hoja').hidden = true; };
-function fijarZona(z) { zona = z; ls.set('pulso.zona', z); cerrarHoja(); pintarZona(); }
+function fijarZona(z) { zona = z; ls.set('pulso.zona', z); zonaOculta = false; ls.set('pulso.zonaOculta', null); cerrarHoja(); pintarZona(); }
 $('z-cerrar').onclick = cerrarHoja;
 $('hoja').onclick = e => { if (e.target.id === 'hoja') cerrarHoja(); };
 $('z-quitar').onclick = () => fijarZona(null);
@@ -581,3 +613,5 @@ setInterval(actualizar, 5 * 60e3);
 ir();
 actualizar();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+$('mostrar-zona').onclick = e => { e.preventDefault(); ocultarZona(false); scrollTo({ top: 0, behavior: 'smooth' }); };
