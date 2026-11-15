@@ -1,7 +1,7 @@
 {
  "celdas": {
   "38.76,0.14": {
-   "t": "2026-11-15T02:15:37.658Z",
+   "t": "2026-11-15T02:30:57.630Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-15T02:15:37.660Z",
+   "t": "2026-11-15T02:30:57.632Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -85,7 +85,7 @@
    "contexto": "Polígono Industrial Pinto (a 0,3 km)"
   },
   "39.48,2.86": {
-   "t": "2026-11-15T02:15:37.660Z",
+   "t": "2026-11-15T02:30:57.632Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Son Noguera (a 0,9 km)"
