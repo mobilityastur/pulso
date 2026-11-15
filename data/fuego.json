@@ -1,35 +1,24 @@
 {
- "actualizado": "2026-11-15T02:45:36.724Z",
+ "actualizado": "2026-11-15T03:01:03.100Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 2,
- "detecciones": 3,
+ "total": 1,
+ "detecciones": 1,
  "mayor": {
-  "lat": 38.7587,
-  "lon": 0.1464,
-  "t": "2026-11-14T02:55:00.000Z",
-  "frp": 5.4,
+  "lat": 39.4835,
+  "lon": 2.8599,
+  "t": "2026-11-14T12:38:00.000Z",
+  "frp": 2.5,
   "conf": "nominal",
   "sat": "NOAA21",
-  "dn": "noche",
+  "dn": "día",
   "n": 1,
   "ts": [
-   "2026-11-14T02:55:00.000Z"
+   "2026-11-14T12:38:00.000Z"
   ],
-  "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
+  "contexto": "Son Noguera (a 0,9 km)"
  },
  "focos": [
-  {
-   "lat": 38.7587,
-   "lon": 0.1464,
-   "t": "2026-11-14T02:55:00.000Z",
-   "frp": 5.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Estació Depuradora d'Aigües Residuals de Xàbia (a 2,8 km)"
-  },
   {
    "lat": 39.4835,
    "lon": 2.8599,
@@ -42,23 +31,5 @@
    "contexto": "Son Noguera (a 0,9 km)"
   }
  ],
- "industriales": [
-  {
-   "lat": 37.3583,
-   "lon": -5.8655,
-   "t": "2026-11-14T02:57:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 4
-  }
- ]
+ "industriales": []
 }
