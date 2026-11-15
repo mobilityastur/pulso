@@ -1,35 +1,25 @@
 {
- "actualizado": "2026-11-15T12:30:54.362Z",
+ "actualizado": "2026-11-15T12:45:44.114Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 2,
- "detecciones": 22,
+ "total": 1,
+ "detecciones": 21,
  "mayor": {
-  "lat": 39.4835,
-  "lon": 2.8599,
-  "t": "2026-11-14T12:38:00.000Z",
-  "frp": 2.5,
+  "lat": 41.4063,
+  "lon": 1.9987,
+  "t": "2026-11-15T02:38:00.000Z",
+  "frp": 1,
   "conf": "nominal",
   "sat": "NOAA21",
-  "dn": "día",
-  "n": 1,
+  "dn": "noche",
+  "n": 2,
   "ts": [
-   "2026-11-14T12:38:00.000Z"
+   "2026-11-15T02:38:00.000Z",
+   "2026-11-15T01:53:00.000Z"
   ],
-  "contexto": "Son Noguera (a 0,9 km)"
+  "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
  },
  "focos": [
-  {
-   "lat": 39.4835,
-   "lon": 2.8599,
-   "t": "2026-11-14T12:38:00.000Z",
-   "frp": 2.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "contexto": "Son Noguera (a 0,9 km)"
-  },
   {
    "lat": 41.4063,
    "lon": 1.9987,
