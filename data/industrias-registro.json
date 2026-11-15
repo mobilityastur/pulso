@@ -67,19 +67,21 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "lat": 41.3135,
-   "lon": 1.6601,
+   "lat": 41.312,
+   "lon": 1.6619,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-14T02:15:00.000Z",
-   "ultimo_frp": 0.8,
-   "frp_max": 0.8,
-   "detecciones": 2,
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
+   "ultimo_frp": 0.9,
+   "frp_max": 0.9,
+   "detecciones": 3,
    "dias": [
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "pasos": [
     "2026-11-14T01:15:00.000Z",
-    "2026-11-14T02:15:00.000Z"
+    "2026-11-14T02:15:00.000Z",
+    "2026-11-15T01:53:00.000Z"
    ]
   },
   "cementos cosmos|cementera|huelva": {
@@ -88,18 +90,20 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "lat": 37.3603,
-   "lon": -6.6723,
+   "lat": 37.3593,
+   "lon": -6.6764,
    "primera_vez": "2026-11-14T02:15:00.000Z",
-   "ultima_vez": "2026-11-14T02:15:00.000Z",
-   "ultimo_frp": 0.7,
-   "frp_max": 0.7,
-   "detecciones": 1,
+   "ultima_vez": "2026-11-15T01:56:00.000Z",
+   "ultimo_frp": 1,
+   "frp_max": 1,
+   "detecciones": 2,
    "dias": [
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "pasos": [
-    "2026-11-14T02:15:00.000Z"
+    "2026-11-14T02:15:00.000Z",
+    "2026-11-15T01:56:00.000Z"
    ]
   },
   "cemex|cementera|alicante": {
@@ -108,19 +112,21 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "lat": 38.3776,
-   "lon": -0.5459,
+   "lat": 38.377,
+   "lon": -0.5434,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-14T02:15:00.000Z",
-   "ultimo_frp": 1.2,
+   "ultima_vez": "2026-11-15T01:56:00.000Z",
+   "ultimo_frp": 0.8,
    "frp_max": 1.2,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "pasos": [
     "2026-11-14T01:15:00.000Z",
-    "2026-11-14T02:15:00.000Z"
+    "2026-11-14T02:15:00.000Z",
+    "2026-11-15T01:56:00.000Z"
    ]
   },
   "central eléctrica|celda:41.48,-1.48": {
@@ -151,18 +157,19 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "lat": 41.4525,
-   "lon": 1.979,
+   "lat": 41.4542,
+   "lon": 1.9802,
    "primera_vez": "2026-11-15T00:56:00.000Z",
-   "ultima_vez": "2026-11-15T00:56:00.000Z",
-   "ultimo_frp": 0.8,
-   "frp_max": 0.8,
-   "detecciones": 1,
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
+   "ultimo_frp": 1.1,
+   "frp_max": 1.1,
+   "detecciones": 2,
    "dias": [
     "2026-11-15"
    ],
    "pasos": [
-    "2026-11-15T00:56:00.000Z"
+    "2026-11-15T00:56:00.000Z",
+    "2026-11-15T01:53:00.000Z"
    ]
   },
   "pedrera fàbrica de ciment cemex|cementera|tortosa": {
@@ -172,18 +179,19 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "lat": 40.5774,
-   "lon": 0.5422,
+   "lat": 40.576,
+   "lon": 0.5403,
    "primera_vez": "2026-11-15T00:56:00.000Z",
-   "ultima_vez": "2026-11-15T00:56:00.000Z",
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
    "ultimo_frp": 0.5,
    "frp_max": 0.5,
-   "detecciones": 1,
+   "detecciones": 2,
    "dias": [
     "2026-11-15"
    ],
    "pasos": [
-    "2026-11-15T00:56:00.000Z"
+    "2026-11-15T00:56:00.000Z",
+    "2026-11-15T01:53:00.000Z"
    ]
   },
   "planta incineradora de son reus|residuos / incineración|palma": {
@@ -193,20 +201,63 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Palma",
-   "lat": 39.6473,
-   "lon": 2.6817,
+   "lat": 39.6493,
+   "lon": 2.679,
    "primera_vez": "2026-11-15T00:58:00.000Z",
-   "ultima_vez": "2026-11-15T00:58:00.000Z",
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
    "ultimo_frp": 0.4,
    "frp_max": 0.4,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T00:58:00.000Z",
+    "2026-11-15T01:53:00.000Z"
+   ]
+  },
+  "central tèrmica de cas tresorer|central eléctrica|palma": {
+   "nombre": "Central Tèrmica de Cas Tresorer",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Palma",
+   "lat": 39.5686,
+   "lon": 2.6892,
+   "primera_vez": "2026-11-15T01:53:00.000Z",
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
+   "ultimo_frp": 0.3,
+   "frp_max": 0.3,
    "detecciones": 1,
    "dias": [
     "2026-11-15"
    ],
    "pasos": [
-    "2026-11-15T00:58:00.000Z"
+    "2026-11-15T01:53:00.000Z"
+   ]
+  },
+  "ferrodisa|siderurgia / metalurgia|valencia": {
+   "nombre": "Ferrodisa",
+   "tipo": "Siderurgia / metalurgia",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Valencia",
+   "lat": 39.6637,
+   "lon": -0.25,
+   "primera_vez": "2026-11-15T01:53:00.000Z",
+   "ultima_vez": "2026-11-15T01:53:00.000Z",
+   "ultimo_frp": 0.3,
+   "frp_max": 0.3,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T01:53:00.000Z"
    ]
   }
  },
- "actualizado": "2026-11-15T04:45:42.948Z"
+ "actualizado": "2026-11-15T05:01:03.810Z"
 }
