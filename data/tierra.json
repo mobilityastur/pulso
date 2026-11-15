@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T18:01:04.711Z",
+ "actualizado": "2026-11-15T18:15:38.215Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1278,19 +1278,6 @@
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Strait Of Gibraltar",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261105_0000242",
-   "t": "2026-11-05T18:10:31.720Z",
-   "lat": 40.1593,
-   "lon": -0.7298,
-   "prof": 2,
-   "mag": 1.7,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
    "autor": "IGN",
    "ign": null
   }
