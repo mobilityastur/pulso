@@ -1,18 +1,20 @@
 {
  "luz": {
-  "ok": true,
-  "t": "2026-11-15T13:01:04.405Z"
+  "ok": false,
+  "t": "2026-11-15T13:17:29.057Z",
+  "error": "HTTP 503 en https://apidatos.ree.es/es/datos/generacion/estructura-generacion?start_date=2026-11-08T00:00&end_date=2026-11-15T14:16&time_trunc=day\n<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport",
+  "ultimo_ok": "2026-11-15T13:01:04.405Z"
  },
  "fuego": {
   "ok": true,
-  "t": "2026-11-15T13:01:04.405Z"
+  "t": "2026-11-15T13:17:29.057Z"
  },
  "tierra": {
   "ok": true,
-  "t": "2026-11-15T13:01:04.405Z"
+  "t": "2026-11-15T13:17:29.057Z"
  },
  "aire": {
   "ok": true,
-  "t": "2026-11-15T13:01:04.405Z"
+  "t": "2026-11-15T13:17:29.057Z"
  }
 }
