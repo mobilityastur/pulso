@@ -85,10 +85,50 @@
    "contexto": "Polígono Industrial Pinto (a 0,3 km)"
   },
   "39.48,2.86": {
-   "t": "2026-11-15T03:15:37.319Z",
+   "t": "2026-11-15T03:31:01.355Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Son Noguera (a 0,9 km)"
+  },
+  "41.48,-1.48": {
+   "t": "2026-11-15T03:31:01.356Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": null,
+   "tipo": "Central eléctrica",
+   "zona": "SET Morata",
+   "d_km": 0.48,
+   "osm": null
+  },
+  "41.46,1.98": {
+   "t": "2026-11-15T03:31:01.357Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "mantefluid S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "d_km": 0.66,
+   "osm": null
+  },
+  "40.58,0.54": {
+   "t": "2026-11-15T03:31:01.357Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "Pedrera Fàbrica de Ciment Cemex",
+   "tipo": "Cementera",
+   "zona": null,
+   "d_km": 0.4,
+   "osm": null
+  },
+  "39.64,2.68": {
+   "t": "2026-11-15T03:31:01.357Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "Planta incineradora de Son Reus",
+   "tipo": "Residuos / incineración",
+   "zona": null,
+   "d_km": 0.53,
+   "osm": null
   }
  }
 }

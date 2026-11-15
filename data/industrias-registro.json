@@ -122,7 +122,91 @@
     "2026-11-14T01:15:00.000Z",
     "2026-11-14T02:15:00.000Z"
    ]
+  },
+  "central eléctrica|celda:41.48,-1.48": {
+   "nombre": null,
+   "tipo": "Central eléctrica",
+   "zona": "SET Morata",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Zaragoza",
+   "lat": 41.4745,
+   "lon": -1.4868,
+   "primera_vez": "2026-11-15T00:56:00.000Z",
+   "ultima_vez": "2026-11-15T00:56:00.000Z",
+   "ultimo_frp": 0.9,
+   "frp_max": 0.9,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T00:56:00.000Z"
+   ]
+  },
+  "mantefluid s.l.|fábrica|barcelona": {
+   "nombre": "mantefluid S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Barcelona",
+   "lat": 41.4525,
+   "lon": 1.979,
+   "primera_vez": "2026-11-15T00:56:00.000Z",
+   "ultima_vez": "2026-11-15T00:56:00.000Z",
+   "ultimo_frp": 0.8,
+   "frp_max": 0.8,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T00:56:00.000Z"
+   ]
+  },
+  "pedrera fàbrica de ciment cemex|cementera|tortosa": {
+   "nombre": "Pedrera Fàbrica de Ciment Cemex",
+   "tipo": "Cementera",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tortosa",
+   "lat": 40.5774,
+   "lon": 0.5422,
+   "primera_vez": "2026-11-15T00:56:00.000Z",
+   "ultima_vez": "2026-11-15T00:56:00.000Z",
+   "ultimo_frp": 0.5,
+   "frp_max": 0.5,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T00:56:00.000Z"
+   ]
+  },
+  "planta incineradora de son reus|residuos / incineración|palma": {
+   "nombre": "Planta incineradora de Son Reus",
+   "tipo": "Residuos / incineración",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Palma",
+   "lat": 39.6473,
+   "lon": 2.6817,
+   "primera_vez": "2026-11-15T00:58:00.000Z",
+   "ultima_vez": "2026-11-15T00:58:00.000Z",
+   "ultimo_frp": 0.4,
+   "frp_max": 0.4,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T00:58:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-15T03:15:37.319Z"
+ "actualizado": "2026-11-15T03:31:01.358Z"
 }
