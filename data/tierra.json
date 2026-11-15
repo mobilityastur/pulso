@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T12:01:03.384Z",
+ "actualizado": "2026-11-15T12:15:36.852Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1304,19 +1304,6 @@
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Pyrenees",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261105_0000163",
-   "t": "2026-11-05T12:01:32.790Z",
-   "lat": 38.9179,
-   "lon": 0.0319,
-   "prof": 3,
-   "mag": 1.8,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
    "autor": "IGN",
    "ign": null
   }
