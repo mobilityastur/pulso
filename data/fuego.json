@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T22:45:38.404Z",
+ "actualizado": "2026-11-15T23:01:15.035Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 1,
@@ -48,7 +48,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 43.5232,
@@ -63,7 +63,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 41.3108,
@@ -80,7 +80,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 41.4542,
@@ -97,7 +97,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 37.3593,
@@ -114,7 +114,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 41.4745,
@@ -131,7 +131,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Zaragoza",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 38.3756,
@@ -148,7 +148,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 4
+   "dias_mes": 5
   },
   {
    "lat": 43.4099,
@@ -165,7 +165,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 36.1793,
@@ -182,7 +182,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Algeciras",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 40.576,
@@ -199,7 +199,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 39.6493,
@@ -216,7 +216,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Palma",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 39.5686,
@@ -233,7 +233,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Palma",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 39.6637,
@@ -250,7 +250,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Valencia",
-   "dias_mes": 3
+   "dias_mes": 4
   }
  ]
 }
