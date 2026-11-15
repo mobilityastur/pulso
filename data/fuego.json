@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-15T01:00:59.432Z",
+ "actualizado": "2026-11-15T01:15:40.878Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 5,
- "detecciones": 15,
+ "detecciones": 12,
  "mayor": {
   "lat": 38.7587,
   "lon": 0.1464,
@@ -94,23 +94,6 @@
    "dias_mes": 2
   },
   {
-   "lat": 41.1862,
-   "lon": 1.2232,
-   "t": "2026-11-14T01:15:00.000Z",
-   "frp": 1.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Repsol Tarragona Refinery",
-   "tipo": "Refinería / petroquímica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tarragona",
-   "dias_mes": 2
-  },
-  {
    "lat": 38.3776,
    "lon": -0.5459,
    "t": "2026-11-14T02:15:00.000Z",
@@ -118,7 +101,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "CEMEX",
    "tipo": "Cementera",
    "zona": null,
@@ -152,7 +135,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "Rojano Trancoso, S.L.",
    "tipo": "Fábrica",
    "zona": null,
