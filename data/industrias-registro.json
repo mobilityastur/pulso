@@ -67,13 +67,13 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "lat": 41.312,
-   "lon": 1.6619,
+   "lat": 41.3108,
+   "lon": 1.6614,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-15T01:53:00.000Z",
-   "ultimo_frp": 0.9,
-   "frp_max": 0.9,
-   "detecciones": 3,
+   "ultima_vez": "2026-11-15T02:38:00.000Z",
+   "ultimo_frp": 1.1,
+   "frp_max": 1.1,
+   "detecciones": 4,
    "dias": [
     "2026-11-14",
     "2026-11-15"
@@ -81,7 +81,8 @@
    "pasos": [
     "2026-11-14T01:15:00.000Z",
     "2026-11-14T02:15:00.000Z",
-    "2026-11-15T01:53:00.000Z"
+    "2026-11-15T01:53:00.000Z",
+    "2026-11-15T02:38:00.000Z"
    ]
   },
   "cementos cosmos|cementera|huelva": {
@@ -112,13 +113,13 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "lat": 38.377,
-   "lon": -0.5434,
+   "lat": 38.3756,
+   "lon": -0.5454,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-15T01:56:00.000Z",
+   "ultima_vez": "2026-11-15T02:38:00.000Z",
    "ultimo_frp": 0.8,
    "frp_max": 1.2,
-   "detecciones": 3,
+   "detecciones": 4,
    "dias": [
     "2026-11-14",
     "2026-11-15"
@@ -126,7 +127,8 @@
    "pasos": [
     "2026-11-14T01:15:00.000Z",
     "2026-11-14T02:15:00.000Z",
-    "2026-11-15T01:56:00.000Z"
+    "2026-11-15T01:56:00.000Z",
+    "2026-11-15T02:38:00.000Z"
    ]
   },
   "central eléctrica|celda:41.48,-1.48": {
@@ -257,7 +259,91 @@
    "pasos": [
     "2026-11-15T01:53:00.000Z"
    ]
+  },
+  "ecrimesa|fábrica|santander": {
+   "nombre": "Ecrimesa",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Santander",
+   "lat": 43.4425,
+   "lon": -3.8466,
+   "primera_vez": "2026-11-15T02:38:00.000Z",
+   "ultima_vez": "2026-11-15T02:38:00.000Z",
+   "ultimo_frp": 1.3,
+   "frp_max": 1.3,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T02:38:00.000Z"
+   ]
+  },
+  "arcelormittal gijón (veriña)|siderurgia|gijón": {
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "tipo": "Siderurgia",
+   "zona": null,
+   "origen": "conocida",
+   "osm": null,
+   "ciudad": "Gijón",
+   "lat": 43.5232,
+   "lon": -5.7274,
+   "primera_vez": "2026-11-15T02:38:00.000Z",
+   "ultima_vez": "2026-11-15T02:38:00.000Z",
+   "ultimo_frp": 1.3,
+   "frp_max": 1.3,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T02:38:00.000Z"
+   ]
+  },
+  "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
+   "nombre": "Almacenamiento Energético 'BESS Marina de Cudeyo'",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Santander",
+   "lat": 43.4099,
+   "lon": -3.8391,
+   "primera_vez": "2026-11-15T02:38:00.000Z",
+   "ultima_vez": "2026-11-15T02:38:00.000Z",
+   "ultimo_frp": 0.8,
+   "frp_max": 0.8,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T02:38:00.000Z"
+   ]
+  },
+  "central térmica de los barrios|central eléctrica|algeciras": {
+   "nombre": "Central Térmica de Los Barrios",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Algeciras",
+   "lat": 36.1793,
+   "lon": -5.4236,
+   "primera_vez": "2026-11-15T02:40:00.000Z",
+   "ultima_vez": "2026-11-15T02:40:00.000Z",
+   "ultimo_frp": 0.6,
+   "frp_max": 0.6,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-15"
+   ],
+   "pasos": [
+    "2026-11-15T02:40:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-15T05:01:03.810Z"
+ "actualizado": "2026-11-15T05:15:43.478Z"
 }
