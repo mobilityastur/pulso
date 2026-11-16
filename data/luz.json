@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-16T15:31:20.747Z",
+ "actualizado": "2026-11-16T15:45:45.418Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-16T16:25:00+01:00",
-  "total": 37983,
-  "renovable": 69.8,
+  "t": "2026-11-16T16:40:00+01:00",
+  "total": 37512,
+  "renovable": 68,
   "mix": {
-   "solar": 11998,
-   "eolica": 12352,
-   "hidraulica": 2003,
-   "nuclear": 6087,
-   "gas": 3059,
+   "solar": 9982,
+   "eolica": 12151,
+   "hidraulica": 3380,
+   "nuclear": 6090,
+   "gas": 3374,
    "carbon": 0,
-   "otras": 2484
+   "otras": 2535
   }
  },
  "tecnologias": [
@@ -23,49 +23,49 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 12352
+   "valor": 12151
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 11468
+   "valor": 9472
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6087
-  },
-  {
-   "titulo": "Ciclo combinado",
-   "renovable": false,
-   "familia": "gas",
-   "valor": 1915
+   "valor": 6090
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 1674
+   "valor": 2897
+  },
+  {
+   "titulo": "Ciclo combinado",
+   "renovable": false,
+   "familia": "gas",
+   "valor": 2167
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 1647
+   "valor": 1700
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1144
+   "valor": 1207
   },
   {
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 530
+   "valor": 510
   },
   {
    "titulo": "Biomasa",
@@ -74,33 +74,19 @@
    "valor": 486
   },
   {
-   "titulo": "Turbina de vapor",
-   "renovable": false,
-   "familia": "otras",
-   "valor": 351
-  },
-  {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 329
+   "valor": 483
+  },
+  {
+   "titulo": "Turbina de vapor",
+   "renovable": false,
+   "familia": "otras",
+   "valor": 349
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-15T16:40:00+01:00",
-   "total": 30814,
-   "renovable": 64.4,
-   "mix": {
-    "solar": 5298,
-    "eolica": 14004,
-    "hidraulica": 103,
-    "nuclear": 6072,
-    "gas": 2816,
-    "carbon": 0,
-    "otras": 2521
-   }
-  },
   {
    "t": "2026-11-15T17:00:00+01:00",
    "total": 29899,
@@ -1362,28 +1348,24 @@
    }
   },
   {
-   "t": "2026-11-16T16:25:00+01:00",
-   "total": 37983,
-   "renovable": 69.8,
+   "t": "2026-11-16T16:40:00+01:00",
+   "total": 37512,
+   "renovable": 68,
    "mix": {
-    "solar": 11998,
-    "eolica": 12352,
-    "hidraulica": 2003,
-    "nuclear": 6087,
-    "gas": 3059,
+    "solar": 9982,
+    "eolica": 12151,
+    "hidraulica": 3380,
+    "nuclear": 6090,
+    "gas": 3374,
     "carbon": 0,
-    "otras": 2484
+    "otras": 2535
    }
   }
  ],
  "demanda": {
-  "actual": 34798,
-  "t": "2026-11-16T16:20:00.000+01:00",
+  "actual": 34558,
+  "t": "2026-11-16T16:35:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-15T16:40:00.000+01:00",
-    "v": 27358
-   },
    {
     "t": "2026-11-15T17:00:00.000+01:00",
     "v": 27110
@@ -1666,14 +1648,14 @@
    },
    {
     "t": "2026-11-16T16:20:00.000+01:00",
-    "v": 34798
+    "v": 34797
+   },
+   {
+    "t": "2026-11-16T16:35:00.000+01:00",
+    "v": 34558
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-15T16:40:00.000+01:00",
-    "v": 27074
-   },
    {
     "t": "2026-11-15T17:00:00.000+01:00",
     "v": 26695
@@ -1952,15 +1934,19 @@
    },
    {
     "t": "2026-11-16T16:00:00.000+01:00",
-    "v": 34257
+    "v": 34258
    },
    {
     "t": "2026-11-16T16:20:00.000+01:00",
-    "v": 34014
+    "v": 34012
    },
    {
-    "t": "2026-11-16T16:30:00.000+01:00",
-    "v": 33897
+    "t": "2026-11-16T16:40:00.000+01:00",
+    "v": 33801
+   },
+   {
+    "t": "2026-11-16T16:45:00.000+01:00",
+    "v": 33752
    }
   ]
  }
