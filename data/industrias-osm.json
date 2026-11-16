@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-16T18:31:04.123Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-16T18:31:04.124Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-16T18:31:04.122Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-16T18:31:04.122Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -191,7 +191,7 @@
    "osm": null
   },
   "36.18,-5.40": {
-   "t": "2026-11-16T18:31:04.121Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Puerto de Refinería",
@@ -201,25 +201,25 @@
    "osm": null
   },
   "43.22,-2.88": {
-   "t": "2026-11-16T18:31:04.123Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Lapatza (a 0,1 km)"
   },
   "37.66,-0.90": {
-   "t": "2026-11-16T18:31:04.123Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Centro de Conservación y Explotación de Carreteras Sector MU-3 (Cartagena) (a 1,3 km)"
   },
   "43.44,-5.36": {
-   "t": "2026-11-16T18:31:04.124Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.38,-6.48": {
-   "t": "2026-11-16T18:31:04.124Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -229,7 +229,7 @@
    "osm": null
   },
   "43.04,-2.22": {
-   "t": "2026-11-16T18:31:04.122Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "ArcelorMittal Olaberria",
@@ -239,13 +239,13 @@
    "osm": null
   },
   "37.34,-6.64": {
-   "t": "2026-11-16T18:31:04.123Z",
+   "t": "2026-11-16T18:35:31.210Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial El Corchito (a 3,1 km)"
   },
   "38.62,-0.96": {
-   "t": "2026-11-16T18:31:04.117Z",
+   "t": "2026-11-16T18:35:31.206Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -257,61 +257,61 @@
    "contexto": null
   },
   "37.18,-2.54": {
-   "t": "2026-11-16T18:31:04.118Z",
+   "t": "2026-11-16T18:35:31.207Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "36.76,-3.48": {
-   "t": "2026-11-16T18:31:04.119Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.76,-1.32": {
-   "t": "2026-11-16T18:31:04.119Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Estación Depuradora de Aguas Residuales de Condado de Alhama (a 2,5 km)"
   },
   "38.24,-1.68": {
-   "t": "2026-11-16T18:31:04.120Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.04,-3.52": {
-   "t": "2026-11-16T18:31:04.120Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.82,-1.22": {
-   "t": "2026-11-16T18:31:04.121Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.08,-1.34": {
-   "t": "2026-11-16T18:31:04.121Z",
+   "t": "2026-11-16T18:35:31.209Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.76,-1.36": {
-   "t": "2026-11-16T18:31:04.118Z",
+   "t": "2026-11-16T18:35:31.207Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "36.94,-2.34": {
-   "t": "2026-11-16T18:31:04.119Z",
+   "t": "2026-11-16T18:35:31.207Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-16T18:31:04.120Z",
+   "t": "2026-11-16T18:35:31.208Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -321,7 +321,7 @@
    "osm": null
   },
   "38.32,-6.06": {
-   "t": "2026-11-16T18:31:04.119Z",
+   "t": "2026-11-16T18:35:31.207Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
