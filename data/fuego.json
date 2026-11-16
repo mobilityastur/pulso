@@ -1,24 +1,114 @@
 {
- "actualizado": "2026-11-16T15:15:46.496Z",
+ "actualizado": "2026-11-16T15:31:18.474Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 14,
+ "total": 13,
+ "detecciones": 24,
  "mayor": {
-  "lat": 37.3494,
-  "lon": -6.6383,
-  "t": "2026-11-16T03:17:00.000Z",
-  "frp": 0.8,
+  "lat": 38.6151,
+  "lon": -0.9587,
+  "t": "2026-11-16T12:57:00.000Z",
+  "frp": 35.3,
   "conf": "nominal",
   "sat": "NOAA20",
-  "dn": "noche",
+  "dn": "día",
   "n": 1,
   "ts": [
-   "2026-11-16T03:17:00.000Z"
-  ],
-  "contexto": "Polígono Industrial El Corchito (a 3,1 km)"
+   "2026-11-16T12:57:00.000Z"
+  ]
  },
  "focos": [
+  {
+   "lat": 38.6151,
+   "lon": -0.9587,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 35.3,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.7548,
+   "lon": -1.3481,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 12.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.172,
+   "lon": -2.5426,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 5.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 36.7602,
+   "lon": -3.4718,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 4.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.7524,
+   "lon": -1.3219,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 4.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Estación Depuradora de Aguas Residuales de Condado de Alhama (a 2,5 km)"
+  },
+  {
+   "lat": 38.2455,
+   "lon": -1.6704,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 3.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 39.0442,
+   "lon": -3.5191,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 2.3,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.8216,
+   "lon": -1.2194,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 2.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 38.0703,
+   "lon": -1.3469,
+   "t": "2026-11-16T12:57:00.000Z",
+   "frp": 1.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
   {
    "lat": 37.3494,
    "lon": -6.6383,
