@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-16T08:30:55.671Z",
+ "actualizado": "2026-11-16T08:45:46.047Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 8,
+  "total": 9,
   "sentibles": 1,
   "mayor": {
    "id": "20261115_0000188",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261116_0000106",
+   "t": "2026-11-16T08:24:07.230Z",
+   "lat": 37.2811,
+   "lon": -2.039,
+   "prof": 0,
+   "mag": 1.9,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Spain",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261116_0000059",
    "t": "2026-11-16T03:47:46.090Z",
@@ -1227,19 +1240,6 @@
    "lugar": null,
    "region": "Near South Coast Of France",
    "autor": "ReNaSS",
-   "ign": null
-  },
-  {
-   "id": "20261106_0000306",
-   "t": "2026-11-06T08:32:52.680Z",
-   "lat": 37.0576,
-   "lon": -2.4027,
-   "prof": 0,
-   "mag": 2,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
-   "autor": "IGN",
    "ign": null
   }
  ]
