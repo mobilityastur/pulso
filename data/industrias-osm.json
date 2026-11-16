@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-16T01:45:38.137Z",
+   "t": "2026-11-16T02:01:08.167Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-16T01:45:38.136Z",
+   "t": "2026-11-16T02:01:08.166Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-16T01:45:38.137Z",
+   "t": "2026-11-16T02:01:08.166Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-16T01:45:38.135Z",
+   "t": "2026-11-16T02:01:08.164Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -161,7 +161,7 @@
    "osm": null
   },
   "43.52,-5.72": {
-   "t": "2026-11-16T01:45:38.136Z",
+   "t": "2026-11-16T02:01:08.166Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -171,7 +171,7 @@
    "osm": null
   },
   "43.40,-3.84": {
-   "t": "2026-11-16T01:45:38.137Z",
+   "t": "2026-11-16T02:01:08.166Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Almacenamiento Energético 'BESS Marina de Cudeyo'",
@@ -181,7 +181,7 @@
    "osm": null
   },
   "36.18,-5.42": {
-   "t": "2026-11-16T01:45:38.138Z",
+   "t": "2026-11-16T02:01:08.167Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Central Térmica de Los Barrios",
