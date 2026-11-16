@@ -394,7 +394,28 @@
    "pasos": [
     "2026-11-16T02:19:00.000Z"
    ]
+  },
+  "arcelormittal olaberria|fábrica|san sebastián": {
+   "nombre": "ArcelorMittal Olaberria",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "San Sebastián",
+   "lat": 43.042,
+   "lon": -2.223,
+   "primera_vez": "2026-11-16T01:34:00.000Z",
+   "ultima_vez": "2026-11-16T01:34:00.000Z",
+   "ultimo_frp": 1,
+   "frp_max": 1,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-16"
+   ],
+   "pasos": [
+    "2026-11-16T01:34:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-16T04:45:36.815Z"
+ "actualizado": "2026-11-16T05:01:16.662Z"
 }

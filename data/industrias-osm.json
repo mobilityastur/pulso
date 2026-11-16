@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-16T04:45:36.813Z",
+   "t": "2026-11-16T05:01:16.660Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-16T04:45:36.813Z",
+   "t": "2026-11-16T05:01:16.661Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-16T04:45:36.812Z",
+   "t": "2026-11-16T05:01:16.659Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-16T04:45:36.812Z",
+   "t": "2026-11-16T05:01:16.660Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -191,7 +191,7 @@
    "osm": null
   },
   "36.18,-5.40": {
-   "t": "2026-11-16T04:45:36.811Z",
+   "t": "2026-11-16T05:01:16.658Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Puerto de Refinería",
@@ -201,31 +201,41 @@
    "osm": null
   },
   "43.22,-2.88": {
-   "t": "2026-11-16T04:45:36.813Z",
+   "t": "2026-11-16T05:01:16.660Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Lapatza (a 0,1 km)"
   },
   "37.66,-0.90": {
-   "t": "2026-11-16T04:45:36.813Z",
+   "t": "2026-11-16T05:01:16.660Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Centro de Conservación y Explotación de Carreteras Sector MU-3 (Cartagena) (a 1,3 km)"
   },
   "43.44,-5.36": {
-   "t": "2026-11-16T04:45:36.813Z",
+   "t": "2026-11-16T05:01:16.661Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.38,-6.48": {
-   "t": "2026-11-16T04:45:36.814Z",
+   "t": "2026-11-16T05:01:16.661Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
    "tipo": "Cementera",
    "zona": null,
    "d_km": 0.3,
+   "osm": null
+  },
+  "43.04,-2.22": {
+   "t": "2026-11-16T05:01:16.660Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "ArcelorMittal Olaberria",
+   "tipo": "Fábrica",
+   "zona": null,
+   "d_km": 0.54,
    "osm": null
   }
  }

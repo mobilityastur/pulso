@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-16T04:45:36.815Z",
+ "actualizado": "2026-11-16T05:01:16.663Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 3,
- "detecciones": 10,
+ "detecciones": 11,
  "mayor": {
   "lat": 43.2243,
   "lon": -2.8786,
@@ -103,6 +103,23 @@
    "osm": null,
    "ciudad": "Santander",
    "dias_mes": 4
+  },
+  {
+   "lat": 43.042,
+   "lon": -2.223,
+   "t": "2026-11-16T01:34:00.000Z",
+   "frp": 1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "ArcelorMittal Olaberria",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "San Sebastián",
+   "dias_mes": 1
   },
   {
    "lat": 38.3761,
