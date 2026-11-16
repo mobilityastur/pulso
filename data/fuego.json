@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T22:45:40.389Z",
+ "actualizado": "2026-11-16T23:01:14.032Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 15,
@@ -187,7 +187,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 36.1874,
@@ -204,7 +204,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Algeciras",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 41.4748,
@@ -221,7 +221,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Zaragoza",
-   "dias_mes": 4
+   "dias_mes": 5
   },
   {
    "lat": 43.4429,
@@ -238,7 +238,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "dias_mes": 4
+   "dias_mes": 5
   },
   {
    "lat": 43.042,
@@ -255,7 +255,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "San Sebastián",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 38.3761,
@@ -272,7 +272,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 37.3633,
@@ -289,7 +289,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 38.3801,
@@ -306,7 +306,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Mérida",
-   "dias_mes": 1
+   "dias_mes": 2
   }
  ]
 }
