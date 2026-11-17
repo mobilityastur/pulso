@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-17T02:15:52.929Z",
+ "actualizado": "2026-11-17T02:29:18.712Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 14,
- "detecciones": 27,
+ "total": 12,
+ "detecciones": 19,
  "mayor": {
   "lat": 38.6151,
   "lon": -0.9587,
@@ -139,27 +139,6 @@
    "dn": "noche",
    "n": 1,
    "contexto": "Polígono Industrial El Corchito (a 3,1 km)"
-  },
-  {
-   "lat": 43.2243,
-   "lon": -2.8786,
-   "t": "2026-11-16T02:17:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Polígono Industrial Lapatza (a 0,1 km)"
-  },
-  {
-   "lat": 43.4424,
-   "lon": -5.3575,
-   "t": "2026-11-16T02:17:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
   }
  ],
  "industriales": [
@@ -186,7 +165,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "Puerto de Refinería",
    "tipo": "Refinería / petroquímica",
    "zona": null,
@@ -196,57 +175,6 @@
    "dias_mes": 2
   },
   {
-   "lat": 41.4748,
-   "lon": -1.4857,
-   "t": "2026-11-16T02:17:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Central eléctrica",
-   "zona": "SET Morata",
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Zaragoza",
-   "dias_mes": 5
-  },
-  {
-   "lat": 43.4429,
-   "lon": -3.8453,
-   "t": "2026-11-16T02:17:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Ecrimesa",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Santander",
-   "dias_mes": 5
-  },
-  {
-   "lat": 38.3761,
-   "lon": -0.5434,
-   "t": "2026-11-16T02:19:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "CEMEX",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Alicante",
-   "dias_mes": 6
-  },
-  {
    "lat": 37.3633,
    "lon": -5.866,
    "t": "2026-11-16T03:17:00.000Z",
@@ -254,7 +182,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "Cementos Portland Valderrivas",
    "tipo": "Cementera",
    "zona": null,
@@ -262,23 +190,6 @@
    "osm": null,
    "ciudad": "Sevilla",
    "dias_mes": 6
-  },
-  {
-   "lat": 38.3801,
-   "lon": -6.4846,
-   "t": "2026-11-16T02:19:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Cosmos",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Mérida",
-   "dias_mes": 2
   }
  ]
 }
