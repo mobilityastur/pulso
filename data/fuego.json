@@ -1,48 +1,28 @@
 {
- "actualizado": "2026-11-17T12:45:43.329Z",
+ "actualizado": "2026-11-17T13:01:13.591Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 16,
- "detecciones": 41,
+ "total": 10,
+ "detecciones": 31,
  "mayor": {
-  "lat": 38.6151,
-  "lon": -0.9587,
-  "t": "2026-11-16T12:57:00.000Z",
-  "frp": 35.3,
+  "lat": 37.1705,
+  "lon": -2.5462,
+  "t": "2026-11-16T13:40:00.000Z",
+  "frp": 15.1,
   "conf": "nominal",
-  "sat": "NOAA20",
+  "sat": "NOAA21",
   "dn": "día",
-  "n": 1,
+  "n": 2,
   "ts": [
-   "2026-11-16T12:57:00.000Z"
+   "2026-11-16T13:40:00.000Z"
   ]
  },
  "focos": [
-  {
-   "lat": 38.6151,
-   "lon": -0.9587,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 35.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
-  },
   {
    "lat": 37.1705,
    "lon": -2.5462,
    "t": "2026-11-16T13:40:00.000Z",
    "frp": 15.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 3
-  },
-  {
-   "lat": 37.7559,
-   "lon": -1.3515,
-   "t": "2026-11-16T13:40:00.000Z",
-   "frp": 12.9,
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "día",
@@ -59,63 +39,22 @@
    "n": 1
   },
   {
+   "lat": 37.7559,
+   "lon": -1.3515,
+   "t": "2026-11-16T13:40:00.000Z",
+   "frp": 8.9,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
    "lat": 36.9379,
    "lon": -2.3451,
    "t": "2026-11-16T13:40:00.000Z",
    "frp": 8.4,
    "conf": "nominal",
    "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
-  },
-  {
-   "lat": 37.7547,
-   "lon": -1.3232,
-   "t": "2026-11-17T02:00:00.000Z",
-   "frp": 4.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2,
-   "contexto": "Estación Depuradora de Aguas Residuales de Condado de Alhama (a 2,5 km)"
-  },
-  {
-   "lat": 36.7602,
-   "lon": -3.4718,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 4.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
-  },
-  {
-   "lat": 38.2455,
-   "lon": -1.6704,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 3.2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 2
-  },
-  {
-   "lat": 39.0442,
-   "lon": -3.5191,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 2.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
-  },
-  {
-   "lat": 37.8216,
-   "lon": -1.2194,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 2.1,
-   "conf": "nominal",
-   "sat": "NOAA20",
    "dn": "día",
    "n": 1
   },
@@ -128,16 +67,6 @@
    "sat": "NOAA20",
    "dn": "noche",
    "n": 4
-  },
-  {
-   "lat": 38.0703,
-   "lon": -1.3469,
-   "t": "2026-11-16T12:57:00.000Z",
-   "frp": 1.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
   },
   {
    "lat": 43.4125,
@@ -159,6 +88,17 @@
    "sat": "NOAA20",
    "dn": "noche",
    "n": 2
+  },
+  {
+   "lat": 37.7547,
+   "lon": -1.3232,
+   "t": "2026-11-17T02:00:00.000Z",
+   "frp": 0.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "contexto": "Estación Depuradora de Aguas Residuales de Condado de Alhama (a 2,5 km)"
   },
   {
    "lat": 41.4745,
