@@ -23,7 +23,7 @@
    "osm": null
   },
   "41.18,1.22": {
-   "t": "2026-11-17T21:15:52.953Z",
+   "t": "2026-11-17T21:30:55.626Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Repsol Tarragona Refinery",
@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-17T21:15:52.953Z",
+   "t": "2026-11-17T21:30:55.625Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.626Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.627Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-17T21:15:52.953Z",
+   "t": "2026-11-17T21:30:55.626Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.627Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -101,7 +101,7 @@
    "osm": null
   },
   "41.46,1.98": {
-   "t": "2026-11-17T21:15:52.953Z",
+   "t": "2026-11-17T21:30:55.626Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "mantefluid S.L.",
@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-17T21:15:52.955Z",
+   "t": "2026-11-17T21:30:55.628Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -269,7 +269,7 @@
    "contexto": null
   },
   "37.76,-1.32": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.627Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Estación Depuradora de Aguas Residuales de Condado de Alhama (a 2,5 km)"
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-17T21:15:52.952Z",
+   "t": "2026-11-17T21:30:55.625Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -327,49 +327,49 @@
    "contexto": null
   },
   "36.94,-2.06": {
-   "t": "2026-11-17T21:15:52.952Z",
+   "t": "2026-11-17T21:30:55.624Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.66,-0.26": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.628Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon Industrial Sepes (a 1,0 km)"
   },
   "43.30,-3.38": {
-   "t": "2026-11-17T21:15:52.953Z",
+   "t": "2026-11-17T21:30:55.625Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.48,2.18": {
-   "t": "2026-11-17T21:15:52.954Z",
+   "t": "2026-11-17T21:30:55.627Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial La Ferreria (a 1,0 km)"
   },
   "43.42,-3.84": {
-   "t": "2026-11-17T21:15:52.952Z",
+   "t": "2026-11-17T21:30:55.625Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
   },
   "37.32,-1.96": {
-   "t": "2026-11-17T21:15:52.951Z",
+   "t": "2026-11-17T21:30:55.623Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.34,-1.98": {
-   "t": "2026-11-17T21:15:52.951Z",
+   "t": "2026-11-17T21:30:55.624Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "40.72,-6.26": {
-   "t": "2026-11-17T21:15:52.952Z",
+   "t": "2026-11-17T21:30:55.624Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
