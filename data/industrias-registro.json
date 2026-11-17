@@ -116,17 +116,18 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "lat": 38.3761,
-   "lon": -0.5434,
+   "lat": 38.3765,
+   "lon": -0.5462,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-16T02:19:00.000Z",
-   "ultimo_frp": 0.9,
+   "ultima_vez": "2026-11-17T01:17:00.000Z",
+   "ultimo_frp": 0.6,
    "frp_max": 1.2,
-   "detecciones": 6,
+   "detecciones": 7,
    "dias": [
     "2026-11-14",
     "2026-11-15",
-    "2026-11-16"
+    "2026-11-16",
+    "2026-11-17"
    ],
    "pasos": [
     "2026-11-14T01:15:00.000Z",
@@ -134,7 +135,8 @@
     "2026-11-15T01:56:00.000Z",
     "2026-11-15T02:38:00.000Z",
     "2026-11-16T01:36:00.000Z",
-    "2026-11-16T02:19:00.000Z"
+    "2026-11-16T02:19:00.000Z",
+    "2026-11-17T01:17:00.000Z"
    ]
   },
   "central eléctrica|celda:41.48,-1.48": {
@@ -189,19 +191,21 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "lat": 40.576,
-   "lon": 0.5403,
+   "lat": 40.5775,
+   "lon": 0.5397,
    "primera_vez": "2026-11-15T00:56:00.000Z",
-   "ultima_vez": "2026-11-15T01:53:00.000Z",
-   "ultimo_frp": 0.5,
+   "ultima_vez": "2026-11-17T01:15:00.000Z",
+   "ultimo_frp": 0.4,
    "frp_max": 0.5,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-17"
    ],
    "pasos": [
     "2026-11-15T00:56:00.000Z",
-    "2026-11-15T01:53:00.000Z"
+    "2026-11-15T01:53:00.000Z",
+    "2026-11-17T01:15:00.000Z"
    ]
   },
   "planta incineradora de son reus|residuos / incineración|palma": {
@@ -298,20 +302,22 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Gijón",
-   "lat": 43.527,
-   "lon": -5.7335,
+   "lat": 43.5244,
+   "lon": -5.736,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-16T13:42:00.000Z",
+   "ultima_vez": "2026-11-17T01:15:00.000Z",
    "ultimo_frp": 3.7,
    "frp_max": 3.7,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
     "2026-11-15",
-    "2026-11-16"
+    "2026-11-16",
+    "2026-11-17"
    ],
    "pasos": [
     "2026-11-15T02:38:00.000Z",
-    "2026-11-16T13:42:00.000Z"
+    "2026-11-16T13:42:00.000Z",
+    "2026-11-17T01:15:00.000Z"
    ]
   },
   "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
@@ -421,5 +427,5 @@
    ]
   }
  },
- "actualizado": "2026-11-17T04:15:40.935Z"
+ "actualizado": "2026-11-17T04:31:12.443Z"
 }
