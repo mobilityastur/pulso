@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T12:31:00.410Z",
+ "actualizado": "2026-11-18T12:45:44.253Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -7,7 +7,7 @@
   "sentibles": 2,
   "mayor": {
    "id": "20261118_0000180",
-   "t": "2026-11-18T10:29:23.220Z",
+   "t": "2026-11-18T10:29:22.440Z",
    "lat": 42.6841,
    "lon": -7.6407,
    "prof": 0,
@@ -15,14 +15,14 @@
    "tipo_mag": "ml",
    "lugar": "E de Taboada (Lugo)",
    "region": "Spain",
-   "autor": "IGN",
+   "autor": "EMSC",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
   }
  },
  "eventos": [
   {
    "id": "20261118_0000180",
-   "t": "2026-11-18T10:29:23.220Z",
+   "t": "2026-11-18T10:29:22.440Z",
    "lat": 42.6841,
    "lon": -7.6407,
    "prof": 0,
@@ -30,7 +30,7 @@
    "tipo_mag": "ml",
    "lugar": "E de Taboada (Lugo)",
    "region": "Spain",
-   "autor": "IGN",
+   "autor": "EMSC",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
   },
   {
