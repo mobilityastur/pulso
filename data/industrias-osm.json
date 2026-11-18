@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-18T02:45:38.275Z",
+   "t": "2026-11-18T02:55:56.885Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -327,7 +327,7 @@
    "contexto": null
   },
   "36.94,-2.06": {
-   "t": "2026-11-18T02:45:38.274Z",
+   "t": "2026-11-18T02:55:56.884Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -357,19 +357,19 @@
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
   },
   "37.32,-1.96": {
-   "t": "2026-11-18T02:45:38.273Z",
+   "t": "2026-11-18T02:55:56.883Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.34,-1.98": {
-   "t": "2026-11-18T02:45:38.274Z",
+   "t": "2026-11-18T02:55:56.884Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "40.72,-6.26": {
-   "t": "2026-11-18T02:45:38.274Z",
+   "t": "2026-11-18T02:55:56.884Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null

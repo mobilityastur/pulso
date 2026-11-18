@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-18T02:45:38.275Z",
+ "actualizado": "2026-11-18T02:55:56.886Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 13,
+ "total": 4,
+ "detecciones": 10,
  "mayor": {
   "lat": 37.3186,
   "lon": -1.9522,
@@ -50,30 +50,9 @@
    "n": 3
   },
   {
-   "lat": 43.4125,
-   "lon": -3.8381,
-   "t": "2026-11-17T02:55:00.000Z",
-   "frp": 1.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
-  },
-  {
    "lat": 36.9381,
    "lon": -2.0564,
    "t": "2026-11-17T02:57:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 43.2985,
-   "lon": -3.3769,
-   "t": "2026-11-17T02:55:00.000Z",
    "frp": 1.1,
    "conf": "nominal",
    "sat": "NOAA20",
@@ -98,21 +77,6 @@
    "osm": null,
    "ciudad": "Alicante",
    "dias_mes": 7
-  },
-  {
-   "lat": 41.4093,
-   "lon": 1.9959,
-   "t": "2026-11-17T02:55:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Fuente fija sin identificar",
-   "origen": "repetición",
-   "ciudad": "Barcelona",
-   "dias_mes": 6
   }
  ]
 }
