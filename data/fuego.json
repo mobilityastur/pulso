@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-18T02:55:56.886Z",
+ "actualizado": "2026-11-18T03:01:04.991Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 10,
+ "total": 3,
+ "detecciones": 8,
  "mayor": {
   "lat": 37.3186,
   "lon": -1.9522,
@@ -48,35 +48,7 @@
    "sat": "NOAA20",
    "dn": "día",
    "n": 3
-  },
-  {
-   "lat": 36.9381,
-   "lon": -2.0564,
-   "t": "2026-11-17T02:57:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
   }
  ],
- "industriales": [
-  {
-   "lat": 38.3789,
-   "lon": -0.5439,
-   "t": "2026-11-17T02:57:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "CEMEX",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Alicante",
-   "dias_mes": 7
-  }
- ]
+ "industriales": []
 }
