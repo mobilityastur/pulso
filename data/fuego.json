@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-18T01:01:04.034Z",
+ "actualizado": "2026-11-18T01:15:41.896Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 9,
- "detecciones": 33,
+ "total": 8,
+ "detecciones": 28,
  "mayor": {
   "lat": 37.3186,
   "lon": -1.9522,
@@ -101,35 +101,9 @@
    "dn": "noche",
    "n": 1,
    "contexto": "Polígon industrial La Ferreria (a 1,0 km)"
-  },
-  {
-   "lat": 39.6654,
-   "lon": -0.2516,
-   "t": "2026-11-17T01:15:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "contexto": "Polígon Industrial Sepes (a 1,0 km)"
   }
  ],
  "industriales": [
-  {
-   "lat": 43.5244,
-   "lon": -5.736,
-   "t": "2026-11-17T01:15:00.000Z",
-   "frp": 1.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 5
-  },
   {
    "lat": 38.3789,
    "lon": -0.5439,
@@ -245,23 +219,6 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Zaragoza",
-   "dias_mes": 6
-  },
-  {
-   "lat": 40.5775,
-   "lon": 0.5397,
-   "t": "2026-11-17T01:15:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "nombre": "Pedrera Fàbrica de Ciment Cemex",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tortosa",
    "dias_mes": 6
   }
  ]
