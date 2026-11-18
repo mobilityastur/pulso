@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-18T02:45:38.275Z",
+   "t": "2026-11-18T04:15:49.359Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-18T01:01:04.029Z",
+   "t": "2026-11-18T04:15:49.358Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -357,22 +357,32 @@
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
   },
   "37.32,-1.96": {
-   "t": "2026-11-18T04:01:09.312Z",
+   "t": "2026-11-18T04:15:49.356Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.34,-1.98": {
-   "t": "2026-11-18T04:01:09.313Z",
+   "t": "2026-11-18T04:15:49.358Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "40.72,-6.26": {
-   "t": "2026-11-18T04:01:09.313Z",
+   "t": "2026-11-18T04:15:49.358Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
+  },
+  "43.54,-5.82": {
+   "t": "2026-11-18T04:15:49.358Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "Acería LD-III",
+   "tipo": "Siderurgia / metalurgia",
+   "zona": null,
+   "d_km": 1.19,
+   "osm": null
   }
  }
 }

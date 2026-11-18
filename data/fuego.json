@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-18T04:01:09.314Z",
+ "actualizado": "2026-11-18T04:15:49.360Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 3,
- "detecciones": 8,
+ "detecciones": 11,
  "mayor": {
   "lat": 37.3186,
   "lon": -1.9522,
@@ -50,5 +50,51 @@
    "n": 3
   }
  ],
- "industriales": []
+ "industriales": [
+  {
+   "lat": 43.5408,
+   "lon": -5.8299,
+   "t": "2026-11-18T01:41:00.000Z",
+   "frp": 5.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "ArcelorMittal Avilés",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Avilés",
+   "dias_mes": 3
+  },
+  {
+   "lat": 43.5249,
+   "lon": -5.7322,
+   "t": "2026-11-18T01:41:00.000Z",
+   "frp": 5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Gijón",
+   "dias_mes": 5
+  },
+  {
+   "lat": 41.4064,
+   "lon": 1.9969,
+   "t": "2026-11-18T01:41:00.000Z",
+   "frp": 0.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "origen": "repetición",
+   "ciudad": "Barcelona",
+   "dias_mes": 6
+  }
+ ]
 }
