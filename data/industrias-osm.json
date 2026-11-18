@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-18T02:01:04.988Z",
+   "t": "2026-11-18T02:15:40.677Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-18T02:01:04.989Z",
+   "t": "2026-11-18T02:15:40.677Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -327,7 +327,7 @@
    "contexto": null
   },
   "36.94,-2.06": {
-   "t": "2026-11-18T02:01:04.987Z",
+   "t": "2026-11-18T02:15:40.677Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -339,7 +339,7 @@
    "contexto": "Polígon Industrial Sepes (a 1,0 km)"
   },
   "43.30,-3.38": {
-   "t": "2026-11-18T02:01:04.988Z",
+   "t": "2026-11-18T02:15:40.677Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -351,25 +351,25 @@
    "contexto": "Polígon industrial La Ferreria (a 1,0 km)"
   },
   "43.42,-3.84": {
-   "t": "2026-11-18T02:01:04.987Z",
+   "t": "2026-11-18T02:15:40.676Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
   },
   "37.32,-1.96": {
-   "t": "2026-11-18T02:01:04.985Z",
+   "t": "2026-11-18T02:15:40.674Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.34,-1.98": {
-   "t": "2026-11-18T02:01:04.987Z",
+   "t": "2026-11-18T02:15:40.676Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "40.72,-6.26": {
-   "t": "2026-11-18T02:01:04.987Z",
+   "t": "2026-11-18T02:15:40.676Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
