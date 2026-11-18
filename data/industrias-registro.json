@@ -314,13 +314,13 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Gijón",
-   "lat": 43.5249,
-   "lon": -5.7322,
+   "lat": 43.5201,
+   "lon": -5.7354,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-18T01:41:00.000Z",
+   "ultima_vez": "2026-11-18T03:19:00.000Z",
    "ultimo_frp": 5,
    "frp_max": 5,
-   "detecciones": 4,
+   "detecciones": 6,
    "dias": [
     "2026-11-15",
     "2026-11-16",
@@ -331,7 +331,9 @@
     "2026-11-15T02:38:00.000Z",
     "2026-11-16T13:42:00.000Z",
     "2026-11-17T01:15:00.000Z",
-    "2026-11-18T01:41:00.000Z"
+    "2026-11-18T01:41:00.000Z",
+    "2026-11-18T02:38:00.000Z",
+    "2026-11-18T03:19:00.000Z"
    ]
   },
   "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
@@ -471,20 +473,64 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Avilés",
-   "lat": 43.5408,
-   "lon": -5.8299,
+   "lat": 43.5396,
+   "lon": -5.8335,
    "primera_vez": "2026-11-18T01:41:00.000Z",
-   "ultima_vez": "2026-11-18T01:41:00.000Z",
+   "ultima_vez": "2026-11-18T02:38:00.000Z",
    "ultimo_frp": 5.4,
    "frp_max": 5.4,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-18"
+   ],
+   "pasos": [
+    "2026-11-18T01:41:00.000Z",
+    "2026-11-18T02:38:00.000Z"
+   ]
+  },
+  "hot rolling|fábrica|avilés": {
+   "nombre": "Hot Rolling",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Avilés",
+   "lat": 43.5532,
+   "lon": -5.8625,
+   "primera_vez": "2026-11-18T02:38:00.000Z",
+   "ultima_vez": "2026-11-18T02:38:00.000Z",
+   "ultimo_frp": 1.1,
+   "frp_max": 1.1,
    "detecciones": 1,
    "dias": [
     "2026-11-18"
    ],
    "pasos": [
-    "2026-11-18T01:41:00.000Z"
+    "2026-11-18T02:38:00.000Z"
+   ]
+  },
+  "exolum|refinería / petroquímica|a coruña": {
+   "nombre": "Exolum",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "A Coruña",
+   "lat": 43.3504,
+   "lon": -8.4475,
+   "primera_vez": "2026-11-18T02:38:00.000Z",
+   "ultima_vez": "2026-11-18T03:19:00.000Z",
+   "ultimo_frp": 1,
+   "frp_max": 1,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-18"
+   ],
+   "pasos": [
+    "2026-11-18T02:38:00.000Z",
+    "2026-11-18T03:19:00.000Z"
    ]
   }
  },
- "actualizado": "2026-11-18T05:31:05.458Z"
+ "actualizado": "2026-11-18T05:45:45.112Z"
 }
