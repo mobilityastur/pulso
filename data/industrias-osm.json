@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-18T22:15:46.579Z",
+   "t": "2026-11-18T22:31:04.732Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-18T22:15:46.578Z",
+   "t": "2026-11-18T22:31:04.731Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-18T22:15:46.577Z",
+   "t": "2026-11-18T22:31:04.730Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -395,7 +395,7 @@
    "osm": null
   },
   "43.56,-5.86": {
-   "t": "2026-11-18T22:15:46.579Z",
+   "t": "2026-11-18T22:31:04.732Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Hot Rolling",
@@ -405,7 +405,7 @@
    "osm": null
   },
   "43.36,-8.44": {
-   "t": "2026-11-18T22:15:46.579Z",
+   "t": "2026-11-18T22:31:04.732Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Exolum",
@@ -415,19 +415,19 @@
    "osm": null
   },
   "41.42,0.40": {
-   "t": "2026-11-18T22:15:46.578Z",
+   "t": "2026-11-18T22:31:04.731Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.50,0.44": {
-   "t": "2026-11-18T22:15:46.578Z",
+   "t": "2026-11-18T22:31:04.731Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.36,-1.68": {
-   "t": "2026-11-18T22:15:46.578Z",
+   "t": "2026-11-18T22:31:04.732Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
