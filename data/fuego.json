@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T22:45:42.071Z",
+ "actualizado": "2026-11-18T23:01:23.473Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 3,
@@ -64,7 +64,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Avilés",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 43.5201,
@@ -79,7 +79,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 43.5532,
@@ -96,7 +96,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Avilés",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 43.3504,
@@ -113,7 +113,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "A Coruña",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 41.4064,
@@ -128,7 +128,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 6
+   "dias_mes": 7
   }
  ]
 }
