@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-19T11:43:44.840Z",
+ "actualizado": "2026-11-19T11:45:52.436Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-19T12:35:00+01:00",
-  "total": 39720,
-  "renovable": 74.3,
+  "t": "2026-11-19T12:40:00+01:00",
+  "total": 40100,
+  "renovable": 74.4,
   "mix": {
-   "solar": 16452,
-   "eolica": 12815,
+   "solar": 16740,
+   "eolica": 12854,
    "hidraulica": 0,
-   "nuclear": 6088,
-   "gas": 2737,
+   "nuclear": 6092,
+   "gas": 2786,
    "carbon": 0,
    "otras": 1628
   }
@@ -23,25 +23,25 @@
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 16291
+   "valor": 16570
   },
   {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 12815
+   "valor": 12854
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6088
+   "valor": 6092
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 1861
+   "valor": 1909
   },
   {
    "titulo": "Autoproductores",
@@ -53,7 +53,7 @@
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 876
+   "valor": 877
   },
   {
    "titulo": "Turbina de vapor",
@@ -71,7 +71,7 @@
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 161
+   "valor": 170
   }
  ],
  "serie": [
@@ -1336,15 +1336,15 @@
    }
   },
   {
-   "t": "2026-11-19T12:35:00+01:00",
-   "total": 39720,
-   "renovable": 74.3,
+   "t": "2026-11-19T12:40:00+01:00",
+   "total": 40100,
+   "renovable": 74.4,
    "mix": {
-    "solar": 16452,
-    "eolica": 12815,
+    "solar": 16740,
+    "eolica": 12854,
     "hidraulica": 0,
-    "nuclear": 6088,
-    "gas": 2737,
+    "nuclear": 6092,
+    "gas": 2786,
     "carbon": 0,
     "otras": 1628
    }
@@ -1931,6 +1931,10 @@
    {
     "t": "2026-11-19T12:40:00.000+01:00",
     "v": 34588
+   },
+   {
+    "t": "2026-11-19T12:45:00.000+01:00",
+    "v": 34590
    }
   ]
  }
