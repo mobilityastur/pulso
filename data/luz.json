@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-19T19:45:44.428Z",
+ "actualizado": "2026-11-19T20:01:10.246Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-19T20:40:00+01:00",
-  "total": 38664,
-  "renovable": 65.2,
+  "t": "2026-11-19T20:55:00+01:00",
+  "total": 38069,
+  "renovable": 65,
   "mix": {
-   "solar": 73,
-   "eolica": 18997,
-   "hidraulica": 7250,
-   "nuclear": 6092,
-   "gas": 3947,
+   "solar": 63,
+   "eolica": 18750,
+   "hidraulica": 6896,
+   "nuclear": 6090,
+   "gas": 3960,
    "carbon": 0,
-   "otras": 2305
+   "otras": 2310
   }
  },
  "tecnologias": [
@@ -23,104 +23,76 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 18997
+   "valor": 18750
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6092
+   "valor": 6090
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 5669
+   "valor": 5449
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 2853
-  },
-  {
-   "titulo": "Turbinación bombeo",
-   "renovable": false,
-   "familia": "hidraulica",
-   "valor": 1581
+   "valor": 2857
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 1571
+   "valor": 1583
+  },
+  {
+   "titulo": "Turbinación bombeo",
+   "renovable": false,
+   "familia": "hidraulica",
+   "valor": 1447
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1094
+   "valor": 1103
   },
   {
    "titulo": "Biomasa",
    "renovable": true,
    "familia": "otras",
-   "valor": 473
+   "valor": 481
   },
   {
    "titulo": "Turbina de vapor",
    "renovable": false,
    "familia": "otras",
-   "valor": 230
+   "valor": 232
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 59
-  },
-  {
-   "titulo": "Baterías",
-   "renovable": false,
-   "familia": "otras",
-   "valor": 31
+   "valor": 49
   },
   {
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
    "valor": 14
+  },
+  {
+   "titulo": "Baterías",
+   "renovable": false,
+   "familia": "otras",
+   "valor": 14
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-18T21:00:00+01:00",
-   "total": 38558,
-   "renovable": 65.2,
-   "mix": {
-    "solar": 52,
-    "eolica": 19439,
-    "hidraulica": 6861,
-    "nuclear": 6079,
-    "gas": 3879,
-    "carbon": 0,
-    "otras": 2248
-   }
-  },
-  {
-   "t": "2026-11-18T21:00:00+01:00",
-   "total": 38558,
-   "renovable": 65.2,
-   "mix": {
-    "solar": 52,
-    "eolica": 19439,
-    "hidraulica": 6861,
-    "nuclear": 6079,
-    "gas": 3879,
-    "carbon": 0,
-    "otras": 2248
-   }
-  },
   {
    "t": "2026-11-18T21:20:00+01:00",
    "total": 37787,
@@ -1366,16 +1338,26 @@
     "carbon": 0,
     "otras": 2305
    }
+  },
+  {
+   "t": "2026-11-19T20:55:00+01:00",
+   "total": 38069,
+   "renovable": 65,
+   "mix": {
+    "solar": 63,
+    "eolica": 18750,
+    "hidraulica": 6896,
+    "nuclear": 6090,
+    "gas": 3960,
+    "carbon": 0,
+    "otras": 2310
+   }
   }
  ],
  "demanda": {
-  "actual": 36381,
-  "t": "2026-11-19T20:35:00.000+01:00",
+  "actual": 36684,
+  "t": "2026-11-19T20:50:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-18T21:00:00.000+01:00",
-    "v": 36046
-   },
    {
     "t": "2026-11-18T21:20:00.000+01:00",
     "v": 35924
@@ -1657,15 +1639,15 @@
     "v": 36473
    },
    {
-    "t": "2026-11-19T20:35:00.000+01:00",
-    "v": 36381
+    "t": "2026-11-19T20:40:00.000+01:00",
+    "v": 36629
+   },
+   {
+    "t": "2026-11-19T20:50:00.000+01:00",
+    "v": 36684
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-18T21:00:00.000+01:00",
-    "v": 35985
-   },
    {
     "t": "2026-11-18T21:20:00.000+01:00",
     "v": 35598
@@ -1951,8 +1933,8 @@
     "v": 36052
    },
    {
-    "t": "2026-11-19T20:45:00.000+01:00",
-    "v": 35937
+    "t": "2026-11-19T21:00:00.000+01:00",
+    "v": 35869
    }
   ]
  }
