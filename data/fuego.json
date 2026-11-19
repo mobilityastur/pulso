@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-19T03:15:45.545Z",
+ "actualizado": "2026-11-19T03:30:56.541Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 3,
- "detecciones": 8,
+ "detecciones": 5,
  "mayor": {
   "lat": 41.4298,
   "lon": 0.4028,
@@ -50,38 +50,5 @@
    "n": 2
   }
  ],
- "industriales": [
-  {
-   "lat": 43.5201,
-   "lon": -5.7354,
-   "t": "2026-11-18T03:19:00.000Z",
-   "frp": 2.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 6
-  },
-  {
-   "lat": 43.3504,
-   "lon": -8.4475,
-   "t": "2026-11-18T03:19:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Exolum",
-   "tipo": "Refinería / petroquímica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "A Coruña",
-   "dias_mes": 2
-  }
- ]
+ "industriales": []
 }
