@@ -573,7 +573,28 @@
    "pasos": [
     "2026-11-19T12:01:00.000Z"
    ]
+  },
+  "fábrica|celda:38.66,-4.04": {
+   "nombre": null,
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "lat": 38.6653,
+   "lon": -4.048,
+   "primera_vez": "2026-11-19T13:42:00.000Z",
+   "ultima_vez": "2026-11-19T13:42:00.000Z",
+   "ultimo_frp": 5.9,
+   "frp_max": 5.9,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-19"
+   ],
+   "pasos": [
+    "2026-11-19T13:42:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-19T16:01:09.594Z"
+ "actualizado": "2026-11-19T16:15:43.815Z"
 }

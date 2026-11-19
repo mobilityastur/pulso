@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-19T16:01:09.594Z",
+ "actualizado": "2026-11-19T16:15:43.815Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 8,
- "detecciones": 43,
+ "total": 9,
+ "detecciones": 48,
  "mayor": {
   "lat": 41.9864,
   "lon": -1.1447,
@@ -30,14 +30,14 @@
    "n": 8
   },
   {
-   "lat": 36.3238,
-   "lon": -5.3489,
-   "t": "2026-11-19T12:44:00.000Z",
+   "lat": 36.3268,
+   "lon": -5.3491,
+   "t": "2026-11-19T13:42:00.000Z",
    "frp": 7.6,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 2,
+   "n": 3,
    "contexto": "Tesoricoop (a 2,8 km)"
   },
   {
@@ -51,14 +51,24 @@
    "n": 1
   },
   {
-   "lat": 41.7638,
-   "lon": 0.4832,
-   "t": "2026-11-19T12:46:00.000Z",
+   "lat": 41.7634,
+   "lon": 0.4818,
+   "t": "2026-11-19T13:42:00.000Z",
    "frp": 4.8,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 2
+   "n": 3
+  },
+  {
+   "lat": 42.1879,
+   "lon": -1.2944,
+   "t": "2026-11-19T13:42:00.000Z",
+   "frp": 4.4,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
   },
   {
    "lat": 39.1314,
@@ -82,14 +92,15 @@
    "contexto": "EDAR de Valtierra-Arguedas (a 1,3 km)"
   },
   {
-   "lat": 41.0707,
-   "lon": 0.5874,
-   "t": "2026-11-19T12:46:00.000Z",
+   "lat": 41.0716,
+   "lon": 0.5904,
+   "t": "2026-11-19T13:42:00.000Z",
    "frp": 2.6,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 2
+   "n": 3,
+   "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
   },
   {
    "lat": 38.3326,
@@ -117,6 +128,23 @@
    "origen": "conocida",
    "ciudad": "Avilés",
    "dias_mes": 4
+  },
+  {
+   "lat": 38.6653,
+   "lon": -4.048,
+   "t": "2026-11-19T13:42:00.000Z",
+   "frp": 5.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "dias_mes": 1
   },
   {
    "lat": 39.538,
