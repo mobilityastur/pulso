@@ -1,37 +1,157 @@
 {
- "actualizado": "2026-11-19T14:31:02.124Z",
+ "actualizado": "2026-11-19T14:45:44.221Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 1,
- "detecciones": 20,
+ "total": 8,
+ "detecciones": 43,
  "mayor": {
-  "lat": 43.4106,
-  "lon": -3.8391,
-  "t": "2026-11-19T02:19:00.000Z",
-  "frp": 0.5,
+  "lat": 41.9864,
+  "lon": -1.1447,
+  "t": "2026-11-19T12:46:00.000Z",
+  "frp": 8.4,
   "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "noche",
-  "n": 2,
+  "sat": "NOAA21",
+  "dn": "día",
+  "n": 8,
   "ts": [
-   "2026-11-19T02:19:00.000Z"
-  ],
-  "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
+   "2026-11-19T12:46:00.000Z",
+   "2026-11-19T12:01:00.000Z"
+  ]
  },
  "focos": [
   {
-   "lat": 43.4106,
-   "lon": -3.8391,
-   "t": "2026-11-19T02:19:00.000Z",
-   "frp": 0.5,
+   "lat": 41.9864,
+   "lon": -1.1447,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 8.4,
    "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 8
+  },
+  {
+   "lat": 36.3238,
+   "lon": -5.3489,
+   "t": "2026-11-19T12:44:00.000Z",
+   "frp": 7.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
    "n": 2,
-   "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
+   "contexto": "Tesoricoop (a 2,8 km)"
+  },
+  {
+   "lat": 43.216,
+   "lon": -2.1416,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 5.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 41.7638,
+   "lon": 0.4832,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 4.8,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 39.1314,
+   "lon": -0.4722,
+   "t": "2026-11-19T12:44:00.000Z",
+   "frp": 3.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 42.1379,
+   "lon": -1.5784,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 2.8,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "EDAR de Valtierra-Arguedas (a 1,3 km)"
+  },
+  {
+   "lat": 41.0707,
+   "lon": 0.5874,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 2.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 38.3326,
+   "lon": -1.4842,
+   "t": "2026-11-19T12:44:00.000Z",
+   "frp": 2.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
   }
  ],
  "industriales": [
+  {
+   "lat": 43.5414,
+   "lon": -5.8304,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 11.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 3,
+   "nombre": "ArcelorMittal Avilés",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Avilés",
+   "dias_mes": 4
+  },
+  {
+   "lat": 39.538,
+   "lon": -0.3629,
+   "t": "2026-11-19T12:01:00.000Z",
+   "frp": 5.3,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 2,
+   "nombre": null,
+   "tipo": "Central eléctrica",
+   "zona": "Ràfia Industrial",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Valencia",
+   "dias_mes": 1
+  },
+  {
+   "lat": 43.4095,
+   "lon": -3.8342,
+   "t": "2026-11-19T12:04:00.000Z",
+   "frp": 4.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 4,
+   "nombre": "Almacenamiento Energético 'BESS Marina de Cudeyo'",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Santander",
+   "dias_mes": 3
+  },
   {
    "lat": 43.5179,
    "lon": -5.7327,
@@ -80,21 +200,6 @@
    "osm": null,
    "ciudad": "Alicante",
    "dias_mes": 8
-  },
-  {
-   "lat": 43.541,
-   "lon": -5.8325,
-   "t": "2026-11-19T02:19:00.000Z",
-   "frp": 1.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "nombre": "ArcelorMittal Avilés",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Avilés",
-   "dias_mes": 4
   },
   {
    "lat": 36.1828,
