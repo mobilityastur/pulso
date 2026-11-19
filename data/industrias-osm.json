@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-19T07:01:11.992Z",
+   "t": "2026-11-19T07:15:43.952Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-19T07:01:11.992Z",
+   "t": "2026-11-19T07:15:43.952Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-19T07:01:11.992Z",
+   "t": "2026-11-19T07:15:43.952Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -415,19 +415,19 @@
    "osm": null
   },
   "41.42,0.40": {
-   "t": "2026-11-19T07:01:11.990Z",
+   "t": "2026-11-19T07:15:43.951Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.50,0.44": {
-   "t": "2026-11-19T07:01:11.991Z",
+   "t": "2026-11-19T07:15:43.952Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.36,-1.68": {
-   "t": "2026-11-19T07:01:11.991Z",
+   "t": "2026-11-19T07:15:43.952Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
