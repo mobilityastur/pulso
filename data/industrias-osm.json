@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-19T13:15:59.452Z",
+   "t": "2026-11-19T13:31:01.355Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -181,7 +181,7 @@
    "osm": null
   },
   "36.18,-5.42": {
-   "t": "2026-11-19T13:15:59.453Z",
+   "t": "2026-11-19T13:31:01.355Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Central Térmica de Los Barrios",
@@ -191,7 +191,7 @@
    "osm": null
   },
   "36.18,-5.40": {
-   "t": "2026-11-19T13:15:59.453Z",
+   "t": "2026-11-19T13:31:01.355Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Puerto de Refinería",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-19T13:15:59.451Z",
+   "t": "2026-11-19T13:31:01.353Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -351,7 +351,7 @@
    "contexto": "Polígon industrial La Ferreria (a 1,0 km)"
   },
   "43.42,-3.84": {
-   "t": "2026-11-19T13:15:59.453Z",
+   "t": "2026-11-19T13:31:01.356Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-19T13:15:59.452Z",
+   "t": "2026-11-19T13:31:01.355Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -433,7 +433,7 @@
    "contexto": null
   },
   "43.34,-8.44": {
-   "t": "2026-11-19T13:15:59.452Z",
+   "t": "2026-11-19T13:31:01.354Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Exolum",
@@ -443,7 +443,7 @@
    "osm": null
   },
   "42.56,-6.78": {
-   "t": "2026-11-19T13:15:59.453Z",
+   "t": "2026-11-19T13:31:01.355Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
