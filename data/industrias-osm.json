@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-19T04:15:43.481Z",
+   "t": "2026-11-19T04:30:57.200Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -161,7 +161,7 @@
    "osm": null
   },
   "43.52,-5.72": {
-   "t": "2026-11-19T04:15:43.481Z",
+   "t": "2026-11-19T04:30:57.200Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-19T04:15:43.482Z",
+   "t": "2026-11-19T04:30:57.200Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -415,19 +415,19 @@
    "osm": null
   },
   "41.42,0.40": {
-   "t": "2026-11-19T04:15:43.480Z",
+   "t": "2026-11-19T04:30:57.199Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.50,0.44": {
-   "t": "2026-11-19T04:15:43.481Z",
+   "t": "2026-11-19T04:30:57.200Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.36,-1.68": {
-   "t": "2026-11-19T04:15:43.481Z",
+   "t": "2026-11-19T04:30:57.200Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
