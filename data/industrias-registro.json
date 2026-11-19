@@ -316,13 +316,13 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Gijón",
-   "lat": 43.5263,
-   "lon": -5.7269,
+   "lat": 43.5179,
+   "lon": -5.7327,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-19T01:21:00.000Z",
+   "ultima_vez": "2026-11-19T03:02:00.000Z",
    "ultimo_frp": 2.2,
    "frp_max": 5,
-   "detecciones": 7,
+   "detecciones": 8,
    "dias": [
     "2026-11-15",
     "2026-11-16",
@@ -337,7 +337,8 @@
     "2026-11-18T01:41:00.000Z",
     "2026-11-18T02:38:00.000Z",
     "2026-11-18T03:19:00.000Z",
-    "2026-11-19T01:21:00.000Z"
+    "2026-11-19T01:21:00.000Z",
+    "2026-11-19T03:02:00.000Z"
    ]
   },
   "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
@@ -538,5 +539,5 @@
    ]
   }
  },
- "actualizado": "2026-11-19T05:15:54.528Z"
+ "actualizado": "2026-11-19T05:31:05.955Z"
 }
