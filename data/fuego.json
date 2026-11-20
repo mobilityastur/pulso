@@ -1,24 +1,46 @@
 {
- "actualizado": "2026-11-20T15:45:44.521Z",
+ "actualizado": "2026-11-20T16:01:12.865Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 3,
- "detecciones": 20,
+ "total": 5,
+ "detecciones": 23,
  "mayor": {
-  "lat": 43.4115,
-  "lon": -3.8417,
-  "t": "2026-11-20T01:02:00.000Z",
-  "frp": 1.2,
+  "lat": 38.2185,
+  "lon": -1.3215,
+  "t": "2026-11-20T13:22:00.000Z",
+  "frp": 4.8,
   "conf": "nominal",
-  "sat": "NOAA21",
-  "dn": "noche",
+  "sat": "NOAA20",
+  "dn": "día",
   "n": 2,
   "ts": [
-   "2026-11-20T01:02:00.000Z"
+   "2026-11-20T13:22:00.000Z"
   ],
-  "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
+  "contexto": "Frutas Maripi (a 2,7 km)"
  },
  "focos": [
+  {
+   "lat": 38.2185,
+   "lon": -1.3215,
+   "t": "2026-11-20T13:22:00.000Z",
+   "frp": 4.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 2,
+   "contexto": "Frutas Maripi (a 2,7 km)"
+  },
+  {
+   "lat": 38.1237,
+   "lon": -1.3072,
+   "t": "2026-11-20T13:22:00.000Z",
+   "frp": 2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
+  },
   {
    "lat": 43.4115,
    "lon": -3.8417,
