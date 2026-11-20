@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-20T03:30:57.621Z",
+ "actualizado": "2026-11-20T03:45:42.073Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 9,
- "detecciones": 28,
+ "total": 10,
+ "detecciones": 32,
  "mayor": {
   "lat": 41.9864,
   "lon": -1.1447,
@@ -71,6 +71,17 @@
    "n": 1
   },
   {
+   "lat": 43.4115,
+   "lon": -3.8417,
+   "t": "2026-11-20T01:02:00.000Z",
+   "frp": 4.1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 4,
+   "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
+  },
+  {
    "lat": 39.1314,
    "lon": -0.4722,
    "t": "2026-11-19T12:44:00.000Z",
@@ -130,21 +141,21 @@
    "dias_mes": 5
   },
   {
-   "lat": 38.6653,
-   "lon": -4.048,
-   "t": "2026-11-19T13:42:00.000Z",
+   "lat": 38.6645,
+   "lon": -4.0521,
+   "t": "2026-11-20T01:04:00.000Z",
    "frp": 5.9,
    "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Fábrica",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 3,
+   "nombre": "Refineria Exolum de Puertollano",
+   "tipo": "Refinería / petroquímica",
    "zona": null,
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "dias_mes": 2
+   "dias_mes": 1
   },
   {
    "lat": 39.538,
@@ -162,23 +173,6 @@
    "osm": null,
    "ciudad": "Valencia",
    "dias_mes": 2
-  },
-  {
-   "lat": 43.4095,
-   "lon": -3.8342,
-   "t": "2026-11-19T12:04:00.000Z",
-   "frp": 4.1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 2,
-   "nombre": "Almacenamiento Energético 'BESS Marina de Cudeyo'",
-   "tipo": "Central eléctrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Santander",
-   "dias_mes": 4
   }
  ]
 }

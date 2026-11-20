@@ -594,7 +594,30 @@
    "pasos": [
     "2026-11-19T13:42:00.000Z"
    ]
+  },
+  "refineria exolum de puertollano|refinería / petroquímica|ciudad real": {
+   "nombre": "Refineria Exolum de Puertollano",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "lat": 38.6645,
+   "lon": -4.0521,
+   "primera_vez": "2026-11-19T13:42:00.000Z",
+   "ultima_vez": "2026-11-20T01:04:00.000Z",
+   "ultimo_frp": 5.9,
+   "frp_max": 5.9,
+   "detecciones": 2,
+   "dias": [
+    "2026-11-19",
+    "2026-11-20"
+   ],
+   "pasos": [
+    "2026-11-19T13:42:00.000Z",
+    "2026-11-20T01:04:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-20T03:30:57.621Z"
+ "actualizado": "2026-11-20T03:45:42.073Z"
 }
