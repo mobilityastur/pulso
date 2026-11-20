@@ -1,34 +1,25 @@
 {
- "actualizado": "2026-11-20T11:45:43.059Z",
+ "actualizado": "2026-11-20T12:01:21.987Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 12,
- "detecciones": 48,
+ "detecciones": 42,
  "mayor": {
-  "lat": 41.9864,
-  "lon": -1.1447,
-  "t": "2026-11-19T12:46:00.000Z",
-  "frp": 8.4,
+  "lat": 36.3268,
+  "lon": -5.3491,
+  "t": "2026-11-19T13:42:00.000Z",
+  "frp": 7.6,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 8,
+  "n": 3,
   "ts": [
-   "2026-11-19T12:46:00.000Z",
-   "2026-11-19T12:01:00.000Z"
-  ]
+   "2026-11-19T13:42:00.000Z",
+   "2026-11-19T12:44:00.000Z"
+  ],
+  "contexto": "Tesoricoop (a 2,8 km)"
  },
  "focos": [
-  {
-   "lat": 41.9864,
-   "lon": -1.1447,
-   "t": "2026-11-19T12:46:00.000Z",
-   "frp": 8.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 8
-  },
   {
    "lat": 36.3268,
    "lon": -5.3491,
@@ -39,6 +30,16 @@
    "dn": "día",
    "n": 3,
    "contexto": "Tesoricoop (a 2,8 km)"
+  },
+  {
+   "lat": 41.9864,
+   "lon": -1.1447,
+   "t": "2026-11-19T12:46:00.000Z",
+   "frp": 6.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 4
   },
   {
    "lat": 43.216,
@@ -176,23 +177,6 @@
    "osm": null,
    "ciudad": "Ciudad Real",
    "dias_mes": 1
-  },
-  {
-   "lat": 39.538,
-   "lon": -0.3629,
-   "t": "2026-11-19T12:01:00.000Z",
-   "frp": 5.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 2,
-   "nombre": null,
-   "tipo": "Central eléctrica",
-   "zona": "Ràfia Industrial",
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Valencia",
-   "dias_mes": 2
   },
   {
    "lat": 43.5215,
