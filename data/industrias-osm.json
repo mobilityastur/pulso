@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.783Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -63,13 +63,13 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.784Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   "37.36,-6.68": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.784Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -101,7 +101,7 @@
    "osm": null
   },
   "41.46,1.98": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.783Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "mantefluid S.L.",
@@ -219,7 +219,7 @@
    "contexto": null
   },
   "38.38,-6.48": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.784Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -229,7 +229,7 @@
    "osm": null
   },
   "43.04,-2.22": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.783Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "ArcelorMittal Olaberria",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.782Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -351,7 +351,7 @@
    "contexto": "Polígon industrial La Ferreria (a 1,0 km)"
   },
   "43.42,-3.84": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.781Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-20T08:01:15.512Z",
+   "t": "2026-11-20T08:15:46.779Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -395,7 +395,7 @@
    "osm": null
   },
   "43.56,-5.86": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.783Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Hot Rolling",
@@ -453,19 +453,19 @@
    "osm": null
   },
   "41.98,-1.14": {
-   "t": "2026-11-20T08:01:15.514Z",
+   "t": "2026-11-20T08:15:46.780Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "36.32,-5.34": {
-   "t": "2026-11-20T08:01:15.514Z",
+   "t": "2026-11-20T08:15:46.780Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Tesoricoop (a 2,8 km)"
   },
   "39.54,-0.36": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.781Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -475,25 +475,25 @@
    "osm": null
   },
   "43.22,-2.14": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.781Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.76,0.48": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.781Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.14,-0.48": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.782Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "42.14,-1.58": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.782Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "EDAR de Valtierra-Arguedas (a 1,3 km)"
@@ -505,7 +505,7 @@
    "contexto": null
   },
   "38.34,-1.48": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.782Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -521,19 +521,19 @@
    "osm": null
   },
   "42.18,-1.30": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.781Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.08,0.60": {
-   "t": "2026-11-20T08:01:15.516Z",
+   "t": "2026-11-20T08:15:46.782Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
   },
   "38.66,-4.06": {
-   "t": "2026-11-20T08:01:15.515Z",
+   "t": "2026-11-20T08:15:46.780Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Refineria Exolum de Puertollano",
@@ -543,13 +543,13 @@
    "osm": null
   },
   "37.28,-6.70": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.784Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.98,-1.42": {
-   "t": "2026-11-20T08:01:15.517Z",
+   "t": "2026-11-20T08:15:46.784Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
