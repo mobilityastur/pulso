@@ -1,36 +1,23 @@
 {
- "actualizado": "2026-11-20T12:31:01.501Z",
+ "actualizado": "2026-11-20T12:45:47.904Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 12,
- "detecciones": 40,
+ "total": 10,
+ "detecciones": 36,
  "mayor": {
-  "lat": 36.3268,
-  "lon": -5.3491,
-  "t": "2026-11-19T13:42:00.000Z",
-  "frp": 7.6,
+  "lat": 41.9864,
+  "lon": -1.1447,
+  "t": "2026-11-19T12:46:00.000Z",
+  "frp": 6.2,
   "conf": "nominal",
-  "sat": "NOAA20",
+  "sat": "NOAA21",
   "dn": "día",
-  "n": 3,
+  "n": 4,
   "ts": [
-   "2026-11-19T13:42:00.000Z",
-   "2026-11-19T12:44:00.000Z"
-  ],
-  "contexto": "Tesoricoop (a 2,8 km)"
+   "2026-11-19T12:46:00.000Z"
+  ]
  },
  "focos": [
-  {
-   "lat": 36.3268,
-   "lon": -5.3491,
-   "t": "2026-11-19T13:42:00.000Z",
-   "frp": 7.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 3,
-   "contexto": "Tesoricoop (a 2,8 km)"
-  },
   {
    "lat": 41.9864,
    "lon": -1.1447,
@@ -72,14 +59,15 @@
    "n": 1
   },
   {
-   "lat": 39.1314,
-   "lon": -0.4722,
-   "t": "2026-11-19T12:44:00.000Z",
-   "frp": 3.5,
+   "lat": 36.3268,
+   "lon": -5.3491,
+   "t": "2026-11-19T13:42:00.000Z",
+   "frp": 3.2,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 1
+   "n": 1,
+   "contexto": "Tesoricoop (a 2,8 km)"
   },
   {
    "lat": 42.1379,
@@ -102,16 +90,6 @@
    "dn": "día",
    "n": 3,
    "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
-  },
-  {
-   "lat": 38.3326,
-   "lon": -1.4842,
-   "t": "2026-11-19T12:44:00.000Z",
-   "frp": 2.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
   },
   {
    "lat": 43.4115,
