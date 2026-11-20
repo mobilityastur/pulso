@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T18:15:42.130Z",
+ "actualizado": "2026-11-20T18:31:06.371Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -16,7 +16,7 @@
    "lugar": "Atlántico-Portugal",
    "region": "Portugal",
    "autor": "IPMA",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wsynx"
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wtprb"
   }
  },
  "eventos": [
@@ -31,7 +31,7 @@
    "lugar": "Atlántico-Portugal",
    "region": "Portugal",
    "autor": "IPMA",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wsynx"
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wtprb"
   },
   {
    "id": "20261120_0000261",
