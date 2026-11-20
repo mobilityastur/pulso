@@ -1,40 +1,30 @@
 {
- "actualizado": "2026-11-20T12:45:47.904Z",
+ "actualizado": "2026-11-20T13:01:06.924Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 10,
- "detecciones": 36,
+ "total": 7,
+ "detecciones": 25,
  "mayor": {
-  "lat": 41.9864,
-  "lon": -1.1447,
-  "t": "2026-11-19T12:46:00.000Z",
-  "frp": 6.2,
+  "lat": 42.1879,
+  "lon": -1.2944,
+  "t": "2026-11-19T13:42:00.000Z",
+  "frp": 4.4,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 4,
+  "n": 1,
   "ts": [
-   "2026-11-19T12:46:00.000Z"
+   "2026-11-19T13:42:00.000Z"
   ]
  },
  "focos": [
   {
-   "lat": 41.9864,
-   "lon": -1.1447,
-   "t": "2026-11-19T12:46:00.000Z",
-   "frp": 6.2,
+   "lat": 42.1879,
+   "lon": -1.2944,
+   "t": "2026-11-19T13:42:00.000Z",
+   "frp": 4.4,
    "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 4
-  },
-  {
-   "lat": 43.216,
-   "lon": -2.1416,
-   "t": "2026-11-19T12:46:00.000Z",
-   "frp": 5.2,
-   "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
    "n": 1
   },
@@ -42,17 +32,7 @@
    "lat": 41.7634,
    "lon": 0.4818,
    "t": "2026-11-19T13:42:00.000Z",
-   "frp": 4.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 3
-  },
-  {
-   "lat": 42.1879,
-   "lon": -1.2944,
-   "t": "2026-11-19T13:42:00.000Z",
-   "frp": 4.4,
+   "frp": 3.7,
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "día",
@@ -70,25 +50,14 @@
    "contexto": "Tesoricoop (a 2,8 km)"
   },
   {
-   "lat": 42.1379,
-   "lon": -1.5784,
-   "t": "2026-11-19T12:46:00.000Z",
-   "frp": 2.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "contexto": "EDAR de Valtierra-Arguedas (a 1,3 km)"
-  },
-  {
    "lat": 41.0716,
    "lon": 0.5904,
    "t": "2026-11-19T13:42:00.000Z",
-   "frp": 2.6,
+   "frp": 1.9,
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "día",
-   "n": 3,
+   "n": 1,
    "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
   },
   {
@@ -124,21 +93,6 @@
   }
  ],
  "industriales": [
-  {
-   "lat": 43.5414,
-   "lon": -5.8304,
-   "t": "2026-11-19T12:46:00.000Z",
-   "frp": 11.6,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "nombre": "ArcelorMittal Avilés",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Avilés",
-   "dias_mes": 5
-  },
   {
    "lat": 38.6645,
    "lon": -4.0521,
