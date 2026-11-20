@@ -635,7 +635,28 @@
     "2026-11-19T13:42:00.000Z",
     "2026-11-20T01:04:00.000Z"
    ]
+  },
+  "fuente fija sin identificar|celda:43.42,-3.84": {
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "zona": null,
+   "origen": "repetición",
+   "osm": null,
+   "ciudad": "Santander",
+   "lat": 43.4115,
+   "lon": -3.8417,
+   "primera_vez": "2026-11-20T01:02:00.000Z",
+   "ultima_vez": "2026-11-20T01:02:00.000Z",
+   "ultimo_frp": 1.2,
+   "frp_max": 1.2,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-20"
+   ],
+   "pasos": [
+    "2026-11-20T01:02:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-20T22:45:39.440Z"
+ "actualizado": "2026-11-20T23:01:10.217Z"
 }

@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-11-20T22:45:39.441Z",
+ "actualizado": "2026-11-20T23:01:10.217Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 5,
+ "total": 4,
  "detecciones": 23,
  "mayor": {
   "lat": 38.2185,
@@ -42,17 +42,6 @@
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
   },
   {
-   "lat": 43.4115,
-   "lon": -3.8417,
-   "t": "2026-11-20T01:02:00.000Z",
-   "frp": 1.2,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2,
-   "contexto": "Polígono Industrial de La Cerrada (a 0,6 km)"
-  },
-  {
    "lat": 37.2874,
    "lon": -6.6981,
    "t": "2026-11-20T02:02:00.000Z",
@@ -89,7 +78,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 43.5215,
@@ -104,7 +93,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 41.454,
@@ -121,7 +110,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 43.0356,
@@ -138,7 +127,22 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "San Sebastián",
-   "dias_mes": 3
+   "dias_mes": 4
+  },
+  {
+   "lat": 43.4115,
+   "lon": -3.8417,
+   "t": "2026-11-20T01:02:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 2,
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "origen": "repetición",
+   "ciudad": "Santander",
+   "dias_mes": 5
   },
   {
    "lat": 38.3768,
@@ -155,7 +159,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 9
+   "dias_mes": 10
   },
   {
    "lat": 43.5519,
@@ -172,7 +176,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Avilés",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 41.4059,
@@ -187,7 +191,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 8
+   "dias_mes": 9
   },
   {
    "lat": 37.3597,
@@ -204,7 +208,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 38.3782,
@@ -221,7 +225,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Mérida",
-   "dias_mes": 3
+   "dias_mes": 4
   }
  ]
 }
