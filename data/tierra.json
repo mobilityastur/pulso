@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T09:30:58.925Z",
+ "actualizado": "2026-11-20T09:45:52.669Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -119,10 +119,10 @@
    "prof": 78,
    "mag": 3.1,
    "tipo_mag": "ml",
-   "lugar": "Golfo de Cádiz",
+   "lugar": null,
    "region": "West Of Gibraltar",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wrifv"
+   "ign": null
   },
   {
    "id": "20261119_0000056",
@@ -223,10 +223,10 @@
    "prof": 0,
    "mag": 2.7,
    "tipo_mag": "ml",
-   "lugar": "E de Taboada (Lugo)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
+   "ign": null
   },
   {
    "id": "20261118_0000177",
@@ -236,10 +236,10 @@
    "prof": 0,
    "mag": 2.5,
    "tipo_mag": "ml",
-   "lugar": "E de Taboada (Lugo)",
+   "lugar": null,
    "region": "Spain",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
+   "ign": null
   },
   {
    "id": "20261118_0000152",
@@ -756,10 +756,10 @@
    "prof": 25,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": "Alborán Oeste",
+   "lugar": null,
    "region": "Strait Of Gibraltar",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wkjwo"
+   "ign": null
   },
   {
    "id": "20261115_0000099",
@@ -1016,10 +1016,10 @@
    "prof": 11,
    "mag": 4,
    "tipo_mag": "mb",
-   "lugar": "N de Medea (Argelia)",
+   "lugar": null,
    "region": "Northern Algeria",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wgbbk"
+   "ign": null
   },
   {
    "id": "20261113_0000066",
@@ -1094,10 +1094,10 @@
    "prof": 33,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": "Atlántico-Canarias",
+   "lugar": null,
    "region": "Canary Islands, Spain Region",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfirt"
+   "ign": null
   },
   {
    "id": "20261112_0000258",
@@ -1107,10 +1107,10 @@
    "prof": 40,
    "mag": 3.2,
    "tipo_mag": "ml",
-   "lugar": "N de Alcalá de los Gazules (Cádiz)",
+   "lugar": null,
    "region": "Strait Of Gibraltar",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfenz"
+   "ign": null
   },
   {
    "id": "20261112_0000184",
@@ -1354,10 +1354,10 @@
    "prof": 2,
    "mag": 3.1,
    "tipo_mag": "ml",
-   "lugar": "E de Pliego (Murcia)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wciso"
+   "ign": null
   },
   {
    "id": "20261111_0000004",
@@ -1367,10 +1367,10 @@
    "prof": 3,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": "SO de O Carballiño (OU)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wbwsu"
+   "ign": null
   },
   {
    "id": "20261111_0000002",
@@ -1487,19 +1487,6 @@
    "lugar": null,
    "region": "Strait Of Gibraltar",
    "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261110_0000125",
-   "t": "2026-11-10T09:39:43.882Z",
-   "lat": 43.7944,
-   "lon": 2.2781,
-   "prof": 5,
-   "mag": 2.2,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "France",
-   "autor": "ReNaSS",
    "ign": null
   }
  ]
