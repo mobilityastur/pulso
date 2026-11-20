@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-20T00:45:48.554Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -171,7 +171,7 @@
    "osm": null
   },
   "43.40,-3.84": {
-   "t": "2026-11-20T00:45:48.552Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Almacenamiento Energético 'BESS Marina de Cudeyo'",
@@ -181,7 +181,7 @@
    "osm": null
   },
   "36.18,-5.42": {
-   "t": "2026-11-20T00:45:48.554Z",
+   "t": "2026-11-20T01:01:10.084Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Central Térmica de Los Barrios",
@@ -191,7 +191,7 @@
    "osm": null
   },
   "36.18,-5.40": {
-   "t": "2026-11-20T00:45:48.554Z",
+   "t": "2026-11-20T01:01:10.084Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Puerto de Refinería",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-20T00:45:48.553Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-20T00:45:48.547Z",
+   "t": "2026-11-20T01:01:10.080Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -433,7 +433,7 @@
    "contexto": null
   },
   "43.34,-8.44": {
-   "t": "2026-11-20T00:45:48.553Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Exolum",
@@ -443,7 +443,7 @@
    "osm": null
   },
   "42.56,-6.78": {
-   "t": "2026-11-20T00:45:48.554Z",
+   "t": "2026-11-20T01:01:10.084Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -453,19 +453,19 @@
    "osm": null
   },
   "41.98,-1.14": {
-   "t": "2026-11-20T00:45:48.548Z",
+   "t": "2026-11-20T01:01:10.081Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "36.32,-5.34": {
-   "t": "2026-11-20T00:45:48.549Z",
+   "t": "2026-11-20T01:01:10.081Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Tesoricoop (a 2,8 km)"
   },
   "39.54,-0.36": {
-   "t": "2026-11-20T00:45:48.550Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -475,25 +475,25 @@
    "osm": null
   },
   "43.22,-2.14": {
-   "t": "2026-11-20T00:45:48.551Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.76,0.48": {
-   "t": "2026-11-20T00:45:48.551Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.14,-0.48": {
-   "t": "2026-11-20T00:45:48.552Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "42.14,-1.58": {
-   "t": "2026-11-20T00:45:48.552Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "EDAR de Valtierra-Arguedas (a 1,3 km)"
@@ -505,13 +505,13 @@
    "contexto": null
   },
   "38.34,-1.48": {
-   "t": "2026-11-20T00:45:48.553Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-20T00:45:48.550Z",
+   "t": "2026-11-20T01:01:10.081Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -521,13 +521,13 @@
    "osm": null
   },
   "42.18,-1.30": {
-   "t": "2026-11-20T00:45:48.551Z",
+   "t": "2026-11-20T01:01:10.082Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.08,0.60": {
-   "t": "2026-11-20T00:45:48.553Z",
+   "t": "2026-11-20T01:01:10.083Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
