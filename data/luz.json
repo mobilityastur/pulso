@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-20T20:25:17.331Z",
+ "actualizado": "2026-11-20T20:31:05.544Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-20T21:20:00+01:00",
-  "total": 33894,
-  "renovable": 37.2,
+  "t": "2026-11-20T21:25:00+01:00",
+  "total": 33783,
+  "renovable": 37,
   "mix": {
    "solar": 111,
-   "eolica": 3573,
-   "hidraulica": 10585,
-   "nuclear": 6094,
-   "gas": 10545,
+   "eolica": 3528,
+   "hidraulica": 10548,
+   "nuclear": 6090,
+   "gas": 10520,
    "carbon": 0,
    "otras": 2986
   }
@@ -23,25 +23,25 @@
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 8800
+   "valor": 8774
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 8428
+   "valor": 8343
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6094
+   "valor": 6090
   },
   {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 3573
+   "valor": 3528
   },
   {
    "titulo": "Autoproductores",
@@ -53,13 +53,13 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 2157
+   "valor": 2205
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1745
+   "valor": 1746
   },
   {
    "titulo": "Biomasa",
@@ -1332,11 +1332,25 @@
     "carbon": 0,
     "otras": 2986
    }
+  },
+  {
+   "t": "2026-11-20T21:25:00+01:00",
+   "total": 33783,
+   "renovable": 37,
+   "mix": {
+    "solar": 111,
+    "eolica": 3528,
+    "hidraulica": 10548,
+    "nuclear": 6090,
+    "gas": 10520,
+    "carbon": 0,
+    "otras": 2986
+   }
   }
  ],
  "demanda": {
-  "actual": 34285,
-  "t": "2026-11-20T21:15:00.000+01:00",
+  "actual": 34327,
+  "t": "2026-11-20T21:20:00.000+01:00",
   "real": [
    {
     "t": "2026-11-19T21:40:00.000+01:00",
@@ -1623,8 +1637,8 @@
     "v": 34826
    },
    {
-    "t": "2026-11-20T21:15:00.000+01:00",
-    "v": 34285
+    "t": "2026-11-20T21:20:00.000+01:00",
+    "v": 34327
    }
   ],
   "prevista": [
@@ -1917,8 +1931,8 @@
     "v": 34042
    },
    {
-    "t": "2026-11-20T21:25:00.000+01:00",
-    "v": 33862
+    "t": "2026-11-20T21:30:00.000+01:00",
+    "v": 33670
    }
   ]
  }
