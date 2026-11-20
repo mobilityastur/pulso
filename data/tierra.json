@@ -1,25 +1,51 @@
 {
- "actualizado": "2026-11-20T17:31:12.205Z",
+ "actualizado": "2026-11-20T17:45:41.492Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 6,
-  "sentibles": 1,
+  "total": 8,
+  "sentibles": 2,
   "mayor": {
-   "id": "20261120_0000134",
-   "t": "2026-11-20T08:58:05.900Z",
-   "lat": 38.0548,
-   "lon": -9.5829,
-   "prof": 48,
-   "mag": 3.4,
+   "id": "20261120_0000260",
+   "t": "2026-11-20T17:36:58.900Z",
+   "lat": 38.023,
+   "lon": -9.534,
+   "prof": 16,
+   "mag": 3.6,
    "tipo_mag": "ml",
-   "lugar": null,
+   "lugar": "Atlántico-Portugal",
    "region": "Portugal",
-   "autor": "EMSC",
-   "ign": null
+   "autor": "IPMA",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wsynx"
   }
  },
  "eventos": [
+  {
+   "id": "20261120_0000260",
+   "t": "2026-11-20T17:36:58.900Z",
+   "lat": 38.023,
+   "lon": -9.534,
+   "prof": 16,
+   "mag": 3.6,
+   "tipo_mag": "ml",
+   "lugar": "Atlántico-Portugal",
+   "region": "Portugal",
+   "autor": "IPMA",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wsynx"
+  },
+  {
+   "id": "20261120_0000261",
+   "t": "2026-11-20T17:23:40.380Z",
+   "lat": 37.1574,
+   "lon": -3.6156,
+   "prof": 11,
+   "mag": 1.7,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Spain",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261120_0000172",
    "t": "2026-11-20T10:48:38.070Z",
