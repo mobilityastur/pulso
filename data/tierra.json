@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T05:45:38.651Z",
+ "actualizado": "2026-11-21T06:01:04.029Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1458,10 +1458,10 @@
    "prof": 2,
    "mag": 3.1,
    "tipo_mag": "ml",
-   "lugar": "E de Pliego (Murcia)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wciso"
+   "ign": null
   }
  ]
 }
