@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T23:45:38.032Z",
+ "actualizado": "2026-11-21T00:01:19.856Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1458,10 +1458,10 @@
    "prof": 3,
    "mag": 2.8,
    "tipo_mag": "ml",
-   "lugar": "SO de O Carballiño (OU)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wbwsu"
+   "ign": null
   },
   {
    "id": "20261111_0000002",
@@ -1473,19 +1473,6 @@
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Strait Of Gibraltar",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261110_0000339",
-   "t": "2026-11-10T23:48:32.280Z",
-   "lat": 37.0667,
-   "lon": -2.4262,
-   "prof": 7,
-   "mag": 2.5,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
    "autor": "IGN",
    "ign": null
   }
