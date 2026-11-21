@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-21T11:07:57.081Z",
+   "t": "2026-11-21T11:15:42.149Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -555,13 +555,13 @@
    "contexto": null
   },
   "38.22,-1.32": {
-   "t": "2026-11-21T11:07:57.079Z",
+   "t": "2026-11-21T11:15:42.148Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Frutas Maripi (a 2,7 km)"
   },
   "38.12,-1.30": {
-   "t": "2026-11-21T11:07:57.081Z",
+   "t": "2026-11-21T11:15:42.149Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
