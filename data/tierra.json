@@ -1,25 +1,38 @@
 {
- "actualizado": "2026-11-21T10:01:10.848Z",
+ "actualizado": "2026-11-21T10:15:43.633Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 9,
-  "sentibles": 1,
+  "total": 10,
+  "sentibles": 2,
   "mayor": {
-   "id": "20261120_0000260",
-   "t": "2026-11-20T17:36:58.900Z",
-   "lat": 38.023,
-   "lon": -9.534,
-   "prof": 16,
+   "id": "20261121_0000135",
+   "t": "2026-11-21T10:01:13.040Z",
+   "lat": 35.959,
+   "lon": -7.7031,
+   "prof": 78,
    "mag": 3.6,
-   "tipo_mag": "ml",
-   "lugar": "Atlántico-Portugal",
-   "region": "Portugal",
-   "autor": "IPMA",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wtprb"
+   "tipo_mag": "mb",
+   "lugar": "Golfo de Cádiz",
+   "region": "Strait Of Gibraltar",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wuwdk"
   }
  },
  "eventos": [
+  {
+   "id": "20261121_0000135",
+   "t": "2026-11-21T10:01:13.040Z",
+   "lat": 35.959,
+   "lon": -7.7031,
+   "prof": 78,
+   "mag": 3.6,
+   "tipo_mag": "mb",
+   "lugar": "Golfo de Cádiz",
+   "region": "Strait Of Gibraltar",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wuwdk"
+  },
   {
    "id": "20261121_0000125",
    "t": "2026-11-21T08:52:53.110Z",
