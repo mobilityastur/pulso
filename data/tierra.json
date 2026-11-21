@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-21T09:01:03.706Z",
+ "actualizado": "2026-11-21T09:15:40.275Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 8,
+  "total": 9,
   "sentibles": 1,
   "mayor": {
    "id": "20261120_0000260",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261121_0000125",
+   "t": "2026-11-21T08:52:53.110Z",
+   "lat": 42.7453,
+   "lon": 1.975,
+   "prof": 0,
+   "mag": 1.9,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Pyrenees",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261121_0000114",
    "t": "2026-11-21T07:05:22.300Z",
