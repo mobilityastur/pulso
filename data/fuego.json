@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-21T02:31:04.747Z",
+ "actualizado": "2026-11-21T02:45:39.272Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 2,
- "detecciones": 8,
+ "detecciones": 3,
  "mayor": {
   "lat": 38.2185,
   "lon": -1.3215,
@@ -42,55 +42,5 @@
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
   }
  ],
- "industriales": [
-  {
-   "lat": 43.5215,
-   "lon": -5.7311,
-   "t": "2026-11-20T02:45:00.000Z",
-   "frp": 1.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 3,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 8
-  },
-  {
-   "lat": 38.3768,
-   "lon": -0.5417,
-   "t": "2026-11-20T02:45:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "CEMEX",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Alicante",
-   "dias_mes": 10
-  },
-  {
-   "lat": 43.5519,
-   "lon": -5.8582,
-   "t": "2026-11-20T02:45:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Hot Rolling",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Avilés",
-   "dias_mes": 6
-  }
- ]
+ "industriales": []
 }
