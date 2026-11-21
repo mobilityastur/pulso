@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-21T02:01:19.478Z",
+ "actualizado": "2026-11-21T02:15:41.670Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 13,
+ "total": 2,
+ "detecciones": 8,
  "mayor": {
   "lat": 38.2185,
   "lon": -1.3215,
@@ -40,26 +40,6 @@
    "dn": "día",
    "n": 1,
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
-  },
-  {
-   "lat": 37.2874,
-   "lon": -6.6981,
-   "t": "2026-11-20T02:02:00.000Z",
-   "frp": 0.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
-  },
-  {
-   "lat": 37.978,
-   "lon": -1.4128,
-   "t": "2026-11-20T02:02:00.000Z",
-   "frp": 0.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
   }
  ],
  "industriales": [
@@ -86,7 +66,7 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "CEMEX",
    "tipo": "Cementera",
    "zona": null,
@@ -111,40 +91,6 @@
    "osm": null,
    "ciudad": "Avilés",
    "dias_mes": 6
-  },
-  {
-   "lat": 37.3597,
-   "lon": -6.6757,
-   "t": "2026-11-20T02:02:00.000Z",
-   "frp": 0.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Cosmos",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Huelva",
-   "dias_mes": 6
-  },
-  {
-   "lat": 38.3782,
-   "lon": -6.4836,
-   "t": "2026-11-20T02:02:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Cosmos",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Mérida",
-   "dias_mes": 4
   }
  ]
 }
