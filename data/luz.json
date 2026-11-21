@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-21T22:15:47.461Z",
+ "actualizado": "2026-11-21T22:30:57.042Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-21T23:10:00+01:00",
-  "total": 29325,
-  "renovable": 62.4,
+  "t": "2026-11-21T23:25:00+01:00",
+  "total": 29409,
+  "renovable": 62.2,
   "mix": {
-   "solar": 97,
-   "eolica": 15544,
-   "hidraulica": 2294,
-   "nuclear": 6098,
-   "gas": 2825,
+   "solar": 98,
+   "eolica": 16067,
+   "hidraulica": 1752,
+   "nuclear": 6093,
+   "gas": 2952,
    "carbon": 0,
-   "otras": 2467
+   "otras": 2447
   }
  },
  "tecnologias": [
@@ -23,37 +23,37 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 15544
+   "valor": 16067
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6098
-  },
-  {
-   "titulo": "Hidráulica",
-   "renovable": true,
-   "familia": "hidraulica",
-   "valor": 2195
+   "valor": 6093
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 1769
+   "valor": 1749
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 1517
+   "valor": 1685
+  },
+  {
+   "titulo": "Hidráulica",
+   "renovable": true,
+   "familia": "hidraulica",
+   "valor": 1658
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1308
+   "valor": 1267
   },
   {
    "titulo": "Biomasa",
@@ -71,13 +71,13 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 99
+   "valor": 94
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 69
+   "valor": 70
   },
   {
    "titulo": "Solar térmica",
@@ -87,34 +87,6 @@
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-20T23:20:00+01:00",
-   "total": 29205,
-   "renovable": 39.4,
-   "mix": {
-    "solar": 107,
-    "eolica": 4612,
-    "hidraulica": 7786,
-    "nuclear": 6099,
-    "gas": 7686,
-    "carbon": 0,
-    "otras": 2915
-   }
-  },
-  {
-   "t": "2026-11-20T23:20:00+01:00",
-   "total": 29205,
-   "renovable": 39.4,
-   "mix": {
-    "solar": 107,
-    "eolica": 4612,
-    "hidraulica": 7786,
-    "nuclear": 6099,
-    "gas": 7686,
-    "carbon": 0,
-    "otras": 2915
-   }
-  },
   {
    "t": "2026-11-20T23:40:00+01:00",
    "total": 28965,
@@ -1264,28 +1236,38 @@
    }
   },
   {
-   "t": "2026-11-21T23:10:00+01:00",
-   "total": 29325,
-   "renovable": 62.4,
+   "t": "2026-11-21T23:20:00+01:00",
+   "total": 29383,
+   "renovable": 62.3,
    "mix": {
     "solar": 97,
-    "eolica": 15544,
-    "hidraulica": 2294,
-    "nuclear": 6098,
-    "gas": 2825,
+    "eolica": 16036,
+    "hidraulica": 1795,
+    "nuclear": 6092,
+    "gas": 2917,
     "carbon": 0,
-    "otras": 2467
+    "otras": 2446
+   }
+  },
+  {
+   "t": "2026-11-21T23:25:00+01:00",
+   "total": 29409,
+   "renovable": 62.2,
+   "mix": {
+    "solar": 98,
+    "eolica": 16067,
+    "hidraulica": 1752,
+    "nuclear": 6093,
+    "gas": 2952,
+    "carbon": 0,
+    "otras": 2447
    }
   }
  ],
  "demanda": {
-  "actual": 27696,
-  "t": "2026-11-21T23:05:00.000+01:00",
+  "actual": 26933,
+  "t": "2026-11-21T23:20:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-20T23:20:00.000+01:00",
-    "v": 29065
-   },
    {
     "t": "2026-11-20T23:40:00.000+01:00",
     "v": 28278
@@ -1568,18 +1550,14 @@
    },
    {
     "t": "2026-11-21T23:00:00.000+01:00",
-    "v": 27766
+    "v": 27765
    },
    {
-    "t": "2026-11-21T23:05:00.000+01:00",
-    "v": 27696
+    "t": "2026-11-21T23:20:00.000+01:00",
+    "v": 26933
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-20T23:20:00.000+01:00",
-    "v": 28763
-   },
    {
     "t": "2026-11-20T23:40:00.000+01:00",
     "v": 28061
@@ -1865,8 +1843,12 @@
     "v": 27799
    },
    {
-    "t": "2026-11-21T23:15:00.000+01:00",
-    "v": 27271
+    "t": "2026-11-21T23:20:00.000+01:00",
+    "v": 27077
+   },
+   {
+    "t": "2026-11-21T23:30:00.000+01:00",
+    "v": 26722
    }
   ]
  }
