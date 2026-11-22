@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T22:45:41.990Z",
+ "actualizado": "2026-11-22T23:01:04.516Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 7,
@@ -108,7 +108,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Avilés",
-   "dias_mes": 6
+   "dias_mes": 7
   },
   {
    "lat": 43.5267,
@@ -123,7 +123,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 6
+   "dias_mes": 7
   },
   {
    "lat": 41.4073,
@@ -138,7 +138,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 10
+   "dias_mes": 11
   },
   {
    "lat": 38.6652,
@@ -155,7 +155,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 43.0365,
@@ -172,7 +172,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "San Sebastián",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 43.4435,
@@ -189,7 +189,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "dias_mes": 6
+   "dias_mes": 7
   },
   {
    "lat": 37.3586,
@@ -206,7 +206,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 38.3768,
@@ -223,7 +223,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Mérida",
-   "dias_mes": 5
+   "dias_mes": 6
   }
  ]
 }
