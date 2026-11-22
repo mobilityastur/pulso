@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T22:01:05.962Z",
+ "actualizado": "2026-11-22T22:15:37.011Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1418,19 +1418,6 @@
    "lon": -16.1983,
    "prof": 15,
    "mag": 2.4,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Canary Islands, Spain Region",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261112_0000287",
-   "t": "2026-11-12T22:13:46.590Z",
-   "lat": 28.7863,
-   "lon": -16.3115,
-   "prof": 33,
-   "mag": 2.8,
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Canary Islands, Spain Region",
