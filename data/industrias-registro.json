@@ -307,20 +307,22 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "lat": 43.4429,
-   "lon": -3.8453,
+   "lat": 43.4435,
+   "lon": -3.8472,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-16T02:17:00.000Z",
-   "ultimo_frp": 1,
+   "ultima_vez": "2026-11-22T03:02:00.000Z",
+   "ultimo_frp": 0.7,
    "frp_max": 1.3,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
     "2026-11-15",
-    "2026-11-16"
+    "2026-11-16",
+    "2026-11-22"
    ],
    "pasos": [
     "2026-11-15T02:38:00.000Z",
-    "2026-11-16T02:17:00.000Z"
+    "2026-11-16T02:17:00.000Z",
+    "2026-11-22T03:02:00.000Z"
    ]
   },
   "arcelormittal gijón (veriña)|siderurgia|gijón": {
@@ -330,13 +332,13 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Gijón",
-   "lat": 43.5246,
-   "lon": -5.7291,
+   "lat": 43.5267,
+   "lon": -5.7292,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-22T02:06:00.000Z",
+   "ultima_vez": "2026-11-22T03:02:00.000Z",
    "ultimo_frp": 1,
    "frp_max": 5,
-   "detecciones": 13,
+   "detecciones": 14,
    "dias": [
     "2026-11-15",
     "2026-11-16",
@@ -359,7 +361,8 @@
     "2026-11-20T02:00:00.000Z",
     "2026-11-20T02:45:00.000Z",
     "2026-11-22T01:21:00.000Z",
-    "2026-11-22T02:06:00.000Z"
+    "2026-11-22T02:06:00.000Z",
+    "2026-11-22T03:02:00.000Z"
    ]
   },
   "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
@@ -465,20 +468,22 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "San Sebastián",
-   "lat": 43.0356,
-   "lon": -2.2214,
+   "lat": 43.0365,
+   "lon": -2.2222,
    "primera_vez": "2026-11-16T01:34:00.000Z",
-   "ultima_vez": "2026-11-20T02:00:00.000Z",
-   "ultimo_frp": 1.3,
+   "ultima_vez": "2026-11-22T03:02:00.000Z",
+   "ultimo_frp": 0.7,
    "frp_max": 1.3,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
     "2026-11-16",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-22"
    ],
    "pasos": [
     "2026-11-16T01:34:00.000Z",
-    "2026-11-20T02:00:00.000Z"
+    "2026-11-20T02:00:00.000Z",
+    "2026-11-22T03:02:00.000Z"
    ]
   },
   "fuente fija sin identificar|celda:41.40,2.00": {
@@ -612,18 +617,20 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "lat": 38.6653,
-   "lon": -4.048,
+   "lat": 38.6652,
+   "lon": -4.0464,
    "primera_vez": "2026-11-19T13:42:00.000Z",
-   "ultima_vez": "2026-11-19T13:42:00.000Z",
-   "ultimo_frp": 5.9,
+   "ultima_vez": "2026-11-22T03:04:00.000Z",
+   "ultimo_frp": 0.8,
    "frp_max": 5.9,
-   "detecciones": 1,
+   "detecciones": 2,
    "dias": [
-    "2026-11-19"
+    "2026-11-19",
+    "2026-11-22"
    ],
    "pasos": [
-    "2026-11-19T13:42:00.000Z"
+    "2026-11-19T13:42:00.000Z",
+    "2026-11-22T03:04:00.000Z"
    ]
   },
   "refineria exolum de puertollano|refinería / petroquímica|ciudad real": {
@@ -671,5 +678,5 @@
    ]
   }
  },
- "actualizado": "2026-11-22T05:45:38.477Z"
+ "actualizado": "2026-11-22T06:01:05.466Z"
 }
