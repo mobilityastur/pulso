@@ -222,6 +222,8 @@ function pintarConexiones() {
     const bar = fut.length ? fut.reduce((m, h) => h.v < m.v ? h : m) : null;
     add('💶', `La luz (PVPC) está a <b>${fmtKwh(pr.ahora.pvpc.v)}</b>.${bar && bar.t !== pr.ahora.pvpc.t ? ` La hora más barata de lo que queda de hoy: ${horaDe(bar.t)} (${fmtKwh(bar.v)}).` : ''}${pr.manana ? ` Mañana, la más barata a las ${horaDe(pr.manana.min.t)} (${fmtKwh(pr.manana.min.v)}).` : ''}`);
   }
+  const mixPrecio = relacionPrecioMix();
+  if (mixPrecio) add('🔗', mixPrecio);
   const ag = estado.agua;
   if (ag?.total) {
     const T = ag.total, top = [...ag.ambitos].sort((x, y) => y.pct - x.pct), alto = top[0], bajo = top.at(-1);
@@ -476,6 +478,30 @@ document.querySelectorAll('#seg-reg button').forEach(b => b.onclick = () => {
   pintarRegistro();
 });
 
+
+
+// Relación precio-mix: renovables y fuente principal en la hora más barata y la más cara de lo que va de día
+function relacionPrecioMix() {
+  const pr = estado.precio, lz = estado.luz;
+  if (!pr?.hoy || !lz?.serie?.length || lz.resolucion === 'day') return null;
+  const horaMadrid = t => new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' }).format(new Date(t));
+  const porHora = {};
+  for (const p of lz.serie) (porHora[horaMadrid(p.t)] ??= []).push(p);
+  const horas = pr.hoy.horas.filter(h => Date.parse(h.t) <= Date.now()).map(h => {
+    const ps = porHora[horaMadrid(h.t)]; if (!ps?.length) return null;
+    const ren = ps.reduce((a, p) => a + p.renovable, 0) / ps.length;
+    const mix = {}; for (const p of ps) for (const [k, v] of Object.entries(p.mix)) mix[k] = (mix[k] ?? 0) + v;
+    const lider = Object.entries(mix).sort((a, b) => b[1] - a[1])[0]?.[0];
+    return { ...h, ren, lider };
+  }).filter(Boolean);
+  if (horas.length < 6) return null;
+  const bar = horas.reduce((m, h) => h.v < m.v ? h : m), car = horas.reduce((m, h) => h.v > m.v ? h : m);
+  if (bar.t === car.t || Math.abs(bar.ren - car.ren) < 10) return null;
+  const fuente = k => FAM[k]?.n.toLowerCase() ?? 'otras';
+  const mas = bar.ren > car.ren;
+  const lideres = bar.lider === car.lider ? `, en ambas con la ${fuente(bar.lider)} como primera fuente` : `. Mandaba la ${fuente(bar.lider)} en la barata y la ${fuente(car.lider)} en la cara`;
+  return `Hoy, la hora más barata (${horaDe(bar.t)}, ${fmtKwh(bar.v)}) tuvo un <b>${nf.format(bar.ren)} % renovable</b> y la más cara (${horaDe(car.t)}, ${fmtKwh(car.v)}), un <b>${nf.format(car.ren)} %</b>${lideres}.${mas ? ' Más renovable, luz más barata.' : ''}`;
+}
 
 // ---------- PRECIO DE LA LUZ ----------
 const eur = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
