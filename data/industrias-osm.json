@@ -63,13 +63,13 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-22T08:15:38.237Z",
+   "t": "2026-11-22T08:30:54.216Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   "37.36,-6.68": {
-   "t": "2026-11-22T08:15:38.238Z",
+   "t": "2026-11-22T08:30:54.217Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-22T08:15:38.238Z",
+   "t": "2026-11-22T08:30:54.217Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -161,7 +161,7 @@
    "osm": null
   },
   "43.52,-5.72": {
-   "t": "2026-11-22T08:15:38.236Z",
+   "t": "2026-11-22T08:30:54.215Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -219,7 +219,7 @@
    "contexto": null
   },
   "38.38,-6.48": {
-   "t": "2026-11-22T08:15:38.238Z",
+   "t": "2026-11-22T08:30:54.217Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -229,7 +229,7 @@
    "osm": null
   },
   "43.04,-2.22": {
-   "t": "2026-11-22T08:15:38.237Z",
+   "t": "2026-11-22T08:30:54.216Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "ArcelorMittal Olaberria",
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-22T08:15:38.235Z",
+   "t": "2026-11-22T08:30:54.214Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -511,7 +511,7 @@
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-22T08:15:38.237Z",
+   "t": "2026-11-22T08:30:54.216Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -567,19 +567,19 @@
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
   },
   "38.32,-6.72": {
-   "t": "2026-11-22T08:15:38.237Z",
+   "t": "2026-11-22T08:30:54.216Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Siderúrgica Balboa (a 0,3 km)"
   },
   "39.80,-5.18": {
-   "t": "2026-11-22T08:15:38.239Z",
+   "t": "2026-11-22T08:30:54.218Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.78,-2.56": {
-   "t": "2026-11-22T08:15:38.239Z",
+   "t": "2026-11-22T08:30:54.218Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Bitter Twins (a 2,1 km)"
