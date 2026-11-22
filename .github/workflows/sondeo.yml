@@ -1,0 +1,28 @@
+name: Sondeo (temporal)
+on: { workflow_dispatch: {} }
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v5
+        with: { node-version: 22 }
+      - run: |
+          cat > t.mjs <<'JS'
+          const hoy = new Date(Date.now() + 3600e3).toISOString().slice(0, 10);
+          const man = new Date(Date.now() + 3600e3 + 86400e3).toISOString().slice(0, 10);
+          for (const trunc of ['hour', 'day']) {
+            const u = `https://apidatos.ree.es/es/datos/mercados/precios-mercados-tiempo-real?start_date=${hoy}T00:00&end_date=${man}T23:59&time_trunc=${trunc}`;
+            const r = await fetch(u, { headers: { Accept: 'application/json' } });
+            console.log('===', trunc, r.status);
+            const j = await r.json().catch(() => null);
+            if (!j?.included) { console.log(JSON.stringify(j).slice(0, 400)); continue; }
+            for (const s of j.included) {
+              const v = s.attributes.values;
+              console.log('SERIE', s.id, '|', s.attributes.title, '|', s.type, '| n =', v.length);
+              console.log('  primeros', JSON.stringify(v.slice(0, 3)));
+              console.log('  últimos ', JSON.stringify(v.slice(-3)));
+            }
+            console.log('meta', JSON.stringify(j.data?.attributes ?? {}).slice(0, 300));
+          }
+          JS
+          node t.mjs
