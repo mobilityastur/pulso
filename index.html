@@ -37,6 +37,7 @@
         <div class="t-val" id="c-luz-val">—</div>
         <div class="mixbar" id="c-luz-mix"></div>
         <div class="t-pie" id="c-luz-pie">&nbsp;</div>
+        <div class="t-pie" id="c-luz-precio"></div>
       </a>
       <a class="tarjeta fuego" href="#fuego">
         <div class="t-cab"><span class="ico">🔥</span>Fuego</div>
@@ -80,6 +81,14 @@
     <div class="grande">
       <div class="g-num" id="l-renov">—</div>
       <div class="g-txt">de la electricidad es renovable ahora</div>
+    </div>
+    <div class="panel" id="panel-precio" hidden>
+      <div class="cab-panel"><h3>Precio de la luz · PVPC</h3>
+        <div class="seg" id="seg-precio" role="group" aria-label="Día"><button data-d="hoy" class="on">Hoy</button><button data-d="manana">Mañana</button></div></div>
+      <div class="precio-ahora"><b id="p-ahora">—</b><span id="p-ahora-txt"></span></div>
+      <div class="cifras" id="p-cifras"></div>
+      <div id="grafica-precio" class="grafica"></div>
+      <p class="nota" id="p-nota" style="margin:8px 0 0"></p>
     </div>
     <div class="panel">
       <h3>Mix de generación · últimas 24 h</h3>

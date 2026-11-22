@@ -571,11 +571,42 @@ async function aire() {
   return out;
 }
 
+
+// ---------- PRECIO DE LA LUZ (REData: PVPC 2.0TD horario y mercado spot cuartohorario) ----------
+async function precio() {
+  const ahora = new Date();
+  const hoy = madridLocal(ahora).slice(0, 10), manana = madridLocal(new Date(ahora.getTime() + 86400e3)).slice(0, 10);
+  const j = await getJSON(`${REE}/mercados/precios-mercados-tiempo-real?start_date=${hoy}T00:00&end_date=${manana}T23:59&time_trunc=hour`);
+  const s = parseIncluded(j);
+  const pv = s.find(x => /pvpc/i.test(x.titulo)), sp = s.find(x => /spot/i.test(x.titulo));
+  if (!pv?.valores.length) throw new Error('REData no devolvió el PVPC');
+  const pvpc = pv.valores.map(v => ({ t: v.t, v: Math.round(v.v * 10) / 10000 })); // €/MWh -> €/kWh (4 decimales)
+  const spot = (sp?.valores ?? []).map(v => ({ t: v.t, v: Math.round(v.v * 100) / 100 })); // €/MWh
+  const resumen = dia => {
+    const xs = pvpc.filter(p => madridLocal(new Date(p.t)).slice(0, 10) === dia);
+    if (xs.length < 20) return null;
+    const min = xs.reduce((m, p) => p.v < m.v ? p : m), max = xs.reduce((m, p) => p.v > m.v ? p : m);
+    return { dia, media: Math.round(10000 * xs.reduce((a, p) => a + p.v, 0) / xs.length) / 10000, min, max, horas: xs };
+  };
+  const actual = arr => arr.filter(p => Date.parse(p.t) <= ahora.getTime()).at(-1) ?? null;
+  const out = {
+    actualizado: ahora.toISOString(),
+    fuente: 'Red Eléctrica · REData (PVPC 2.0TD y mercado spot)',
+    ultima_publicacion: j?.data?.attributes?.['last-update'] ?? null,
+    ahora: { pvpc: actual(pvpc), spot: actual(spot) },
+    hoy: resumen(hoy), manana: resumen(manana),
+    spot: spot.filter((p, i) => i % 4 === 0 || p === actual(spot)),
+  };
+  writeJSON('precio.json', out);
+  console.log(`[precio] ok · ahora ${out.ahora.pvpc?.v} €/kWh · hoy media ${out.hoy?.media} · mañana ${out.manana ? 'publicado' : 'aún no'}`);
+  return out;
+}
+
 // ---------- principal ----------
 fs.mkdirSync(DATA, { recursive: true });
-const res = await Promise.allSettled([luz(), fuego(), tierra(), aire()]);
+const res = await Promise.allSettled([luz(), fuego(), tierra(), aire(), precio()]);
 const estado = readJSON('estado.json', {});
-['luz', 'fuego', 'tierra', 'aire'].forEach((k, i) => {
+['luz', 'fuego', 'tierra', 'aire', 'precio'].forEach((k, i) => {
   estado[k] = res[i].status === 'fulfilled'
     ? { ok: true, t: new Date().toISOString() }
     : { ok: false, t: new Date().toISOString(), error: String(res[i].reason?.message ?? res[i].reason).slice(0, 300), ultimo_ok: estado[k]?.ok ? estado[k].t : estado[k]?.ultimo_ok ?? null };

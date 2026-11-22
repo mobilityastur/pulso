@@ -75,7 +75,7 @@ const $ = id => document.getElementById(id);
 const el = (tag, attrs = {}, html = '') => Object.assign(document.createElement(tag), attrs, html ? { innerHTML: html } : {});
 
 // ---------- datos ----------
-const estado = { luz: null, fuego: null, hist: null, st: null, agua: null, tierra: null, aire: null, reg: null };
+const estado = { luz: null, fuego: null, hist: null, st: null, agua: null, tierra: null, aire: null, reg: null, precio: null };
 async function cargar(f) {
   const r = await fetch(`data/${f}?v=${Date.now()}`, { cache: 'no-store' });
   if (!r.ok) throw new Error(f);
@@ -86,6 +86,7 @@ async function actualizar() {
   const [luz, fuego, hist, st, agua, tierra, aire] = await Promise.allSettled(['luz.json', 'fuego.json', 'fuego-historico.json', 'estado.json', 'agua.json', 'tierra.json', 'aire.json'].map(cargar));
   estado.aire = aire.value ?? estado.aire;
   try { estado.reg = await cargar('industrias-registro.json'); } catch {}
+  try { estado.precio = await cargar('precio.json'); } catch {}
   estado.agua = agua.value ?? estado.agua;
   estado.tierra = tierra.value ?? estado.tierra;
   estado.luz = luz.value ?? estado.luz;
@@ -107,6 +108,7 @@ function pintar() {
   pintarTierra(estado.tierra);
   pintarAire(estado.aire);
   pintarRegistro();
+  pintarPrecio();
   pintarZona();
   pintarConexiones();
   pintarMapas();
@@ -214,6 +216,12 @@ function pintarConexiones() {
       }
     }
   }
+  const pr = estado.precio;
+  if (pr?.hoy && pr.ahora?.pvpc) {
+    const fut = pr.hoy.horas.filter(h => Date.parse(h.t) > Date.now() - 3600e3);
+    const bar = fut.length ? fut.reduce((m, h) => h.v < m.v ? h : m) : null;
+    add('💶', `La luz (PVPC) está a <b>${fmtKwh(pr.ahora.pvpc.v)}</b>.${bar && bar.t !== pr.ahora.pvpc.t ? ` La hora más barata de lo que queda de hoy: ${horaDe(bar.t)} (${fmtKwh(bar.v)}).` : ''}${pr.manana ? ` Mañana, la más barata a las ${horaDe(pr.manana.min.t)} (${fmtKwh(pr.manana.min.v)}).` : ''}`);
+  }
   const ag = estado.agua;
   if (ag?.total) {
     const T = ag.total, top = [...ag.ambitos].sort((x, y) => y.pct - x.pct), alto = top[0], bajo = top.at(-1);
@@ -232,7 +240,7 @@ function pintarConexiones() {
     else add('🌍', `Ningún terremoto de magnitud 2,5 o más en 24 h${ti.h24.total ? `; ${ti.h24.total} microsismos registrados` : ''}.`);
   }
   const st = estado.st ?? {};
-  ['luz', 'fuego', 'tierra', 'aire'].forEach(k => { if (st[k] && !st[k].ok) add('⚠️', `La última descarga de ${k} falló; se muestran los datos anteriores.`); });
+  ['luz', 'fuego', 'tierra', 'aire', 'precio'].forEach(k => { if (st[k] && !st[k].ok) add('⚠️', `La última descarga de ${k} falló; se muestran los datos anteriores.`); });
   $('conexiones').innerHTML = li.join('') || '<li class="cargando">Aún no hay datos. Lanza la Action «Actualizar datos» en GitHub.</li>';
 }
 
@@ -467,6 +475,58 @@ document.querySelectorAll('#seg-reg button').forEach(b => b.onclick = () => {
   document.querySelectorAll('#seg-reg button').forEach(x => x.classList.toggle('on', x === b));
   pintarRegistro();
 });
+
+
+// ---------- PRECIO DE LA LUZ ----------
+const eur = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+const fmtKwh = v => v == null ? '—' : `${eur.format(v)} €/kWh`;
+const horaDe = t => new Intl.DateTimeFormat('es-ES', { hour: '2-digit', timeZone: 'Europe/Madrid' }).format(new Date(t)) + ' h';
+let diaPrecio = 'hoy';
+function nivelPrecio(v, xs) { // 0 barata, 1 media, 2 cara, por tercios del propio día
+  const o = xs.map(p => p.v).sort((a, b) => a - b), n = o.length;
+  return v <= o[Math.floor(n / 3)] ? 0 : v <= o[Math.floor(2 * n / 3)] ? 1 : 2;
+}
+const COL_PRECIO = ['#3DBBA0', '#E9A23B', '#E2603D'];
+function pintarPrecio() {
+  const p = estado.precio;
+  if (!p?.hoy) { $('panel-precio').hidden = true; $('c-luz-precio').textContent = ''; return; }
+  $('panel-precio').hidden = false;
+  const a = p.ahora?.pvpc;
+  $('c-luz-precio').textContent = a ? `${fmtKwh(a.v)} ahora` : '';
+  if (!p.manana && diaPrecio === 'manana') diaPrecio = 'hoy';
+  document.querySelectorAll('#seg-precio button').forEach(b => {
+    b.classList.toggle('on', b.dataset.d === diaPrecio);
+    b.hidden = b.dataset.d === 'manana' && !p.manana;
+  });
+  const d = p[diaPrecio];
+  if (diaPrecio === 'hoy' && a) {
+    const niv = ['barata', 'media', 'cara'][nivelPrecio(a.v, d.horas)];
+    $('p-ahora').innerHTML = `${eur.format(a.v)}<small>€/kWh</small>`;
+    $('p-ahora').style.color = COL_PRECIO[nivelPrecio(a.v, d.horas)];
+    $('p-ahora-txt').textContent = `ahora (${horaDe(a.t)}), hora ${niv} del día`;
+  } else {
+    $('p-ahora').innerHTML = `${eur.format(d.media)}<small>€/kWh</small>`; $('p-ahora').style.color = '';
+    $('p-ahora-txt').textContent = `media de mañana`;
+  }
+  $('p-cifras').innerHTML = [[fmtKwh(d.min.v).replace(' €/kWh', ''), `más barata · ${horaDe(d.min.t)}`], [fmtKwh(d.media).replace(' €/kWh', ''), 'media del día'], [fmtKwh(d.max.v).replace(' €/kWh', ''), `más cara · ${horaDe(d.max.t)}`]]
+    .map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+  $('grafica-precio').innerHTML = graficaPrecio(d.horas, diaPrecio === 'hoy' ? a?.t : null);
+  const spot = p.ahora?.spot;
+  $('p-nota').textContent = `Término de energía de la tarifa regulada (PVPC 2.0TD) en €/kWh, sin IVA ni impuesto eléctrico y sin el término de potencia. Con tarifa de mercado libre tu precio es otro.${spot ? ` Mercado mayorista ahora: ${nf1.format(spot.v)} €/MWh.` : ''}${p.manana ? '' : ' El precio de mañana se publica hacia las 20:30.'}`;
+}
+function graficaPrecio(horas, tAhora) {
+  const n = horas.length, maxY = Math.max(...horas.map(h => h.v)) * 1.1;
+  const bw = (W - PL - PR) / n, y = v => PT + (H - PT - PB) * (1 - v / maxY);
+  let g = '';
+  for (let i = 0; i <= 2; i++) { const v = maxY * i / 2; g += `<line x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}" stroke="var(--bd)"/><text x="${PL - 6}" y="${y(v) + 5}" text-anchor="end">${v ? eur.format(v).replace(/0$/, '') : '0'}</text>`; }
+  const barras = horas.map((h, i) => {
+    const ahora = tAhora && h.t === tAhora;
+    return `<rect x="${PL + i * bw + 1.5}" y="${y(h.v)}" width="${Math.max(bw - 3, 1)}" height="${y(0) - y(h.v)}" rx="2.5" fill="${COL_PRECIO[nivelPrecio(h.v, horas)]}" opacity="${!tAhora || ahora ? 1 : .55}"${ahora ? ' stroke="var(--tx)" stroke-width="1.5"' : ''}><title>${horaDe(h.t)}: ${fmtKwh(h.v)}</title></rect>`;
+  }).join('');
+  const et = horas.map((h, i) => i % 6 === 0 ? `<text x="${PL + (i + .5) * bw}" y="${H - 6}" text-anchor="middle">${horaDe(h.t)}</text>` : '').join('');
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Precio por horas">${g}${barras}${et}</svg>`;
+}
+document.querySelectorAll('#seg-precio button').forEach(b => b.onclick = () => { diaPrecio = b.dataset.d; pintarPrecio(); });
 
 // ---------- gráficas SVG ----------
 const W = 640, H = 220, PL = 52, PR = 8, PT = 8, PB = 28;
