@@ -1,22 +1,22 @@
 {
- "actualizado": "2026-11-22T10:01:00.424Z",
+ "actualizado": "2026-11-22T10:15:37.831Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 13,
-  "sentibles": 6,
+  "total": 12,
+  "sentibles": 5,
   "mayor": {
-   "id": "20261121_0000135",
-   "t": "2026-11-21T10:01:11.550Z",
-   "lat": 36.1586,
-   "lon": -7.4614,
-   "prof": 15,
-   "mag": 3.5,
-   "tipo_mag": "ml",
-   "lugar": null,
+   "id": "20261122_0000012",
+   "t": "2026-11-22T00:50:19.630Z",
+   "lat": 36.0111,
+   "lon": -5.831,
+   "prof": 63,
+   "mag": 2.9,
+   "tipo_mag": "mb",
+   "lugar": "O de Tarifa (Cádiz)",
    "region": "Strait Of Gibraltar",
-   "autor": "EMSC",
-   "ign": null
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wvzme"
   }
  },
  "eventos": [
