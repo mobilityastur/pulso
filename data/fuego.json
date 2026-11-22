@@ -1,28 +1,10 @@
 {
- "actualizado": "2026-11-22T02:15:43.677Z",
+ "actualizado": "2026-11-22T02:30:54.446Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 0,
- "detecciones": 1,
+ "detecciones": 0,
  "mayor": null,
  "focos": [],
- "industriales": [
-  {
-   "lat": 37.3607,
-   "lon": -5.864,
-   "t": "2026-11-21T02:25:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 9
-  }
- ]
+ "industriales": []
 }
