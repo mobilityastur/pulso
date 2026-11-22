@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T15:01:08.943Z",
+ "actualizado": "2026-11-22T15:15:39.039Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1436,19 +1436,6 @@
    "region": "Strait Of Gibraltar",
    "autor": "EMSC",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wfenz"
-  },
-  {
-   "id": "20261112_0000184",
-   "t": "2026-11-12T15:01:11.780Z",
-   "lat": 37.1307,
-   "lon": -3.5846,
-   "prof": 3,
-   "mag": 1.9,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Spain",
-   "autor": "IGN",
-   "ign": null
   }
  ]
 }

@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-22T15:01:10.221Z",
+ "actualizado": "2026-11-22T15:15:39.587Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 5,
- "detecciones": 23,
+ "detecciones": 24,
  "mayor": {
   "lat": 39.7343,
   "lon": -0.2137,
@@ -31,14 +31,14 @@
    "contexto": "Agrícola 2 bis (a 1,4 km)"
   },
   {
-   "lat": 41.4639,
-   "lon": -1.308,
-   "t": "2026-11-22T11:51:00.000Z",
+   "lat": 41.4614,
+   "lon": -1.3049,
+   "t": "2026-11-22T12:46:00.000Z",
    "frp": 6.4,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 1
+   "n": 2
   },
   {
    "lat": 38.3204,
