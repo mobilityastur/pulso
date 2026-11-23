@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-23T02:01:01.846Z",
+ "actualizado": "2026-11-23T02:15:40.147Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 23,
+ "total": 4,
+ "detecciones": 14,
  "mayor": {
   "lat": 39.7343,
   "lon": -0.2137,
@@ -60,60 +60,9 @@
    "sat": "NOAA21",
    "dn": "día",
    "n": 1
-  },
-  {
-   "lat": 38.3204,
-   "lon": -6.7162,
-   "t": "2026-11-22T02:08:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Siderúrgica Balboa (a 0,3 km)"
-  },
-  {
-   "lat": 39.8015,
-   "lon": -5.1719,
-   "t": "2026-11-22T02:06:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2
   }
  ],
  "industriales": [
-  {
-   "lat": 43.5267,
-   "lon": -5.7292,
-   "t": "2026-11-22T03:02:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 4,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 7
-  },
-  {
-   "lat": 41.4073,
-   "lon": 1.9985,
-   "t": "2026-11-22T02:06:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 2,
-   "nombre": null,
-   "tipo": "Fuente fija sin identificar",
-   "origen": "repetición",
-   "ciudad": "Barcelona",
-   "dias_mes": 11
-  },
   {
    "lat": 38.6652,
    "lon": -4.0464,
@@ -166,38 +115,19 @@
    "dias_mes": 7
   },
   {
-   "lat": 37.3586,
-   "lon": -6.6741,
-   "t": "2026-11-22T02:08:00.000Z",
-   "frp": 0.7,
+   "lat": 43.5267,
+   "lon": -5.7292,
+   "t": "2026-11-22T03:02:00.000Z",
+   "frp": 0.6,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Cosmos",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Huelva",
-   "dias_mes": 8
-  },
-  {
-   "lat": 38.3768,
-   "lon": -6.4817,
-   "t": "2026-11-22T02:08:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Cosmos",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Mérida",
-   "dias_mes": 6
+   "n": 2,
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Gijón",
+   "dias_mes": 7
   }
  ]
 }
