@@ -63,13 +63,13 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-23T01:45:43.206Z",
+   "t": "2026-11-23T02:01:01.843Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   "37.36,-6.68": {
-   "t": "2026-11-23T01:45:43.207Z",
+   "t": "2026-11-23T02:01:01.845Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-23T01:45:43.207Z",
+   "t": "2026-11-23T02:01:01.844Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -161,7 +161,7 @@
    "osm": null
   },
   "43.52,-5.72": {
-   "t": "2026-11-23T01:45:43.206Z",
+   "t": "2026-11-23T02:01:01.843Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -219,7 +219,7 @@
    "contexto": null
   },
   "38.38,-6.48": {
-   "t": "2026-11-23T01:45:43.208Z",
+   "t": "2026-11-23T02:01:01.845Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -229,7 +229,7 @@
    "osm": null
   },
   "43.04,-2.22": {
-   "t": "2026-11-23T01:45:43.207Z",
+   "t": "2026-11-23T02:01:01.844Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "ArcelorMittal Olaberria",
@@ -511,7 +511,7 @@
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-23T01:45:43.207Z",
+   "t": "2026-11-23T02:01:01.844Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -567,13 +567,13 @@
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
   },
   "38.32,-6.72": {
-   "t": "2026-11-23T01:45:43.207Z",
+   "t": "2026-11-23T02:01:01.844Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Siderúrgica Balboa (a 0,3 km)"
   },
   "39.80,-5.18": {
-   "t": "2026-11-23T01:45:43.208Z",
+   "t": "2026-11-23T02:01:01.845Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -585,25 +585,25 @@
    "contexto": "Bitter Twins (a 2,1 km)"
   },
   "39.74,-0.22": {
-   "t": "2026-11-23T01:45:43.205Z",
+   "t": "2026-11-23T02:01:01.841Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Agrícola 2 bis (a 1,4 km)"
   },
   "41.46,-1.30": {
-   "t": "2026-11-23T01:45:43.206Z",
+   "t": "2026-11-23T02:01:01.842Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.28,-1.60": {
-   "t": "2026-11-23T01:45:43.206Z",
+   "t": "2026-11-23T02:01:01.842Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Puerto Errado (a 0,4 km)"
   },
   "37.26,-6.58": {
-   "t": "2026-11-23T01:45:43.206Z",
+   "t": "2026-11-23T02:01:01.843Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
