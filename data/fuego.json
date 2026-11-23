@@ -1,25 +1,56 @@
 {
- "actualizado": "2026-11-23T14:31:17.248Z",
+ "actualizado": "2026-11-23T14:45:53.339Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 36,
+ "total": 19,
+ "detecciones": 54,
  "mayor": {
-  "lat": 39.9463,
-  "lon": 3.1552,
-  "t": "2026-11-23T02:45:00.000Z",
-  "frp": 5.5,
+  "lat": 37.3332,
+  "lon": -3.1643,
+  "t": "2026-11-23T13:10:00.000Z",
+  "frp": 10.3,
   "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "noche",
-  "n": 12,
+  "sat": "NOAA21",
+  "dn": "día",
+  "n": 1,
   "ts": [
-   "2026-11-23T02:45:00.000Z",
-   "2026-11-23T01:47:00.000Z"
+   "2026-11-23T13:10:00.000Z"
   ],
-  "contexto": "depuradora de Formentor (a 2,5 km)"
+  "contexto": "Polígono Industrial La Estación (a 0,8 km)"
  },
  "focos": [
+  {
+   "lat": 37.3332,
+   "lon": -3.1643,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 10.3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Polígono Industrial La Estación (a 0,8 km)"
+  },
+  {
+   "lat": 37.0216,
+   "lon": -6.4849,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 7.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 41.9758,
+   "lon": -5.6387,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 6.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2,
+   "contexto": "Enagás (a 1,4 km)"
+  },
   {
    "lat": 39.9463,
    "lon": 3.1552,
@@ -43,6 +74,119 @@
    "contexto": "depuradora de Formentor (a 2,5 km)"
   },
   {
+   "lat": 37.2811,
+   "lon": -3.752,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 4.8,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Planta Fotovoltaica Atarfe I (a 1,9 km)"
+  },
+  {
+   "lat": 39.6326,
+   "lon": -0.5174,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 4.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 38.2346,
+   "lon": -1.4693,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 4.1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 41.5558,
+   "lon": -1.3984,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.6742,
+   "lon": -5.1352,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 39.4242,
+   "lon": 3.2305,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Punt Verd (a 0,2 km)"
+  },
+  {
+   "lat": 37.1893,
+   "lon": -2.5248,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 41.2056,
+   "lon": -3.9763,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 41.6804,
+   "lon": 0.2338,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.813,
+   "lon": -5.2175,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 2.3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Polígono Industrial La Vaquera (a 2,4 km)"
+  },
+  {
+   "lat": 39.3839,
+   "lon": -0.6853,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 2.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
    "lat": 39.9376,
    "lon": 3.1778,
    "t": "2026-11-23T01:47:00.000Z",
@@ -51,6 +195,16 @@
    "sat": "NOAA21",
    "dn": "noche",
    "n": 2
+  },
+  {
+   "lat": 37.5337,
+   "lon": -2.135,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 1.3,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
   },
   {
    "lat": 41.5756,
