@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-23T02:15:40.146Z",
+   "t": "2026-11-23T02:30:52.701Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -161,7 +161,7 @@
    "osm": null
   },
   "43.52,-5.72": {
-   "t": "2026-11-23T02:15:40.146Z",
+   "t": "2026-11-23T02:30:52.701Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -229,7 +229,7 @@
    "osm": null
   },
   "43.04,-2.22": {
-   "t": "2026-11-23T02:15:40.145Z",
+   "t": "2026-11-23T02:30:52.700Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "ArcelorMittal Olaberria",
@@ -511,7 +511,7 @@
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-23T02:15:40.145Z",
+   "t": "2026-11-23T02:30:52.700Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -585,25 +585,25 @@
    "contexto": "Bitter Twins (a 2,1 km)"
   },
   "39.74,-0.22": {
-   "t": "2026-11-23T02:15:40.143Z",
+   "t": "2026-11-23T02:30:52.698Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Agrícola 2 bis (a 1,4 km)"
   },
   "41.46,-1.30": {
-   "t": "2026-11-23T02:15:40.144Z",
+   "t": "2026-11-23T02:30:52.700Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.28,-1.60": {
-   "t": "2026-11-23T02:15:40.144Z",
+   "t": "2026-11-23T02:30:52.700Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Puerto Errado (a 0,4 km)"
   },
   "37.26,-6.58": {
-   "t": "2026-11-23T02:15:40.145Z",
+   "t": "2026-11-23T02:30:52.700Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
