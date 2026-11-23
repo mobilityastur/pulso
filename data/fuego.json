@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-23T03:01:05.138Z",
+ "actualizado": "2026-11-23T03:15:38.208Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 4,
- "detecciones": 14,
+ "detecciones": 7,
  "mayor": {
   "lat": 39.7343,
   "lon": -0.2137,
@@ -62,72 +62,5 @@
    "n": 1
   }
  ],
- "industriales": [
-  {
-   "lat": 38.6652,
-   "lon": -4.0464,
-   "t": "2026-11-22T03:04:00.000Z",
-   "frp": 0.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 3,
-   "nombre": null,
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Ciudad Real",
-   "dias_mes": 4
-  },
-  {
-   "lat": 43.0365,
-   "lon": -2.2222,
-   "t": "2026-11-22T03:02:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "ArcelorMittal Olaberria",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "San Sebastián",
-   "dias_mes": 6
-  },
-  {
-   "lat": 43.4435,
-   "lon": -3.8472,
-   "t": "2026-11-22T03:02:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Ecrimesa",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Santander",
-   "dias_mes": 7
-  },
-  {
-   "lat": 43.5267,
-   "lon": -5.7292,
-   "t": "2026-11-22T03:02:00.000Z",
-   "frp": 0.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 7
-  }
- ]
+ "industriales": []
 }
