@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-23T03:45:38.834Z",
+ "actualizado": "2026-11-23T04:01:05.250Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 7,
+ "total": 6,
+ "detecciones": 11,
  "mayor": {
   "lat": 39.7343,
   "lon": -0.2137,
@@ -60,7 +60,46 @@
    "sat": "NOAA21",
    "dn": "día",
    "n": 1
+  },
+  {
+   "lat": 39.9315,
+   "lon": 3.1594,
+   "t": "2026-11-23T01:04:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "contexto": "depuradora de Formentor (a 2,5 km)"
+  },
+  {
+   "lat": 39.9412,
+   "lon": 3.1726,
+   "t": "2026-11-23T01:04:00.000Z",
+   "frp": 1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1
   }
  ],
- "industriales": []
+ "industriales": [
+  {
+   "lat": 41.1958,
+   "lon": 1.2214,
+   "t": "2026-11-23T01:04:00.000Z",
+   "frp": 0.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Refinería / petroquímica",
+   "zona": "Repsol Tarragona Petrochemical",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 1
+  }
+ ]
 }

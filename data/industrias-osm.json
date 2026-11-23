@@ -585,28 +585,50 @@
    "contexto": "Bitter Twins (a 2,1 km)"
   },
   "39.74,-0.22": {
-   "t": "2026-11-23T03:45:38.831Z",
+   "t": "2026-11-23T04:01:05.246Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Agrícola 2 bis (a 1,4 km)"
   },
   "41.46,-1.30": {
-   "t": "2026-11-23T03:45:38.833Z",
+   "t": "2026-11-23T04:01:05.248Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.28,-1.60": {
-   "t": "2026-11-23T03:45:38.832Z",
+   "t": "2026-11-23T04:01:05.247Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Puerto Errado (a 0,4 km)"
   },
   "37.26,-6.58": {
-   "t": "2026-11-23T03:45:38.833Z",
+   "t": "2026-11-23T04:01:05.248Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
+  },
+  "39.94,3.16": {
+   "t": "2026-11-23T04:01:05.248Z",
+   "origen": "lista",
+   "industrial": false,
+   "contexto": "depuradora de Formentor (a 2,5 km)"
+  },
+  "39.94,3.18": {
+   "t": "2026-11-23T04:01:05.248Z",
+   "origen": "lista",
+   "industrial": false,
+   "contexto": null
+  },
+  "41.20,1.22": {
+   "t": "2026-11-23T04:01:05.248Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": null,
+   "tipo": "Refinería / petroquímica",
+   "zona": "Repsol Tarragona Petrochemical",
+   "d_km": 0.64,
+   "osm": null
   }
  }
 }

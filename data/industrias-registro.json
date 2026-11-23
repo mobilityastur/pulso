@@ -676,7 +676,28 @@
    "pasos": [
     "2026-11-20T01:02:00.000Z"
    ]
+  },
+  "refinería / petroquímica|celda:41.20,1.22": {
+   "nombre": null,
+   "tipo": "Refinería / petroquímica",
+   "zona": "Repsol Tarragona Petrochemical",
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "lat": 41.1958,
+   "lon": 1.2214,
+   "primera_vez": "2026-11-23T01:04:00.000Z",
+   "ultima_vez": "2026-11-23T01:04:00.000Z",
+   "ultimo_frp": 0.9,
+   "frp_max": 0.9,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-23"
+   ],
+   "pasos": [
+    "2026-11-23T01:04:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-23T03:45:38.833Z"
+ "actualizado": "2026-11-23T04:01:05.250Z"
 }
