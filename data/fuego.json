@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-23T01:15:40.540Z",
+ "actualizado": "2026-11-23T01:30:56.937Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 7,
- "detecciones": 28,
+ "total": 6,
+ "detecciones": 23,
  "mayor": {
   "lat": 39.7343,
   "lon": -0.2137,
@@ -81,35 +81,9 @@
    "sat": "NOAA21",
    "dn": "noche",
    "n": 2
-  },
-  {
-   "lat": 37.7828,
-   "lon": -2.5571,
-   "t": "2026-11-22T01:24:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Bitter Twins (a 2,1 km)"
   }
  ],
  "industriales": [
-  {
-   "lat": 43.5375,
-   "lon": -5.8345,
-   "t": "2026-11-22T01:21:00.000Z",
-   "frp": 2.6,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 3,
-   "nombre": "ArcelorMittal Avilés",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Avilés",
-   "dias_mes": 7
-  },
   {
    "lat": 43.5267,
    "lon": -5.7292,
@@ -118,7 +92,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 5,
+   "n": 4,
    "nombre": "ArcelorMittal Gijón (Veriña)",
    "tipo": "Siderurgia",
    "origen": "conocida",
