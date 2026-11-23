@@ -713,7 +713,28 @@
    "pasos": [
     "2026-11-23T01:04:00.000Z"
    ]
+  },
+  "polígono lladró|fábrica|valencia": {
+   "nombre": "Polígono Lladró",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Valencia",
+   "lat": 39.501,
+   "lon": -0.3697,
+   "primera_vez": "2026-11-23T12:25:00.000Z",
+   "ultima_vez": "2026-11-23T12:25:00.000Z",
+   "ultimo_frp": 2,
+   "frp_max": 2,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-23"
+   ],
+   "pasos": [
+    "2026-11-23T12:25:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-23T14:45:53.338Z"
+ "actualizado": "2026-11-23T15:01:59.084Z"
 }
