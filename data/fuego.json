@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T22:45:37.958Z",
+ "actualizado": "2026-11-23T23:01:06.928Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 24,
@@ -286,7 +286,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Valencia",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 41.3152,
@@ -303,7 +303,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 41.4758,
@@ -320,7 +320,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Zaragoza",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 37.3589,
@@ -337,7 +337,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Huelva",
-   "dias_mes": 8
+   "dias_mes": 9
   },
   {
    "lat": 41.4549,
@@ -354,7 +354,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "dias_mes": 9
+   "dias_mes": 10
   },
   {
    "lat": 38.376,
@@ -371,7 +371,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 11
+   "dias_mes": 12
   },
   {
    "lat": 41.1958,
@@ -388,7 +388,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 37.3606,
@@ -405,7 +405,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "dias_mes": 10
+   "dias_mes": 11
   },
   {
    "lat": 41.4076,
@@ -420,7 +420,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 11
+   "dias_mes": 12
   }
  ]
 }
