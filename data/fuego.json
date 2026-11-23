@@ -1,35 +1,25 @@
 {
- "actualizado": "2026-11-23T13:15:40.980Z",
+ "actualizado": "2026-11-23T13:31:08.235Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 7,
- "detecciones": 40,
+ "total": 4,
+ "detecciones": 36,
  "mayor": {
-  "lat": 38.2837,
-  "lon": -1.5983,
-  "t": "2026-11-22T13:27:00.000Z",
-  "frp": 10,
+  "lat": 39.9463,
+  "lon": 3.1552,
+  "t": "2026-11-23T02:45:00.000Z",
+  "frp": 5.5,
   "conf": "nominal",
-  "sat": "NOAA21",
-  "dn": "día",
-  "n": 2,
+  "sat": "NOAA20",
+  "dn": "noche",
+  "n": 12,
   "ts": [
-   "2026-11-22T13:27:00.000Z"
+   "2026-11-23T02:45:00.000Z",
+   "2026-11-23T01:47:00.000Z"
   ],
-  "contexto": "Puerto Errado (a 0,4 km)"
+  "contexto": "depuradora de Formentor (a 2,5 km)"
  },
  "focos": [
-  {
-   "lat": 38.2837,
-   "lon": -1.5983,
-   "t": "2026-11-22T13:27:00.000Z",
-   "frp": 10,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 2,
-   "contexto": "Puerto Errado (a 0,4 km)"
-  },
   {
    "lat": 39.9463,
    "lon": 3.1552,
@@ -51,26 +41,6 @@
    "dn": "noche",
    "n": 11,
    "contexto": "depuradora de Formentor (a 2,5 km)"
-  },
-  {
-   "lat": 41.463,
-   "lon": -1.3039,
-   "t": "2026-11-22T13:29:00.000Z",
-   "frp": 3.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
-  },
-  {
-   "lat": 37.2662,
-   "lon": -6.5894,
-   "t": "2026-11-22T13:27:00.000Z",
-   "frp": 2.2,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
   },
   {
    "lat": 39.9376,

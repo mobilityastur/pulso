@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-23T13:15:40.978Z",
+   "t": "2026-11-23T13:31:08.231Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-23T13:15:40.978Z",
+   "t": "2026-11-23T13:31:08.231Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-23T13:15:40.977Z",
+   "t": "2026-11-23T13:31:08.229Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,13 +63,13 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-23T13:15:40.979Z",
+   "t": "2026-11-23T13:31:08.232Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
   },
   "37.36,-6.68": {
-   "t": "2026-11-23T13:15:40.977Z",
+   "t": "2026-11-23T13:31:08.229Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Cosmos",
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-23T13:15:40.977Z",
+   "t": "2026-11-23T13:31:08.229Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -101,7 +101,7 @@
    "osm": null
   },
   "41.46,1.98": {
-   "t": "2026-11-23T13:15:40.977Z",
+   "t": "2026-11-23T13:31:08.230Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "mantefluid S.L.",
@@ -609,19 +609,19 @@
    "contexto": null
   },
   "39.94,3.16": {
-   "t": "2026-11-23T13:15:40.976Z",
+   "t": "2026-11-23T13:31:08.228Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "depuradora de Formentor (a 2,5 km)"
   },
   "39.94,3.18": {
-   "t": "2026-11-23T13:15:40.976Z",
+   "t": "2026-11-23T13:31:08.228Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.20,1.22": {
-   "t": "2026-11-23T13:15:40.978Z",
+   "t": "2026-11-23T13:31:08.231Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -631,7 +631,7 @@
    "osm": null
   },
   "41.58,0.36": {
-   "t": "2026-11-23T13:15:40.978Z",
+   "t": "2026-11-23T13:31:08.232Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
