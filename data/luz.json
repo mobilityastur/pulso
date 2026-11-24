@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-24T06:30:55.919Z",
+ "actualizado": "2026-11-24T06:45:41.500Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-24T07:25:00+01:00",
-  "total": 35287,
-  "renovable": 45.1,
+  "t": "2026-11-24T07:40:00+01:00",
+  "total": 36208,
+  "renovable": 44.7,
   "mix": {
-   "solar": 66,
-   "eolica": 8053,
-   "hidraulica": 8796,
-   "nuclear": 6097,
-   "gas": 8791,
-   "carbon": 239,
-   "otras": 3245
+   "solar": 75,
+   "eolica": 8254,
+   "hidraulica": 8817,
+   "nuclear": 6095,
+   "gas": 9489,
+   "carbon": 238,
+   "otras": 3240
   }
  },
  "tecnologias": [
@@ -23,49 +23,49 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 8053
-  },
-  {
-   "titulo": "Hidráulica",
-   "renovable": true,
-   "familia": "hidraulica",
-   "valor": 7287
+   "valor": 8254
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 6820
+   "valor": 7519
+  },
+  {
+   "titulo": "Hidráulica",
+   "renovable": true,
+   "familia": "hidraulica",
+   "valor": 7348
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6097
+   "valor": 6095
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2440
+   "valor": 2439
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 1971
+   "valor": 1970
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 1509
+   "valor": 1469
   },
   {
    "titulo": "Biomasa",
    "renovable": true,
    "familia": "otras",
-   "valor": 504
+   "valor": 500
   },
   {
    "titulo": "Turbina de vapor",
@@ -77,30 +77,16 @@
    "titulo": "Carbón",
    "renovable": false,
    "familia": "carbon",
-   "valor": 239
+   "valor": 238
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 66
+   "valor": 75
   }
  ],
  "serie": [
-  {
-   "t": "2026-11-23T07:40:00+01:00",
-   "total": 34837,
-   "renovable": 41.3,
-   "mix": {
-    "solar": 55,
-    "eolica": 5804,
-    "hidraulica": 9781,
-    "nuclear": 6097,
-    "gas": 10187,
-    "carbon": 0,
-    "otras": 2913
-   }
-  },
   {
    "t": "2026-11-23T08:00:00+01:00",
    "total": 35589,
@@ -1362,28 +1348,24 @@
    }
   },
   {
-   "t": "2026-11-24T07:25:00+01:00",
-   "total": 35287,
-   "renovable": 45.1,
+   "t": "2026-11-24T07:40:00+01:00",
+   "total": 36208,
+   "renovable": 44.7,
    "mix": {
-    "solar": 66,
-    "eolica": 8053,
-    "hidraulica": 8796,
-    "nuclear": 6097,
-    "gas": 8791,
-    "carbon": 239,
-    "otras": 3245
+    "solar": 75,
+    "eolica": 8254,
+    "hidraulica": 8817,
+    "nuclear": 6095,
+    "gas": 9489,
+    "carbon": 238,
+    "otras": 3240
    }
   }
  ],
  "demanda": {
-  "actual": 32108,
-  "t": "2026-11-24T07:20:00.000+01:00",
+  "actual": 33145,
+  "t": "2026-11-24T07:35:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-23T07:40:00.000+01:00",
-    "v": 32281
-   },
    {
     "t": "2026-11-23T08:00:00.000+01:00",
     "v": 33004
@@ -1666,14 +1648,14 @@
    },
    {
     "t": "2026-11-24T07:20:00.000+01:00",
-    "v": 32108
+    "v": 31799
+   },
+   {
+    "t": "2026-11-24T07:35:00.000+01:00",
+    "v": 33145
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-23T07:40:00.000+01:00",
-    "v": 31510
-   },
    {
     "t": "2026-11-23T08:00:00.000+01:00",
     "v": 32508
@@ -1944,7 +1926,7 @@
    },
    {
     "t": "2026-11-24T06:20:00.000+01:00",
-    "v": 26857
+    "v": 26858
    },
    {
     "t": "2026-11-24T06:40:00.000+01:00",
@@ -1956,11 +1938,15 @@
    },
    {
     "t": "2026-11-24T07:20:00.000+01:00",
-    "v": 31865
+    "v": 31861
    },
    {
-    "t": "2026-11-24T07:30:00.000+01:00",
-    "v": 32405
+    "t": "2026-11-24T07:40:00.000+01:00",
+    "v": 32906
+   },
+   {
+    "t": "2026-11-24T07:45:00.000+01:00",
+    "v": 33074
    }
   ]
  }
