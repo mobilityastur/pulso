@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-24T02:45:37.324Z",
+ "actualizado": "2026-11-24T03:01:06.078Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 20,
- "detecciones": 35,
+ "detecciones": 33,
  "mayor": {
   "lat": 37.3333,
   "lon": -3.1605,
@@ -245,40 +245,6 @@
    "osm": null,
    "ciudad": "Valencia",
    "dias_mes": 2
-  },
-  {
-   "lat": 38.376,
-   "lon": -0.5464,
-   "t": "2026-11-23T02:47:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "CEMEX",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Alicante",
-   "dias_mes": 12
-  },
-  {
-   "lat": 37.3606,
-   "lon": -5.8654,
-   "t": "2026-11-23T02:47:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 11
   }
  ]
 }
