@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-24T05:01:04.591Z",
+ "actualizado": "2026-11-24T05:15:57.386Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 20,
- "detecciones": 36,
+ "detecciones": 38,
  "mayor": {
   "lat": 37.3333,
   "lon": -3.1605,
@@ -229,6 +229,23 @@
   }
  ],
  "industriales": [
+  {
+   "lat": 41.9234,
+   "lon": 0.1826,
+   "t": "2026-11-24T03:08:00.000Z",
+   "frp": 3.8,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "Enagas",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Lleida",
+   "dias_mes": 1
+  },
   {
    "lat": 39.501,
    "lon": -0.3697,

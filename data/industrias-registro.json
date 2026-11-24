@@ -740,7 +740,28 @@
    "pasos": [
     "2026-11-23T12:25:00.000Z"
    ]
+  },
+  "enagas|central eléctrica|lleida": {
+   "nombre": "Enagas",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Lleida",
+   "lat": 41.9234,
+   "lon": 0.1826,
+   "primera_vez": "2026-11-24T03:08:00.000Z",
+   "ultima_vez": "2026-11-24T03:08:00.000Z",
+   "ultimo_frp": 3.8,
+   "frp_max": 3.8,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-24"
+   ],
+   "pasos": [
+    "2026-11-24T03:08:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-24T05:01:04.590Z"
+ "actualizado": "2026-11-24T05:15:57.385Z"
 }
