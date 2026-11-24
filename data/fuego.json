@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-24T12:15:42.267Z",
+ "actualizado": "2026-11-24T12:30:55.851Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 21,
- "detecciones": 41,
+ "total": 16,
+ "detecciones": 28,
  "mayor": {
   "lat": 37.3333,
   "lon": -3.1605,
@@ -12,11 +12,10 @@
   "conf": "nominal",
   "sat": "NOAA20",
   "dn": "día",
-  "n": 3,
+  "n": 2,
   "ts": [
    "2026-11-23T14:05:00.000Z",
-   "2026-11-23T13:10:00.000Z",
-   "2026-11-23T12:25:00.000Z"
+   "2026-11-23T13:10:00.000Z"
   ],
   "contexto": "Polígono Industrial La Estación (a 0,8 km)"
  },
@@ -29,18 +28,8 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "día",
-   "n": 3,
+   "n": 2,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
-  },
-  {
-   "lat": 41.2229,
-   "lon": 1.2985,
-   "t": "2026-11-23T12:27:00.000Z",
-   "frp": 8.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 2
   },
   {
    "lat": 37.0216,
@@ -64,16 +53,6 @@
    "contexto": "Enagás (a 1,4 km)"
   },
   {
-   "lat": 39.6326,
-   "lon": -0.5174,
-   "t": "2026-11-23T13:10:00.000Z",
-   "frp": 5.6,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 3
-  },
-  {
    "lat": 37.2811,
    "lon": -3.752,
    "t": "2026-11-23T13:10:00.000Z",
@@ -85,25 +64,14 @@
    "contexto": "Planta Fotovoltaica Atarfe I (a 1,9 km)"
   },
   {
-   "lat": 38.4366,
-   "lon": -1.7498,
-   "t": "2026-11-23T12:25:00.000Z",
-   "frp": 4.7,
+   "lat": 39.6326,
+   "lon": -0.5174,
+   "t": "2026-11-23T13:10:00.000Z",
+   "frp": 4.4,
    "conf": "nominal",
-   "sat": "NOAA20",
+   "sat": "NOAA21",
    "dn": "día",
-   "n": 4
-  },
-  {
-   "lat": 41.5381,
-   "lon": 0.3651,
-   "t": "2026-11-23T12:27:00.000Z",
-   "frp": 4.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1,
-   "contexto": "Polígono Industrial Sup. 7 (a 1,6 km)"
+   "n": 2
   },
   {
    "lat": 38.2346,
@@ -112,16 +80,6 @@
    "frp": 4.1,
    "conf": "nominal",
    "sat": "NOAA21",
-   "dn": "día",
-   "n": 2
-  },
-  {
-   "lat": 39.0105,
-   "lon": 1.4916,
-   "t": "2026-11-23T12:25:00.000Z",
-   "frp": 3.8,
-   "conf": "nominal",
-   "sat": "NOAA20",
    "dn": "día",
    "n": 1
   },
@@ -155,16 +113,6 @@
    "dn": "día",
    "n": 1,
    "contexto": "Punt Verd (a 0,2 km)"
-  },
-  {
-   "lat": 39.0495,
-   "lon": -2.0043,
-   "t": "2026-11-23T12:25:00.000Z",
-   "frp": 3.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
   },
   {
    "lat": 37.1893,
@@ -255,23 +203,6 @@
    "osm": null,
    "ciudad": "Lleida",
    "dias_mes": 1
-  },
-  {
-   "lat": 39.501,
-   "lon": -0.3697,
-   "t": "2026-11-23T12:25:00.000Z",
-   "frp": 2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1,
-   "nombre": "Polígono Lladró",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Valencia",
-   "dias_mes": 2
   },
   {
    "lat": 41.3131,
