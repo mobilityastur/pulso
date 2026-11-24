@@ -1,23 +1,44 @@
 {
- "actualizado": "2026-11-24T14:30:59.332Z",
+ "actualizado": "2026-11-24T14:45:47.679Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 1,
- "detecciones": 8,
+ "total": 3,
+ "detecciones": 11,
  "mayor": {
-  "lat": 38.1176,
-  "lon": -4.0276,
-  "t": "2026-11-24T02:25:00.000Z",
-  "frp": 0.9,
+  "lat": 38.7406,
+  "lon": -1.4939,
+  "t": "2026-11-24T12:50:00.000Z",
+  "frp": 6.9,
   "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "noche",
+  "sat": "NOAA21",
+  "dn": "día",
   "n": 1,
   "ts": [
-   "2026-11-24T02:25:00.000Z"
+   "2026-11-24T12:50:00.000Z"
   ]
  },
  "focos": [
+  {
+   "lat": 38.7406,
+   "lon": -1.4939,
+   "t": "2026-11-24T12:50:00.000Z",
+   "frp": 6.9,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 37.3327,
+   "lon": -3.1655,
+   "t": "2026-11-24T12:50:00.000Z",
+   "frp": 4.2,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Polígono Industrial La Estación (a 0,8 km)"
+  },
   {
    "lat": 38.1176,
    "lon": -4.0276,
@@ -30,6 +51,23 @@
   }
  ],
  "industriales": [
+  {
+   "lat": 41.2305,
+   "lon": 1.1748,
+   "t": "2026-11-24T12:53:00.000Z",
+   "frp": 4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "nombre": "CATOR, S.A.",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 1
+  },
   {
    "lat": 41.9234,
    "lon": 0.1826,
