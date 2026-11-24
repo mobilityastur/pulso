@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-24T09:15:41.435Z",
+   "t": "2026-11-24T09:30:55.030Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-24T09:15:41.434Z",
+   "t": "2026-11-24T09:30:55.029Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -101,7 +101,7 @@
    "osm": null
   },
   "41.46,1.98": {
-   "t": "2026-11-24T09:15:41.435Z",
+   "t": "2026-11-24T09:30:55.030Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "mantefluid S.L.",
@@ -141,7 +141,7 @@
    "osm": null
   },
   "39.66,-0.24": {
-   "t": "2026-11-24T09:15:41.435Z",
+   "t": "2026-11-24T09:30:55.031Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ferrodisa",
@@ -637,127 +637,127 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-24T09:15:41.428Z",
+   "t": "2026-11-24T09:30:55.022Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
   },
   "37.02,-6.48": {
-   "t": "2026-11-24T09:15:41.430Z",
+   "t": "2026-11-24T09:30:55.024Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.98,-5.64": {
-   "t": "2026-11-24T09:15:41.430Z",
+   "t": "2026-11-24T09:30:55.024Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Enagás (a 1,4 km)"
   },
   "37.28,-3.76": {
-   "t": "2026-11-24T09:15:41.431Z",
+   "t": "2026-11-24T09:30:55.024Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Planta Fotovoltaica Atarfe I (a 1,9 km)"
   },
   "39.64,-0.52": {
-   "t": "2026-11-24T09:15:41.430Z",
+   "t": "2026-11-24T09:30:55.024Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.24,-1.46": {
-   "t": "2026-11-24T09:15:41.431Z",
+   "t": "2026-11-24T09:30:55.025Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.56,-1.40": {
-   "t": "2026-11-24T09:15:41.432Z",
+   "t": "2026-11-24T09:30:55.026Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.68,-5.14": {
-   "t": "2026-11-24T09:15:41.432Z",
+   "t": "2026-11-24T09:30:55.027Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.42,3.24": {
-   "t": "2026-11-24T09:15:41.432Z",
+   "t": "2026-11-24T09:30:55.027Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Punt Verd (a 0,2 km)"
   },
   "37.18,-2.52": {
-   "t": "2026-11-24T09:15:41.433Z",
+   "t": "2026-11-24T09:30:55.028Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.20,-3.98": {
-   "t": "2026-11-24T09:15:41.433Z",
+   "t": "2026-11-24T09:30:55.028Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.68,0.24": {
-   "t": "2026-11-24T09:15:41.433Z",
+   "t": "2026-11-24T09:30:55.028Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.82,-5.22": {
-   "t": "2026-11-24T09:15:41.434Z",
+   "t": "2026-11-24T09:30:55.028Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Vaquera (a 2,4 km)"
   },
   "39.38,-0.68": {
-   "t": "2026-11-24T09:15:41.434Z",
+   "t": "2026-11-24T09:30:55.029Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.54,-2.14": {
-   "t": "2026-11-24T09:15:41.434Z",
+   "t": "2026-11-24T09:30:55.030Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.22,1.30": {
-   "t": "2026-11-24T09:15:41.430Z",
+   "t": "2026-11-24T09:30:55.024Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.44,-1.74": {
-   "t": "2026-11-24T09:15:41.431Z",
+   "t": "2026-11-24T09:30:55.025Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.54,0.36": {
-   "t": "2026-11-24T09:15:41.431Z",
+   "t": "2026-11-24T09:30:55.025Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Sup. 7 (a 1,6 km)"
   },
   "39.02,1.50": {
-   "t": "2026-11-24T09:15:41.432Z",
+   "t": "2026-11-24T09:30:55.026Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.04,-2.00": {
-   "t": "2026-11-24T09:15:41.433Z",
+   "t": "2026-11-24T09:30:55.027Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.50,-0.36": {
-   "t": "2026-11-24T09:15:41.434Z",
+   "t": "2026-11-24T09:30:55.029Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Polígono Lladró",
@@ -767,7 +767,7 @@
    "osm": null
   },
   "41.92,0.18": {
-   "t": "2026-11-24T09:15:41.431Z",
+   "t": "2026-11-24T09:30:55.026Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Enagas",
@@ -777,7 +777,7 @@
    "osm": null
   },
   "38.12,-4.02": {
-   "t": "2026-11-24T09:15:41.435Z",
+   "t": "2026-11-24T09:30:55.030Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
