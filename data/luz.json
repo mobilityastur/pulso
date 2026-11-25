@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-25T20:15:43.672Z",
+ "actualizado": "2026-11-25T20:23:20.350Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-25T21:10:00+01:00",
-  "total": 43100,
-  "renovable": 54.9,
+  "t": "2026-11-25T21:15:00+01:00",
+  "total": 42904,
+  "renovable": 55.3,
   "mix": {
    "solar": 76,
-   "eolica": 16175,
-   "hidraulica": 7637,
-   "nuclear": 6102,
-   "gas": 9727,
+   "eolica": 16183,
+   "hidraulica": 7687,
+   "nuclear": 6107,
+   "gas": 9468,
    "carbon": 239,
    "otras": 3144
   }
@@ -23,25 +23,25 @@
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 16175
+   "valor": 16183
   },
   {
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 7833
+   "valor": 7574
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 6911
+   "valor": 6959
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 6102
+   "valor": 6107
   },
   {
    "titulo": "Autoproductores",
@@ -59,7 +59,7 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 726
+   "valor": 728
   },
   {
    "titulo": "Biomasa",
@@ -92,33 +92,100 @@
    "valor": 4
   }
  ],
+ "nombres_tec": {
+  "nuc": {
+   "n": "Nuclear",
+   "f": "nuclear",
+   "r": false
+  },
+  "eol": {
+   "n": "Eólica",
+   "f": "eolica",
+   "r": true
+  },
+  "hid": {
+   "n": "Hidráulica",
+   "f": "hidraulica",
+   "r": true
+  },
+  "solFot": {
+   "n": "Solar fotovoltaica",
+   "f": "solar",
+   "r": true
+  },
+  "cc": {
+   "n": "Ciclo combinado",
+   "f": "gas",
+   "r": false
+  },
+  "cogenResto": {
+   "n": "Cogeneración y residuos",
+   "f": "gas",
+   "r": false
+  },
+  "car": {
+   "n": "Carbón",
+   "f": "carbon",
+   "r": false
+  },
+  "aut": {
+   "n": "Autoproductores",
+   "f": "otras",
+   "r": false
+  },
+  "bio": {
+   "n": "Biomasa",
+   "f": "otras",
+   "r": true
+  },
+  "turb": {
+   "n": "Turbinación bombeo",
+   "f": "hidraulica",
+   "r": false
+  },
+  "bat": {
+   "n": "Baterías",
+   "f": "otras",
+   "r": false
+  },
+  "vap": {
+   "n": "Turbina de vapor",
+   "f": "otras",
+   "r": false
+  },
+  "solTer": {
+   "n": "Solar térmica",
+   "f": "solar",
+   "r": true
+  }
+ },
  "serie": [
   {
-   "t": "2026-11-24T21:20:00+01:00",
-   "total": 42200,
-   "renovable": 53.1,
+   "t": "2026-11-24T21:40:00+01:00",
+   "total": 41036,
+   "renovable": 53.5,
    "mix": {
     "solar": 64,
-    "eolica": 15729,
-    "hidraulica": 7788,
-    "nuclear": 6093,
-    "gas": 8922,
+    "eolica": 15695,
+    "hidraulica": 7368,
+    "nuclear": 6100,
+    "gas": 8208,
     "carbon": 234,
-    "otras": 3370
-   }
-  },
-  {
-   "t": "2026-11-24T21:20:00+01:00",
-   "total": 42200,
-   "renovable": 53.1,
-   "mix": {
-    "solar": 64,
-    "eolica": 15729,
-    "hidraulica": 7788,
-    "nuclear": 6093,
-    "gas": 8922,
-    "carbon": 234,
-    "otras": 3370
+    "otras": 3367
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15695,
+    "hid": 5662,
+    "solFot": 64,
+    "cc": 6186,
+    "cogenResto": 2022,
+    "car": 234,
+    "aut": 2569,
+    "bio": 541,
+    "turb": 1706,
+    "bat": 26,
+    "vap": 231
    }
   },
   {
@@ -133,34 +200,20 @@
     "gas": 8208,
     "carbon": 234,
     "otras": 3367
-   }
-  },
-  {
-   "t": "2026-11-24T21:40:00+01:00",
-   "total": 41036,
-   "renovable": 53.5,
-   "mix": {
-    "solar": 64,
-    "eolica": 15695,
-    "hidraulica": 7368,
-    "nuclear": 6100,
-    "gas": 8208,
-    "carbon": 234,
-    "otras": 3367
-   }
-  },
-  {
-   "t": "2026-11-24T22:00:00+01:00",
-   "total": 39843,
-   "renovable": 54.6,
-   "mix": {
-    "solar": 64,
-    "eolica": 15893,
-    "hidraulica": 6554,
-    "nuclear": 6098,
-    "gas": 7648,
-    "carbon": 234,
-    "otras": 3352
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15695,
+    "hid": 5662,
+    "solFot": 64,
+    "cc": 6186,
+    "cogenResto": 2022,
+    "car": 234,
+    "aut": 2569,
+    "bio": 541,
+    "turb": 1706,
+    "bat": 26,
+    "vap": 231
    }
   },
   {
@@ -175,6 +228,48 @@
     "gas": 7648,
     "carbon": 234,
     "otras": 3352
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15893,
+    "hid": 5252,
+    "solFot": 64,
+    "cc": 5650,
+    "cogenResto": 1998,
+    "car": 234,
+    "aut": 2551,
+    "bio": 541,
+    "turb": 1302,
+    "bat": 29,
+    "vap": 231
+   }
+  },
+  {
+   "t": "2026-11-24T22:00:00+01:00",
+   "total": 39843,
+   "renovable": 54.6,
+   "mix": {
+    "solar": 64,
+    "eolica": 15893,
+    "hidraulica": 6554,
+    "nuclear": 6098,
+    "gas": 7648,
+    "carbon": 234,
+    "otras": 3352
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15893,
+    "hid": 5252,
+    "solFot": 64,
+    "cc": 5650,
+    "cogenResto": 1998,
+    "car": 234,
+    "aut": 2551,
+    "bio": 541,
+    "turb": 1302,
+    "bat": 29,
+    "vap": 231
    }
   },
   {
@@ -189,6 +284,20 @@
     "gas": 7403,
     "carbon": 234,
     "otras": 3328
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15857,
+    "hid": 4834,
+    "solFot": 64,
+    "cc": 5406,
+    "cogenResto": 1997,
+    "car": 234,
+    "aut": 2530,
+    "bio": 538,
+    "turb": 1037,
+    "bat": 29,
+    "vap": 231
    }
   },
   {
@@ -203,6 +312,20 @@
     "gas": 7403,
     "carbon": 234,
     "otras": 3328
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15857,
+    "hid": 4834,
+    "solFot": 64,
+    "cc": 5406,
+    "cogenResto": 1997,
+    "car": 234,
+    "aut": 2530,
+    "bio": 538,
+    "turb": 1037,
+    "bat": 29,
+    "vap": 231
    }
   },
   {
@@ -217,6 +340,20 @@
     "gas": 6385,
     "carbon": 242,
     "otras": 3328
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16221,
+    "hid": 4450,
+    "solFot": 64,
+    "cc": 4389,
+    "cogenResto": 1996,
+    "car": 242,
+    "aut": 2530,
+    "bio": 542,
+    "turb": 385,
+    "bat": 25,
+    "vap": 231
    }
   },
   {
@@ -231,6 +368,20 @@
     "gas": 6385,
     "carbon": 242,
     "otras": 3328
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16221,
+    "hid": 4450,
+    "solFot": 64,
+    "cc": 4389,
+    "cogenResto": 1996,
+    "car": 242,
+    "aut": 2530,
+    "bio": 542,
+    "turb": 385,
+    "bat": 25,
+    "vap": 231
    }
   },
   {
@@ -245,6 +396,20 @@
     "gas": 5490,
     "carbon": 250,
     "otras": 3323
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 16357,
+    "hid": 4417,
+    "solFot": 63,
+    "cc": 3555,
+    "cogenResto": 1935,
+    "car": 250,
+    "aut": 2524,
+    "bio": 542,
+    "turb": 389,
+    "bat": 25,
+    "vap": 232
    }
   },
   {
@@ -259,6 +424,20 @@
     "gas": 5490,
     "carbon": 250,
     "otras": 3323
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 16357,
+    "hid": 4417,
+    "solFot": 63,
+    "cc": 3555,
+    "cogenResto": 1935,
+    "car": 250,
+    "aut": 2524,
+    "bio": 542,
+    "turb": 389,
+    "bat": 25,
+    "vap": 232
    }
   },
   {
@@ -273,6 +452,19 @@
     "gas": 4729,
     "carbon": 249,
     "otras": 3183
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 16231,
+    "hid": 3645,
+    "solFot": 63,
+    "cc": 2820,
+    "cogenResto": 1909,
+    "car": 249,
+    "aut": 2413,
+    "bio": 538,
+    "turb": 361,
+    "vap": 232
    }
   },
   {
@@ -287,6 +479,19 @@
     "gas": 4729,
     "carbon": 249,
     "otras": 3183
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 16231,
+    "hid": 3645,
+    "solFot": 63,
+    "cc": 2820,
+    "cogenResto": 1909,
+    "car": 249,
+    "aut": 2413,
+    "bio": 538,
+    "turb": 361,
+    "vap": 232
    }
   },
   {
@@ -301,6 +506,19 @@
     "gas": 4728,
     "carbon": 249,
     "otras": 3158
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16054,
+    "hid": 3381,
+    "solFot": 63,
+    "cc": 2847,
+    "cogenResto": 1881,
+    "car": 249,
+    "aut": 2398,
+    "bio": 529,
+    "turb": 236,
+    "vap": 231
    }
   },
   {
@@ -315,6 +533,19 @@
     "gas": 4728,
     "carbon": 249,
     "otras": 3158
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16054,
+    "hid": 3381,
+    "solFot": 63,
+    "cc": 2847,
+    "cogenResto": 1881,
+    "car": 249,
+    "aut": 2398,
+    "bio": 529,
+    "turb": 236,
+    "vap": 231
    }
   },
   {
@@ -329,6 +560,19 @@
     "gas": 4442,
     "carbon": 209,
     "otras": 3142
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15819,
+    "hid": 2590,
+    "solFot": 63,
+    "cc": 2766,
+    "cogenResto": 1676,
+    "car": 209,
+    "aut": 2379,
+    "bio": 532,
+    "turb": 230,
+    "vap": 231
    }
   },
   {
@@ -343,6 +587,19 @@
     "gas": 4442,
     "carbon": 209,
     "otras": 3142
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15819,
+    "hid": 2590,
+    "solFot": 63,
+    "cc": 2766,
+    "cogenResto": 1676,
+    "car": 209,
+    "aut": 2379,
+    "bio": 532,
+    "turb": 230,
+    "vap": 231
    }
   },
   {
@@ -357,6 +614,19 @@
     "gas": 3915,
     "carbon": 172,
     "otras": 2612
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 16113,
+    "hid": 2131,
+    "solFot": 63,
+    "cc": 2467,
+    "cogenResto": 1448,
+    "car": 172,
+    "aut": 1874,
+    "bio": 507,
+    "turb": 190,
+    "vap": 231
    }
   },
   {
@@ -371,6 +641,19 @@
     "gas": 3915,
     "carbon": 172,
     "otras": 2612
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 16113,
+    "hid": 2131,
+    "solFot": 63,
+    "cc": 2467,
+    "cogenResto": 1448,
+    "car": 172,
+    "aut": 1874,
+    "bio": 507,
+    "turb": 190,
+    "vap": 231
    }
   },
   {
@@ -385,6 +668,19 @@
     "gas": 3817,
     "carbon": 165,
     "otras": 2551
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15797,
+    "hid": 1544,
+    "solFot": 63,
+    "cc": 2419,
+    "cogenResto": 1398,
+    "car": 165,
+    "aut": 1817,
+    "bio": 503,
+    "turb": 189,
+    "vap": 231
    }
   },
   {
@@ -399,6 +695,19 @@
     "gas": 3817,
     "carbon": 165,
     "otras": 2551
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15797,
+    "hid": 1544,
+    "solFot": 63,
+    "cc": 2419,
+    "cogenResto": 1398,
+    "car": 165,
+    "aut": 1817,
+    "bio": 503,
+    "turb": 189,
+    "vap": 231
    }
   },
   {
@@ -413,6 +722,19 @@
     "gas": 3803,
     "carbon": 165,
     "otras": 2486
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 15602,
+    "hid": 727,
+    "solFot": 66,
+    "cc": 2459,
+    "cogenResto": 1344,
+    "car": 165,
+    "aut": 1774,
+    "bio": 481,
+    "turb": 137,
+    "vap": 231
    }
   },
   {
@@ -427,6 +749,19 @@
     "gas": 3803,
     "carbon": 165,
     "otras": 2486
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 15602,
+    "hid": 727,
+    "solFot": 66,
+    "cc": 2459,
+    "cogenResto": 1344,
+    "car": 165,
+    "aut": 1774,
+    "bio": 481,
+    "turb": 137,
+    "vap": 231
    }
   },
   {
@@ -441,6 +776,19 @@
     "gas": 3762,
     "carbon": 165,
     "otras": 2457
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 15645,
+    "hid": 488,
+    "solFot": 65,
+    "cc": 2448,
+    "cogenResto": 1314,
+    "car": 165,
+    "aut": 1726,
+    "bio": 500,
+    "turb": 133,
+    "vap": 231
    }
   },
   {
@@ -455,6 +803,19 @@
     "gas": 3762,
     "carbon": 165,
     "otras": 2457
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 15645,
+    "hid": 488,
+    "solFot": 65,
+    "cc": 2448,
+    "cogenResto": 1314,
+    "car": 165,
+    "aut": 1726,
+    "bio": 500,
+    "turb": 133,
+    "vap": 231
    }
   },
   {
@@ -469,6 +830,19 @@
     "gas": 3817,
     "carbon": 165,
     "otras": 2463
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 15566,
+    "hid": 393,
+    "solFot": 66,
+    "cc": 2513,
+    "cogenResto": 1304,
+    "car": 165,
+    "aut": 1728,
+    "bio": 504,
+    "turb": 136,
+    "vap": 231
    }
   },
   {
@@ -483,6 +857,19 @@
     "gas": 3817,
     "carbon": 165,
     "otras": 2463
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 15566,
+    "hid": 393,
+    "solFot": 66,
+    "cc": 2513,
+    "cogenResto": 1304,
+    "car": 165,
+    "aut": 1728,
+    "bio": 504,
+    "turb": 136,
+    "vap": 231
    }
   },
   {
@@ -497,6 +884,19 @@
     "gas": 3690,
     "carbon": 165,
     "otras": 2461
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15616,
+    "hid": 389,
+    "solFot": 66,
+    "cc": 2410,
+    "cogenResto": 1280,
+    "car": 165,
+    "aut": 1729,
+    "bio": 501,
+    "turb": 170,
+    "vap": 231
    }
   },
   {
@@ -511,6 +911,19 @@
     "gas": 3690,
     "carbon": 165,
     "otras": 2461
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15616,
+    "hid": 389,
+    "solFot": 66,
+    "cc": 2410,
+    "cogenResto": 1280,
+    "car": 165,
+    "aut": 1729,
+    "bio": 501,
+    "turb": 170,
+    "vap": 231
    }
   },
   {
@@ -525,6 +938,19 @@
     "gas": 3637,
     "carbon": 165,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 15877,
+    "hid": 299,
+    "solFot": 66,
+    "cc": 2360,
+    "cogenResto": 1277,
+    "car": 165,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 181,
+    "vap": 231
    }
   },
   {
@@ -539,6 +965,19 @@
     "gas": 3637,
     "carbon": 165,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 15877,
+    "hid": 299,
+    "solFot": 66,
+    "cc": 2360,
+    "cogenResto": 1277,
+    "car": 165,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 181,
+    "vap": 231
    }
   },
   {
@@ -553,6 +992,18 @@
     "gas": 3472,
     "carbon": 166,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 15853,
+    "solFot": 66,
+    "cc": 2197,
+    "cogenResto": 1275,
+    "car": 166,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 141,
+    "vap": 231
    }
   },
   {
@@ -567,6 +1018,18 @@
     "gas": 3472,
     "carbon": 166,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 15853,
+    "solFot": 66,
+    "cc": 2197,
+    "cogenResto": 1275,
+    "car": 166,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 141,
+    "vap": 231
    }
   },
   {
@@ -581,6 +1044,19 @@
     "gas": 3489,
     "carbon": 165,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15796,
+    "hid": 68,
+    "solFot": 66,
+    "cc": 2213,
+    "cogenResto": 1276,
+    "car": 165,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 132,
+    "vap": 231
    }
   },
   {
@@ -595,6 +1071,19 @@
     "gas": 3489,
     "carbon": 165,
     "otras": 2413
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15796,
+    "hid": 68,
+    "solFot": 66,
+    "cc": 2213,
+    "cogenResto": 1276,
+    "car": 165,
+    "aut": 1698,
+    "bio": 484,
+    "turb": 132,
+    "vap": 231
    }
   },
   {
@@ -609,6 +1098,20 @@
     "gas": 3761,
     "carbon": 165,
     "otras": 2421
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 15377,
+    "hid": 34,
+    "solFot": 67,
+    "cc": 2482,
+    "cogenResto": 1279,
+    "car": 165,
+    "aut": 1696,
+    "bio": 480,
+    "turb": 108,
+    "bat": 14,
+    "vap": 231
    }
   },
   {
@@ -623,6 +1126,20 @@
     "gas": 4039,
     "carbon": 165,
     "otras": 2414
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 15167,
+    "hid": 283,
+    "solFot": 66,
+    "cc": 2761,
+    "cogenResto": 1278,
+    "car": 165,
+    "aut": 1696,
+    "bio": 480,
+    "turb": 137,
+    "bat": 7,
+    "vap": 231
    }
   },
   {
@@ -637,6 +1154,19 @@
     "gas": 3580,
     "carbon": 165,
     "otras": 2406
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 14819,
+    "hid": 534,
+    "solFot": 67,
+    "cc": 2312,
+    "cogenResto": 1268,
+    "car": 165,
+    "aut": 1695,
+    "bio": 479,
+    "turb": 163,
+    "vap": 232
    }
   },
   {
@@ -651,6 +1181,19 @@
     "gas": 3680,
     "carbon": 181,
     "otras": 2410
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 14886,
+    "hid": 509,
+    "solFot": 64,
+    "cc": 2399,
+    "cogenResto": 1281,
+    "car": 181,
+    "aut": 1696,
+    "bio": 482,
+    "turb": 126,
+    "vap": 232
    }
   },
   {
@@ -665,6 +1208,19 @@
     "gas": 3628,
     "carbon": 180,
     "otras": 2405
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15176,
+    "hid": 420,
+    "solFot": 63,
+    "cc": 2346,
+    "cogenResto": 1282,
+    "car": 180,
+    "aut": 1694,
+    "bio": 480,
+    "turb": 94,
+    "vap": 231
    }
   },
   {
@@ -679,6 +1235,19 @@
     "gas": 3507,
     "carbon": 181,
     "otras": 2407
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 15605,
+    "hid": 396,
+    "solFot": 63,
+    "cc": 2228,
+    "cogenResto": 1279,
+    "car": 181,
+    "aut": 1695,
+    "bio": 481,
+    "turb": 46,
+    "vap": 231
    }
   },
   {
@@ -693,6 +1262,19 @@
     "gas": 3627,
     "carbon": 164,
     "otras": 2364
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 15566,
+    "hid": 642,
+    "solFot": 64,
+    "cc": 2353,
+    "cogenResto": 1274,
+    "car": 164,
+    "aut": 1686,
+    "bio": 446,
+    "turb": 51,
+    "vap": 232
    }
   },
   {
@@ -707,6 +1289,19 @@
     "gas": 3658,
     "carbon": 165,
     "otras": 2437
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 15570,
+    "hid": 1045,
+    "solFot": 63,
+    "cc": 2381,
+    "cogenResto": 1277,
+    "car": 165,
+    "aut": 1724,
+    "bio": 482,
+    "turb": 49,
+    "vap": 231
    }
   },
   {
@@ -721,6 +1316,19 @@
     "gas": 3585,
     "carbon": 165,
     "otras": 2439
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 15680,
+    "hid": 1128,
+    "solFot": 64,
+    "cc": 2307,
+    "cogenResto": 1278,
+    "car": 165,
+    "aut": 1723,
+    "bio": 485,
+    "turb": 74,
+    "vap": 231
    }
   },
   {
@@ -735,6 +1343,19 @@
     "gas": 3867,
     "carbon": 165,
     "otras": 2439
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 15802,
+    "hid": 2263,
+    "solFot": 74,
+    "cc": 2583,
+    "cogenResto": 1284,
+    "car": 165,
+    "aut": 1727,
+    "bio": 481,
+    "turb": 211,
+    "vap": 231
    }
   },
   {
@@ -749,6 +1370,19 @@
     "gas": 4367,
     "carbon": 194,
     "otras": 2477
+   },
+   "tec": {
+    "nuc": 6097,
+    "eol": 15949,
+    "hid": 2723,
+    "solFot": 74,
+    "cc": 3074,
+    "cogenResto": 1293,
+    "car": 194,
+    "aut": 1736,
+    "bio": 480,
+    "turb": 214,
+    "vap": 261
    }
   },
   {
@@ -763,6 +1397,20 @@
     "gas": 4189,
     "carbon": 230,
     "otras": 2534
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 15858,
+    "hid": 2966,
+    "solFot": 75,
+    "cc": 2900,
+    "cogenResto": 1289,
+    "car": 230,
+    "aut": 1738,
+    "bio": 491,
+    "turb": 403,
+    "bat": 4,
+    "vap": 301
    }
   },
   {
@@ -777,6 +1425,20 @@
     "gas": 4470,
     "carbon": 230,
     "otras": 2556
+   },
+   "tec": {
+    "nuc": 6095,
+    "eol": 16449,
+    "hid": 3310,
+    "solFot": 83,
+    "cc": 3112,
+    "cogenResto": 1358,
+    "car": 230,
+    "aut": 1804,
+    "bio": 445,
+    "turb": 519,
+    "bat": 6,
+    "vap": 301
    }
   },
   {
@@ -791,6 +1453,20 @@
     "gas": 4580,
     "carbon": 229,
     "otras": 2559
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 16306,
+    "hid": 4546,
+    "solFot": 82,
+    "cc": 3204,
+    "cogenResto": 1376,
+    "car": 229,
+    "aut": 1809,
+    "bio": 444,
+    "turb": 526,
+    "bat": 5,
+    "vap": 301
    }
   },
   {
@@ -805,6 +1481,20 @@
     "gas": 5111,
     "carbon": 229,
     "otras": 2564
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 15975,
+    "hid": 5246,
+    "solFot": 79,
+    "cc": 3720,
+    "cogenResto": 1391,
+    "car": 229,
+    "aut": 1814,
+    "bio": 444,
+    "turb": 690,
+    "bat": 5,
+    "vap": 301
    }
   },
   {
@@ -819,6 +1509,20 @@
     "gas": 5321,
     "carbon": 197,
     "otras": 2570
+   },
+   "tec": {
+    "nuc": 6095,
+    "eol": 15839,
+    "hid": 5387,
+    "solFot": 350,
+    "cc": 3921,
+    "cogenResto": 1400,
+    "car": 197,
+    "aut": 1818,
+    "bio": 447,
+    "turb": 660,
+    "bat": 4,
+    "vap": 301
    }
   },
   {
@@ -833,6 +1537,20 @@
     "gas": 5348,
     "carbon": 190,
     "otras": 2595
+   },
+   "tec": {
+    "nuc": 6095,
+    "eol": 15885,
+    "hid": 5120,
+    "solFot": 1178,
+    "cc": 3941,
+    "cogenResto": 1407,
+    "car": 190,
+    "aut": 1828,
+    "bio": 449,
+    "turb": 645,
+    "bat": 5,
+    "vap": 313
    }
   },
   {
@@ -847,6 +1565,20 @@
     "gas": 4719,
     "carbon": 219,
     "otras": 2614
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 15938,
+    "hid": 4635,
+    "solFot": 3008,
+    "cc": 3307,
+    "cogenResto": 1412,
+    "car": 219,
+    "aut": 1817,
+    "bio": 440,
+    "turb": 558,
+    "bat": 5,
+    "vap": 352
    }
   },
   {
@@ -861,6 +1593,20 @@
     "gas": 4400,
     "carbon": 254,
     "otras": 2606
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16099,
+    "hid": 3262,
+    "solFot": 6380,
+    "cc": 2996,
+    "cogenResto": 1404,
+    "car": 254,
+    "aut": 1797,
+    "bio": 451,
+    "turb": 381,
+    "bat": 8,
+    "vap": 350
    }
   },
   {
@@ -875,6 +1621,20 @@
     "gas": 4436,
     "carbon": 270,
     "otras": 2588
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 16129,
+    "hid": 1607,
+    "solFot": 9132,
+    "cc": 3071,
+    "cogenResto": 1365,
+    "car": 270,
+    "aut": 1771,
+    "bio": 451,
+    "turb": 108,
+    "bat": 4,
+    "vap": 362
    }
   },
   {
@@ -889,6 +1649,19 @@
     "gas": 4066,
     "carbon": 264,
     "otras": 2527
+   },
+   "tec": {
+    "nuc": 6093,
+    "eol": 15909,
+    "hid": 324,
+    "solFot": 11804,
+    "cc": 2791,
+    "cogenResto": 1275,
+    "car": 264,
+    "aut": 1681,
+    "bio": 445,
+    "turb": 1,
+    "vap": 401
    }
   },
   {
@@ -903,6 +1676,17 @@
     "gas": 3323,
     "carbon": 242,
     "otras": 2490
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 15873,
+    "solFot": 14509,
+    "cc": 2084,
+    "cogenResto": 1239,
+    "car": 242,
+    "aut": 1624,
+    "bio": 466,
+    "vap": 400
    }
   },
   {
@@ -917,6 +1701,17 @@
     "gas": 3058,
     "carbon": 220,
     "otras": 2342
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16312,
+    "solFot": 15806,
+    "cc": 1838,
+    "cogenResto": 1220,
+    "car": 220,
+    "aut": 1544,
+    "bio": 398,
+    "vap": 400
    }
   },
   {
@@ -931,6 +1726,19 @@
     "gas": 3253,
     "carbon": 220,
     "otras": 2341
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 16682,
+    "solFot": 16267,
+    "solTer": 10,
+    "cc": 2032,
+    "cogenResto": 1221,
+    "car": 220,
+    "aut": 1545,
+    "bio": 390,
+    "bat": 6,
+    "vap": 400
    }
   },
   {
@@ -945,6 +1753,19 @@
     "gas": 2762,
     "carbon": 177,
     "otras": 2218
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 16277,
+    "solFot": 17537,
+    "solTer": 21,
+    "cc": 1567,
+    "cogenResto": 1195,
+    "car": 177,
+    "aut": 1461,
+    "bio": 353,
+    "bat": 3,
+    "vap": 401
    }
   },
   {
@@ -959,6 +1780,18 @@
     "gas": 2742,
     "carbon": 168,
     "otras": 2224
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 16112,
+    "solFot": 18151,
+    "solTer": 21,
+    "cc": 1547,
+    "cogenResto": 1195,
+    "car": 168,
+    "aut": 1467,
+    "bio": 357,
+    "vap": 400
    }
   },
   {
@@ -973,6 +1806,18 @@
     "gas": 2727,
     "carbon": 168,
     "otras": 2214
+   },
+   "tec": {
+    "nuc": 6102,
+    "eol": 16082,
+    "solFot": 17883,
+    "solTer": 14,
+    "cc": 1536,
+    "cogenResto": 1191,
+    "car": 168,
+    "aut": 1461,
+    "bio": 353,
+    "vap": 400
    }
   },
   {
@@ -987,6 +1832,18 @@
     "gas": 2783,
     "carbon": 168,
     "otras": 2240
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 16585,
+    "solFot": 17416,
+    "solTer": 23,
+    "cc": 1584,
+    "cogenResto": 1199,
+    "car": 168,
+    "aut": 1475,
+    "bio": 364,
+    "vap": 401
    }
   },
   {
@@ -1001,6 +1858,18 @@
     "gas": 2851,
     "carbon": 168,
     "otras": 2237
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 16308,
+    "solFot": 17232,
+    "solTer": 30,
+    "cc": 1647,
+    "cogenResto": 1204,
+    "car": 168,
+    "aut": 1473,
+    "bio": 364,
+    "vap": 400
    }
   },
   {
@@ -1015,6 +1884,18 @@
     "gas": 2827,
     "carbon": 168,
     "otras": 2249
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 16207,
+    "solFot": 17656,
+    "solTer": 38,
+    "cc": 1623,
+    "cogenResto": 1204,
+    "car": 168,
+    "aut": 1479,
+    "bio": 369,
+    "vap": 401
    }
   },
   {
@@ -1029,6 +1910,18 @@
     "gas": 3082,
     "carbon": 168,
     "otras": 2246
+   },
+   "tec": {
+    "nuc": 6096,
+    "eol": 16935,
+    "solFot": 16851,
+    "solTer": 34,
+    "cc": 1871,
+    "cogenResto": 1211,
+    "car": 168,
+    "aut": 1478,
+    "bio": 368,
+    "vap": 400
    }
   },
   {
@@ -1043,6 +1936,18 @@
     "gas": 2787,
     "carbon": 168,
     "otras": 2247
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 17236,
+    "solFot": 16520,
+    "solTer": 37,
+    "cc": 1587,
+    "cogenResto": 1200,
+    "car": 168,
+    "aut": 1478,
+    "bio": 368,
+    "vap": 401
    }
   },
   {
@@ -1057,6 +1962,18 @@
     "gas": 2814,
     "carbon": 168,
     "otras": 2246
+   },
+   "tec": {
+    "nuc": 6095,
+    "eol": 16874,
+    "solFot": 16481,
+    "solTer": 28,
+    "cc": 1609,
+    "cogenResto": 1205,
+    "car": 168,
+    "aut": 1477,
+    "bio": 368,
+    "vap": 401
    }
   },
   {
@@ -1071,6 +1988,19 @@
     "gas": 2829,
     "carbon": 168,
     "otras": 2250
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 17516,
+    "solFot": 16382,
+    "solTer": 33,
+    "cc": 1625,
+    "cogenResto": 1204,
+    "car": 168,
+    "aut": 1475,
+    "bio": 372,
+    "bat": 2,
+    "vap": 401
    }
   },
   {
@@ -1085,6 +2015,19 @@
     "gas": 2896,
     "carbon": 168,
     "otras": 2238
+   },
+   "tec": {
+    "nuc": 6094,
+    "eol": 17746,
+    "solFot": 16128,
+    "solTer": 47,
+    "cc": 1690,
+    "cogenResto": 1206,
+    "car": 168,
+    "aut": 1469,
+    "bio": 365,
+    "bat": 4,
+    "vap": 400
    }
   },
   {
@@ -1099,6 +2042,19 @@
     "gas": 3137,
     "carbon": 167,
     "otras": 2279
+   },
+   "tec": {
+    "nuc": 6097,
+    "eol": 17985,
+    "solFot": 14831,
+    "solTer": 60,
+    "cc": 1937,
+    "cogenResto": 1200,
+    "car": 167,
+    "aut": 1477,
+    "bio": 373,
+    "bat": 28,
+    "vap": 401
    }
   },
   {
@@ -1113,6 +2069,19 @@
     "gas": 3259,
     "carbon": 168,
     "otras": 2393
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 17960,
+    "solFot": 14189,
+    "solTer": 75,
+    "cc": 2057,
+    "cogenResto": 1202,
+    "car": 168,
+    "aut": 1538,
+    "bio": 431,
+    "bat": 24,
+    "vap": 400
    }
   },
   {
@@ -1127,6 +2096,20 @@
     "gas": 3065,
     "carbon": 168,
     "otras": 2455
+   },
+   "tec": {
+    "nuc": 6098,
+    "eol": 18449,
+    "solFot": 13219,
+    "solTer": 89,
+    "cc": 1862,
+    "cogenResto": 1203,
+    "car": 168,
+    "aut": 1571,
+    "bio": 463,
+    "turb": 1,
+    "bat": 21,
+    "vap": 400
    }
   },
   {
@@ -1141,6 +2124,20 @@
     "gas": 3677,
     "carbon": 168,
     "otras": 2506
+   },
+   "tec": {
+    "nuc": 6100,
+    "eol": 18310,
+    "solFot": 11295,
+    "solTer": 103,
+    "cc": 2453,
+    "cogenResto": 1224,
+    "car": 168,
+    "aut": 1595,
+    "bio": 477,
+    "turb": 1,
+    "bat": 33,
+    "vap": 401
    }
   },
   {
@@ -1155,6 +2152,21 @@
     "gas": 4337,
     "carbon": 169,
     "otras": 2648
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 18059,
+    "hid": 1025,
+    "solFot": 9221,
+    "solTer": 125,
+    "cc": 3056,
+    "cogenResto": 1281,
+    "car": 169,
+    "aut": 1730,
+    "bio": 496,
+    "turb": 1,
+    "bat": 21,
+    "vap": 401
    }
   },
   {
@@ -1169,6 +2181,21 @@
     "gas": 5191,
     "carbon": 168,
     "otras": 2734
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 17571,
+    "hid": 1962,
+    "solFot": 7167,
+    "solTer": 80,
+    "cc": 3824,
+    "cogenResto": 1367,
+    "car": 168,
+    "aut": 1828,
+    "bio": 488,
+    "turb": 1,
+    "bat": 17,
+    "vap": 401
    }
   },
   {
@@ -1183,6 +2210,21 @@
     "gas": 6960,
     "carbon": 168,
     "otras": 2864
+   },
+   "tec": {
+    "nuc": 6107,
+    "eol": 17243,
+    "hid": 3253,
+    "solFot": 4841,
+    "solTer": 75,
+    "cc": 5400,
+    "cogenResto": 1560,
+    "car": 168,
+    "aut": 1949,
+    "bio": 513,
+    "turb": 175,
+    "bat": 2,
+    "vap": 400
    }
   },
   {
@@ -1197,6 +2239,21 @@
     "gas": 8444,
     "carbon": 175,
     "otras": 3100
+   },
+   "tec": {
+    "nuc": 6106,
+    "eol": 16972,
+    "hid": 4993,
+    "solFot": 2666,
+    "solTer": 76,
+    "cc": 6722,
+    "cogenResto": 1722,
+    "car": 175,
+    "aut": 2220,
+    "bio": 507,
+    "turb": 345,
+    "bat": 12,
+    "vap": 361
    }
   },
   {
@@ -1211,6 +2268,21 @@
     "gas": 9265,
     "carbon": 190,
     "otras": 3111
+   },
+   "tec": {
+    "nuc": 6108,
+    "eol": 16636,
+    "hid": 6131,
+    "solFot": 1054,
+    "solTer": 54,
+    "cc": 7496,
+    "cogenResto": 1769,
+    "car": 190,
+    "aut": 2244,
+    "bio": 508,
+    "turb": 889,
+    "bat": 7,
+    "vap": 352
    }
   },
   {
@@ -1225,6 +2297,21 @@
     "gas": 9819,
     "carbon": 190,
     "otras": 3131
+   },
+   "tec": {
+    "nuc": 6099,
+    "eol": 16389,
+    "hid": 6384,
+    "solFot": 336,
+    "solTer": 24,
+    "cc": 7985,
+    "cogenResto": 1834,
+    "car": 190,
+    "aut": 2265,
+    "bio": 508,
+    "turb": 1193,
+    "bat": 7,
+    "vap": 351
    }
   },
   {
@@ -1239,6 +2326,21 @@
     "gas": 10250,
     "carbon": 190,
     "otras": 3144
+   },
+   "tec": {
+    "nuc": 6108,
+    "eol": 16326,
+    "hid": 6107,
+    "solFot": 83,
+    "solTer": 9,
+    "cc": 8369,
+    "cogenResto": 1881,
+    "car": 190,
+    "aut": 2324,
+    "bio": 502,
+    "turb": 1080,
+    "bat": 7,
+    "vap": 311
    }
   },
   {
@@ -1253,6 +2355,21 @@
     "gas": 10277,
     "carbon": 190,
     "otras": 3211
+   },
+   "tec": {
+    "nuc": 6101,
+    "eol": 16227,
+    "hid": 6273,
+    "solFot": 82,
+    "solTer": 8,
+    "cc": 8381,
+    "cogenResto": 1896,
+    "car": 190,
+    "aut": 2349,
+    "bio": 518,
+    "turb": 1209,
+    "bat": 42,
+    "vap": 302
    }
   },
   {
@@ -1267,6 +2384,21 @@
     "gas": 10112,
     "carbon": 217,
     "otras": 3227
+   },
+   "tec": {
+    "nuc": 6107,
+    "eol": 16057,
+    "hid": 6548,
+    "solFot": 79,
+    "solTer": 8,
+    "cc": 8211,
+    "cogenResto": 1901,
+    "car": 217,
+    "aut": 2334,
+    "bio": 508,
+    "turb": 1238,
+    "bat": 84,
+    "vap": 301
    }
   },
   {
@@ -1281,6 +2413,21 @@
     "gas": 9957,
     "carbon": 239,
     "otras": 3265
+   },
+   "tec": {
+    "nuc": 6103,
+    "eol": 16145,
+    "hid": 6705,
+    "solFot": 67,
+    "solTer": 8,
+    "cc": 8047,
+    "cogenResto": 1910,
+    "car": 239,
+    "aut": 2367,
+    "bio": 512,
+    "turb": 1159,
+    "bat": 84,
+    "vap": 302
    }
   },
   {
@@ -1295,6 +2442,20 @@
     "gas": 10117,
     "carbon": 239,
     "otras": 3275
+   },
+   "tec": {
+    "nuc": 6106,
+    "eol": 16123,
+    "hid": 6696,
+    "solFot": 68,
+    "cc": 8190,
+    "cogenResto": 1927,
+    "car": 239,
+    "aut": 2373,
+    "bio": 517,
+    "turb": 1168,
+    "bat": 84,
+    "vap": 301
    }
   },
   {
@@ -1309,6 +2470,20 @@
     "gas": 9888,
     "carbon": 239,
     "otras": 3266
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 15863,
+    "hid": 6890,
+    "solFot": 67,
+    "cc": 7965,
+    "cogenResto": 1923,
+    "car": 239,
+    "aut": 2368,
+    "bio": 516,
+    "turb": 680,
+    "bat": 79,
+    "vap": 303
    }
   },
   {
@@ -1323,6 +2498,20 @@
     "gas": 9698,
     "carbon": 240,
     "otras": 3243
+   },
+   "tec": {
+    "nuc": 6104,
+    "eol": 16155,
+    "hid": 7032,
+    "solFot": 76,
+    "cc": 7774,
+    "cogenResto": 1924,
+    "car": 240,
+    "aut": 2399,
+    "bio": 526,
+    "turb": 683,
+    "bat": 54,
+    "vap": 264
    }
   },
   {
@@ -1337,6 +2526,20 @@
     "gas": 9712,
     "carbon": 239,
     "otras": 3207
+   },
+   "tec": {
+    "nuc": 6106,
+    "eol": 16165,
+    "hid": 7106,
+    "solFot": 76,
+    "cc": 7818,
+    "cogenResto": 1894,
+    "car": 239,
+    "aut": 2395,
+    "bio": 526,
+    "turb": 725,
+    "bat": 54,
+    "vap": 232
    }
   },
   {
@@ -1351,31 +2554,55 @@
     "gas": 9777,
     "carbon": 239,
     "otras": 3149
+   },
+   "tec": {
+    "nuc": 6108,
+    "eol": 16141,
+    "hid": 7087,
+    "solFot": 76,
+    "cc": 7888,
+    "cogenResto": 1889,
+    "car": 239,
+    "aut": 2393,
+    "bio": 520,
+    "turb": 727,
+    "bat": 4,
+    "vap": 232
    }
   },
   {
-   "t": "2026-11-25T21:10:00+01:00",
-   "total": 43100,
-   "renovable": 54.9,
+   "t": "2026-11-25T21:15:00+01:00",
+   "total": 42904,
+   "renovable": 55.3,
    "mix": {
     "solar": 76,
-    "eolica": 16175,
-    "hidraulica": 7637,
-    "nuclear": 6102,
-    "gas": 9727,
+    "eolica": 16183,
+    "hidraulica": 7687,
+    "nuclear": 6107,
+    "gas": 9468,
     "carbon": 239,
     "otras": 3144
+   },
+   "tec": {
+    "nuc": 6107,
+    "eol": 16183,
+    "hid": 6959,
+    "solFot": 76,
+    "cc": 7574,
+    "cogenResto": 1894,
+    "car": 239,
+    "aut": 2388,
+    "bio": 520,
+    "turb": 728,
+    "bat": 4,
+    "vap": 232
    }
   }
  ],
  "demanda": {
-  "actual": 38671,
-  "t": "2026-11-25T21:05:00.000+01:00",
+  "actual": 38390,
+  "t": "2026-11-25T21:15:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-24T21:20:00.000+01:00",
-    "v": 37617
-   },
    {
     "t": "2026-11-24T21:40:00.000+01:00",
     "v": 36409
@@ -1661,15 +2888,11 @@
     "v": 38779
    },
    {
-    "t": "2026-11-25T21:05:00.000+01:00",
-    "v": 38671
+    "t": "2026-11-25T21:15:00.000+01:00",
+    "v": 38390
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-24T21:20:00.000+01:00",
-    "v": 37557
-   },
    {
     "t": "2026-11-24T21:40:00.000+01:00",
     "v": 36478
@@ -1955,8 +3178,8 @@
     "v": 38407
    },
    {
-    "t": "2026-11-25T21:15:00.000+01:00",
-    "v": 38129
+    "t": "2026-11-25T21:20:00.000+01:00",
+    "v": 37885
    }
   ]
  }
