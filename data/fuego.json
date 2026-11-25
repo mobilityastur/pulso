@@ -1,32 +1,33 @@
 {
- "actualizado": "2026-11-25T05:01:06.252Z",
+ "actualizado": "2026-11-25T05:15:40.126Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 2,
- "detecciones": 6,
+ "detecciones": 12,
  "mayor": {
-  "lat": 38.7406,
+  "lat": 38.7421,
   "lon": -1.4939,
-  "t": "2026-11-24T12:50:00.000Z",
+  "t": "2026-11-25T02:08:00.000Z",
   "frp": 6.9,
   "conf": "nominal",
-  "sat": "NOAA21",
-  "dn": "día",
-  "n": 1,
+  "sat": "NOAA20",
+  "dn": "noche",
+  "n": 2,
   "ts": [
+   "2026-11-25T02:08:00.000Z",
    "2026-11-24T12:50:00.000Z"
   ]
  },
  "focos": [
   {
-   "lat": 38.7406,
+   "lat": 38.7421,
    "lon": -1.4939,
-   "t": "2026-11-24T12:50:00.000Z",
+   "t": "2026-11-25T02:08:00.000Z",
    "frp": 6.9,
    "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2
   },
   {
    "lat": 37.3327,
@@ -74,6 +75,40 @@
    "dias_mes": 9
   },
   {
+   "lat": 38.6628,
+   "lon": -4.0449,
+   "t": "2026-11-25T02:49:00.000Z",
+   "frp": 1.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "dias_mes": 5
+  },
+  {
+   "lat": 38.3748,
+   "lon": -0.542,
+   "t": "2026-11-25T02:49:00.000Z",
+   "frp": 1.1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "CEMEX",
+   "tipo": "Cementera",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Alicante",
+   "dias_mes": 13
+  },
+  {
    "lat": 39.6621,
    "lon": -0.2469,
    "t": "2026-11-25T01:11:00.000Z",
@@ -91,6 +126,21 @@
    "dias_mes": 6
   },
   {
+   "lat": 41.4059,
+   "lon": 1.9996,
+   "t": "2026-11-25T02:06:00.000Z",
+   "frp": 1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "origen": "repetición",
+   "ciudad": "Barcelona",
+   "dias_mes": 13
+  },
+  {
    "lat": 40.5763,
    "lon": 0.5407,
    "t": "2026-11-25T01:11:00.000Z",
@@ -106,6 +156,23 @@
    "osm": null,
    "ciudad": "Tortosa",
    "dias_mes": 7
+  },
+  {
+   "lat": 41.3142,
+   "lon": 1.664,
+   "t": "2026-11-25T02:06:00.000Z",
+   "frp": 0.7,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Rojano Trancoso, S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 9
   }
  ]
 }
