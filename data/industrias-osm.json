@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-25T04:45:55.816Z",
+   "t": "2026-11-25T05:01:06.251Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -141,7 +141,7 @@
    "osm": null
   },
   "39.66,-0.24": {
-   "t": "2026-11-25T04:45:55.816Z",
+   "t": "2026-11-25T05:01:06.251Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ferrodisa",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-25T04:45:55.815Z",
+   "t": "2026-11-25T05:01:06.250Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-25T04:45:55.815Z",
+   "t": "2026-11-25T05:01:06.250Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -783,13 +783,13 @@
    "contexto": null
   },
   "38.74,-1.50": {
-   "t": "2026-11-25T04:45:55.814Z",
+   "t": "2026-11-25T05:01:06.248Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.24,1.18": {
-   "t": "2026-11-25T04:45:55.815Z",
+   "t": "2026-11-25T05:01:06.250Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CATOR, S.A.",

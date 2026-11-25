@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-25T04:45:50.596Z",
+ "actualizado": "2026-11-25T05:01:05.563Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 12,
+  "total": 13,
   "sentibles": 0,
   "mayor": {
    "id": "20261125_0000021",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261125_0000069",
+   "t": "2026-11-25T04:35:14.710Z",
+   "lat": 40.311,
+   "lon": 1.5482,
+   "prof": 49,
+   "mag": 1.6,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Balearic Islands, Spain",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261125_0000021",
    "t": "2026-11-25T01:31:12.280Z",
