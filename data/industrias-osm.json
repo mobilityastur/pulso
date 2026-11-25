@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-25T02:45:38.830Z",
+   "t": "2026-11-25T03:01:04.381Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -767,7 +767,7 @@
    "osm": null
   },
   "41.92,0.18": {
-   "t": "2026-11-25T02:45:38.831Z",
+   "t": "2026-11-25T03:01:04.382Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Enagas",
@@ -783,13 +783,13 @@
    "contexto": null
   },
   "38.74,-1.50": {
-   "t": "2026-11-25T02:45:38.829Z",
+   "t": "2026-11-25T03:01:04.380Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.24,1.18": {
-   "t": "2026-11-25T02:45:38.831Z",
+   "t": "2026-11-25T03:01:04.381Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CATOR, S.A.",
