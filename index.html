@@ -88,16 +88,19 @@
       <div class="precio-ahora"><b id="p-ahora">—</b><span id="p-ahora-txt"></span></div>
       <div class="cifras" id="p-cifras"></div>
       <div id="grafica-precio" class="grafica"></div>
+      <div class="lectura" id="lec-precio"></div>
       <p class="nota" id="p-nota" style="margin:8px 0 0"></p>
     </div>
     <div class="panel">
-      <h3>Mix de generación · últimas 24 h</h3>
+      <h3>Mix de generación · últimas 24 h <span class="pista">· desliza</span></h3>
       <div id="grafica-mix" class="grafica"></div>
+      <div class="lectura" id="lec-mix"></div>
       <div class="leyenda-mix" id="leyenda-mix"></div>
     </div>
     <div class="panel" id="panel-demanda" hidden>
       <h3>Demanda · real frente a prevista</h3>
       <div id="grafica-demanda" class="grafica"></div>
+      <div class="lectura" id="lec-demanda"></div>
     </div>
     <div class="panel">
       <h3>Ahora por tecnología</h3>
@@ -116,6 +119,7 @@
     <div class="panel">
       <h3>Últimos 12 meses</h3>
       <div id="grafica-agua" class="grafica"></div>
+      <div class="lectura" id="lec-agua"></div>
       <div class="leyenda-mix"><span><i style="background:var(--agua)"></i>Este año</span><span><i style="background:var(--tx3)"></i>Año anterior</span><span><i style="background:transparent;border:1.5px dashed var(--tx2)"></i>Media 10 años</span></div>
     </div>
     <div class="panel">
@@ -198,6 +202,7 @@
     <div class="panel">
       <h3>Focos por día · últimos 30 días</h3>
       <div id="grafica-fuego" class="grafica"></div>
+      <div class="lectura" id="lec-fuego"></div>
     </div>
     <p class="fuente" id="f-fuente"></p>
     <p class="nota">Un foco de calor es una detección térmica del satélite: puede ser un incendio forestal, una quema agrícola o una fuente industrial. No es un parte oficial de incendios.</p>

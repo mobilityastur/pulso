@@ -129,7 +129,9 @@ function pintarLuz(luz) {
 
   $('l-renov').textContent = `${nf.format(a.renovable)} %`;
   $('grafica-mix').innerHTML = graficaMix(luz.serie, luz.resolucion, luz.unidad);
-  $('leyenda-mix').innerHTML = ORDEN.filter(k => luz.serie.some(p => p.mix[k] > 0))
+  cursorMix(luz);
+  $('leyenda-mix').hidden = true;
+  if (false) $('leyenda-mix').innerHTML = ORDEN.filter(k => luz.serie.some(p => p.mix[k] > 0))
     .map(k => `<span><i style="background:${FAM[k].c}"></i>${FAM[k].n}</span>`).join('');
 
   const tot = luz.tecnologias.reduce((s, t) => s + t.valor, 0) || 1;
@@ -145,6 +147,7 @@ function pintarLuz(luz) {
       { pts: luz.demanda.prevista, c: 'var(--tx3)', dash: '3 3' },
       { pts: luz.demanda.real, c: 'var(--luz)' },
     ], 'MW');
+    cursorDemanda(luz.demanda);
   }
   $('l-fuente').textContent = `Fuente: ${luz.fuente}. Datos provisionales.${diario ? ' Energía por día: el tiempo real no estaba disponible.' : ''}`;
 }
@@ -181,6 +184,7 @@ function pintarFuego(f) {
 
   const dias = Object.entries(estado.hist?.dias ?? {}).slice(-30);
   $('grafica-fuego').innerHTML = dias.length > 1 ? graficaBarras(dias) : '<p class="vacio">El histórico se irá llenando con los días.</p>';
+  if (dias.length > 1) cursorFuego(dias); else $('lec-fuego').innerHTML = '';
 }
 
 function pintarConexiones() {
@@ -266,6 +270,7 @@ function pintarAgua(a) {
     [fmtPct(T.pct_media_10), 'media 10 años'],
   ].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
   $('grafica-agua').innerHTML = graficaAgua(a.serie);
+  cursorAgua(a.serie);
 
   $('cuencas').innerHTML = a.ambitos.map(x => {
     const d = x.pct_media_10 != null ? Math.round(10 * (x.pct - x.pct_media_10)) / 10 : null;
@@ -334,6 +339,7 @@ function graficaAgua(serie) {
   const meses = new Intl.DateTimeFormat('es-ES', { month: 'short' });
   serie.forEach((p, i) => { if (i % 9 === 0) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle">${meses.format(new Date(p.f + 'T12:00:00'))}</text>`; });
   const u = serie.at(-1);
+  GEO.agua = { x, y };
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Reserva de agua">${g}${linea('media10', 'var(--tx2)', 'stroke-dasharray="5 4"')}${linea('anterior', 'var(--tx3)')}${linea('pct', 'var(--agua)')}<circle cx="${x(n - 1)}" cy="${y(u.pct)}" r="4.5" fill="var(--agua)"/></svg>`;
 }
 
@@ -537,6 +543,7 @@ function pintarPrecio() {
   $('p-cifras').innerHTML = [[fmtKwh(d.min.v).replace(' €/kWh', ''), `más barata · ${horaDe(d.min.t)}`], [fmtKwh(d.media).replace(' €/kWh', ''), 'media del día'], [fmtKwh(d.max.v).replace(' €/kWh', ''), `más cara · ${horaDe(d.max.t)}`]]
     .map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
   $('grafica-precio').innerHTML = graficaPrecio(d.horas, diaPrecio === 'hoy' ? a?.t : null);
+  cursorPrecio(d.horas, diaPrecio === 'hoy' && a ? d.horas.findIndex(h => h.t === a.t) : -1);
   const spot = p.ahora?.spot;
   $('p-nota').textContent = `Término de energía de la tarifa regulada (PVPC 2.0TD) en €/kWh, sin IVA ni impuesto eléctrico y sin el término de potencia. Con tarifa de mercado libre tu precio es otro.${spot ? ` Mercado mayorista ahora: ${nf1.format(spot.v)} €/MWh.` : ''}${p.manana ? '' : ' El precio de mañana se publica hacia las 20:30.'}`;
 }
@@ -550,9 +557,88 @@ function graficaPrecio(horas, tAhora) {
     return `<rect x="${PL + i * bw + 1.5}" y="${y(h.v)}" width="${Math.max(bw - 3, 1)}" height="${y(0) - y(h.v)}" rx="2.5" fill="${COL_PRECIO[nivelPrecio(h.v, horas)]}" opacity="${!tAhora || ahora ? 1 : .55}"${ahora ? ' stroke="var(--tx)" stroke-width="1.5"' : ''}><title>${horaDe(h.t)}: ${fmtKwh(h.v)}</title></rect>`;
   }).join('');
   const et = horas.map((h, i) => i % 6 === 0 ? `<text x="${PL + (i + .5) * bw}" y="${H - 6}" text-anchor="middle">${horaDe(h.t)}</text>` : '').join('');
+  GEO.precio = { x: i => PL + (i + .5) * bw, y, bw };
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Precio por horas">${g}${barras}${et}</svg>`;
 }
 document.querySelectorAll('#seg-precio button').forEach(b => b.onclick = () => { diaPrecio = b.dataset.d; pintarPrecio(); });
+
+
+// ---------- Cursor táctil común a las gráficas ----------
+// Arrastrar en horizontal mueve el cursor; en vertical, la página sigue desplazándose (touch-action: pan-y).
+const GEO = {};
+function cursor(idGrafica, idLectura, { n, xDe, marcas, lectura, inicial }) {
+  const svg = $(idGrafica)?.querySelector('svg'), out = $(idLectura);
+  if (!svg || !out || !n) { if (out) out.innerHTML = ''; return; }
+  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  g.setAttribute('class', 'cursor'); svg.appendChild(g);
+  let activo = false;
+  const pintar = i => { g.innerHTML = marcas(i); out.innerHTML = lectura(i); out.classList.toggle('activa', activo); };
+  const indice = e => {
+    const r = svg.getBoundingClientRect(), vx = (e.clientX - r.left) * W / r.width;
+    let mejor = 0;
+    for (let i = 1; i < n; i++) if (Math.abs(xDe(i) - vx) < Math.abs(xDe(mejor) - vx)) mejor = i;
+    return mejor;
+  };
+  svg.onpointerdown = e => { activo = true; pintar(indice(e)); };
+  svg.onpointermove = e => { if (activo || e.pointerType === 'mouse') { if (e.pointerType === 'mouse') activo = true; pintar(indice(e)); } };
+  svg.onpointerup = svg.onpointercancel = svg.onpointerleave = () => { activo = false; pintar(inicial); };
+  pintar(inicial);
+}
+const lineaV = (x, extra = '') => `<line x1="${x}" x2="${x}" y1="${PT}" y2="${H - PB}" stroke="var(--tx)" stroke-width="1.2" opacity=".55"/>${extra}`;
+const punto = (x, y, c) => `<circle cx="${x}" cy="${y}" r="4.5" fill="${c}" stroke="var(--s1)" stroke-width="1.5"/>`;
+const fila = (color, nombre, valor, extra = '') => `<div class="lf"><i style="background:${color}"></i><span>${nombre}</span><b>${valor}</b>${extra ? `<em>${extra}</em>` : ''}</div>`;
+
+function cursorMix(luz) {
+  const s = luz.serie, G = GEO.mix, u = luz.unidad ?? 'MW', nom = luz.nombres_tec ?? {};
+  cursor('grafica-mix', 'lec-mix', {
+    n: s.length, xDe: G.x, inicial: s.length - 1,
+    marcas: i => { let acc = 0; return lineaV(G.x(i), G.tops.map(k => { acc += s[i].mix[k] || 0; return (s[i].mix[k] || 0) > 0 ? punto(G.x(i), G.y(acc), FAM[k].c) : ''; }).join('')); },
+    lectura: i => {
+      const p = s[i], tot = p.total || 1;
+      const filas = p.tec && Object.keys(p.tec).length
+        ? Object.entries(p.tec).sort((a, b) => b[1] - a[1]).map(([k, v]) => fila(FAM[nom[k]?.f]?.c ?? '#999', `${nom[k]?.n ?? k}${nom[k]?.r ? ' <small class="ren">●</small>' : ''}`, `${nf.format(v)} ${u}`, `${nf1.format(100 * v / tot)} %`))
+        : ORDEN.filter(k => p.mix[k] > 0).sort((a, b) => p.mix[b] - p.mix[a]).map(k => fila(FAM[k].c, FAM[k].n, `${nf.format(p.mix[k])} ${u}`, `${nf1.format(100 * p.mix[k] / tot)} %`));
+      return `<div class="lc"><b>${luz.resolucion === 'day' ? diaFmt.format(new Date(p.t)) : hora(p.t)}</b> · ${nf.format(p.total)} ${u} · ${nf.format(p.renovable)} % renovable${i === s.length - 1 ? ' <span class="etq">ahora</span>' : ''}</div><div class="lg">${filas.join('')}</div>`;
+    },
+  });
+}
+function cursorDemanda(dem) {
+  const G = GEO.lineas, ref = G.ref, prev = new Map((dem.prevista ?? []).map(p => [p.t, p.v]));
+  cursor('grafica-demanda', 'lec-demanda', {
+    n: ref.length, xDe: i => G.x(ref[i].t), inicial: ref.length - 1,
+    marcas: i => lineaV(G.x(ref[i].t), (prev.has(ref[i].t) ? punto(G.x(ref[i].t), G.y(prev.get(ref[i].t)), 'var(--tx3)') : '') + punto(G.x(ref[i].t), G.y(ref[i].v), 'var(--luz)')),
+    lectura: i => {
+      const r = ref[i].v, pv = prev.get(ref[i].t);
+      return `<div class="lc"><b>${hora(ref[i].t)}</b>${i === ref.length - 1 ? ' <span class="etq">ahora</span>' : ''}</div><div class="lg">${fila('var(--luz)', 'Real', `${nf.format(r)} MW`)}${pv != null ? fila('var(--tx3)', 'Prevista', `${nf.format(pv)} MW`, `${r >= pv ? '+' : '−'}${nf.format(Math.abs(r - pv))}`) : ''}</div>`;
+    },
+  });
+}
+function cursorPrecio(horas, iAhora) {
+  const G = GEO.precio;
+  cursor('grafica-precio', 'lec-precio', {
+    n: horas.length, xDe: G.x, inicial: iAhora >= 0 ? iAhora : horas.indexOf(horas.reduce((m, h) => h.v < m.v ? h : m)),
+    marcas: i => `<rect x="${G.x(i) - G.bw / 2 + .5}" y="${PT}" width="${G.bw - 1}" height="${H - PT - PB}" rx="3" fill="var(--tx)" opacity=".08"/>` + punto(G.x(i), G.y(horas[i].v), COL_PRECIO[nivelPrecio(horas[i].v, horas)]),
+    lectura: i => { const h = horas[i], niv = nivelPrecio(h.v, horas);
+      return `<div class="lc"><b>${horaDe(h.t)}</b> a ${String((new Date(h.t).getHours() + 1) % 24).padStart(2, '0')} h · <b style="color:${COL_PRECIO[niv]}">${fmtKwh(h.v)}</b> · hora ${['barata', 'media', 'cara'][niv]}${i === iAhora ? ' <span class="etq">ahora</span>' : ''}</div>`; },
+  });
+}
+function cursorAgua(serie) {
+  const G = GEO.agua;
+  cursor('grafica-agua', 'lec-agua', {
+    n: serie.length, xDe: G.x, inicial: serie.length - 1,
+    marcas: i => { const p = serie[i]; return lineaV(G.x(i), (p.media10 != null ? punto(G.x(i), G.y(p.media10), 'var(--tx2)') : '') + (p.anterior != null ? punto(G.x(i), G.y(p.anterior), 'var(--tx3)') : '') + punto(G.x(i), G.y(p.pct), 'var(--agua)')); },
+    lectura: i => { const p = serie[i];
+      return `<div class="lc"><b>Semana del ${fechaLarga(p.f)}</b>${i === serie.length - 1 ? ' <span class="etq">última</span>' : ''}</div><div class="lg">${fila('var(--agua)', 'Este año', fmtPct(p.pct))}${p.anterior != null ? fila('var(--tx3)', 'Año anterior', fmtPct(p.anterior), fmtPts(Math.round(10 * (p.pct - p.anterior)) / 10)) : ''}${p.media10 != null ? fila('var(--tx2)', 'Media 10 años', fmtPct(p.media10), fmtPts(Math.round(10 * (p.pct - p.media10)) / 10)) : ''}</div>`; },
+  });
+}
+function cursorFuego(dias) {
+  const G = GEO.barras;
+  cursor('grafica-fuego', 'lec-fuego', {
+    n: dias.length, xDe: G.x, inicial: dias.length - 1,
+    marcas: i => `<rect x="${G.x(i) - G.bw / 2}" y="${PT}" width="${G.bw}" height="${H - PT - PB}" rx="3" fill="var(--tx)" opacity=".08"/>` + punto(G.x(i), G.y(dias[i][1]), 'var(--fuego)'),
+    lectura: i => `<div class="lc"><b>${fechaLarga(dias[i][0])}</b> · ${dias[i][1]} foco${dias[i][1] === 1 ? '' : 's'}${i === dias.length - 1 ? ' <span class="etq">hoy</span>' : ''}</div>`,
+  });
+}
 
 // ---------- gráficas SVG ----------
 const W = 640, H = 220, PL = 52, PR = 8, PT = 8, PB = 28;
@@ -587,6 +673,7 @@ function graficaMix(serie, res, unidad = 'MW') {
     capas += `<path d="${d}" fill="${FAM[k].c}" opacity=".9"/>`;
     top.forEach((v, i) => base[i] = v);
   }
+  GEO.mix = { x, y, tops: ORDEN.filter(k => serie.some(p => p.mix[k] > 0)).map(k => k) };
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mix de generación">${ejes(n, maxY, etiquetasX(serie, res === 'day'), ' ' + unidad)}${capas}</svg>`;
 }
 function graficaLineas(series, unidad) {
@@ -598,6 +685,7 @@ function graficaLineas(series, unidad) {
   const x = t => PL + (W - PL - PR) * (Date.parse(t) - t0) / Math.max(t1 - t0, 1);
   const y = v => PT + (H - PT - PB) * (1 - v / maxY);
   const lineas = series.map(s => s.pts.length ? `<path d="M${s.pts.map(p => `${x(p.t)},${y(p.v)}`).join('L')}" fill="none" stroke="${s.c}" stroke-width="2" ${s.dash ? `stroke-dasharray="${s.dash}"` : ''}/>` : '').join('');
+  GEO.lineas = { x, y, ref, series };
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Demanda">${ejes(ref.length, maxY, etiquetasX(ref), ' ' + unidad)}${lineas}</svg>`;
 }
 function graficaBarras(dias) {
@@ -607,6 +695,7 @@ function graficaBarras(dias) {
   const barras = dias.map(([d, v], i) => `<rect x="${PL + i * bw + 1}" y="${y(v)}" width="${Math.max(bw - 2, 1)}" height="${y(0) - y(v)}" rx="2" fill="var(--fuego)" opacity="${i === n - 1 ? 1 : .55}"><title>${d}: ${v}</title></rect>`).join('');
   const et = dias.map((d, i) => [i, d[0]]).filter((_, i) => i % Math.max(1, Math.round(n / 5)) === 0)
     .map(([i, d]) => `<text x="${PL + (i + .5) * bw}" y="${H - 6}" text-anchor="middle">${diaFmt.format(new Date(d + 'T12:00:00'))}</text>`).join('');
+  GEO.barras = { x: i => PL + (i + .5) * bw, y, bw };
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Focos por día">${ejes(2, maxY, [])}${et}${barras}</svg>`;
 }
 

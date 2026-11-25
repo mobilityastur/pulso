@@ -152,8 +152,10 @@ async function luzTiempoReal() {
   const tecnologias = Object.entries(ultimo._tec)
     .map(([k, v]) => ({ titulo: TR[k][0], renovable: TR[k][2], familia: TR[k][1], valor: Math.round(v) }))
     .sort((a, b) => b.valor - a.valor);
-  const clean = ({ _tec, _dem, ...p }) => p;
-  return { resolucion: 'realtime', unidad: 'MW', ambito: 'Península', ultimo: clean(ultimo), serie: serie.map(clean), tecnologias,
+  const clean = ({ _tec, _dem, ...p }) => ({ ...p, tec: Object.fromEntries(Object.entries(_tec).map(([k, v]) => [k, Math.round(v)])) });
+  const usadas = new Set(serie.flatMap(p => Object.keys(p._tec)));
+  const nombres_tec = Object.fromEntries([...usadas].map(k => [k, { n: TR[k][0], f: TR[k][1], r: TR[k][2] }]));
+  return { resolucion: 'realtime', unidad: 'MW', ambito: 'Península', ultimo: clean(ultimo), serie: serie.map(clean), tecnologias, nombres_tec,
     fuente: 'Red Eléctrica · tiempo real (península)' };
 }
 
@@ -173,13 +175,16 @@ async function luzDiaria() {
       fam[familiaDe(s.titulo)] += v; total += v;
       if (esRenovable(s)) renov += v;
     }
-    return { t, total: Math.round(total), renovable: total ? Math.round(1000 * renov / total) / 10 : null, mix: Object.fromEntries(Object.entries(fam).map(([k, v]) => [k, Math.round(v)])) };
+    const tec = {};
+    gen.forEach((s, i) => { const v = s.valores.find(x => x.t === t)?.v ?? 0; if (v > 0) tec['t' + i] = Math.round(v); });
+    return { t, total: Math.round(total), renovable: total ? Math.round(1000 * renov / total) / 10 : null, mix: Object.fromEntries(Object.entries(fam).map(([k, v]) => [k, Math.round(v)])), tec };
   }).filter(p => p.total > 0);
   const ultimo = serie.at(-1);
   const tecnologias = gen
     .map(s => ({ titulo: s.titulo, renovable: esRenovable(s), familia: familiaDe(s.titulo), valor: Math.round(s.valores.find(v => v.t === ultimo.t)?.v ?? 0) }))
     .filter(x => x.valor > 0).sort((a, b) => b.valor - a.valor);
-  return { resolucion: 'day', unidad: 'MWh', ambito: 'España', ultimo, serie, tecnologias, fuente: 'Red Eléctrica · REData (diario)' };
+  const nombres_tec = Object.fromEntries(gen.map((s, i) => ['t' + i, { n: s.titulo, f: familiaDe(s.titulo), r: esRenovable(s) }]));
+  return { resolucion: 'day', unidad: 'MWh', ambito: 'España', ultimo, serie, tecnologias, nombres_tec, fuente: 'Red Eléctrica · REData (diario)' };
 }
 
 async function luz() {
@@ -203,7 +208,7 @@ async function luz() {
     actualizado: new Date().toISOString(),
     fuente: g.fuente, resolucion: g.resolucion, unidad: g.unidad, ambito: g.ambito,
     ahora: { t: u.t, total: u.total, renovable: u.renovable, mix: u.mix },
-    tecnologias: g.tecnologias, serie: g.serie, demanda,
+    tecnologias: g.tecnologias, nombres_tec: g.nombres_tec, serie: g.serie, demanda,
   };
   writeJSON('luz.json', out);
   console.log(`[luz] ok · ${g.serie.length} puntos (${g.resolucion}) · ${u.renovable}% renovable`);
