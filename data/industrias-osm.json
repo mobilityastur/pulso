@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-25T12:16:28.624Z",
+   "t": "2026-11-25T12:31:25.079Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-25T12:16:28.625Z",
+   "t": "2026-11-25T12:31:25.080Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-25T12:16:28.624Z",
+   "t": "2026-11-25T12:31:25.080Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-25T12:16:28.624Z",
+   "t": "2026-11-25T12:31:25.080Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -141,7 +141,7 @@
    "osm": null
   },
   "39.66,-0.24": {
-   "t": "2026-11-25T12:16:28.624Z",
+   "t": "2026-11-25T12:31:25.080Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ferrodisa",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-25T12:16:28.623Z",
+   "t": "2026-11-25T12:31:25.079Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -511,7 +511,7 @@
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-25T12:16:28.623Z",
+   "t": "2026-11-25T12:31:25.079Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-25T12:16:28.622Z",
+   "t": "2026-11-25T12:31:25.078Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -783,13 +783,13 @@
    "contexto": null
   },
   "38.74,-1.50": {
-   "t": "2026-11-25T12:16:28.621Z",
+   "t": "2026-11-25T12:31:25.078Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.24,1.18": {
-   "t": "2026-11-25T12:16:28.623Z",
+   "t": "2026-11-25T12:31:25.079Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CATOR, S.A.",
