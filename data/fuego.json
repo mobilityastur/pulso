@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-25T02:15:40.660Z",
+ "actualizado": "2026-11-25T02:31:03.530Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 3,
- "detecciones": 8,
+ "total": 2,
+ "detecciones": 5,
  "mayor": {
   "lat": 38.7406,
   "lon": -1.4939,
@@ -38,16 +38,6 @@
    "dn": "día",
    "n": 1,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
-  },
-  {
-   "lat": 38.1176,
-   "lon": -4.0276,
-   "t": "2026-11-24T02:25:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
   }
  ],
  "industriales": [
@@ -84,40 +74,6 @@
    "osm": null,
    "ciudad": "Lleida",
    "dias_mes": 2
-  },
-  {
-   "lat": 41.3131,
-   "lon": 1.6618,
-   "t": "2026-11-24T02:25:00.000Z",
-   "frp": 1.2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Rojano Trancoso, S.L.",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tarragona",
-   "dias_mes": 9
-  },
-  {
-   "lat": 37.3598,
-   "lon": -5.8661,
-   "t": "2026-11-24T02:25:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 12
   }
  ]
 }
