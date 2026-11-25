@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-25T01:15:40.374Z",
+ "actualizado": "2026-11-25T01:30:51.533Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 3,
- "detecciones": 11,
+ "detecciones": 8,
  "mayor": {
   "lat": 38.7406,
   "lon": -1.4939,
@@ -89,11 +89,11 @@
    "lat": 41.3131,
    "lon": 1.6618,
    "t": "2026-11-24T02:25:00.000Z",
-   "frp": 1.4,
+   "frp": 1.2,
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "Rojano Trancoso, S.L.",
    "tipo": "Fábrica",
    "zona": null,
@@ -101,23 +101,6 @@
    "osm": null,
    "ciudad": "Tarragona",
    "dias_mes": 9
-  },
-  {
-   "lat": 41.4535,
-   "lon": 1.9813,
-   "t": "2026-11-24T01:28:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "mantefluid S.L.",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Barcelona",
-   "dias_mes": 11
   },
   {
    "lat": 37.3598,
@@ -135,23 +118,6 @@
    "osm": null,
    "ciudad": "Sevilla",
    "dias_mes": 12
-  },
-  {
-   "lat": 39.662,
-   "lon": -0.2463,
-   "t": "2026-11-24T01:28:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Ferrodisa",
-   "tipo": "Siderurgia / metalurgia",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Valencia",
-   "dias_mes": 6
   }
  ]
 }
