@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T22:45:49.594Z",
+ "actualizado": "2026-11-25T23:01:11.035Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 5,
@@ -86,7 +86,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 9
+   "dias_mes": 10
   },
   {
    "lat": 38.6628,
@@ -103,7 +103,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "dias_mes": 5
+   "dias_mes": 6
   },
   {
    "lat": 38.3748,
@@ -120,7 +120,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 13
+   "dias_mes": 14
   },
   {
    "lat": 39.6621,
@@ -137,7 +137,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Valencia",
-   "dias_mes": 6
+   "dias_mes": 7
   },
   {
    "lat": 41.4059,
@@ -152,7 +152,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 13
+   "dias_mes": 14
   },
   {
    "lat": 40.5763,
@@ -169,7 +169,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "dias_mes": 7
+   "dias_mes": 8
   },
   {
    "lat": 41.3142,
@@ -186,7 +186,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 9
+   "dias_mes": 10
   }
  ]
 }
