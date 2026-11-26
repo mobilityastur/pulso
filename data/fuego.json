@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T06:15:40.046Z",
+ "actualizado": "2026-11-26T06:30:53.555Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 6,
- "detecciones": 23,
+ "detecciones": 27,
  "mayor": {
   "lat": 41.6601,
   "lon": -3.9201,
@@ -85,14 +85,14 @@
  ],
  "industriales": [
   {
-   "lat": 43.5197,
-   "lon": -5.7361,
-   "t": "2026-11-26T02:30:00.000Z",
+   "lat": 43.5214,
+   "lon": -5.7356,
+   "t": "2026-11-26T03:27:00.000Z",
    "frp": 6.5,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "noche",
-   "n": 5,
+   "n": 9,
    "nombre": "ArcelorMittal Gijón (Veriña)",
    "tipo": "Siderurgia",
    "origen": "conocida",

@@ -1,25 +1,51 @@
 {
- "actualizado": "2026-11-26T06:15:39.492Z",
+ "actualizado": "2026-11-26T06:30:53.298Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 8,
+  "total": 10,
   "sentibles": 0,
   "mayor": {
-   "id": "20261125_0000355",
-   "t": "2026-11-25T20:44:44.350Z",
-   "lat": 43.1804,
-   "lon": -6.6618,
-   "prof": 15,
-   "mag": 2.2,
+   "id": "20261126_0000125",
+   "t": "2026-11-26T06:20:13.429Z",
+   "lat": 42.3845,
+   "lon": 2.3108,
+   "prof": 5,
+   "mag": 2.3,
    "tipo_mag": "ml",
    "lugar": null,
-   "region": "Spain",
-   "autor": "IGN",
+   "region": "Pyrenees",
+   "autor": "ReNaSS",
    "ign": null
   }
  },
  "eventos": [
+  {
+   "id": "20261126_0000125",
+   "t": "2026-11-26T06:20:13.429Z",
+   "lat": 42.3845,
+   "lon": 2.3108,
+   "prof": 5,
+   "mag": 2.3,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Pyrenees",
+   "autor": "ReNaSS",
+   "ign": null
+  },
+  {
+   "id": "20261126_0000127",
+   "t": "2026-11-26T05:21:32.840Z",
+   "lat": 42.8397,
+   "lon": -0.2509,
+   "prof": 0,
+   "mag": 2,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Pyrenees",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261126_0000092",
    "t": "2026-11-26T04:11:10.220Z",
