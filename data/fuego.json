@@ -1,33 +1,24 @@
 {
- "actualizado": "2026-11-26T13:15:47.388Z",
+ "actualizado": "2026-11-26T13:31:01.751Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 24,
+ "total": 2,
+ "detecciones": 22,
  "mayor": {
-  "lat": 41.9648,
-  "lon": -5.6538,
-  "t": "2026-11-25T13:29:00.000Z",
-  "frp": 3.1,
+  "lat": 38.1103,
+  "lon": -4.0322,
+  "t": "2026-11-26T02:32:00.000Z",
+  "frp": 2.4,
   "conf": "nominal",
-  "sat": "NOAA20",
-  "dn": "día",
-  "n": 1,
+  "sat": "NOAA21",
+  "dn": "noche",
+  "n": 3,
   "ts": [
-   "2026-11-25T13:29:00.000Z"
+   "2026-11-26T02:32:00.000Z",
+   "2026-11-26T01:49:00.000Z"
   ]
  },
  "focos": [
-  {
-   "lat": 41.9648,
-   "lon": -5.6538,
-   "t": "2026-11-25T13:29:00.000Z",
-   "frp": 3.1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1
-  },
   {
    "lat": 38.1103,
    "lon": -4.0322,
@@ -37,17 +28,6 @@
    "sat": "NOAA21",
    "dn": "noche",
    "n": 3
-  },
-  {
-   "lat": 37.3315,
-   "lon": -3.1639,
-   "t": "2026-11-25T13:29:00.000Z",
-   "frp": 2.2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "día",
-   "n": 1,
-   "contexto": "Polígono Industrial La Estación (a 0,8 km)"
   },
   {
    "lat": 38.6545,
