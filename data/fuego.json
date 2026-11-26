@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T05:01:01.286Z",
+ "actualizado": "2026-11-26T05:15:40.372Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 5,
- "detecciones": 13,
+ "total": 6,
+ "detecciones": 23,
  "mayor": {
   "lat": 41.6601,
   "lon": -3.9201,
@@ -51,6 +51,16 @@
    "n": 1
   },
   {
+   "lat": 38.1103,
+   "lon": -4.0322,
+   "t": "2026-11-26T02:32:00.000Z",
+   "frp": 2.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 3
+  },
+  {
    "lat": 37.3315,
    "lon": -3.1639,
    "t": "2026-11-25T13:29:00.000Z",
@@ -62,17 +72,50 @@
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
   },
   {
-   "lat": 38.1111,
-   "lon": -4.0317,
-   "t": "2026-11-26T01:49:00.000Z",
-   "frp": 1.1,
+   "lat": 38.6545,
+   "lon": -6.965,
+   "t": "2026-11-26T02:32:00.000Z",
+   "frp": 0.5,
    "conf": "nominal",
-   "sat": "NOAA20",
+   "sat": "NOAA21",
    "dn": "noche",
-   "n": 2
+   "n": 1,
+   "contexto": "Polígono Industrial \"Cuatro Caminos\" (a 3,0 km)"
   }
  ],
  "industriales": [
+  {
+   "lat": 43.5197,
+   "lon": -5.7361,
+   "t": "2026-11-26T02:30:00.000Z",
+   "frp": 6.5,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 5,
+   "nombre": "ArcelorMittal Gijón (Veriña)",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Gijón",
+   "dias_mes": 10
+  },
+  {
+   "lat": 38.666,
+   "lon": -4.0528,
+   "t": "2026-11-26T02:32:00.000Z",
+   "frp": 2.1,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 3,
+   "nombre": "Refineria Exolum de Puertollano",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "dias_mes": 3
+  },
   {
    "lat": 41.4546,
    "lon": 1.9765,
@@ -91,21 +134,21 @@
    "dias_mes": 12
   },
   {
-   "lat": 38.6686,
-   "lon": -4.0507,
-   "t": "2026-11-26T01:47:00.000Z",
-   "frp": 1.1,
+   "lat": 37.3598,
+   "lon": -5.8668,
+   "t": "2026-11-26T02:32:00.000Z",
+   "frp": 1,
    "conf": "nominal",
-   "sat": "NOAA20",
+   "sat": "NOAA21",
    "dn": "noche",
-   "n": 2,
-   "nombre": "Refineria Exolum de Puertollano",
-   "tipo": "Refinería / petroquímica",
+   "n": 1,
+   "nombre": "Cementos Portland Valderrivas",
+   "tipo": "Cementera",
    "zona": null,
    "origen": "OpenStreetMap",
    "osm": null,
-   "ciudad": "Ciudad Real",
-   "dias_mes": 3
+   "ciudad": "Sevilla",
+   "dias_mes": 13
   },
   {
    "lat": 41.313,
@@ -123,6 +166,21 @@
    "osm": null,
    "ciudad": "Tarragona",
    "dias_mes": 10
+  },
+  {
+   "lat": 43.5399,
+   "lon": -5.8288,
+   "t": "2026-11-26T02:30:00.000Z",
+   "frp": 0.9,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "ArcelorMittal Avilés",
+   "tipo": "Siderurgia",
+   "origen": "conocida",
+   "ciudad": "Avilés",
+   "dias_mes": 4
   },
   {
    "lat": 38.3779,
