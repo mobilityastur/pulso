@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-26T06:45:38.318Z",
+   "t": "2026-11-26T07:01:15.473Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -101,7 +101,7 @@
    "osm": null
   },
   "41.46,1.98": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "mantefluid S.L.",
@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-26T06:45:38.318Z",
+   "t": "2026-11-26T07:01:15.473Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-26T06:45:38.316Z",
+   "t": "2026-11-26T07:01:15.471Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -375,7 +375,7 @@
    "contexto": null
   },
   "43.54,-5.82": {
-   "t": "2026-11-26T06:45:38.318Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -533,7 +533,7 @@
    "contexto": "Polígon Industrial Camins Nous (a 2,0 km)"
   },
   "38.66,-4.06": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Refineria Exolum de Puertollano",
@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.471Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -799,31 +799,31 @@
    "osm": null
   },
   "41.66,-3.92": {
-   "t": "2026-11-26T06:45:38.315Z",
+   "t": "2026-11-26T07:01:15.470Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Bodegas Lopez Cristobal (a 2,2 km)"
   },
   "37.24,-5.42": {
-   "t": "2026-11-26T06:45:38.316Z",
+   "t": "2026-11-26T07:01:15.471Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.96,-5.66": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.471Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.12,-4.04": {
-   "t": "2026-11-26T06:45:38.317Z",
+   "t": "2026-11-26T07:01:15.471Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.66,-6.96": {
-   "t": "2026-11-26T06:45:38.318Z",
+   "t": "2026-11-26T07:01:15.472Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial \"Cuatro Caminos\" (a 3,0 km)"
