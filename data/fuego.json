@@ -1,32 +1,44 @@
 {
- "actualizado": "2026-11-26T15:45:42.447Z",
+ "actualizado": "2026-11-26T16:01:09.899Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 26,
+ "total": 12,
+ "detecciones": 34,
  "mayor": {
-  "lat": 41.2059,
-  "lon": -1.6681,
-  "t": "2026-11-26T12:14:00.000Z",
+  "lat": 41.2041,
+  "lon": -1.6703,
+  "t": "2026-11-26T13:10:00.000Z",
   "frp": 7.4,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 1,
+  "n": 2,
   "ts": [
+   "2026-11-26T13:10:00.000Z",
    "2026-11-26T12:14:00.000Z"
   ]
  },
  "focos": [
   {
-   "lat": 41.2059,
-   "lon": -1.6681,
-   "t": "2026-11-26T12:14:00.000Z",
+   "lat": 41.2041,
+   "lon": -1.6703,
+   "t": "2026-11-26T13:10:00.000Z",
    "frp": 7.4,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "día",
-   "n": 1
+   "n": 2
+  },
+  {
+   "lat": 37.2831,
+   "lon": -3.75,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 4.7,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 2,
+   "contexto": "Planta Fotovoltaica Atarfe I (a 0,6 km)"
   },
   {
    "lat": 37.3334,
@@ -50,6 +62,16 @@
    "n": 1
   },
   {
+   "lat": 37.2808,
+   "lon": -3.7834,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 3.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
    "lat": 38.1103,
    "lon": -4.0322,
    "t": "2026-11-26T02:32:00.000Z",
@@ -58,6 +80,16 @@
    "sat": "NOAA21",
    "dn": "noche",
    "n": 3
+  },
+  {
+   "lat": 38.7064,
+   "lon": -3.7256,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 2.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
   },
   {
    "lat": 38.1006,
@@ -69,6 +101,37 @@
    "dn": "día",
    "n": 1,
    "contexto": "Johnson Controls (a 1,8 km)"
+  },
+  {
+   "lat": 37.1181,
+   "lon": -3.6637,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 2.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Polígono Industrial Virgen de las Nieves (a 1,5 km)"
+  },
+  {
+   "lat": 37.4604,
+   "lon": -2.6332,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 1.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 39.0735,
+   "lon": -6.9012,
+   "t": "2026-11-26T13:10:00.000Z",
+   "frp": 1.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1
   },
   {
    "lat": 38.6545,
