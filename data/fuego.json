@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T04:45:40.997Z",
+ "actualizado": "2026-11-26T05:01:01.286Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 4,
- "detecciones": 5,
+ "total": 5,
+ "detecciones": 13,
  "mayor": {
   "lat": 41.6601,
   "lon": -3.9201,
@@ -60,7 +60,103 @@
    "dn": "día",
    "n": 1,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
+  },
+  {
+   "lat": 38.1111,
+   "lon": -4.0317,
+   "t": "2026-11-26T01:49:00.000Z",
+   "frp": 1.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2
   }
  ],
- "industriales": []
+ "industriales": [
+  {
+   "lat": 41.4546,
+   "lon": 1.9765,
+   "t": "2026-11-26T01:47:00.000Z",
+   "frp": 1.2,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "mantefluid S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Barcelona",
+   "dias_mes": 12
+  },
+  {
+   "lat": 38.6686,
+   "lon": -4.0507,
+   "t": "2026-11-26T01:47:00.000Z",
+   "frp": 1.1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 2,
+   "nombre": "Refineria Exolum de Puertollano",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Ciudad Real",
+   "dias_mes": 3
+  },
+  {
+   "lat": 41.313,
+   "lon": 1.6631,
+   "t": "2026-11-26T01:47:00.000Z",
+   "frp": 1,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Rojano Trancoso, S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 10
+  },
+  {
+   "lat": 38.3779,
+   "lon": -0.5464,
+   "t": "2026-11-26T01:47:00.000Z",
+   "frp": 0.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "CEMEX",
+   "tipo": "Cementera",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Alicante",
+   "dias_mes": 14
+  },
+  {
+   "lat": 40.5782,
+   "lon": 0.5424,
+   "t": "2026-11-26T01:47:00.000Z",
+   "frp": 0.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Pedrera Fàbrica de Ciment Cemex",
+   "tipo": "Cementera",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tortosa",
+   "dias_mes": 8
+  }
+ ]
 }
