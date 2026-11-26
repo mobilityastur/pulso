@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-26T02:30:51.071Z",
+   "t": "2026-11-26T02:45:39.971Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -511,7 +511,7 @@
    "contexto": null
   },
   "38.66,-4.04": {
-   "t": "2026-11-26T02:30:51.071Z",
+   "t": "2026-11-26T02:45:39.970Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-26T02:30:51.071Z",
+   "t": "2026-11-26T02:45:39.970Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -799,19 +799,19 @@
    "osm": null
   },
   "41.66,-3.92": {
-   "t": "2026-11-26T02:30:51.070Z",
+   "t": "2026-11-26T02:45:39.969Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Bodegas Lopez Cristobal (a 2,2 km)"
   },
   "37.24,-5.42": {
-   "t": "2026-11-26T02:30:51.071Z",
+   "t": "2026-11-26T02:45:39.970Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.96,-5.66": {
-   "t": "2026-11-26T02:30:51.071Z",
+   "t": "2026-11-26T02:45:39.970Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
