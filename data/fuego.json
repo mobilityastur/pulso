@@ -1,45 +1,23 @@
 {
- "actualizado": "2026-11-26T12:15:39.755Z",
+ "actualizado": "2026-11-26T12:31:07.415Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 27,
+ "total": 4,
+ "detecciones": 24,
  "mayor": {
-  "lat": 41.6601,
-  "lon": -3.9201,
-  "t": "2026-11-25T12:31:00.000Z",
-  "frp": 10.3,
+  "lat": 41.9648,
+  "lon": -5.6538,
+  "t": "2026-11-25T13:29:00.000Z",
+  "frp": 3.1,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 2,
+  "n": 1,
   "ts": [
-   "2026-11-25T12:31:00.000Z"
-  ],
-  "contexto": "Bodegas Lopez Cristobal (a 2,2 km)"
+   "2026-11-25T13:29:00.000Z"
+  ]
  },
  "focos": [
-  {
-   "lat": 41.6601,
-   "lon": -3.9201,
-   "t": "2026-11-25T12:31:00.000Z",
-   "frp": 10.3,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 2,
-   "contexto": "Bodegas Lopez Cristobal (a 2,2 km)"
-  },
-  {
-   "lat": 37.2453,
-   "lon": -5.4269,
-   "t": "2026-11-25T12:31:00.000Z",
-   "frp": 4.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
-  },
   {
    "lat": 41.9648,
    "lon": -5.6538,
