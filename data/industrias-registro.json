@@ -818,7 +818,28 @@
    "pasos": [
     "2026-11-24T12:53:00.000Z"
    ]
+  },
+  "fuente fija sin identificar|celda:37.34,-3.16": {
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "zona": null,
+   "origen": "repetición",
+   "osm": null,
+   "ciudad": "Granada",
+   "lat": 37.3334,
+   "lon": -3.1617,
+   "primera_vez": "2026-11-26T12:14:00.000Z",
+   "ultima_vez": "2026-11-26T12:14:00.000Z",
+   "ultimo_frp": 4.6,
+   "frp_max": 4.6,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-26"
+   ],
+   "pasos": [
+    "2026-11-26T12:14:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-26T22:45:38.476Z"
+ "actualizado": "2026-11-26T23:01:12.460Z"
 }

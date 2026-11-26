@@ -1,8 +1,8 @@
 {
- "actualizado": "2026-11-26T22:45:38.476Z",
+ "actualizado": "2026-11-26T23:01:12.460Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 12,
+ "total": 11,
  "detecciones": 35,
  "mayor": {
   "lat": 41.206,
@@ -40,17 +40,6 @@
    "dn": "día",
    "n": 2,
    "contexto": "Planta Fotovoltaica Atarfe I (a 0,6 km)"
-  },
-  {
-   "lat": 37.3334,
-   "lon": -3.1617,
-   "t": "2026-11-26T12:14:00.000Z",
-   "frp": 4.6,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "contexto": "Polígono Industrial La Estación (a 0,8 km)"
   },
   {
    "lat": 38.2569,
@@ -160,7 +149,22 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 10
+   "dias_mes": 11
+  },
+  {
+   "lat": 37.3334,
+   "lon": -3.1617,
+   "t": "2026-11-26T12:14:00.000Z",
+   "frp": 4.6,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "nombre": null,
+   "tipo": "Fuente fija sin identificar",
+   "origen": "repetición",
+   "ciudad": "Granada",
+   "dias_mes": 5
   },
   {
    "lat": 38.666,
@@ -177,7 +181,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Ciudad Real",
-   "dias_mes": 3
+   "dias_mes": 4
   },
   {
    "lat": 41.4546,
@@ -194,7 +198,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "dias_mes": 12
+   "dias_mes": 13
   },
   {
    "lat": 37.3598,
@@ -211,7 +215,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "dias_mes": 13
+   "dias_mes": 14
   },
   {
    "lat": 41.313,
@@ -228,7 +232,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 10
+   "dias_mes": 11
   },
   {
    "lat": 43.5399,
@@ -243,7 +247,7 @@
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Avilés",
-   "dias_mes": 4
+   "dias_mes": 5
   },
   {
    "lat": 38.3779,
@@ -260,7 +264,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 14
+   "dias_mes": 15
   },
   {
    "lat": 40.5782,
@@ -277,7 +281,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "dias_mes": 8
+   "dias_mes": 9
   }
  ]
 }
