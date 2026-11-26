@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T02:01:01.599Z",
+ "actualizado": "2026-11-26T02:15:41.703Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 5,
- "detecciones": 11,
+ "total": 4,
+ "detecciones": 7,
  "mayor": {
   "lat": 41.6601,
   "lon": -3.9201,
@@ -60,16 +60,6 @@
    "dn": "día",
    "n": 1,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
-  },
-  {
-   "lat": 38.7421,
-   "lon": -1.4939,
-   "t": "2026-11-25T02:08:00.000Z",
-   "frp": 0.4,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1
   }
  ],
  "industriales": [
@@ -98,7 +88,7 @@
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "noche",
-   "n": 2,
+   "n": 1,
    "nombre": "CEMEX",
    "tipo": "Cementera",
    "zona": null,
@@ -106,38 +96,6 @@
    "osm": null,
    "ciudad": "Alicante",
    "dias_mes": 14
-  },
-  {
-   "lat": 41.4059,
-   "lon": 1.9996,
-   "t": "2026-11-25T02:06:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Fuente fija sin identificar",
-   "origen": "repetición",
-   "ciudad": "Barcelona",
-   "dias_mes": 14
-  },
-  {
-   "lat": 41.3142,
-   "lon": 1.664,
-   "t": "2026-11-25T02:06:00.000Z",
-   "frp": 0.7,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Rojano Trancoso, S.L.",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tarragona",
-   "dias_mes": 10
   }
  ]
 }
