@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T11:01:04.558Z",
+ "actualizado": "2026-11-26T11:15:40.940Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -22,11 +22,11 @@
  "eventos": [
   {
    "id": "20261126_0000196",
-   "t": "2026-11-26T10:46:16.070Z",
+   "t": "2026-11-26T10:46:15.980Z",
    "lat": 42.452,
    "lon": 0.4701,
    "prof": 12,
-   "mag": 3,
+   "mag": 3.2,
    "tipo_mag": "ml",
    "lugar": "NE de Valle de Bardají (Huesca)",
    "region": "Pyrenees",
