@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T22:01:01.207Z",
+ "actualizado": "2026-11-26T22:15:37.763Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 11,
+  "total": 12,
   "sentibles": 3,
   "mayor": {
    "id": "20261126_0000184",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261126_0000394",
+   "t": "2026-11-26T21:55:07.490Z",
+   "lat": 42.4545,
+   "lon": -6.6381,
+   "prof": 10,
+   "mag": 1.8,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Spain",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261126_0000358",
    "t": "2026-11-26T20:01:34.070Z",
@@ -1473,19 +1486,6 @@
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Strait Of Gibraltar",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261116_0000309",
-   "t": "2026-11-16T22:06:18.900Z",
-   "lat": 42.5691,
-   "lon": 2.3242,
-   "prof": 0,
-   "mag": 1.6,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Pyrenees",
    "autor": "IGN",
    "ign": null
   }
