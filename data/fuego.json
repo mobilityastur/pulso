@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-26T02:45:39.995Z",
+ "actualizado": "2026-11-26T03:01:02.240Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 4,
- "detecciones": 7,
+ "detecciones": 5,
  "mayor": {
   "lat": 41.6601,
   "lon": -3.9201,
@@ -62,40 +62,5 @@
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
   }
  ],
- "industriales": [
-  {
-   "lat": 38.6628,
-   "lon": -4.0449,
-   "t": "2026-11-25T02:49:00.000Z",
-   "frp": 1.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Ciudad Real",
-   "dias_mes": 6
-  },
-  {
-   "lat": 38.3748,
-   "lon": -0.542,
-   "t": "2026-11-25T02:49:00.000Z",
-   "frp": 1.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "CEMEX",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Alicante",
-   "dias_mes": 14
-  }
- ]
+ "industriales": []
 }
