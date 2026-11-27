@@ -1,25 +1,38 @@
 {
- "actualizado": "2026-11-27T08:45:40.555Z",
+ "actualizado": "2026-11-27T09:01:08.154Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
   "total": 10,
-  "sentibles": 4,
+  "sentibles": 3,
   "mayor": {
-   "id": "20261126_0000184",
-   "t": "2026-11-26T08:57:43.450Z",
-   "lat": 36.353,
-   "lon": 1.0118,
-   "prof": 7,
-   "mag": 3.6,
-   "tipo_mag": "mb",
-   "lugar": "NO de Chlef (Argelia)",
-   "region": "Northern Algeria",
-   "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xdxpr"
+   "id": "20261126_0000196",
+   "t": "2026-11-26T10:46:15.280Z",
+   "lat": 42.4504,
+   "lon": 0.4714,
+   "prof": 5,
+   "mag": 3.2,
+   "tipo_mag": "ml",
+   "lugar": "NE de Valle de Bardají (Huesca)",
+   "region": "Pyrenees",
+   "autor": "EMSC",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xebeu"
   }
  },
  "eventos": [
+  {
+   "id": "20261127_0000134",
+   "t": "2026-11-27T08:46:56.990Z",
+   "lat": 28.1918,
+   "lon": -16.3679,
+   "prof": 23,
+   "mag": 2,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Canary Islands, Spain Region",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261127_0000058",
    "t": "2026-11-27T03:21:28.050Z",
@@ -1421,19 +1434,6 @@
    "tipo_mag": "ml",
    "lugar": null,
    "region": "Canary Islands, Spain Region",
-   "autor": "IGN",
-   "ign": null
-  },
-  {
-   "id": "20261117_0000112",
-   "t": "2026-11-17T08:48:19.990Z",
-   "lat": 36.5768,
-   "lon": -7.4985,
-   "prof": 17,
-   "mag": 2.2,
-   "tipo_mag": "ml",
-   "lugar": null,
-   "region": "Strait Of Gibraltar",
    "autor": "IGN",
    "ign": null
   }
