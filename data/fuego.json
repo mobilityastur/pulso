@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-27T03:15:39.899Z",
+ "actualizado": "2026-11-27T03:30:51.212Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 9,
- "detecciones": 17,
+ "detecciones": 13,
  "mayor": {
   "lat": 41.206,
   "lon": -1.6718,
@@ -129,21 +129,6 @@
    "origen": "repetición",
    "ciudad": "Granada",
    "dias_mes": 5
-  },
-  {
-   "lat": 43.5214,
-   "lon": -5.7356,
-   "t": "2026-11-26T03:27:00.000Z",
-   "frp": 2,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 4,
-   "nombre": "ArcelorMittal Gijón (Veriña)",
-   "tipo": "Siderurgia",
-   "origen": "conocida",
-   "ciudad": "Gijón",
-   "dias_mes": 11
   }
  ]
 }
