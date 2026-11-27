@@ -1,10 +1,10 @@
 {
- "actualizado": "2026-11-27T01:15:40.883Z",
+ "actualizado": "2026-11-27T01:30:52.853Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 12,
-  "sentibles": 3,
+  "total": 13,
+  "sentibles": 4,
   "mayor": {
    "id": "20261126_0000184",
    "t": "2026-11-26T08:57:43.450Z",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261127_0000022",
+   "t": "2026-11-27T01:13:43.050Z",
+   "lat": 27.6754,
+   "lon": -18.1784,
+   "prof": 37,
+   "mag": 3.1,
+   "tipo_mag": "ml",
+   "lugar": "O de El Pinar de el Hierro (IHI)",
+   "region": "Canary Islands, Spain Region",
+   "autor": "IGN",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xfduq"
+  },
   {
    "id": "20261127_0000020",
    "t": "2026-11-27T00:45:49.270Z",
