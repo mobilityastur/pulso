@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-27T10:01:05.762Z",
+ "actualizado": "2026-11-27T10:15:40.793Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-27T10:55:00+01:00",
-  "total": 45863,
-  "renovable": 63.4,
+  "t": "2026-11-27T11:10:00+01:00",
+  "total": 45467,
+  "renovable": 64.5,
   "mix": {
-   "solar": 19369,
-   "eolica": 4834,
-   "hidraulica": 4616,
+   "solar": 20080,
+   "eolica": 4821,
+   "hidraulica": 4144,
    "nuclear": 6097,
-   "gas": 7228,
+   "gas": 6687,
    "carbon": 289,
-   "otras": 3430
+   "otras": 3349
   }
  },
  "tecnologias": [
@@ -23,7 +23,7 @@
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 19260
+   "valor": 19954
   },
   {
    "titulo": "Nuclear",
@@ -32,40 +32,40 @@
    "valor": 6097
   },
   {
-   "titulo": "Ciclo combinado",
-   "renovable": false,
-   "familia": "gas",
-   "valor": 5208
-  },
-  {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 4834
+   "valor": 4821
+  },
+  {
+   "titulo": "Ciclo combinado",
+   "renovable": false,
+   "familia": "gas",
+   "valor": 4707
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 4386
+   "valor": 3927
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2521
+   "valor": 2447
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 2020
+   "valor": 1980
   },
   {
    "titulo": "Biomasa",
    "renovable": true,
    "familia": "otras",
-   "valor": 509
+   "valor": 492
   },
   {
    "titulo": "Turbina de vapor",
@@ -83,13 +83,19 @@
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 230
+   "valor": 217
   },
   {
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 109
+   "valor": 126
+  },
+  {
+   "titulo": "Baterías",
+   "renovable": false,
+   "familia": "otras",
+   "valor": 10
   }
  ],
  "nombres_tec": {
@@ -2704,37 +2710,66 @@
    }
   },
   {
-   "t": "2026-11-27T10:55:00+01:00",
-   "total": 45863,
-   "renovable": 63.4,
+   "t": "2026-11-27T11:00:00+01:00",
+   "total": 45706,
+   "renovable": 63.6,
    "mix": {
-    "solar": 19369,
-    "eolica": 4834,
-    "hidraulica": 4616,
-    "nuclear": 6097,
-    "gas": 7228,
+    "solar": 19516,
+    "eolica": 4815,
+    "hidraulica": 4434,
+    "nuclear": 6098,
+    "gas": 7124,
     "carbon": 289,
     "otras": 3430
    },
    "tec": {
-    "nuc": 6097,
-    "eol": 4834,
-    "hid": 4386,
-    "solFot": 19260,
-    "solTer": 109,
-    "cc": 5208,
-    "cogenResto": 2020,
+    "nuc": 6098,
+    "eol": 4815,
+    "hid": 4210,
+    "solFot": 19401,
+    "solTer": 115,
+    "cc": 5139,
+    "cogenResto": 1985,
     "car": 289,
     "aut": 2521,
     "bio": 509,
-    "turb": 230,
+    "turb": 224,
+    "vap": 400
+   }
+  },
+  {
+   "t": "2026-11-27T11:10:00+01:00",
+   "total": 45467,
+   "renovable": 64.5,
+   "mix": {
+    "solar": 20080,
+    "eolica": 4821,
+    "hidraulica": 4144,
+    "nuclear": 6097,
+    "gas": 6687,
+    "carbon": 289,
+    "otras": 3349
+   },
+   "tec": {
+    "nuc": 6097,
+    "eol": 4821,
+    "hid": 3927,
+    "solFot": 19954,
+    "solTer": 126,
+    "cc": 4707,
+    "cogenResto": 1980,
+    "car": 289,
+    "aut": 2447,
+    "bio": 492,
+    "turb": 217,
+    "bat": 10,
     "vap": 400
    }
   }
  ],
  "demanda": {
-  "actual": 38608,
-  "t": "2026-11-27T10:50:00.000+01:00",
+  "actual": 38614,
+  "t": "2026-11-27T11:05:00.000+01:00",
   "real": [
    {
     "t": "2026-11-26T11:20:00.000+01:00",
@@ -3021,8 +3056,12 @@
     "v": 38849
    },
    {
-    "t": "2026-11-27T10:50:00.000+01:00",
-    "v": 38608
+    "t": "2026-11-27T11:00:00.000+01:00",
+    "v": 38495
+   },
+   {
+    "t": "2026-11-27T11:05:00.000+01:00",
+    "v": 38614
    }
   ],
   "prevista": [
@@ -3252,7 +3291,7 @@
    },
    {
     "t": "2026-11-27T06:00:00.000+01:00",
-    "v": 26838
+    "v": 26837
    },
    {
     "t": "2026-11-27T06:20:00.000+01:00",
@@ -3280,7 +3319,7 @@
    },
    {
     "t": "2026-11-27T08:20:00.000+01:00",
-    "v": 35728
+    "v": 35727
    },
    {
     "t": "2026-11-27T08:40:00.000+01:00",
@@ -3288,31 +3327,35 @@
    },
    {
     "t": "2026-11-27T09:00:00.000+01:00",
-    "v": 36911
+    "v": 36912
    },
    {
     "t": "2026-11-27T09:20:00.000+01:00",
-    "v": 37425
+    "v": 37426
    },
    {
     "t": "2026-11-27T09:40:00.000+01:00",
-    "v": 37782
+    "v": 37781
    },
    {
     "t": "2026-11-27T10:00:00.000+01:00",
-    "v": 38235
+    "v": 38231
    },
    {
     "t": "2026-11-27T10:20:00.000+01:00",
-    "v": 38578
+    "v": 38572
    },
    {
     "t": "2026-11-27T10:40:00.000+01:00",
-    "v": 38580
+    "v": 38573
    },
    {
     "t": "2026-11-27T11:00:00.000+01:00",
-    "v": 38453
+    "v": 38447
+   },
+   {
+    "t": "2026-11-27T11:15:00.000+01:00",
+    "v": 38343
    }
   ]
  }
