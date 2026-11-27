@@ -1,25 +1,38 @@
 {
- "actualizado": "2026-11-27T17:01:08.664Z",
+ "actualizado": "2026-11-27T17:15:38.094Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 11,
-  "sentibles": 2,
+  "total": 12,
+  "sentibles": 3,
   "mayor": {
-   "id": "20261127_0000022",
-   "t": "2026-11-27T01:13:43.050Z",
-   "lat": 27.6754,
-   "lon": -18.1784,
-   "prof": 37,
-   "mag": 3.1,
-   "tipo_mag": "ml",
-   "lugar": "O de El Pinar de el Hierro (IHI)",
-   "region": "Canary Islands, Spain Region",
+   "id": "20261127_0000274",
+   "t": "2026-11-27T16:44:01.040Z",
+   "lat": 36.422,
+   "lon": 2.5913,
+   "prof": 0,
+   "mag": 3.2,
+   "tipo_mag": "mb",
+   "lugar": null,
+   "region": "Northern Algeria",
    "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xfduq"
+   "ign": null
   }
  },
  "eventos": [
+  {
+   "id": "20261127_0000274",
+   "t": "2026-11-27T16:44:01.040Z",
+   "lat": 36.422,
+   "lon": 2.5913,
+   "prof": 0,
+   "mag": 3.2,
+   "tipo_mag": "mb",
+   "lugar": null,
+   "region": "Northern Algeria",
+   "autor": "IGN",
+   "ign": null
+  },
   {
    "id": "20261127_0000260",
    "t": "2026-11-27T15:46:40.780Z",
