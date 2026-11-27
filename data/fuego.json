@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-27T02:30:57.243Z",
+ "actualizado": "2026-11-27T02:45:41.011Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 11,
- "detecciones": 21,
+ "total": 9,
+ "detecciones": 17,
  "mayor": {
   "lat": 41.206,
   "lon": -1.6718,
@@ -62,16 +62,6 @@
    "n": 1
   },
   {
-   "lat": 38.1103,
-   "lon": -4.0322,
-   "t": "2026-11-26T02:32:00.000Z",
-   "frp": 2.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1
-  },
-  {
    "lat": 38.7064,
    "lon": -3.7256,
    "t": "2026-11-26T13:10:00.000Z",
@@ -122,17 +112,6 @@
    "sat": "NOAA20",
    "dn": "día",
    "n": 1
-  },
-  {
-   "lat": 38.6545,
-   "lon": -6.965,
-   "t": "2026-11-26T02:32:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Polígono Industrial \"Cuatro Caminos\" (a 3,0 km)"
   }
  ],
  "industriales": [
@@ -152,23 +131,6 @@
    "dias_mes": 5
   },
   {
-   "lat": 38.666,
-   "lon": -4.0528,
-   "t": "2026-11-26T02:32:00.000Z",
-   "frp": 2.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Refineria Exolum de Puertollano",
-   "tipo": "Refinería / petroquímica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Ciudad Real",
-   "dias_mes": 4
-  },
-  {
    "lat": 43.5214,
    "lon": -5.7356,
    "t": "2026-11-26T03:27:00.000Z",
@@ -182,23 +144,6 @@
    "origen": "conocida",
    "ciudad": "Gijón",
    "dias_mes": 11
-  },
-  {
-   "lat": 37.3598,
-   "lon": -5.8668,
-   "t": "2026-11-26T02:32:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 14
   }
  ]
 }
