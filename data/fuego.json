@@ -1,35 +1,24 @@
 {
- "actualizado": "2026-11-27T12:01:10.415Z",
+ "actualizado": "2026-11-27T12:15:50.285Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 11,
- "detecciones": 26,
+ "total": 9,
+ "detecciones": 22,
  "mayor": {
-  "lat": 41.206,
-  "lon": -1.6718,
-  "t": "2026-11-26T13:54:00.000Z",
-  "frp": 7.4,
+  "lat": 37.2831,
+  "lon": -3.75,
+  "t": "2026-11-26T13:10:00.000Z",
+  "frp": 4.7,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 3,
+  "n": 2,
   "ts": [
-   "2026-11-26T13:54:00.000Z",
-   "2026-11-26T13:10:00.000Z",
-   "2026-11-26T12:14:00.000Z"
-  ]
+   "2026-11-26T13:10:00.000Z"
+  ],
+  "contexto": "Planta Fotovoltaica Atarfe I (a 0,6 km)"
  },
  "focos": [
-  {
-   "lat": 41.206,
-   "lon": -1.6718,
-   "t": "2026-11-26T13:54:00.000Z",
-   "frp": 7.4,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 3
-  },
   {
    "lat": 37.2831,
    "lon": -3.75,
@@ -42,14 +31,14 @@
    "contexto": "Planta Fotovoltaica Atarfe I (a 0,6 km)"
   },
   {
-   "lat": 38.2569,
-   "lon": -1.6392,
-   "t": "2026-11-26T12:14:00.000Z",
+   "lat": 41.206,
+   "lon": -1.6718,
+   "t": "2026-11-26T13:54:00.000Z",
    "frp": 4.5,
    "conf": "nominal",
    "sat": "NOAA21",
    "dn": "día",
-   "n": 1
+   "n": 2
   },
   {
    "lat": 37.2808,
@@ -70,17 +59,6 @@
    "sat": "NOAA20",
    "dn": "día",
    "n": 1
-  },
-  {
-   "lat": 38.1006,
-   "lon": -0.6732,
-   "t": "2026-11-26T12:14:00.000Z",
-   "frp": 2.2,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "contexto": "Johnson Controls (a 1,8 km)"
   },
   {
    "lat": 37.1181,
@@ -137,21 +115,6 @@
   }
  ],
  "industriales": [
-  {
-   "lat": 37.3334,
-   "lon": -3.1617,
-   "t": "2026-11-26T12:14:00.000Z",
-   "frp": 4.6,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1,
-   "nombre": null,
-   "tipo": "Fuente fija sin identificar",
-   "origen": "repetición",
-   "ciudad": "Granada",
-   "dias_mes": 5
-  },
   {
    "lat": 41.3474,
    "lon": 2.1141,
