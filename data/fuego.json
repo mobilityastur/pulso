@@ -1,33 +1,24 @@
 {
- "actualizado": "2026-11-27T13:45:43.176Z",
+ "actualizado": "2026-11-27T14:01:09.231Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 3,
- "detecciones": 14,
+ "total": 2,
+ "detecciones": 13,
  "mayor": {
-  "lat": 41.206,
-  "lon": -1.6718,
-  "t": "2026-11-26T13:54:00.000Z",
-  "frp": 4.1,
+  "lat": 38.3191,
+  "lon": -6.7199,
+  "t": "2026-11-27T02:13:00.000Z",
+  "frp": 0.7,
   "conf": "nominal",
   "sat": "NOAA21",
-  "dn": "día",
+  "dn": "noche",
   "n": 1,
   "ts": [
-   "2026-11-26T13:54:00.000Z"
-  ]
+   "2026-11-27T02:13:00.000Z"
+  ],
+  "contexto": "Siderúrgica Balboa (a 0,3 km)"
  },
  "focos": [
-  {
-   "lat": 41.206,
-   "lon": -1.6718,
-   "t": "2026-11-26T13:54:00.000Z",
-   "frp": 4.1,
-   "conf": "nominal",
-   "sat": "NOAA21",
-   "dn": "día",
-   "n": 1
-  },
   {
    "lat": 38.3191,
    "lon": -6.7199,
