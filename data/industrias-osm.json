@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-27T01:45:38.108Z",
+   "t": "2026-11-27T04:31:00.196Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-27T01:45:38.109Z",
+   "t": "2026-11-27T04:31:00.195Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -201,7 +201,7 @@
    "osm": null
   },
   "43.22,-2.88": {
-   "t": "2026-11-17T02:15:52.928Z",
+   "t": "2026-11-27T04:31:00.196Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Lapatza (a 0,1 km)"
@@ -637,7 +637,7 @@
    "contexto": null
   },
   "37.34,-3.16": {
-   "t": "2026-11-27T04:15:40.196Z",
+   "t": "2026-11-27T04:31:00.193Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial La Estación (a 0,8 km)"
@@ -835,58 +835,68 @@
    "contexto": null
   },
   "38.26,-1.64": {
-   "t": "2026-11-27T04:15:40.196Z",
+   "t": "2026-11-27T04:31:00.194Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.10,-0.68": {
-   "t": "2026-11-27T04:15:40.197Z",
+   "t": "2026-11-27T04:31:00.194Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Johnson Controls (a 1,8 km)"
   },
   "41.20,-1.68": {
-   "t": "2026-11-27T04:15:40.194Z",
+   "t": "2026-11-27T04:31:00.192Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.28,-3.74": {
-   "t": "2026-11-27T04:15:40.196Z",
+   "t": "2026-11-27T04:31:00.193Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Planta Fotovoltaica Atarfe I (a 0,6 km)"
   },
   "37.28,-3.78": {
-   "t": "2026-11-27T04:15:40.196Z",
+   "t": "2026-11-27T04:31:00.194Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.70,-3.72": {
-   "t": "2026-11-27T04:15:40.197Z",
+   "t": "2026-11-27T04:31:00.194Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.12,-3.66": {
-   "t": "2026-11-27T04:15:40.197Z",
+   "t": "2026-11-27T04:31:00.194Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial Virgen de las Nieves (a 1,5 km)"
   },
   "37.46,-2.64": {
-   "t": "2026-11-27T04:15:40.197Z",
+   "t": "2026-11-27T04:31:00.195Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.08,-6.90": {
-   "t": "2026-11-27T04:15:40.198Z",
+   "t": "2026-11-27T04:31:00.195Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
+  },
+  "41.34,2.12": {
+   "t": "2026-11-27T04:31:00.195Z",
+   "origen": "lista",
+   "industrial": true,
+   "nombre": "Cromogenia Units - Fábrica 2",
+   "tipo": "Fábrica",
+   "zona": null,
+   "d_km": 0.47,
+   "osm": null
   }
  }
 }
