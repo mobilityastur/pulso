@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T22:45:38.823Z",
+ "actualizado": "2026-11-27T23:01:05.912Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 15,
@@ -189,7 +189,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Barcelona",
-   "dias_mes": 1
+   "dias_mes": 2
   },
   {
    "lat": 41.312,
@@ -206,7 +206,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "dias_mes": 11
+   "dias_mes": 12
   },
   {
    "lat": 38.3753,
@@ -223,7 +223,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Alicante",
-   "dias_mes": 15
+   "dias_mes": 16
   },
   {
    "lat": 40.5766,
@@ -240,7 +240,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tortosa",
-   "dias_mes": 9
+   "dias_mes": 10
   },
   {
    "lat": 37.3591,
@@ -257,7 +257,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "dias_mes": 14
+   "dias_mes": 15
   },
   {
    "lat": 41.4753,
@@ -274,7 +274,7 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Zaragoza",
-   "dias_mes": 9
+   "dias_mes": 10
   },
   {
    "lat": 41.4067,
@@ -289,7 +289,7 @@
    "tipo": "Fuente fija sin identificar",
    "origen": "repetición",
    "ciudad": "Barcelona",
-   "dias_mes": 15
+   "dias_mes": 16
   }
  ]
 }
