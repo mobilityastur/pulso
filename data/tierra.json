@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-28T14:30:56.991Z",
+ "actualizado": "2026-11-28T14:45:45.829Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 16,
+  "total": 15,
   "sentibles": 4,
   "mayor": {
    "id": "20261128_0000167",
