@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T09:30:55.351Z",
+ "actualizado": "2026-11-28T09:45:40.965Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -1419,10 +1419,10 @@
    "prof": 0,
    "mag": 2.7,
    "tipo_mag": "ml",
-   "lugar": "E de Taboada (Lugo)",
+   "lugar": null,
    "region": "Spain",
    "autor": "EMSC",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
+   "ign": null
   },
   {
    "id": "20261118_0000177",
@@ -1432,21 +1432,8 @@
    "prof": 0,
    "mag": 2.5,
    "tipo_mag": "ml",
-   "lugar": "E de Taboada (Lugo)",
-   "region": "Spain",
-   "autor": "IGN",
-   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026wpkno"
-  },
-  {
-   "id": "20261118_0000152",
-   "t": "2026-11-18T09:32:53.850Z",
-   "lat": 28.2169,
-   "lon": -16.2418,
-   "prof": 23,
-   "mag": 1.5,
-   "tipo_mag": "ml",
    "lugar": null,
-   "region": "Canary Islands, Spain Region",
+   "region": "Spain",
    "autor": "IGN",
    "ign": null
   }
