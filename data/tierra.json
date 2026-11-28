@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T12:15:47.264Z",
+ "actualizado": "2026-11-28T12:30:56.356Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -13,7 +13,7 @@
    "prof": 11,
    "mag": 3.8,
    "tipo_mag": "ml",
-   "lugar": "N de Santa Cruz del Comercio (Granada)",
+   "lugar": "SO de Moraleda de Zafayona (Granada)",
    "region": "Spain",
    "autor": "IGN",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xhuej"
@@ -28,7 +28,7 @@
    "prof": 11,
    "mag": 3.8,
    "tipo_mag": "ml",
-   "lugar": "N de Santa Cruz del Comercio (Granada)",
+   "lugar": "SO de Moraleda de Zafayona (Granada)",
    "region": "Spain",
    "autor": "IGN",
    "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xhuej"
