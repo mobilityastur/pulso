@@ -1,10 +1,10 @@
 {
- "actualizado": "2026-11-28T05:30:59.991Z",
+ "actualizado": "2026-11-28T05:45:40.366Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 12,
-  "sentibles": 1,
+  "total": 13,
+  "sentibles": 2,
   "mayor": {
    "id": "20261127_0000274",
    "t": "2026-11-27T16:44:01.040Z",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261128_0000103",
+   "t": "2026-11-28T05:31:48.630Z",
+   "lat": 35.9152,
+   "lon": -4.5735,
+   "prof": 81,
+   "mag": 2.9,
+   "tipo_mag": "mb",
+   "lugar": "Alborán Oeste",
+   "region": "Strait Of Gibraltar",
+   "autor": "EMSC",
+   "ign": "https://www.ign.es/web/ign/portal/sis-catalogo-terremotos/-/catalogo-terremotos/detailTerremoto?evid=es2026xhhvs"
+  },
   {
    "id": "20261128_0000087",
    "t": "2026-11-28T04:24:49.880Z",
