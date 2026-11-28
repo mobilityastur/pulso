@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-28T12:45:42.068Z",
+   "t": "2026-11-28T13:01:06.139Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-28T12:45:42.070Z",
+   "t": "2026-11-28T13:01:06.141Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-28T12:45:42.069Z",
+   "t": "2026-11-28T13:01:06.140Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-28T12:45:42.069Z",
+   "t": "2026-11-28T13:01:06.141Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-28T12:45:42.070Z",
+   "t": "2026-11-28T13:01:06.141Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -111,7 +111,7 @@
    "osm": null
   },
   "40.58,0.54": {
-   "t": "2026-11-28T12:45:42.070Z",
+   "t": "2026-11-28T13:01:06.141Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Pedrera Fàbrica de Ciment Cemex",
@@ -141,7 +141,7 @@
    "osm": null
   },
   "39.66,-0.24": {
-   "t": "2026-11-28T12:45:42.069Z",
+   "t": "2026-11-28T13:01:06.140Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ferrodisa",
@@ -151,7 +151,7 @@
    "osm": null
   },
   "43.44,-3.84": {
-   "t": "2026-11-28T12:45:42.068Z",
+   "t": "2026-11-28T13:01:06.139Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Ecrimesa",
@@ -311,7 +311,7 @@
    "contexto": null
   },
   "43.52,-5.74": {
-   "t": "2026-11-28T12:45:42.066Z",
+   "t": "2026-11-28T13:01:06.138Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería de Veriña - ArcelorMittal",
@@ -385,7 +385,7 @@
    "osm": null
   },
   "43.54,-5.84": {
-   "t": "2026-11-28T12:45:42.065Z",
+   "t": "2026-11-28T13:01:06.137Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Acería LD-III",
@@ -395,7 +395,7 @@
    "osm": null
   },
   "43.56,-5.86": {
-   "t": "2026-11-28T12:45:42.069Z",
+   "t": "2026-11-28T13:01:06.140Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Hot Rolling",
@@ -433,7 +433,7 @@
    "contexto": null
   },
   "43.34,-8.44": {
-   "t": "2026-11-28T12:45:42.070Z",
+   "t": "2026-11-28T13:01:06.142Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Exolum",
@@ -621,7 +621,7 @@
    "contexto": null
   },
   "41.20,1.22": {
-   "t": "2026-11-28T12:45:42.068Z",
+   "t": "2026-11-28T13:01:06.139Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -899,7 +899,7 @@
    "osm": null
   },
   "38.76,-1.50": {
-   "t": "2026-11-28T12:45:42.064Z",
+   "t": "2026-11-28T13:01:06.136Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -953,19 +953,19 @@
    "contexto": null
   },
   "36.82,-5.22": {
-   "t": "2026-11-28T12:45:42.065Z",
+   "t": "2026-11-28T13:01:06.138Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.30,-2.18": {
-   "t": "2026-11-28T12:45:42.066Z",
+   "t": "2026-11-28T13:01:06.138Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.28,-6.78": {
-   "t": "2026-11-28T12:45:42.067Z",
+   "t": "2026-11-28T13:01:06.139Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -977,19 +977,19 @@
    "contexto": "Polígono Industrial El Cabeço (a 1,6 km)"
   },
   "38.40,-1.04": {
-   "t": "2026-11-28T12:45:42.068Z",
+   "t": "2026-11-28T13:01:06.139Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígono Industrial El Cabeço (a 0,8 km)"
   },
   "38.90,-3.38": {
-   "t": "2026-11-28T12:45:42.069Z",
+   "t": "2026-11-28T13:01:06.140Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Garbella Fruits S.L. (a 1,7 km)"
   },
   "36.86,-2.44": {
-   "t": "2026-11-28T12:45:42.071Z",
+   "t": "2026-11-28T13:01:06.142Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Planta de Gas Natural Licuado Almería-Chumico",
