@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-28T01:15:43.268Z",
+ "actualizado": "2026-11-28T01:30:53.576Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 15,
- "detecciones": 35,
+ "total": 14,
+ "detecciones": 30,
  "mayor": {
   "lat": 38.7612,
   "lon": -1.4979,
@@ -160,37 +160,9 @@
    "dn": "noche",
    "n": 1,
    "contexto": "Siderúrgica Balboa (a 0,3 km)"
-  },
-  {
-   "lat": 43.2271,
-   "lon": -2.8866,
-   "t": "2026-11-27T01:28:00.000Z",
-   "frp": 0.5,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "contexto": "Polígono Industrial Lapatza (a 0,1 km)"
   }
  ],
  "industriales": [
-  {
-   "lat": 41.3474,
-   "lon": 2.1141,
-   "t": "2026-11-27T01:28:00.000Z",
-   "frp": 1.9,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cromogenia Units - Fábrica 2",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Barcelona",
-   "dias_mes": 2
-  },
   {
    "lat": 41.312,
    "lon": 1.6591,
@@ -199,7 +171,7 @@
    "conf": "nominal",
    "sat": "NOAA20",
    "dn": "noche",
-   "n": 3,
+   "n": 2,
    "nombre": "Rojano Trancoso, S.L.",
    "tipo": "Fábrica",
    "zona": null,
@@ -224,23 +196,6 @@
    "osm": null,
    "ciudad": "Alicante",
    "dias_mes": 16
-  },
-  {
-   "lat": 40.5766,
-   "lon": 0.5401,
-   "t": "2026-11-27T01:30:00.000Z",
-   "frp": 1,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 2,
-   "nombre": "Pedrera Fàbrica de Ciment Cemex",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tortosa",
-   "dias_mes": 10
   },
   {
    "lat": 37.3591,

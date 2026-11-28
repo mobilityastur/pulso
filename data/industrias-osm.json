@@ -33,7 +33,7 @@
    "osm": null
   },
   "38.38,-0.54": {
-   "t": "2026-11-28T01:15:43.266Z",
+   "t": "2026-11-28T01:30:53.573Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "CEMEX",
@@ -43,7 +43,7 @@
    "osm": null
   },
   "37.36,-5.86": {
-   "t": "2026-11-28T01:15:43.266Z",
+   "t": "2026-11-28T01:30:53.574Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Cementos Portland Valderrivas",
@@ -53,7 +53,7 @@
    "osm": null
   },
   "41.32,1.66": {
-   "t": "2026-11-28T01:15:43.266Z",
+   "t": "2026-11-28T01:30:53.573Z",
    "origen": "lista",
    "industrial": true,
    "nombre": "Rojano Trancoso, S.L.",
@@ -63,7 +63,7 @@
    "osm": null
   },
   "41.40,2.00": {
-   "t": "2026-11-28T01:15:43.267Z",
+   "t": "2026-11-28T01:30:53.574Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Polígon industrial Molí dels Frares (a 0,3 km)"
@@ -91,7 +91,7 @@
    "contexto": "Son Noguera (a 0,9 km)"
   },
   "41.48,-1.48": {
-   "t": "2026-11-28T01:15:43.266Z",
+   "t": "2026-11-28T01:30:53.574Z",
    "origen": "lista",
    "industrial": true,
    "nombre": null,
@@ -567,7 +567,7 @@
    "contexto": "Polígono Industrial La Capellanía (a 1,9 km)"
   },
   "38.32,-6.72": {
-   "t": "2026-11-28T01:15:43.267Z",
+   "t": "2026-11-28T01:30:53.574Z",
    "origen": "lista",
    "industrial": false,
    "contexto": "Siderúrgica Balboa (a 0,3 km)"
@@ -751,7 +751,7 @@
    "contexto": null
   },
   "39.04,-2.00": {
-   "t": "2026-11-28T01:15:43.265Z",
+   "t": "2026-11-28T01:30:53.573Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
@@ -899,73 +899,73 @@
    "osm": null
   },
   "38.76,-1.50": {
-   "t": "2026-11-28T01:15:43.262Z",
+   "t": "2026-11-28T01:30:53.569Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.00,-0.90": {
-   "t": "2026-11-28T01:15:43.263Z",
+   "t": "2026-11-28T01:30:53.570Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.24,-1.66": {
-   "t": "2026-11-28T01:15:43.263Z",
+   "t": "2026-11-28T01:30:53.570Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.58,-0.72": {
-   "t": "2026-11-28T01:15:43.264Z",
+   "t": "2026-11-28T01:30:53.571Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "42.00,-0.10": {
-   "t": "2026-11-28T01:15:43.263Z",
+   "t": "2026-11-28T01:30:53.571Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.68,-1.44": {
-   "t": "2026-11-28T01:15:43.264Z",
+   "t": "2026-11-28T01:30:53.571Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.04,-4.24": {
-   "t": "2026-11-28T01:15:43.264Z",
+   "t": "2026-11-28T01:30:53.572Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "38.76,-3.36": {
-   "t": "2026-11-28T01:15:43.264Z",
+   "t": "2026-11-28T01:30:53.572Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "41.66,0.22": {
-   "t": "2026-11-28T01:15:43.265Z",
+   "t": "2026-11-28T01:30:53.572Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "36.82,-5.22": {
-   "t": "2026-11-28T01:15:43.263Z",
+   "t": "2026-11-28T01:30:53.571Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "39.30,-2.18": {
-   "t": "2026-11-28T01:15:43.264Z",
+   "t": "2026-11-28T01:30:53.572Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
   },
   "37.28,-6.78": {
-   "t": "2026-11-28T01:15:43.265Z",
+   "t": "2026-11-28T01:30:53.572Z",
    "origen": "lista",
    "industrial": false,
    "contexto": null
