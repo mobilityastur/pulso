@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-28T03:01:05.106Z",
+ "actualizado": "2026-11-28T03:15:40.302Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 13,
- "detecciones": 24,
+ "detecciones": 22,
  "mayor": {
   "lat": 38.7612,
   "lon": -1.4979,
@@ -151,40 +151,5 @@
    "n": 1
   }
  ],
- "industriales": [
-  {
-   "lat": 41.312,
-   "lon": 1.6591,
-   "t": "2026-11-27T03:10:00.000Z",
-   "frp": 1.3,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Rojano Trancoso, S.L.",
-   "tipo": "Fábrica",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Tarragona",
-   "dias_mes": 12
-  },
-  {
-   "lat": 37.3591,
-   "lon": -5.8661,
-   "t": "2026-11-27T03:10:00.000Z",
-   "frp": 0.9,
-   "conf": "nominal",
-   "sat": "NOAA20",
-   "dn": "noche",
-   "n": 1,
-   "nombre": "Cementos Portland Valderrivas",
-   "tipo": "Cementera",
-   "zona": null,
-   "origen": "OpenStreetMap",
-   "osm": null,
-   "ciudad": "Sevilla",
-   "dias_mes": 15
-  }
- ]
+ "industriales": []
 }
