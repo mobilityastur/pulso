@@ -1,23 +1,33 @@
 {
- "actualizado": "2026-11-28T15:01:11.484Z",
+ "actualizado": "2026-11-28T15:15:42.271Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 3,
- "detecciones": 24,
+ "total": 6,
+ "detecciones": 28,
  "mayor": {
-  "lat": 40.0661,
-  "lon": 4.0893,
-  "t": "2026-11-28T11:36:00.000Z",
-  "frp": 5,
+  "lat": 38.2953,
+  "lon": -1.6837,
+  "t": "2026-11-28T12:31:00.000Z",
+  "frp": 25.6,
   "conf": "nominal",
-  "sat": "NOAA21",
+  "sat": "NOAA20",
   "dn": "día",
-  "n": 1,
+  "n": 2,
   "ts": [
-   "2026-11-28T11:36:00.000Z"
+   "2026-11-28T12:31:00.000Z"
   ]
  },
  "focos": [
+  {
+   "lat": 38.2953,
+   "lon": -1.6837,
+   "t": "2026-11-28T12:31:00.000Z",
+   "frp": 25.6,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 2
+  },
   {
    "lat": 40.0661,
    "lon": 4.0893,
@@ -25,6 +35,27 @@
    "frp": 5,
    "conf": "nominal",
    "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
+   "lat": 42.0235,
+   "lon": -1.5946,
+   "t": "2026-11-28T12:33:00.000Z",
+   "frp": 3.4,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "día",
+   "n": 1,
+   "contexto": "Planta solar La Olivera (a 0,5 km)"
+  },
+  {
+   "lat": 37.3956,
+   "lon": -5.2399,
+   "t": "2026-11-28T12:31:00.000Z",
+   "frp": 2.8,
+   "conf": "nominal",
+   "sat": "NOAA20",
    "dn": "día",
    "n": 1
   },
