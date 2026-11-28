@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-28T09:01:13.622Z",
+ "actualizado": "2026-11-28T09:15:40.041Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-28T09:55:00+01:00",
-  "total": 36089,
-  "renovable": 58.2,
+  "t": "2026-11-28T10:10:00+01:00",
+  "total": 37073,
+  "renovable": 61.6,
   "mix": {
-   "solar": 13289,
-   "eolica": 4045,
-   "hidraulica": 3358,
-   "nuclear": 5721,
-   "gas": 6325,
+   "solar": 15281,
+   "eolica": 3896,
+   "hidraulica": 3323,
+   "nuclear": 5718,
+   "gas": 5510,
    "carbon": 0,
-   "otras": 3351
+   "otras": 3345
   }
  },
  "tecnologias": [
@@ -23,37 +23,37 @@
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 13278
+   "valor": 15258
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 5721
-  },
-  {
-   "titulo": "Ciclo combinado",
-   "renovable": false,
-   "familia": "gas",
-   "valor": 4299
+   "valor": 5718
   },
   {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 4045
+   "valor": 3896
+  },
+  {
+   "titulo": "Ciclo combinado",
+   "renovable": false,
+   "familia": "gas",
+   "valor": 3484
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 3173
+   "valor": 3139
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2547
+   "valor": 2532
   },
   {
    "titulo": "Cogeneración y residuos",
@@ -65,25 +65,25 @@
    "titulo": "Biomasa",
    "renovable": true,
    "familia": "otras",
-   "valor": 512
+   "valor": 513
   },
   {
    "titulo": "Turbina de vapor",
    "renovable": false,
    "familia": "otras",
-   "valor": 292
+   "valor": 300
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 185
+   "valor": 184
   },
   {
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 11
+   "valor": 23
   }
  ],
  "nombres_tec": {
@@ -2674,36 +2674,63 @@
    }
   },
   {
-   "t": "2026-11-28T09:55:00+01:00",
-   "total": 36089,
-   "renovable": 58.2,
+   "t": "2026-11-28T10:00:00+01:00",
+   "total": 36269,
+   "renovable": 59,
    "mix": {
-    "solar": 13289,
-    "eolica": 4045,
-    "hidraulica": 3358,
+    "solar": 13877,
+    "eolica": 3999,
+    "hidraulica": 3200,
     "nuclear": 5721,
-    "gas": 6325,
+    "gas": 6112,
     "carbon": 0,
-    "otras": 3351
+    "otras": 3360
    },
    "tec": {
     "nuc": 5721,
-    "eol": 4045,
-    "hid": 3173,
-    "solFot": 13278,
-    "solTer": 11,
-    "cc": 4299,
-    "cogenResto": 2026,
+    "eol": 3999,
+    "hid": 3015,
+    "solFot": 13863,
+    "solTer": 14,
+    "cc": 4096,
+    "cogenResto": 2016,
     "aut": 2547,
     "bio": 512,
     "turb": 185,
-    "vap": 292
+    "vap": 301
+   }
+  },
+  {
+   "t": "2026-11-28T10:10:00+01:00",
+   "total": 37073,
+   "renovable": 61.6,
+   "mix": {
+    "solar": 15281,
+    "eolica": 3896,
+    "hidraulica": 3323,
+    "nuclear": 5718,
+    "gas": 5510,
+    "carbon": 0,
+    "otras": 3345
+   },
+   "tec": {
+    "nuc": 5718,
+    "eol": 3896,
+    "hid": 3139,
+    "solFot": 15258,
+    "solTer": 23,
+    "cc": 3484,
+    "cogenResto": 2026,
+    "aut": 2532,
+    "bio": 513,
+    "turb": 184,
+    "vap": 300
    }
   }
  ],
  "demanda": {
-  "actual": 32546,
-  "t": "2026-11-28T09:50:00.000+01:00",
+  "actual": 32862,
+  "t": "2026-11-28T10:05:00.000+01:00",
   "real": [
    {
     "t": "2026-11-27T10:20:00.000+01:00",
@@ -2990,8 +3017,12 @@
     "v": 31945
    },
    {
-    "t": "2026-11-28T09:50:00.000+01:00",
-    "v": 32546
+    "t": "2026-11-28T10:00:00.000+01:00",
+    "v": 32800
+   },
+   {
+    "t": "2026-11-28T10:05:00.000+01:00",
+    "v": 32862
    }
   ],
   "prevista": [
@@ -3282,6 +3313,10 @@
    {
     "t": "2026-11-28T10:00:00.000+01:00",
     "v": 32553
+   },
+   {
+    "t": "2026-11-28T10:15:00.000+01:00",
+    "v": 33144
    }
   ]
  }
