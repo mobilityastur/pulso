@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-28T19:01:07.437Z",
+ "actualizado": "2026-11-28T19:15:44.142Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-28T19:55:00+01:00",
-  "total": 33635,
-  "renovable": 29,
+  "t": "2026-11-28T20:10:00+01:00",
+  "total": 33357,
+  "renovable": 29.3,
   "mix": {
-   "solar": 52,
-   "eolica": 1934,
-   "hidraulica": 7955,
-   "nuclear": 5730,
-   "gas": 14600,
+   "solar": 55,
+   "eolica": 1981,
+   "hidraulica": 7948,
+   "nuclear": 5726,
+   "gas": 14277,
    "carbon": 0,
-   "otras": 3364
+   "otras": 3370
   }
  },
  "tecnologias": [
@@ -23,73 +23,73 @@
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 12574
+   "valor": 12245
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 7278
+   "valor": 7265
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 5730
+   "valor": 5726
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2566
+   "valor": 2565
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 2026
+   "valor": 2032
   },
   {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 1934
+   "valor": 1981
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 677
+   "valor": 683
   },
   {
    "titulo": "Biomasa",
    "renovable": true,
    "familia": "otras",
-   "valor": 484
+   "valor": 481
   },
   {
    "titulo": "Turbina de vapor",
    "renovable": false,
    "familia": "otras",
-   "valor": 230
+   "valor": 231
   },
   {
    "titulo": "Baterías",
    "renovable": false,
    "familia": "otras",
-   "valor": 84
+   "valor": 93
   },
   {
    "titulo": "Solar fotovoltaica",
    "renovable": true,
    "familia": "solar",
-   "valor": 32
+   "valor": 33
   },
   {
    "titulo": "Solar térmica",
    "renovable": true,
    "familia": "solar",
-   "valor": 20
+   "valor": 22
   }
  ],
  "nombres_tec": {
@@ -2650,37 +2650,65 @@
    }
   },
   {
-   "t": "2026-11-28T19:55:00+01:00",
-   "total": 33635,
-   "renovable": 29,
+   "t": "2026-11-28T20:00:00+01:00",
+   "total": 33552,
+   "renovable": 29.1,
    "mix": {
-    "solar": 52,
-    "eolica": 1934,
-    "hidraulica": 7955,
-    "nuclear": 5730,
-    "gas": 14600,
+    "solar": 53,
+    "eolica": 1939,
+    "hidraulica": 7954,
+    "nuclear": 5722,
+    "gas": 14519,
     "carbon": 0,
-    "otras": 3364
+    "otras": 3365
    },
    "tec": {
-    "nuc": 5730,
-    "eol": 1934,
-    "hid": 7278,
+    "nuc": 5722,
+    "eol": 1939,
+    "hid": 7272,
     "solFot": 32,
-    "solTer": 20,
-    "cc": 12574,
-    "cogenResto": 2026,
+    "solTer": 21,
+    "cc": 12488,
+    "cogenResto": 2031,
     "aut": 2566,
     "bio": 484,
-    "turb": 677,
+    "turb": 682,
     "bat": 84,
-    "vap": 230
+    "vap": 231
+   }
+  },
+  {
+   "t": "2026-11-28T20:10:00+01:00",
+   "total": 33357,
+   "renovable": 29.3,
+   "mix": {
+    "solar": 55,
+    "eolica": 1981,
+    "hidraulica": 7948,
+    "nuclear": 5726,
+    "gas": 14277,
+    "carbon": 0,
+    "otras": 3370
+   },
+   "tec": {
+    "nuc": 5726,
+    "eol": 1981,
+    "hid": 7265,
+    "solFot": 33,
+    "solTer": 22,
+    "cc": 12245,
+    "cogenResto": 2032,
+    "aut": 2565,
+    "bio": 481,
+    "turb": 683,
+    "bat": 93,
+    "vap": 231
    }
   }
  ],
  "demanda": {
-  "actual": 33135,
-  "t": "2026-11-28T19:50:00.000+01:00",
+  "actual": 32884,
+  "t": "2026-11-28T20:05:00.000+01:00",
   "real": [
    {
     "t": "2026-11-27T20:20:00.000+01:00",
@@ -2967,8 +2995,12 @@
     "v": 32762
    },
    {
-    "t": "2026-11-28T19:50:00.000+01:00",
-    "v": 33135
+    "t": "2026-11-28T20:00:00.000+01:00",
+    "v": 33003
+   },
+   {
+    "t": "2026-11-28T20:05:00.000+01:00",
+    "v": 32884
    }
   ],
   "prevista": [
@@ -3259,6 +3291,10 @@
    {
     "t": "2026-11-28T20:00:00.000+01:00",
     "v": 33283
+   },
+   {
+    "t": "2026-11-28T20:15:00.000+01:00",
+    "v": 33281
    }
   ]
  }
