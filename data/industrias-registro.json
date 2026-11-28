@@ -50,13 +50,13 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Sevilla",
-   "lat": 37.3591,
-   "lon": -5.8661,
+   "lat": 37.3624,
+   "lon": -5.8641,
    "primera_vez": "2026-11-14T02:15:00.000Z",
-   "ultima_vez": "2026-11-27T03:10:00.000Z",
-   "ultimo_frp": 0.9,
+   "ultima_vez": "2026-11-28T02:51:00.000Z",
+   "ultimo_frp": 0.5,
    "frp_max": 1,
-   "detecciones": 11,
+   "detecciones": 12,
    "dias": [
     "2026-11-14",
     "2026-11-16",
@@ -65,7 +65,8 @@
     "2026-11-23",
     "2026-11-24",
     "2026-11-26",
-    "2026-11-27"
+    "2026-11-27",
+    "2026-11-28"
    ],
    "pasos": [
     "2026-11-14T02:15:00.000Z",
@@ -78,7 +79,8 @@
     "2026-11-24T02:25:00.000Z",
     "2026-11-26T02:32:00.000Z",
     "2026-11-27T02:13:00.000Z",
-    "2026-11-27T03:10:00.000Z"
+    "2026-11-27T03:10:00.000Z",
+    "2026-11-28T02:51:00.000Z"
    ]
   },
   "rojano trancoso, s.l.|fábrica|tarragona": {
@@ -87,13 +89,13 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Tarragona",
-   "lat": 41.312,
-   "lon": 1.6591,
+   "lat": 41.3128,
+   "lon": 1.6612,
    "primera_vez": "2026-11-14T01:15:00.000Z",
-   "ultima_vez": "2026-11-27T03:10:00.000Z",
-   "ultimo_frp": 1.5,
+   "ultima_vez": "2026-11-28T02:49:00.000Z",
+   "ultimo_frp": 0.9,
    "frp_max": 1.5,
-   "detecciones": 14,
+   "detecciones": 15,
    "dias": [
     "2026-11-14",
     "2026-11-15",
@@ -102,7 +104,8 @@
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-11-27"
+    "2026-11-27",
+    "2026-11-28"
    ],
    "pasos": [
     "2026-11-14T01:15:00.000Z",
@@ -118,7 +121,8 @@
     "2026-11-26T01:47:00.000Z",
     "2026-11-27T01:28:00.000Z",
     "2026-11-27T02:10:00.000Z",
-    "2026-11-27T03:10:00.000Z"
+    "2026-11-27T03:10:00.000Z",
+    "2026-11-28T02:49:00.000Z"
    ]
   },
   "cementos cosmos|cementera|huelva": {
@@ -370,22 +374,24 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Santander",
-   "lat": 43.4435,
-   "lon": -3.8472,
+   "lat": 43.4419,
+   "lon": -3.8442,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-22T03:02:00.000Z",
-   "ultimo_frp": 0.7,
-   "frp_max": 1.3,
-   "detecciones": 3,
+   "ultima_vez": "2026-11-28T02:49:00.000Z",
+   "ultimo_frp": 1.4,
+   "frp_max": 1.4,
+   "detecciones": 4,
    "dias": [
     "2026-11-15",
     "2026-11-16",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-28"
    ],
    "pasos": [
     "2026-11-15T02:38:00.000Z",
     "2026-11-16T02:17:00.000Z",
-    "2026-11-22T03:02:00.000Z"
+    "2026-11-22T03:02:00.000Z",
+    "2026-11-28T02:49:00.000Z"
    ]
   },
   "arcelormittal gijón (veriña)|siderurgia|gijón": {
@@ -395,13 +401,13 @@
    "origen": "conocida",
    "osm": null,
    "ciudad": "Gijón",
-   "lat": 43.5251,
-   "lon": -5.7279,
+   "lat": 43.5234,
+   "lon": -5.7305,
    "primera_vez": "2026-11-15T02:38:00.000Z",
-   "ultima_vez": "2026-11-28T01:51:00.000Z",
+   "ultima_vez": "2026-11-28T02:49:00.000Z",
    "ultimo_frp": 3.6,
    "frp_max": 6.5,
-   "detecciones": 18,
+   "detecciones": 19,
    "dias": [
     "2026-11-15",
     "2026-11-16",
@@ -432,7 +438,8 @@
     "2026-11-25T01:09:00.000Z",
     "2026-11-26T02:30:00.000Z",
     "2026-11-26T03:27:00.000Z",
-    "2026-11-28T01:51:00.000Z"
+    "2026-11-28T01:51:00.000Z",
+    "2026-11-28T02:49:00.000Z"
    ]
   },
   "almacenamiento energético 'bess marina de cudeyo'|central eléctrica|santander": {
@@ -631,20 +638,22 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "Avilés",
-   "lat": 43.5519,
-   "lon": -5.8582,
+   "lat": 43.5544,
+   "lon": -5.8617,
    "primera_vez": "2026-11-18T02:38:00.000Z",
-   "ultima_vez": "2026-11-20T02:45:00.000Z",
-   "ultimo_frp": 1,
+   "ultima_vez": "2026-11-28T02:49:00.000Z",
+   "ultimo_frp": 0.7,
    "frp_max": 1.1,
-   "detecciones": 2,
+   "detecciones": 3,
    "dias": [
     "2026-11-18",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-28"
    ],
    "pasos": [
     "2026-11-18T02:38:00.000Z",
-    "2026-11-20T02:45:00.000Z"
+    "2026-11-20T02:45:00.000Z",
+    "2026-11-28T02:49:00.000Z"
    ]
   },
   "exolum|refinería / petroquímica|a coruña": {
@@ -654,21 +663,23 @@
    "origen": "OpenStreetMap",
    "osm": null,
    "ciudad": "A Coruña",
-   "lat": 43.3466,
-   "lon": -8.4385,
+   "lat": 43.3469,
+   "lon": -8.4393,
    "primera_vez": "2026-11-18T02:38:00.000Z",
-   "ultima_vez": "2026-11-19T02:19:00.000Z",
-   "ultimo_frp": 2.1,
+   "ultima_vez": "2026-11-28T02:49:00.000Z",
+   "ultimo_frp": 0.5,
    "frp_max": 2.1,
-   "detecciones": 3,
+   "detecciones": 4,
    "dias": [
     "2026-11-18",
-    "2026-11-19"
+    "2026-11-19",
+    "2026-11-28"
    ],
    "pasos": [
     "2026-11-18T02:38:00.000Z",
     "2026-11-18T03:19:00.000Z",
-    "2026-11-19T02:19:00.000Z"
+    "2026-11-19T02:19:00.000Z",
+    "2026-11-28T02:49:00.000Z"
    ]
   },
   "central eléctrica|celda:39.54,-0.36": {
@@ -891,7 +902,28 @@
    "pasos": [
     "2026-11-27T01:28:00.000Z"
    ]
+  },
+  "planta de gas natural licuado almería-chumico|central eléctrica|almería": {
+   "nombre": "Planta de Gas Natural Licuado Almería-Chumico",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Almería",
+   "lat": 36.8534,
+   "lon": -2.4314,
+   "primera_vez": "2026-11-28T02:51:00.000Z",
+   "ultima_vez": "2026-11-28T02:51:00.000Z",
+   "ultimo_frp": 0.3,
+   "frp_max": 0.3,
+   "detecciones": 1,
+   "dias": [
+    "2026-11-28"
+   ],
+   "pasos": [
+    "2026-11-28T02:51:00.000Z"
+   ]
   }
  },
- "actualizado": "2026-11-28T05:45:40.678Z"
+ "actualizado": "2026-11-28T06:01:04.168Z"
 }

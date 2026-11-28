@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-28T05:45:40.679Z",
+ "actualizado": "2026-11-28T06:01:04.168Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
  "total": 15,
- "detecciones": 35,
+ "detecciones": 45,
  "mayor": {
   "lat": 38.7612,
   "lon": -1.4979,
@@ -151,14 +151,14 @@
    "n": 1
   },
   {
-   "lat": 38.407,
-   "lon": -1.0404,
-   "t": "2026-11-28T01:53:00.000Z",
+   "lat": 38.41,
+   "lon": -1.0415,
+   "t": "2026-11-28T02:51:00.000Z",
    "frp": 2.2,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "noche",
-   "n": 2,
+   "n": 3,
    "contexto": "Polígono Industrial El Cabeço (a 0,8 km)"
   },
   {
@@ -190,19 +190,19 @@
    "dias_mes": 8
   },
   {
-   "lat": 43.5251,
-   "lon": -5.7279,
-   "t": "2026-11-28T01:51:00.000Z",
+   "lat": 43.5234,
+   "lon": -5.7305,
+   "t": "2026-11-28T02:49:00.000Z",
    "frp": 3.6,
    "conf": "nominal",
-   "sat": "NOAA21",
+   "sat": "NOAA20",
    "dn": "noche",
-   "n": 3,
+   "n": 6,
    "nombre": "ArcelorMittal Gijón (Veriña)",
    "tipo": "Siderurgia",
    "origen": "conocida",
    "ciudad": "Gijón",
-   "dias_mes": 8
+   "dias_mes": 12
   },
   {
    "lat": 41.1948,
@@ -222,6 +222,23 @@
    "dias_mes": 3
   },
   {
+   "lat": 43.4419,
+   "lon": -3.8442,
+   "t": "2026-11-28T02:49:00.000Z",
+   "frp": 1.4,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Ecrimesa",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Santander",
+   "dias_mes": 8
+  },
+  {
    "lat": 38.375,
    "lon": -0.5435,
    "t": "2026-11-28T01:53:00.000Z",
@@ -239,6 +256,23 @@
    "dias_mes": 16
   },
   {
+   "lat": 41.3128,
+   "lon": 1.6612,
+   "t": "2026-11-28T02:49:00.000Z",
+   "frp": 0.9,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Rojano Trancoso, S.L.",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Tarragona",
+   "dias_mes": 12
+  },
+  {
    "lat": 39.6648,
    "lon": -0.2465,
    "t": "2026-11-28T01:53:00.000Z",
@@ -254,6 +288,23 @@
    "osm": null,
    "ciudad": "Valencia",
    "dias_mes": 8
+  },
+  {
+   "lat": 43.5544,
+   "lon": -5.8617,
+   "t": "2026-11-28T02:49:00.000Z",
+   "frp": 0.7,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Hot Rolling",
+   "tipo": "Fábrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Avilés",
+   "dias_mes": 7
   },
   {
    "lat": 41.4058,
@@ -303,6 +354,57 @@
    "osm": null,
    "ciudad": "Tortosa",
    "dias_mes": 10
+  },
+  {
+   "lat": 37.3624,
+   "lon": -5.8641,
+   "t": "2026-11-28T02:51:00.000Z",
+   "frp": 0.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Cementos Portland Valderrivas",
+   "tipo": "Cementera",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Sevilla",
+   "dias_mes": 15
+  },
+  {
+   "lat": 43.3469,
+   "lon": -8.4393,
+   "t": "2026-11-28T02:49:00.000Z",
+   "frp": 0.5,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Exolum",
+   "tipo": "Refinería / petroquímica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "A Coruña",
+   "dias_mes": 5
+  },
+  {
+   "lat": 36.8534,
+   "lon": -2.4314,
+   "t": "2026-11-28T02:51:00.000Z",
+   "frp": 0.3,
+   "conf": "nominal",
+   "sat": "NOAA20",
+   "dn": "noche",
+   "n": 1,
+   "nombre": "Planta de Gas Natural Licuado Almería-Chumico",
+   "tipo": "Central eléctrica",
+   "zona": null,
+   "origen": "OpenStreetMap",
+   "osm": null,
+   "ciudad": "Almería",
+   "dias_mes": 1
   }
  ]
 }
