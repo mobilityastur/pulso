@@ -1,10 +1,10 @@
 {
- "actualizado": "2026-11-28T17:01:26.581Z",
+ "actualizado": "2026-11-28T17:15:41.827Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
-  "total": 17,
-  "sentibles": 3,
+  "total": 18,
+  "sentibles": 4,
   "mayor": {
    "id": "20261128_0000167",
    "t": "2026-11-28T11:45:37.110Z",
@@ -20,6 +20,19 @@
   }
  },
  "eventos": [
+  {
+   "id": "20261128_0000240",
+   "t": "2026-11-28T16:33:13.480Z",
+   "lat": 36.4827,
+   "lon": -10.0002,
+   "prof": 40,
+   "mag": 2.9,
+   "tipo_mag": "ml",
+   "lugar": null,
+   "region": "Azores-Cape St. Vincent Ridge",
+   "autor": "EMSC",
+   "ign": null
+  },
   {
    "id": "20261128_0000230",
    "t": "2026-11-28T15:04:58.470Z",
