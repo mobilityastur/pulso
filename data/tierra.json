@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T12:01:08.470Z",
+ "actualizado": "2026-11-28T12:15:47.264Z",
  "fuente": "EMSC (datos de la Red Sísmica Nacional del IGN y otras redes) · nombres del IGN",
  "ventana_dias": 10,
  "h24": {
@@ -7,11 +7,11 @@
   "sentibles": 4,
   "mayor": {
    "id": "20261128_0000167",
-   "t": "2026-11-28T11:45:37.850Z",
-   "lat": 37.1136,
-   "lon": -3.9839,
-   "prof": 5,
-   "mag": 3.6,
+   "t": "2026-11-28T11:45:37.090Z",
+   "lat": 37.1282,
+   "lon": -3.9867,
+   "prof": 11,
+   "mag": 3.8,
    "tipo_mag": "ml",
    "lugar": "N de Santa Cruz del Comercio (Granada)",
    "region": "Spain",
@@ -22,11 +22,11 @@
  "eventos": [
   {
    "id": "20261128_0000167",
-   "t": "2026-11-28T11:45:37.850Z",
-   "lat": 37.1136,
-   "lon": -3.9839,
-   "prof": 5,
-   "mag": 3.6,
+   "t": "2026-11-28T11:45:37.090Z",
+   "lat": 37.1282,
+   "lon": -3.9867,
+   "prof": 11,
+   "mag": 3.8,
    "tipo_mag": "ml",
    "lugar": "N de Santa Cruz del Comercio (Granada)",
    "region": "Spain",
