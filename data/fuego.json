@@ -1,9 +1,9 @@
 {
- "actualizado": "2026-11-28T15:15:42.271Z",
+ "actualizado": "2026-11-28T15:30:55.262Z",
  "fuente": "NASA FIRMS · VIIRS (Suomi NPP, NOAA-20, NOAA-21)",
  "ventana_h": 24,
- "total": 6,
- "detecciones": 28,
+ "total": 9,
+ "detecciones": 32,
  "mayor": {
   "lat": 38.2953,
   "lon": -1.6837,
@@ -29,6 +29,16 @@
    "n": 2
   },
   {
+   "lat": 37.6013,
+   "lon": -5.1224,
+   "t": "2026-11-28T13:16:00.000Z",
+   "frp": 9.2,
+   "conf": "alta",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1
+  },
+  {
    "lat": 40.0661,
    "lon": 4.0893,
    "t": "2026-11-28T11:36:00.000Z",
@@ -37,6 +47,27 @@
    "sat": "NOAA21",
    "dn": "día",
    "n": 1
+  },
+  {
+   "lat": 37.3905,
+   "lon": -5.2417,
+   "t": "2026-11-28T13:16:00.000Z",
+   "frp": 4.4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 2
+  },
+  {
+   "lat": 43.1197,
+   "lon": -2.448,
+   "t": "2026-11-28T13:16:00.000Z",
+   "frp": 4,
+   "conf": "nominal",
+   "sat": "NOAA21",
+   "dn": "día",
+   "n": 1,
+   "contexto": "BIDEGI (a 1,2 km)"
   },
   {
    "lat": 42.0235,
@@ -50,12 +81,12 @@
    "contexto": "Planta solar La Olivera (a 0,5 km)"
   },
   {
-   "lat": 37.3956,
-   "lon": -5.2399,
-   "t": "2026-11-28T12:31:00.000Z",
-   "frp": 2.8,
+   "lat": 37.3294,
+   "lon": -7.0132,
+   "t": "2026-11-28T13:16:00.000Z",
+   "frp": 3.1,
    "conf": "nominal",
-   "sat": "NOAA20",
+   "sat": "NOAA21",
    "dn": "día",
    "n": 1
   },
