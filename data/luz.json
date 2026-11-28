@@ -1,21 +1,21 @@
 {
- "actualizado": "2026-11-28T17:30:56.873Z",
+ "actualizado": "2026-11-28T17:45:40.446Z",
  "fuente": "Red Eléctrica · tiempo real (península)",
  "resolucion": "realtime",
  "unidad": "MW",
  "ambito": "Península",
  "ahora": {
-  "t": "2026-11-28T18:25:00+01:00",
-  "total": 32774,
-  "renovable": 28.6,
+  "t": "2026-11-28T18:40:00+01:00",
+  "total": 33511,
+  "renovable": 28.2,
   "mix": {
    "solar": 71,
-   "eolica": 1911,
-   "hidraulica": 7730,
-   "nuclear": 5720,
-   "gas": 14052,
+   "eolica": 1912,
+   "hidraulica": 7929,
+   "nuclear": 5722,
+   "gas": 14569,
    "carbon": 0,
-   "otras": 3290
+   "otras": 3308
   }
  },
  "tecnologias": [
@@ -23,43 +23,43 @@
    "titulo": "Ciclo combinado",
    "renovable": false,
    "familia": "gas",
-   "valor": 12010
+   "valor": 12532
   },
   {
    "titulo": "Hidráulica",
    "renovable": true,
    "familia": "hidraulica",
-   "valor": 6889
+   "valor": 6968
   },
   {
    "titulo": "Nuclear",
    "renovable": false,
    "familia": "nuclear",
-   "valor": 5720
+   "valor": 5722
   },
   {
    "titulo": "Autoproductores",
    "renovable": false,
    "familia": "otras",
-   "valor": 2543
+   "valor": 2544
   },
   {
    "titulo": "Cogeneración y residuos",
    "renovable": false,
    "familia": "gas",
-   "valor": 2042
+   "valor": 2037
   },
   {
    "titulo": "Eólica",
    "renovable": true,
    "familia": "eolica",
-   "valor": 1911
+   "valor": 1912
   },
   {
    "titulo": "Turbinación bombeo",
    "renovable": false,
    "familia": "hidraulica",
-   "valor": 841
+   "valor": 961
   },
   {
    "titulo": "Biomasa",
@@ -71,7 +71,13 @@
    "titulo": "Turbina de vapor",
    "renovable": false,
    "familia": "otras",
-   "valor": 252
+   "valor": 231
+  },
+  {
+   "titulo": "Baterías",
+   "renovable": false,
+   "familia": "otras",
+   "valor": 47
   },
   {
    "titulo": "Solar fotovoltaica",
@@ -84,12 +90,6 @@
    "renovable": true,
    "familia": "solar",
    "valor": 33
-  },
-  {
-   "titulo": "Baterías",
-   "renovable": false,
-   "familia": "otras",
-   "valor": 9
   }
  ],
  "nombres_tec": {
@@ -160,35 +160,6 @@
   }
  },
  "serie": [
-  {
-   "t": "2026-11-27T18:40:00+01:00",
-   "total": 41172,
-   "renovable": 35.8,
-   "mix": {
-    "solar": 182,
-    "eolica": 5284,
-    "hidraulica": 10615,
-    "nuclear": 6099,
-    "gas": 15180,
-    "carbon": 288,
-    "otras": 3524
-   },
-   "tec": {
-    "nuc": 6099,
-    "eol": 5284,
-    "hid": 8769,
-    "solFot": 92,
-    "solTer": 90,
-    "cc": 13110,
-    "cogenResto": 2070,
-    "car": 288,
-    "aut": 2657,
-    "bio": 518,
-    "turb": 1846,
-    "bat": 47,
-    "vap": 302
-   }
-  },
   {
    "t": "2026-11-27T19:00:00+01:00",
    "total": 40809,
@@ -2683,42 +2654,38 @@
    }
   },
   {
-   "t": "2026-11-28T18:25:00+01:00",
-   "total": 32774,
-   "renovable": 28.6,
+   "t": "2026-11-28T18:40:00+01:00",
+   "total": 33511,
+   "renovable": 28.2,
    "mix": {
     "solar": 71,
-    "eolica": 1911,
-    "hidraulica": 7730,
-    "nuclear": 5720,
-    "gas": 14052,
+    "eolica": 1912,
+    "hidraulica": 7929,
+    "nuclear": 5722,
+    "gas": 14569,
     "carbon": 0,
-    "otras": 3290
+    "otras": 3308
    },
    "tec": {
-    "nuc": 5720,
-    "eol": 1911,
-    "hid": 6889,
+    "nuc": 5722,
+    "eol": 1912,
+    "hid": 6968,
     "solFot": 38,
     "solTer": 33,
-    "cc": 12010,
-    "cogenResto": 2042,
-    "aut": 2543,
+    "cc": 12532,
+    "cogenResto": 2037,
+    "aut": 2544,
     "bio": 486,
-    "turb": 841,
-    "bat": 9,
-    "vap": 252
+    "turb": 961,
+    "bat": 47,
+    "vap": 231
    }
   }
  ],
  "demanda": {
-  "actual": 32242,
-  "t": "2026-11-28T18:20:00.000+01:00",
+  "actual": 32409,
+  "t": "2026-11-28T18:35:00.000+01:00",
   "real": [
-   {
-    "t": "2026-11-27T18:40:00.000+01:00",
-    "v": 37063
-   },
    {
     "t": "2026-11-27T19:00:00.000+01:00",
     "v": 36884
@@ -3001,14 +2968,14 @@
    },
    {
     "t": "2026-11-28T18:20:00.000+01:00",
-    "v": 32242
+    "v": 32241
+   },
+   {
+    "t": "2026-11-28T18:35:00.000+01:00",
+    "v": 32409
    }
   ],
   "prevista": [
-   {
-    "t": "2026-11-27T18:40:00.000+01:00",
-    "v": 36761
-   },
    {
     "t": "2026-11-27T19:00:00.000+01:00",
     "v": 36902
@@ -3291,11 +3258,15 @@
    },
    {
     "t": "2026-11-28T18:20:00.000+01:00",
-    "v": 32390
+    "v": 32389
    },
    {
-    "t": "2026-11-28T18:30:00.000+01:00",
-    "v": 32520
+    "t": "2026-11-28T18:40:00.000+01:00",
+    "v": 32635
+   },
+   {
+    "t": "2026-11-28T18:45:00.000+01:00",
+    "v": 32686
    }
   ]
  }
